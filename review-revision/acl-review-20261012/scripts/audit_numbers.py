@@ -150,7 +150,7 @@ for stop in ['exact', 'primary']:
         eq('w exact all gains', closed, gains)
         check('w exact saving', np.mean(sav), f'mean saving was {hu(np.mean(sav),1)} entries, at most {hu(max(rel),2)}\\%', APP)
     else:
-        check('w primary', (closed, gains, np.mean(sav), max(rel)), f'{closed} comparisons closed and six showed a gain, with mean saving {hu(np.mean(sav),1)} entries and at most {hu(max(rel),2)}\\%', APP)
+        check('w primary', (closed, gains, np.mean(sav), max(rel)), f'{closed} comparisons closed and six showed a gain. Over these six gains the mean saving was {hu(np.mean(sav),1)} entries, with at most {hu(max(rel),2)}\\%', APP)
         eq('w primary gains', gains, 6)
     check(f'w open {stop}', open_, f'{open_} exact' if stop == 'exact' else f'{open_} primary', APP)
 

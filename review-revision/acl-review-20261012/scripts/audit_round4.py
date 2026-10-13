@@ -46,7 +46,7 @@ for stop in ['primary', 'exact']:
     means[stop] = {key: Fraction(sum(v), len(v)) for key, v in acc.items()}
 p = means['primary']
 chk('switch primary', f"averaged {comma(hu(p['switch'], 1))} queries, against {comma(hu(p['joint'], 1))} for joint and {comma(hu(p['safety'], 1))} for safety-only" in A)
-chk('oracle primary', f"true non-full condition gave {comma(hu(p['oracle'], 1))}" in A)
+chk('oracle primary', f"true exclusion-required condition gave {comma(hu(p['oracle'], 1))}" in A)
 e = means['exact']; spread = max(e.values()) - min(e.values())
 chk('exact spread', Fraction(24, 10) < spread <= Fraction(25, 10) and 'the four means differed by at most 2.5 entries' in A)
 chk('809.58 main', 'exceeded $Q_{\\rm joint}$ by 809.58 entries on average' in M)
