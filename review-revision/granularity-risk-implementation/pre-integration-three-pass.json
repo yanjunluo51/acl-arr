@@ -1,0 +1,16 @@
+{
+  "checks": [
+    {
+      "pass": 1,
+      "scope": "Original matrices and acquisition masks unchanged; coverage uses all 57 original non-full instances and both targets, not just the 89 gains."
+    },
+    {
+      "pass": 2,
+      "scope": "Proof: optimistic capacity after any single-column omission is at least V(F-min f); upper-cost capacity is at most V(F+p-max f). Strict lower gap forces all columns by monotonicity. Independently checked 66339 finite integer instances and 9236 predecessor subsets."
+    },
+    {
+      "pass": 3,
+      "scope": "One sufficient condition explaining query granularity, not a new competing selection method. Risk diagnostic identifies average-vs-max scope; no quality claim or runtime saving. New condition is posthoc and sufficient, not necessary or literature-certified."
+    }
+  ]
+}

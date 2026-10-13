@@ -1,0 +1,11 @@
+{
+  "status": "PASS_SCOPED_THREE_PRE_EDIT_CHECKS",
+  "pass_1": "Current source/PDF binding checked; original preserved before/manuscript; three new bibliography entries fetched from official arXiv exports",
+  "pass_2": "Mean construction derived from literal replacement scores; exact budgets and 2-entry minima checked; 2113536 subsets enumerated; randomized tail argument reviewed separately; no human proof certification",
+  "pass_3": "New result extends existing certificate-versus-discovery claim to primary tolerance; no new risk objective, pooling method or data claim; existing results retained",
+  "not_claimed": [
+    "100 percent correctness",
+    "complete novelty search",
+    "new real-scoring experiment"
+  ]
+}

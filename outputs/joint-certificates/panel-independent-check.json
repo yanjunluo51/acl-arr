@@ -1,0 +1,9 @@
+{
+  "status": "PASS_ALL_SMALL_BATCH_MINIMA_BY_INDEPENDENT_SUBSET_MILP",
+  "configuration_cases": 1920,
+  "joint_and_separated_minima_checked": 7680,
+  "zero_gap_integer_MILP_calls": 21076,
+  "all_witnesses_rechecked_in_integer_arithmetic": true,
+  "certified_unresolved_instances": 0,
+  "elapsed_seconds": 5.580102
+}

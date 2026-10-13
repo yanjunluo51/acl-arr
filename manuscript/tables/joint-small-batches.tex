@@ -1,0 +1,35 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrrrrrr}
+\toprule
+Panel & $q$ & $Q_{\rm joint}$ & $Q_{\rm split}$ & \shortstack{$Q_{\rm joint}<Q_{\rm split}$\\splits/40} & $Q_{\rm joint}(\mathcal O)$ & $Q_{\rm split}(\mathcal O)$ & \shortstack{$Q_{\rm joint}<Q_{\rm split}$\\splits/40} \\
+\midrule
+RewardBench 2 & 0.05 & 19.63 & 19.95 & 13 & 13.85 & 13.95 & 4 \\
+RewardBench 2 & 0.10 & 19.05 & 19.30 & 6 & 13.30 & 13.45 & 3 \\
+RewardBench 2 & 0.20 & 13.95 & 14.48 & 11 & 10.73 & 11.05 & 8 \\
+RewardBench 2 & 0.30 & 12.93 & 13.08 & 5 & 9.55 & 9.70 & 5 \\
+WMT23, 13 streams & 0.05 & 39.18 & 39.30 & 4 & 25.48 & 25.58 & 4 \\
+WMT23, 13 streams & 0.10 & 49.33 & 49.65 & 8 & 35.93 & 36.05 & 3 \\
+WMT23, 13 streams & 0.20 & 21.05 & 21.18 & 5 & 15.25 & 15.33 & 3 \\
+WMT23, 13 streams & 0.30 & 15.90 & 16.40 & 8 & 10.88 & 11.10 & 3 \\
+WMT23, 12 streams & 0.05 & 43.25 & 43.25 & 0 & 29.53 & 29.53 & 0 \\
+WMT23, 12 streams & 0.10 & 46.38 & 46.43 & 2 & 33.08 & 33.08 & 0 \\
+WMT23, 12 streams & 0.20 & 19.30 & 19.63 & 5 & 13.83 & 14.00 & 3 \\
+WMT23, 12 streams & 0.30 & 19.08 & 19.60 & 13 & 13.18 & 13.35 & 7 \\
+WMT24 en-de & 0.05 & 37.85 & 38.08 & 7 & 27.35 & 27.50 & 5 \\
+WMT24 en-de & 0.10 & 32.55 & 32.73 & 5 & 23.48 & 23.50 & 1 \\
+WMT24 en-de & 0.20 & 21.33 & 21.73 & 12 & 14.73 & 14.98 & 8 \\
+WMT24 en-de & 0.30 & 18.83 & 19.10 & 6 & 13.08 & 13.25 & 5 \\
+WMT24 en-es & 0.05 & 40.68 & 40.95 & 10 & 28.98 & 29.13 & 5 \\
+WMT24 en-es & 0.10 & 29.98 & 30.05 & 3 & 21.88 & 21.90 & 1 \\
+WMT24 en-es & 0.20 & 23.03 & 23.23 & 6 & 16.23 & 16.38 & 4 \\
+WMT24 en-es & 0.30 & 18.55 & 18.70 & 3 & 13.20 & 13.30 & 2 \\
+WMT24 ja-zh & 0.05 & 40.13 & 40.70 & 13 & 28.40 & 28.75 & 8 \\
+WMT24 ja-zh & 0.10 & 40.25 & 40.83 & 12 & 29.65 & 29.83 & 6 \\
+WMT24 ja-zh & 0.20 & 36.83 & 37.35 & 11 & 28.50 & 28.85 & 7 \\
+WMT24 ja-zh & 0.30 & 28.58 & 29.55 & 18 & 20.78 & 21.20 & 10 \\
+\bottomrule
+\end{tabular}
+\caption{Exact mean entry certificates on the predefined subbatches of at most four baseline-selected outputs. Each row averages 40 splits, retaining original maps, cutoff and all candidates while resetting $N$, $k$ and $b_H$ for this subbatch. The first group starts empty; the second reports minimum additional entries after observing the first quarter of eligible cells in seeded row and candidate-index order. $Q_{\rm split}$ adds independently minimized safety and exclusion sizes over the same safe-target range. The $Q_{\rm joint}<Q_{\rm split}$ columns count splits below the additive bound; they do not compare against the best deduplicated union. An independent subset formulation gives matching numerical optima; reconstructed witnesses pass integer feasibility checks. These are not minima for the original full test batches.}
+\label{tab:joint-small}
+\end{table*}

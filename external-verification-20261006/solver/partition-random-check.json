@@ -1,0 +1,8 @@
+{
+  "status": "PASS_100_FRESH_ENTRY_SUBSET_COMPARISONS",
+  "seed": 6100623,
+  "cases": 100,
+  "with_nonempty_history": 86,
+  "with_positive_tolerance": 69,
+  "maximum_entries": 9
+}

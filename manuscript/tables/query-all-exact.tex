@@ -1,0 +1,36 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrrrrrr}
+\toprule
+ & & & & \multicolumn{4}{c}{Active inspection (\%)} & & \\
+Panel & Pooling & $q$ & Z (\%) & Fixed & Random & Width & Ref. & Cov. (\%) & Gap (outputs) \\
+\midrule
+RewardBench 2 & median & 0.05 & 0.0 & 73.8 & 73.9 & 72.0 & 71.1 & 99.6 & 0.0 \\
+RewardBench 2 & median & 0.10 & 0.0 & 58.3 & 58.3 & 55.5 & 53.4 & 100.0 & 0.0 \\
+RewardBench 2 & median & 0.20 & 2.5 & 23.5 & 23.2 & 23.4 & 22.0 & 100.0 & 0.0 \\
+RewardBench 2 & median & 0.30 & 85.0 & 0.8 & 0.8 & 0.8 & 0.8 & 100.0 & 0.0 \\
+RewardBench 2 & mean & 0.05 & 0.0 & 93.7 & 93.7 & 93.8 & 90.2 & 100.0 & 0.0 \\
+RewardBench 2 & mean & 0.10 & 0.0 & 90.5 & 90.4 & 90.0 & 86.9 & 100.0 & 0.0 \\
+RewardBench 2 & mean & 0.20 & 0.0 & 82.0 & 82.0 & 79.5 & 79.5 & 100.0 & 0.0 \\
+RewardBench 2 & mean & 0.30 & 0.0 & 69.7 & 69.8 & 63.0 & 71.0 & 100.0 & 0.0 \\
+WMT23, 13 streams & median & 0.05 & 10.0 & 68.4 & 67.6 & 71.2 & 54.3 & 99.5 & 0.0 \\
+WMT23, 13 streams & median & 0.10 & 97.5 & 0.2 & 0.2 & 0.2 & 0.2 & 100.0 & 0.0 \\
+WMT23, 13 streams & median & 0.20 & 100.0 & 0.0 & 0.0 & 0.0 & 0.0 & 100.0 & 0.0 \\
+WMT23, 13 streams & median & 0.30 & 100.0 & 0.0 & 0.0 & 0.0 & 0.0 & 100.0 & 0.0 \\
+WMT23, 13 streams & mean & 0.05 & 0.0 & 94.1 & 94.0 & 94.6 & 88.8 & 99.7 & 0.0 \\
+WMT23, 13 streams & mean & 0.10 & 0.0 & 90.9 & 91.0 & 91.4 & 86.3 & 100.0 & 0.0 \\
+WMT23, 13 streams & mean & 0.20 & 0.0 & 62.2 & 62.1 & 55.7 & 62.1 & 100.0 & 0.0 \\
+WMT23, 13 streams & mean & 0.30 & 0.0 & 47.4 & 47.2 & 40.2 & 51.6 & 100.0 & 0.0 \\
+WMT23, 12 streams & median & 0.05 & 90.0 & 5.7 & 5.5 & 5.5 & 5.3 & 99.9 & 0.0 \\
+WMT23, 12 streams & median & 0.10 & 80.0 & 5.2 & 5.1 & 5.9 & 4.8 & 100.0 & 0.0 \\
+WMT23, 12 streams & median & 0.20 & 97.5 & 0.9 & 0.8 & 0.8 & 0.8 & 100.0 & 0.0 \\
+WMT23, 12 streams & median & 0.30 & 95.0 & 0.9 & 0.9 & 0.8 & 0.9 & 100.0 & 0.0 \\
+WMT23, 12 streams & mean & 0.05 & 0.0 & 92.2 & 92.2 & 92.0 & 88.7 & 99.1 & 0.0 \\
+WMT23, 12 streams & mean & 0.10 & 0.0 & 88.6 & 88.6 & 88.4 & 84.3 & 100.0 & 0.0 \\
+WMT23, 12 streams & mean & 0.20 & 0.0 & 66.0 & 66.0 & 60.6 & 64.8 & 100.0 & 0.0 \\
+WMT23, 12 streams & mean & 0.30 & 0.0 & 58.1 & 58.2 & 51.4 & 60.0 & 100.0 & 0.0 \\
+\bottomrule
+\end{tabular}
+\caption{All depths and pooling rules at $\alpha=.10$, $V^+-V^-=0$. Order columns are mean queried fractions of $mT$ in percent; empty active sets contribute zero. Z is the zero-query stopping percentage over 40 splits. Cov.\ is reference-priority $K/|S_0|$ in percent; Gap is its retained-count gap in outputs. These overlapping splits provide descriptive summaries.}
+\label{tab:all-exact}
+\end{table*}

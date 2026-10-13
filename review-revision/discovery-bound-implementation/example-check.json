@@ -1,0 +1,8 @@
+{
+  "status": "PASS_FINITE_FULL_QUERY_SUBSETS",
+  "subsets": 4096,
+  "safety": 5,
+  "exclusion": 7,
+  "best_union": 12,
+  "joint": 7
+}

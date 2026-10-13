@@ -1,0 +1,35 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Panel & $q$ & Avg. & Mean max & Over (\%) \\
+\midrule
+RewardBench 2 & 0.05 & 0.077 & 0.164 & 17.3 \\
+RewardBench 2 & 0.10 & 0.066 & 0.128 & 9.3 \\
+RewardBench 2 & 0.20 & 0.047 & 0.088 & 0.3 \\
+RewardBench 2 & 0.30 & 0.041 & 0.068 & 0.0 \\
+WMT23, 13 streams & 0.05 & 0.078 & 0.234 & 38.0 \\
+WMT23, 13 streams & 0.10 & 0.035 & 0.072 & 0.3 \\
+WMT23, 13 streams & 0.20 & 0.035 & 0.073 & 0.0 \\
+WMT23, 13 streams & 0.30 & 0.033 & 0.069 & 0.1 \\
+WMT23, 12 streams & 0.05 & 0.043 & 0.114 & 6.1 \\
+WMT23, 12 streams & 0.10 & 0.048 & 0.112 & 5.5 \\
+WMT23, 12 streams & 0.20 & 0.042 & 0.085 & 1.6 \\
+WMT23, 12 streams & 0.30 & 0.040 & 0.082 & 1.1 \\
+WMT24 en-de & 0.05 & 0.022 & 0.063 & 2.4 \\
+WMT24 en-de & 0.10 & 0.036 & 0.081 & 1.1 \\
+WMT24 en-de & 0.20 & 0.034 & 0.073 & 0.0 \\
+WMT24 en-de & 0.30 & 0.032 & 0.065 & 0.0 \\
+WMT24 en-es & 0.05 & 0.029 & 0.070 & 2.4 \\
+WMT24 en-es & 0.10 & 0.036 & 0.081 & 0.9 \\
+WMT24 en-es & 0.20 & 0.036 & 0.075 & 0.6 \\
+WMT24 en-es & 0.30 & 0.031 & 0.064 & 0.0 \\
+WMT24 ja-zh & 0.05 & 0.046 & 0.106 & 9.3 \\
+WMT24 ja-zh & 0.10 & 0.048 & 0.110 & 8.3 \\
+WMT24 ja-zh & 0.20 & 0.047 & 0.103 & 4.9 \\
+WMT24 ja-zh & 0.30 & 0.041 & 0.088 & 1.5 \\
+\bottomrule
+\end{tabular}
+\caption{Primary stopping uses $V^+-V^-\le\lceil.02|S_0|\rceil$. Median pooling: reference-priority returns at $\alpha=.10$, all depths. Avg.\ averages the splitwise replacement-average churn $R(C)$ over 40 splits. Mean max averages the maximum replacement-specific churn within each split; it is not the maximum across all splits. Over is the mean percentage of replacements exceeding .10. Each split separately satisfies $R(C)\le\alpha$; individual replacements need not.}
+\label{tab:review-replacement-median}
+\end{table*}

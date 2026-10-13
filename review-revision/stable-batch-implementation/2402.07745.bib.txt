@@ -1,0 +1,9 @@
+@misc{watsondaniels2025predictivechurnsetgood,
+      title={Predictive Churn with the Set of Good Models}, 
+      author={Jamelle Watson-Daniels and Flavio du Pin Calmon and Alexander D'Amour and Carol Long and David C. Parkes and Berk Ustun},
+      year={2025},
+      eprint={2402.07745},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2402.07745}, 
+}

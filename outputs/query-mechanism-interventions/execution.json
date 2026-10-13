@@ -1,0 +1,12 @@
+{
+  "status": "PASS_FULL_EXECUTION_PENDING_INDEPENDENT_AUDIT",
+  "configuration_cases": 1920,
+  "paths": 7680,
+  "stop_records": 15360,
+  "summary_cells": 384,
+  "original_reference_stop_equalities": 3840,
+  "recorded_replies": 21632445,
+  "new_model_inference": false,
+  "oracle_variants_deployable": false,
+  "elapsed_seconds": 70.4324965
+}

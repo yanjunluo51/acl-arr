@@ -1,0 +1,25 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+Panel & Stop & Closed / tasks & Dedup. & Joint & Discovery \\
+\midrule
+All panels & primary & 960 / 960 & 18.69 & 5.34 & 809.58 \\
+All panels & exact & 960 / 960 & 81.79 & 1.19 & 796.66 \\
+RewardBench 2 & primary & 160 / 160 & 0.00 & 0.00 & 274.59 \\
+RewardBench 2 & exact & 160 / 160 & 0.00 & 0.00 & 267.05 \\
+WMT23, 13 & primary & 160 / 160 & 0.60 & 0.75 & 531.77 \\
+WMT23, 13 & exact & 160 / 160 & 5.01 & 0.51 & 542.18 \\
+WMT23, 12 & primary & 160 / 160 & 3.33 & 1.70 & 525.33 \\
+WMT23, 12 & exact & 160 / 160 & 12.35 & 0.78 & 527.55 \\
+WMT24-en-de & primary & 160 / 160 & 0.00 & 0.00 & 1298.33 \\
+WMT24-en-de & exact & 160 / 160 & 7.86 & 0.23 & 1291.07 \\
+WMT24-en-es & primary & 160 / 160 & 1.34 & 0.67 & 1140.28 \\
+WMT24-en-es & exact & 160 / 160 & 7.95 & 0.17 & 1160.61 \\
+WMT24-ja-zh & primary & 160 / 160 & 106.86 & 28.95 & 1087.16 \\
+WMT24-ja-zh & exact & 160 / 160 & 457.57 & 5.43 & 991.53 \\
+\bottomrule
+\end{tabular}
+\caption{Complete-batch mean cost contrasts at $\alpha=.10$, all four depths. On the same closed-union tasks, columns average $Q_{\rm split}-Q_{\cup,\rm sep}$ (Dedup.), $Q_{\cup,\rm sep}-Q_{\rm joint}$ (Joint), and $Q_{\rm ref}-Q_{\rm joint}$ (Discovery), in score entries. Dedup. and Joint sum to $Q_{\rm split}-Q_{\rm joint}$; Discovery is measured separately. Primary uses $\varepsilon=\lceil.02|S_0|\rceil$; exact uses zero. Empty histories, maps, budgets and stopping targets match. Machine-readable records retain all targets, final lower and upper bounds, zero-minimum indicators and all seven policies. Resource-limited attempts remain in separate records.}
+\label{tab:cost-contrasts}
+\end{table*}

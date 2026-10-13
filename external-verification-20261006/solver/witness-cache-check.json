@@ -1,0 +1,7 @@
+{
+  "status": "PASS_BETTER_CACHED_TARGET_RECONSTRUCTS_WITNESS",
+  "previous_feasible_union": 2,
+  "better_cached_target_value": 1,
+  "reconstructed_union": 1,
+  "query_mask": 4
+}

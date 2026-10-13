@@ -1,0 +1,69 @@
+{
+  "status": "PASS_SCOPED_CONSTRUCTED_SCORE_AND_COLUMN_CHECKS",
+  "fixed_parameters": {
+    "M": 7,
+    "T": 7,
+    "q": "1/20",
+    "alpha": "1/10",
+    "cutoff": "3/5"
+  },
+  "reference_outputs": 20,
+  "reference_right_ecdf_realization": true,
+  "explicit_score_agreement_positions": 273,
+  "integer_formula_indices": 1003,
+  "instances": [
+    {
+      "h": 0,
+      "k": 17,
+      "N": 340,
+      "m": 6,
+      "T": 7,
+      "bH": 166,
+      "b": 41,
+      "active_entries": 42,
+      "offline_exact": 1,
+      "deterministic_worst": 42,
+      "randomized_lower": "43/2",
+      "initial_gap": 1,
+      "primary_epsilon": 1,
+      "primary_queries": 0
+    },
+    {
+      "h": 1,
+      "k": 37,
+      "N": 740,
+      "m": 13,
+      "T": 7,
+      "bH": 362,
+      "b": 90,
+      "active_entries": 91,
+      "offline_exact": 1,
+      "deterministic_worst": 91,
+      "randomized_lower": "46",
+      "initial_gap": 1,
+      "primary_epsilon": 1,
+      "primary_queries": 0
+    },
+    {
+      "h": 2,
+      "k": 57,
+      "N": 1140,
+      "m": 20,
+      "T": 7,
+      "bH": 558,
+      "b": 139,
+      "active_entries": 140,
+      "offline_exact": 1,
+      "deterministic_worst": 140,
+      "randomized_lower": "141/2",
+      "initial_gap": 1,
+      "primary_epsilon": 2,
+      "primary_queries": 0
+    }
+  ],
+  "column_targets": 570,
+  "column_full": 566,
+  "randomized_claim": "Analytic averaging over all agreement locations; finite checks do not replace proof",
+  "positive_tolerance_bound": false,
+  "new_nlp_evidence": false
+}

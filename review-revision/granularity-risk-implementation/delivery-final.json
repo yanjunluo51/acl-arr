@@ -1,0 +1,51 @@
+{
+  "status": "PASS_SCOPED_GRANULARITY_RISK_DELIVERY",
+  "archives": {
+    "manuscript/source_private.zip": {
+      "sha256": "53749186180cb0943ba93e9fbfc0f4f6907d16e15d802370f56c501a484e83c5",
+      "members": 1309,
+      "hash_crc_live_binding": true,
+      "anonymous_byte_scan": false
+    },
+    "packages/current_mapping_column_code_private.zip": {
+      "sha256": "66861b349159848bc660bca5958e1f7ce91130a184624ab7c16571fbb2ec11ae",
+      "members": 2620,
+      "hash_crc_live_binding": true,
+      "anonymous_byte_scan": false
+    },
+    "packages/current_anonymous_source.zip": {
+      "sha256": "efd8b52c5a981e58225576d7b8cf643d300ddd3cf5a5b86fe6b49e90fe6b4c39",
+      "members": 1309,
+      "hash_crc_live_binding": true,
+      "anonymous_byte_scan": true
+    },
+    "packages/current_anonymous_code.zip": {
+      "sha256": "3132cfb5f3952f09854661a0b9e25af953a7f9715e6f04b7533150bd1bd1fcd4",
+      "members": 2620,
+      "hash_crc_live_binding": true,
+      "anonymous_byte_scan": true
+    }
+  },
+  "clean_builds": {
+    "private": {
+      "pages": 92,
+      "text_pixels_match": true,
+      "current_check": true,
+      "risk_arithmetic_replay": true,
+      "column_predecessors_and_finite_replay": true,
+      "raw_scorer_reexecution": false
+    },
+    "anonymous": {
+      "pages": 92,
+      "text_pixels_match": true,
+      "current_check": true,
+      "risk_arithmetic_replay": true,
+      "column_predecessors_and_finite_replay": true,
+      "raw_scorer_reexecution": false
+    }
+  },
+  "human_proof_review": false,
+  "complete_rights_authorization": false,
+  "new_scorer_inference": false,
+  "uploaded": false
+}

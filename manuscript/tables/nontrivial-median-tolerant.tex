@@ -1,0 +1,37 @@
+\begin{table*}[t]
+\centering\small
+
+
+\begin{tabular}{llrrrrrrrr}
+\toprule
+Panel & $q$ & $n$ & Fixed & Random & Width & Ref. & Ref.\ active & $K$ & Gap \\
+\midrule
+RewardBench 2 & 0.05 & 40 & 296.3 & 296.8 & 292.2 & 285.0 & 61.4 & 115.6 & 3.0 \\
+RewardBench 2 & 0.10 & 39 & 426.6 & 425.4 & 409.0 & 388.1 & 46.2 & 230.1 & 5.3 \\
+RewardBench 2 & 0.20 & 37 & 210.8 & 207.7 & 211.2 & 204.8 & 15.2 & 453.8 & 9.8 \\
+RewardBench 2 & 0.30 & 1 & 27.0 & 38.0 & 35.0 & 33.0 & 1.8 & 735.0 & 15.0 \\
+WMT23, 13 & 0.05 & 36 & 738.3 & 746.0 & 817.2 & 581.4 & 50.1 & 132.5 & 3.2 \\
+WMT23, 13 & 0.10 & 0 & -- & -- & -- & -- & -- & -- & -- \\
+WMT23, 13 & 0.20 & 0 & -- & -- & -- & -- & -- & -- & -- \\
+WMT23, 13 & 0.30 & 0 & -- & -- & -- & -- & -- & -- & -- \\
+WMT23, 12 & 0.05 & 3 & 588.0 & 584.7 & 585.7 & 577.7 & 51.0 & 167.0 & 4.0 \\
+WMT23, 12 & 0.10 & 5 & 283.2 & 282.6 & 303.0 & 238.2 & 14.8 & 300.6 & 6.6 \\
+WMT23, 12 & 0.20 & 1 & 712.0 & 658.0 & 605.0 & 641.0 & 20.1 & 551.0 & 12.0 \\
+WMT23, 12 & 0.30 & 1 & 637.0 & 588.0 & 563.0 & 683.0 & 14.8 & 821.0 & 17.0 \\
+WMT24 en-de & 0.05 & 2 & 1066.0 & 1094.5 & 1247.0 & 881.0 & 25.8 & 592.0 & 12.5 \\
+WMT24 en-de & 0.10 & 5 & 256.4 & 263.2 & 313.8 & 205.2 & 3.6 & 1563.2 & 32.6 \\
+WMT24 en-de & 0.20 & 0 & -- & -- & -- & -- & -- & -- & -- \\
+WMT24 en-de & 0.30 & 0 & -- & -- & -- & -- & -- & -- & -- \\
+WMT24 en-es & 0.05 & 1 & 1484.0 & 1439.0 & 1293.0 & 1329.0 & 45.4 & 733.0 & 15.0 \\
+WMT24 en-es & 0.10 & 0 & -- & -- & -- & -- & -- & -- & -- \\
+WMT24 en-es & 0.20 & 0 & -- & -- & -- & -- & -- & -- & -- \\
+WMT24 en-es & 0.30 & 0 & -- & -- & -- & -- & -- & -- & -- \\
+WMT24 ja-zh & 0.05 & 9 & 1278.1 & 1275.8 & 1288.1 & 1228.4 & 50.2 & 558.2 & 12.1 \\
+WMT24 ja-zh & 0.10 & 5 & 1374.0 & 1352.6 & 1466.2 & 1273.0 & 33.7 & 1001.2 & 21.0 \\
+WMT24 ja-zh & 0.20 & 1 & 336.0 & 329.0 & 595.0 & 359.0 & 9.7 & 765.0 & 16.0 \\
+WMT24 ja-zh & 0.30 & 0 & -- & -- & -- & -- & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\caption{Median entry acquisition with $\varepsilon=\lceil .02|S_0|\rceil$ and $\alpha=.10$. Each panel--depth setting has 40 splits. The shared subset has initial gap greater than $\varepsilon$; $n$ gives its size. Query counts are conditional means for fixed, random, largest-width and reference-priority acquisition. Ref.\ active is the mean $100Q/(mT)$. For reference priority, $K=V^-$ is returned count and Gap is $V^+-V^-$; both average the same initially non-stopping splits. Empty subsets are marked --. Integer count means use decimal half-up rounding; ratios are averaged separately. These overlapping splits give descriptive results.}
+\label{tab:nontrivial-median-tolerant}
+\end{table*}

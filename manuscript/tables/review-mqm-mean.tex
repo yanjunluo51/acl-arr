@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrrr}
+\toprule
+Language & Pooling & $q$ & Obs. (\%) & MQM & $\Delta\mathrm{MQM}_K$ & $\Delta\mathrm{MQM}_{K_{\rm lab}}$ \\
+\midrule
+en-de & mean & 0.05 & 36.1 & -0.0636 & 0.0003 & 0.0040 \\
+en-de & mean & 0.10 & 36.7 & -0.2389 & -0.0068 & -0.0065 \\
+en-de & mean & 0.20 & 37.8 & -0.6264 & -0.0030 & -0.0034 \\
+en-de & mean & 0.30 & 39.2 & -1.1102 & -0.0113 & -0.0102 \\
+en-es & mean & 0.05 & 29.7 & -0.0577 & -0.0016 & -0.0002 \\
+en-es & mean & 0.10 & 34.8 & -0.1010 & 0.0006 & -0.0005 \\
+en-es & mean & 0.20 & 38.8 & -0.1609 & 0.0011 & 0.0030 \\
+en-es & mean & 0.30 & 40.5 & -0.2081 & -0.0017 & -0.0018 \\
+ja-zh & mean & 0.05 & 55.8 & -0.3203 & -0.0015 & -0.0009 \\
+ja-zh & mean & 0.10 & 60.7 & -0.4475 & 0.0057 & 0.0053 \\
+ja-zh & mean & 0.20 & 64.0 & -0.6797 & 0.0049 & 0.0063 \\
+ja-zh & mean & 0.30 & 62.4 & -0.9202 & 0.0012 & 0.0039 \\
+\bottomrule
+\end{tabular}
+\caption{Mean pooling: native MQM after reference-priority stopping. All results use $\alpha=.10$ and the primary stopping criterion $V^+-V^-\le\lceil.02|S_0(P)|\rceil$. Entries average 40 split values; differences precede rounding. Obs.\ is the percentage of returned outputs with MQM annotations. MQM is higher-is-better. $\Delta\mathrm{MQM}_K$ is the certified set\textquotesingle s observed-label mean MQM minus the matched-$K$ comparator\textquotesingle s mean. $\Delta\mathrm{MQM}_{K_{\rm lab}}$ uses the top-$K_{\rm lab}$ annotated-output comparator, matching the number of annotated returned outputs. The matched-$K$ comparator matches total count; each MQM mean uses the annotated outputs in its own list. Positive differences favor the certified set. Missing labels are not imputed; both diagnostics concern annotated outputs.}
+\label{tab:review-mqm-mean}
+\end{table*}

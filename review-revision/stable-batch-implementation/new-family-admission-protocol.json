@@ -1,0 +1,10 @@
+{
+  "status": "ADMISSION_RULES_FIXED_BEFORE_READING_FILE",
+  "task": "summarization",
+  "source": "official Yale-LILY/SummEval annotation release",
+  "selection_reason": "different NLP output task with publicly documented multi-metric annotations, not selected for certificate gains",
+  "labels": "human ratings and text never used for acquisition or predictor fitting",
+  "admission": "require output IDs, source-group identity and a complete finite per-output automatic-metric matrix; fewer than 8 distinct admissible streams blocks fixed M=7 analysis",
+  "scope": "inspect schema and availability only; final metric directions, partition and execution protocol must be fixed before certificate outcomes",
+  "new_scores_computed": false
+}

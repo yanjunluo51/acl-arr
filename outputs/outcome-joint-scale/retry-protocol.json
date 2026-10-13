@@ -1,0 +1,26 @@
+{
+  "resource_followup": true,
+  "seconds": 600,
+  "cases": [
+    [
+      "WMT24-en-de",
+      1,
+      0.05,
+      32
+    ],
+    [
+      "WMT24-ja-zh",
+      3,
+      0.05,
+      64
+    ],
+    [
+      "WMT24-ja-zh",
+      4,
+      0.05,
+      "full"
+    ]
+  ],
+  "primary_60_second_results_unchanged": true,
+  "planned_before_retry_results": true
+}

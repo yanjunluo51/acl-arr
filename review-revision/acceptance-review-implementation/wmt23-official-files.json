@@ -1,0 +1,178 @@
+[
+  {
+    "file": "wmt23-official/metric-scores/en-de/embed_llama-refA.seg.score",
+    "sha256": "73db57bb48e0c933eae70ff07dc0e0944531bf462917553e5bd5ac9edd899e2a"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/Calibri-COMET22-refA.seg.score",
+    "sha256": "8a923253855548473ba490b3089cb0706a0d03b1661738dfeb3d69040b38bb2a"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/eBLEU-refA.seg.score",
+    "sha256": "c53f73e639e4092bbb81bd1f0f491ac1e1819cca4e772cbec95b0f44dc9fdf75"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/COMET-refA.seg.score",
+    "sha256": "62c741184f44de9d2bc5f5ce171dca8c26ba71e5d5e9e104ff27172dd84bf283"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/XCOMET-XL-refA.seg.score",
+    "sha256": "b5af3cbc44f4f8ca184d6e076ed1e36a85e85c714a470105e5bd167db38c858b"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/MaTESe-refA.seg.score",
+    "sha256": "02a2867d3fe09806b0d318fe03daa8bebee73b85cc772016eb6218c4834982f9"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/MEE4-refA.seg.score",
+    "sha256": "0e32b40e1c7bd20796753cbf7fbbe9d12ef02ab8f79dd4c36c991dce4f95501e"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/XCOMET-XXL-refA.seg.score",
+    "sha256": "4ba377d4a474c2bf20d8e4c6957d07efe22b05a29b1a861cac5641cee970ab5b"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/f200spBLEU-refA.seg.score",
+    "sha256": "983d199d2a103aad6b8655f38765abb203a73d39fffe4b5ea4d3725e6fa45191"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/prismRef-refA.seg.score",
+    "sha256": "d07c012b5259c484c218a71d68b0413bca25502b8fac7e7bda1378fbf87f9142"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/chrF-refA.seg.score",
+    "sha256": "724111c0cec467b33aad612b46e9a3e901185dd6b670bf9c8529f36a0009ace2"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/MetricX-23-b-refA.seg.score",
+    "sha256": "99cf9cfcbe0b2050597971ad65aa5cae27dc0e1aa3b7a7d2e7b5c5c83278d6f9"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/XCOMET-Ensemble-refA.seg.score",
+    "sha256": "86421f4b5218272760385a9d9880d81e0eea210ef4acb00ae1dd8069431fb648"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/sescoreX-refA.seg.score",
+    "sha256": "cfef9c40e733c49ff7e42286aa5a0cda8b7abd77fe87d4d43742d508b7db0488"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/MetricX-23-c-refA.seg.score",
+    "sha256": "13204cc2a0a2c530c5139f9518abb55b907bdb31f19b8aa45876704ff5b31848"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/mre-score-labse-regular-refA.seg.score",
+    "sha256": "81c5f94c81f07665af544a123b8c9636f1069cf63bfa7d0c8bf3596c163e699b"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/instructscore-refA.seg.score",
+    "sha256": "cfef9c40e733c49ff7e42286aa5a0cda8b7abd77fe87d4d43742d508b7db0488"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/BLEU-refA.seg.score",
+    "sha256": "92bfb31b669ce9b78362e7ad2fad3de5d90cbfc1a73e28e3ab341d2de1f7e75f"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/BERTscore-refA.seg.score",
+    "sha256": "713789f9f9d7359ce603d743e951d39ee88ad9985cf1e9352b05850b0f2edd34"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/MetricX-23-refA.seg.score",
+    "sha256": "0d22caa530f0f700e96c525390886353755f800b78d802ccd905ef00561e93c5"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/BLEURT-20-refA.seg.score",
+    "sha256": "0f81480156d3b47cab1a6cef6eca3a7fd6654743e93946980fce3326cda13c38"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/XLsim-refA.seg.score",
+    "sha256": "914b40b49bb37e8d6ef86b7e0b4e33fd847a30e9dd420687b3542140677ca4d3"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/YiSi-1-refA.seg.score",
+    "sha256": "f5283310236bfba283d9dc5ae9e17f9ffc7bf2462c22662414bbf6b262176f9b"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/docWMT22CometDA-refA.seg.score",
+    "sha256": "2dfb11ae36bdaba893366712446b6caa3431a4db5fff0310d54216cfb683fed3"
+  },
+  {
+    "file": "wmt23-official/metric-scores/en-de/tokengram_F-refA.seg.score",
+    "sha256": "bea0349641a58dcc35b4f1d9f74036a3deedbf2463d8ce5dc1746c46d5c1440b"
+  },
+  {
+    "file": "wmt23-official/human-scores/en-de.mqm.seg.score",
+    "sha256": "6f6e617ac577dd1d90ca0968bf16ec15e972b3d93c4aad26188e49bc45d270cd"
+  },
+  {
+    "file": "wmt23-official/references/en-de.refA.txt",
+    "sha256": "b02877fdc8050e73d18bdcb5a31779ccb51028b30bd33e5c59e813130c5508b2"
+  },
+  {
+    "file": "wmt23-official/references/en-de.synthetic_ref.txt",
+    "sha256": "d0f9060503d6bd6f5a37fb82ee385b7ba31d4ef54728081d1d36234908eb2301"
+  },
+  {
+    "file": "wmt23-official/documents/en-de.docs",
+    "sha256": "c10069c093e037ddcba15df7b3446194ecc27df532d1327380da6d6cbc389c5d"
+  },
+  {
+    "file": "wmt23-official/sources/en-de.txt",
+    "sha256": "097b5ccf5552f62c052bad7878caeeec2d3db431c02076fbfe1fd057fb272eef"
+  },
+  {
+    "file": "wmt23-official/system-outputs/en-de/ONLINE-G.txt",
+    "sha256": "34f82b2954aa613dc5c70826cf835569bf6361af103a71381c5447256c1996c9"
+  },
+  {
+    "file": "wmt23-official/system-outputs/en-de/NLLB_MBR_BLEU.txt",
+    "sha256": "c21f961f6f08c2117e345cb16c571ecc4d5aa9e7c2f314f8cffdd9f05dbdf0a1"
+  },
+  {
+    "file": "wmt23-official/system-outputs/en-de/refA.txt",
+    "sha256": "b02877fdc8050e73d18bdcb5a31779ccb51028b30bd33e5c59e813130c5508b2"
+  },
+  {
+    "file": "wmt23-official/system-outputs/en-de/synthetic_ref.txt",
+    "sha256": "d0f9060503d6bd6f5a37fb82ee385b7ba31d4ef54728081d1d36234908eb2301"
+  },
+  {
+    "file": "wmt23-official/system-outputs/en-de/ZengHuiMT.txt",
+    "sha256": "0ac378c36ecb9e50bb0659b6694ef104dd0e43e0a94680af2a8efe11725ce41b"
+  },
+  {
+    "file": "wmt23-official/system-outputs/en-de/GPT4-5shot.txt",
+    "sha256": "426a5e294296848671af529801264a5730dc2fc942b43d930ee019a7a816524e"
+  },
+  {
+    "file": "wmt23-official/system-outputs/en-de/ONLINE-A.txt",
+    "sha256": "0ccda29c7e09e092ecfcd205f499f894e009d4952060d1abc1d2e01cd1cb69c5"
+  },
+  {
+    "file": "wmt23-official/system-outputs/en-de/Lan-BridgeMT.txt",
+    "sha256": "0420a9c4462f52ae99723d4282ba4c0f360e4da806b6ea12aade6d8c04ec23b8"
+  },
+  {
+    "file": "wmt23-official/system-outputs/en-de/ONLINE-Y.txt",
+    "sha256": "1017ad82da4bdc6409050ec3225fb3a9d2567f016d7aa164abfc80119c5b5d4f"
+  },
+  {
+    "file": "wmt23-official/system-outputs/en-de/ONLINE-B.txt",
+    "sha256": "6b1e0a36a54f22c5ea97b1fcf86e6a5cb0a61789483858ca01c78e8d4fcd5164"
+  },
+  {
+    "file": "wmt23-official/system-outputs/en-de/ONLINE-W.txt",
+    "sha256": "1c47c7cf1528f6a0a144413350fc20988dac3de7e3f50ae016ea9ba16705c966"
+  },
+  {
+    "file": "wmt23-official/system-outputs/en-de/AIRC.txt",
+    "sha256": "f3edbb9117e25e94edfcfff9f61070871bacfa3d8feed31026f872cd49abe7af"
+  },
+  {
+    "file": "wmt23-official/system-outputs/en-de/NLLB_Greedy.txt",
+    "sha256": "c57f9452f5b7e081fd5d235cad470c4d27360d392da4ce2fdce18d70deba986a"
+  },
+  {
+    "file": "wmt23-official/system-outputs/en-de/ONLINE-M.txt",
+    "sha256": "0c9982a6c921d2662d6b7d9a2b9d7b9af3035366a977ffd64b395f64c282f1c4"
+  }
+]

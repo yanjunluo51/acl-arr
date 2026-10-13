@@ -1,0 +1,31 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrrr}
+\toprule
+Task & History & $\varepsilon$ & $n$ & $Q_{\rm joint}<Q_{\cup,\rm sep}$ & Double count & Joint reduction \\
+\midrule
+Full & empty & 0 & 96 & 4 & 2573 & 72 \\
+Small & empty & 0 & 960 & 84 & 190 & 116 \\
+Small & empty & 1 & 960 & 43 & 37 & 71 \\
+Small & quarter & 0 & 960 & 38 & 106 & 51 \\
+Small & quarter & 1 & 960 & 9 & 17 & 18 \\
+\bottomrule
+\end{tabular}
+\caption{Mean entry evidence: separating deduplication from joint optimization. The strict-gain column counts instances. Double count sums $Q_{\rm split}-Q_{\cup,\rm sep}$; Joint reduction sums $Q_{\cup,\rm sep}-Q_{\rm joint}$ in additional entry observations. Each small row covers six panels, four depths and 40 splits, with the original reset subbatch budget. Full tasks preserve the original test batch and budget at two depths and eight splits per panel. All component ties are optimized; equal joint/additive cases use the proved bound sandwich. Histories are not charged again.}
+\label{tab:deduplicated-summary}
+\end{table*}
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrrrr}
+\toprule
+Panel & Split & $q$ & $Q_{\rm joint}$ & $Q_{\cup,\rm sep}$ & $Q_{\rm split}$ \\
+\midrule
+WMT23, 12 streams & 6 & 0.05 & 2273 & 2293 & 2521 \\
+WMT23, 12 streams & 7 & 0.05 & 2347 & 2361 & 2602 \\
+WMT24 ja-zh & 1 & 0.05 & 5149 & 5167 & 6023 \\
+WMT24 ja-zh & 4 & 0.05 & 10103 & 10123 & 11371 \\
+\bottomrule
+\end{tabular}
+\caption{The four full mean instances with joint minima below optimally deduplicated separate witnesses. All use empty history, exact stopping and $\alpha=.10$. The other 92 full tasks have equality throughout. Both outcome-count and binary-entry programs numerically close these union optima; original time-limited attempts remain in the records. All costs count entry observations, not scorer calls or execution time.}
+\label{tab:deduplicated-full}
+\end{table*}

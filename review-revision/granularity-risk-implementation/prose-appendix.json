@@ -1,0 +1,4 @@
+REVIEW: 18951 words; em dashes 0/3; 3 issue(s).
+- ADVISORY precision_terms: Verify that each promotional or vague term is earned by evidence and scope.
+- WARNING uniform_sentence_run: Review five-sentence runs with nearly identical length for repeated syntax.
+- ADVISORY semicolon_density: Review semicolon density above two per 1,000 prose words.

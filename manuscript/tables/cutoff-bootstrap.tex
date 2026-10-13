@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrrrrrr}
+\toprule
+Panel & Pool & $J_t$ & $J_{\rm map+t}$ & \shortstack{Zero stops\\$t$ (\%)} & \shortstack{Zero stops\\map+$t$ (\%)} & $Q_{0,t}$ & $Q_{0,\rm map+t}$ \\
+\midrule
+RewardBench 2 & median & 0.951 & 0.909 & 0.0 & 0.0 & 153.0 & 153.0 \\
+RewardBench 2 & mean & 0.933 & 0.933 & 0.0 & 0.0 & -- & -- \\
+WMT23, 13 streams & median & 0.997 & 0.959 & 21.0 & 25.5 & 312.0 & 244.0 \\
+WMT23, 13 streams & mean & 0.892 & 0.890 & 0.0 & 0.0 & -- & -- \\
+WMT23, 12 streams & median & 0.847 & 0.842 & 82.3 & 80.8 & 0.0 & 0.0 \\
+WMT23, 12 streams & mean & 0.862 & 0.855 & 0.0 & 0.0 & -- & -- \\
+WMT24 en-de & median & 0.855 & 0.856 & 92.0 & 90.0 & 0.0 & 0.0 \\
+WMT24 en-de & mean & 0.853 & 0.846 & 1.0 & 1.5 & -- & -- \\
+WMT24 en-es & median & 0.851 & 0.854 & 98.0 & 95.3 & 0.0 & 0.0 \\
+WMT24 en-es & mean & 0.877 & 0.877 & 0.5 & 0.0 & -- & -- \\
+WMT24 ja-zh & median & 0.841 & 0.831 & 77.5 & 74.5 & 0.0 & 0.0 \\
+WMT24 ja-zh & mean & 0.829 & 0.836 & 0.0 & 0.0 & -- & -- \\
+\bottomrule
+\end{tabular}
+\caption{Reference-group bootstrap at $q=.05$, $\alpha=.10$: 50 paired draws in each of eight splits, 400 instances per cell. $t$ resamples the reference-consensus cutoff while retaining original maps; map+$t$ refits ECDFs and cutoff on the same resampled prompt/source/document groups. Test groups and the evaluator family stay fixed. $J$ is median baseline-selection Jaccard against the original split. Zero reports the fraction meeting the primary count-gap stop without queries; $Q_0$ is the median matching exact entry minimum, reported only for median pooling. Every draw defines a changed fixed protocol. Percentiles in the saved records are descriptive bootstrap summaries, not population confidence intervals. No label-based tuning or new online acquisition is performed.}
+\label{tab:cutoff-bootstrap}
+\end{table*}

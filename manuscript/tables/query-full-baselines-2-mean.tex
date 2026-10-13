@@ -1,0 +1,35 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+$q$ & Policy & Risk & Sel.\ cov.\ (\%) & Returned (outputs) & Precision \\
+\midrule
+0.05 & No queries & 0.015 & 20.6 & 22.0 & -- \\
+0.05 & Envelope CRC & 0.077 & 89.0 & 103.8 & -- \\
+0.05 & Batch threshold & 0.091 & 94.4 & 109.6 & -- \\
+0.05 & Batch cardinality & 0.092 & 94.6 & 109.9 & -- \\
+0.05 & Batch retention & 0.074 & 99.1 & 116.1 & -- \\
+0.05 & Fixed-count retention & 0.057 & 100.0 & 112.0 & -- \\
+0.10 & No queries & 0.010 & 24.3 & 55.6 & -- \\
+0.10 & Envelope CRC & 0.076 & 98.2 & 222.6 & -- \\
+0.10 & Batch threshold & 0.081 & 99.8 & 226.5 & -- \\
+0.10 & Batch cardinality & 0.081 & 99.8 & 226.5 & -- \\
+0.10 & Batch retention & 0.054 & 100.0 & 227.2 & -- \\
+0.10 & Fixed-count retention & 0.041 & 100.0 & 224.0 & -- \\
+0.20 & No queries & 0.011 & 75.8 & 342.0 & -- \\
+0.20 & Envelope CRC & 0.075 & 99.7 & 450.3 & -- \\
+0.20 & Batch threshold & 0.076 & 100.0 & 451.6 & -- \\
+0.20 & Batch cardinality & 0.076 & 100.0 & 451.6 & -- \\
+0.20 & Batch retention & 0.040 & 100.0 & 451.6 & -- \\
+0.20 & Fixed-count retention & 0.037 & 100.0 & 449.0 & -- \\
+0.30 & No queries & 0.015 & 82.9 & 563.3 & -- \\
+0.30 & Envelope CRC & 0.076 & 99.9 & 680.3 & -- \\
+0.30 & Batch threshold & 0.076 & 100.0 & 681.0 & -- \\
+0.30 & Batch cardinality & 0.076 & 100.0 & 681.0 & -- \\
+0.30 & Batch retention & 0.039 & 100.0 & 681.0 & -- \\
+0.30 & Fixed-count retention & 0.038 & 100.0 & 673.0 & -- \\
+\bottomrule
+\end{tabular}
+\caption{Count means use decimal half-up rounding after aggregating integer records. Risk is the mean of replacement-average churn $R(C)$ over 40 splits; Returned is the mean output count $K$. WMT23, 12 streams, mean pooling, all depths, $\alpha=.10$. Metrics and averaging follow Table~\ref{tab:baselines}; coverage uses each policy\textquotesingle s own baseline list. These controls do not use human-quality labels; the separate WMT23 MQM diagnostic is in Appendix~\ref{app:quality}.}
+\label{tab:baseline-2-mean}
+\end{table*}

@@ -1,0 +1,61 @@
+{
+  "status": "FIXED_BEFORE_NEW_RESULTS",
+  "mean_layout": {
+    "population": "all 57 non-full-retention mean instances among the original 960; 903 full-retention instances remain automatic-exclusion controls",
+    "layouts": [
+      "original",
+      "aligned_ascending",
+      "cyclic_ascending",
+      "random_seed_104729",
+      "random_seed_130363"
+    ],
+    "stops": [
+      "exact",
+      "primary"
+    ],
+    "expected_instances": 57,
+    "expected_targets": 570,
+    "cyclic": "sort contribution ascending stably within each original selected row, then rotate by original row index modulo T",
+    "random": "independent per-row permutation from fixed PCG64 seed; same deterministic seed per instance",
+    "fixed": [
+      "base scores",
+      "cutoff",
+      "per-row contribution multiset",
+      "caps",
+      "budget",
+      "epsilon",
+      "candidate count"
+    ],
+    "interpretation": "posthoc synthetic mechanism intervention, not new evaluator panels or new independent NLP data",
+    "oracle": "all column subsets; all tied separately minimal safety/exclusion witnesses"
+  },
+  "scenario_risk": {
+    "panels": 6,
+    "pooling": [
+      "median",
+      "mean"
+    ],
+    "depths": [
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ],
+    "splits": 40,
+    "methods": [
+      "fixed",
+      "random",
+      "largest_width",
+      "reference_priority"
+    ],
+    "stops": [
+      "primary",
+      "exact"
+    ],
+    "expected_masks": 15360,
+    "risk": "all committed membership flips for each of the MT replacements divided by 2k",
+    "alpha": "1/10",
+    "means": "equal per-mask averages; overlapping splits descriptive",
+    "source": "original saved masks; no changed acquisition"
+  }
+}

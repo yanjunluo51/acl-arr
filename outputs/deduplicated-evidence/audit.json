@@ -1,0 +1,83 @@
+{
+  "status": "PASS_INTEGER_DEDUPLICATED_EVIDENCE_AUDIT",
+  "records": 3936,
+  "inferred_equalities": 3544,
+  "fresh_pairs": 392,
+  "small_independent_pairs": 388,
+  "full_entry_pairs": 4,
+  "primary_unresolved": 1,
+  "append_only_closures": 1,
+  "full_entry_primary_unresolved": 1,
+  "full_entry_append_only_closures": 1,
+  "backend_exhaustive_cases": 160,
+  "summaries": [
+    {
+      "scope": "full",
+      "history": "empty",
+      "epsilon": 0,
+      "instances": 96,
+      "joint_sum": 433231,
+      "union_sum": 433303,
+      "additive_sum": 435876,
+      "joint_below_union": 4,
+      "double_count_reduction": 2573,
+      "genuine_joint_reduction": 72,
+      "fresh_optimized": 4
+    },
+    {
+      "scope": "small",
+      "history": "empty",
+      "epsilon": 0,
+      "instances": 960,
+      "joint_sum": 27502,
+      "union_sum": 27618,
+      "additive_sum": 27808,
+      "joint_below_union": 84,
+      "double_count_reduction": 190,
+      "genuine_joint_reduction": 116,
+      "fresh_optimized": 186
+    },
+    {
+      "scope": "small",
+      "history": "empty",
+      "epsilon": 1,
+      "instances": 960,
+      "joint_sum": 15507,
+      "union_sum": 15578,
+      "additive_sum": 15615,
+      "joint_below_union": 43,
+      "double_count_reduction": 37,
+      "genuine_joint_reduction": 71,
+      "fresh_optimized": 74
+    },
+    {
+      "scope": "small",
+      "history": "quarter",
+      "epsilon": 0,
+      "instances": 960,
+      "joint_sum": 19631,
+      "union_sum": 19682,
+      "additive_sum": 19788,
+      "joint_below_union": 38,
+      "double_count_reduction": 106,
+      "genuine_joint_reduction": 51,
+      "fresh_optimized": 105
+    },
+    {
+      "scope": "small",
+      "history": "quarter",
+      "epsilon": 1,
+      "instances": 960,
+      "joint_sum": 8738,
+      "union_sum": 8756,
+      "additive_sum": 8773,
+      "joint_below_union": 9,
+      "double_count_reduction": 17,
+      "genuine_joint_reduction": 18,
+      "fresh_optimized": 23
+    }
+  ],
+  "all_component_ties_optimized": true,
+  "human_proof_certified": false,
+  "new_model_inference": false
+}

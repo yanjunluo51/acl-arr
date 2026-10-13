@@ -1,0 +1,35 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+$q$ & Policy & Risk & Sel.\ cov.\ (\%) & Returned (outputs) & Precision \\
+\midrule
+0.05 & No queries & 0.056 & 84.9 & 117.9 & -- \\
+0.05 & Envelope CRC & 0.067 & 77.0 & 107.9 & -- \\
+0.05 & Batch threshold & 0.085 & 86.0 & 119.8 & -- \\
+0.05 & Batch cardinality & 0.096 & 91.1 & 126.5 & -- \\
+0.05 & Batch retention & 0.082 & 99.5 & 137.3 & -- \\
+0.05 & Fixed-count retention & 0.056 & 100.0 & 122.0 & -- \\
+0.10 & No queries & 0.035 & 100.0 & 241.3 & -- \\
+0.10 & Envelope CRC & 0.064 & 99.1 & 239.1 & -- \\
+0.10 & Batch threshold & 0.066 & 99.9 & 241.2 & -- \\
+0.10 & Batch cardinality & 0.066 & 100.0 & 241.3 & -- \\
+0.10 & Batch retention & 0.035 & 100.0 & 241.4 & -- \\
+0.10 & Fixed-count retention & 0.037 & 100.0 & 243.0 & -- \\
+0.20 & No queries & 0.035 & 100.0 & 489.1 & -- \\
+0.20 & Envelope CRC & 0.060 & 99.6 & 487.2 & -- \\
+0.20 & Batch threshold & 0.061 & 100.0 & 489.1 & -- \\
+0.20 & Batch cardinality & 0.061 & 100.0 & 489.1 & -- \\
+0.20 & Batch retention & 0.035 & 100.0 & 489.1 & -- \\
+0.20 & Fixed-count retention & 0.034 & 100.0 & 486.0 & -- \\
+0.30 & No queries & 0.033 & 100.0 & 730.9 & -- \\
+0.30 & Envelope CRC & 0.066 & 99.9 & 730.3 & -- \\
+0.30 & Batch threshold & 0.067 & 100.0 & 730.9 & -- \\
+0.30 & Batch cardinality & 0.067 & 100.0 & 730.9 & -- \\
+0.30 & Batch retention & 0.033 & 100.0 & 730.9 & -- \\
+0.30 & Fixed-count retention & 0.036 & 100.0 & 729.0 & -- \\
+\bottomrule
+\end{tabular}
+\caption{Count means use decimal half-up rounding after aggregating integer records. Risk is the mean of replacement-average churn $R(C)$ over 40 splits; Returned is the mean output count $K$. WMT23, 13 streams, median pooling, all depths, $\alpha=.10$. Metrics and averaging follow Table~\ref{tab:baselines}; coverage uses each policy\textquotesingle s own baseline list. These controls do not use human-quality labels; the separate WMT23 MQM diagnostic is in Appendix~\ref{app:quality}.}
+\label{tab:baseline-1-median}
+\end{table*}

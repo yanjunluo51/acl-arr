@@ -1,0 +1,5 @@
+{"event": "solver_call", "receipt": {"target": 489, "mode": "union", "status": 2, "message": "highspy 1.15.1: Infeasible", "optimality_gap": Infinity, "dual_bound": Infinity, "variables": 6291, "constraints": 6722, "presolve": true, "improvement_cutoff": 7603}}
+{"event": "target", "result": {"target": 489, "safety_minimum": 6877, "exclusion_minimum": 1183, "union_minimum": null, "proven": false}}
+{"event": "solver_call", "receipt": {"target": 490, "mode": "exclusion", "status": 0, "message": "highspy 1.15.1: Optimal", "optimality_gap": 0.0, "dual_bound": 1155.0, "variables": 1889, "constraints": 532, "presolve": true, "improvement_cutoff": null}}
+{"event": "solver_call", "receipt": {"target": 490, "mode": "union", "status": 2, "message": "highspy 1.15.1: Infeasible", "optimality_gap": Infinity, "dual_bound": Infinity, "variables": 6291, "constraints": 6722, "presolve": true, "improvement_cutoff": 7603}}
+{"event": "target", "result": {"target": 490, "safety_minimum": 6943, "exclusion_minimum": 1155, "union_minimum": null, "proven": false}}

@@ -1,0 +1,27 @@
+{
+  "status": "ERRORS_RETAINED",
+  "completed": 202,
+  "expected": 202,
+  "closed": 129,
+  "agrees": 129,
+  "unresolved": 73,
+  "integer_witness_checks": 578,
+  "error_records": [
+    [
+      "WMT24-ja-zh",
+      22,
+      0.05,
+      "primary"
+    ]
+  ],
+  "all_requested_executions_complete": true,
+  "all_optima_closed": false,
+  "independent_integer_feasibility": true,
+  "numerical_lower_bounds_not_rational_proofs": true,
+  "source_hashes": {
+    "cases-private.json": "6e1e235c94fe8dc6a2858a109b36853ab1c9eeac0b9224f6b7a5f4bdf2476a13",
+    "records.jsonl": "f6dbb0265414170052bf20b0485788bb0f452f34924d4f3b46607e33099fcc71",
+    "protocol.json": "5564e3f9b92dbc84a4dabe85232dd8ab9136874f7ce837f79ca383c7dbb4b3a3",
+    "progress.json": "db0292243eab9ac174bf867112cb516f02f6d26f4b0fd22908d0d55e00942c82"
+  }
+}

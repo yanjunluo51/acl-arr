@@ -1,0 +1,9 @@
+@misc{prastalo2026reducingcrosssamplepredictionchurn,
+      title={Reducing cross-sample prediction churn in scientific machine learning}, 
+      author={Gordan Prastalo and Kevin Maik Jablonka},
+      year={2026},
+      eprint={2605.13826},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2605.13826}, 
+}

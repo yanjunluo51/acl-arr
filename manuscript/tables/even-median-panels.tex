@@ -1,0 +1,35 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrlrrrr}
+\toprule
+Panel & $M$ & $T$ & Stop & Closed & Zero & Mean LB & Mean UB \\
+\midrule
+RewardBench & 6 & 8 & primary & 160 & 0 & 355.8 & 355.8 \\
+RewardBench & 6 & 8 & exact & 160 & 0 & 434.2 & 434.2 \\
+RewardBench & 8 & 6 & primary & 160 & 62 & 55.8 & 55.8 \\
+RewardBench & 8 & 6 & exact & 160 & 47 & 78.5 & 78.5 \\
+WMT23 (13 streams) & 6 & 18 & primary & 160 & 143 & 9.2 & 9.2 \\
+WMT23 (13 streams) & 6 & 18 & exact & 160 & 123 & 23.0 & 23.0 \\
+WMT23 (13 streams) & 8 & 16 & primary & 160 & 159 & 0.019 & 0.019 \\
+WMT23 (13 streams) & 8 & 16 & exact & 160 & 155 & 1.6 & 1.6 \\
+WMT23 (12 streams) & 6 & 18 & primary & 160 & 141 & 20.5 & 20.5 \\
+WMT23 (12 streams) & 6 & 18 & exact & 160 & 126 & 41.7 & 41.7 \\
+WMT23 (12 streams) & 8 & 16 & primary & 160 & 156 & 3.5 & 3.5 \\
+WMT23 (12 streams) & 8 & 16 & exact & 160 & 150 & 8.0 & 8.0 \\
+WMT24 en--de & 6 & 15 & primary & 160 & 115 & 298.8 & 298.8 \\
+WMT24 en--de & 6 & 15 & exact & 160 & 92 & 522.3 & 522.3 \\
+WMT24 en--de & 8 & 13 & primary & 160 & 157 & 4.0 & 4.0 \\
+WMT24 en--de & 8 & 13 & exact & 160 & 151 & 17.4 & 17.4 \\
+WMT24 en--es & 6 & 15 & primary & 160 & 113 & 241.4 & 241.4 \\
+WMT24 en--es & 6 & 15 & exact & 160 & 86 & 420.6 & 420.6 \\
+WMT24 en--es & 8 & 13 & primary & 160 & 158 & 4.3 & 4.3 \\
+WMT24 en--es & 8 & 13 & exact & 160 & 155 & 8.5 & 8.5 \\
+WMT24 ja--zh & 6 & 16 & primary & 160 & 93 & 447.0 & 447.0 \\
+WMT24 ja--zh & 6 & 16 & exact & 160 & 82 & 628.4 & 628.4 \\
+WMT24 ja--zh & 8 & 14 & primary & 160 & 147 & 48.5 & 48.5 \\
+WMT24 ja--zh & 8 & 14 & exact & 160 & 140 & 71.2 & 71.2 \\
+\bottomrule
+\end{tabular}
+\caption{Even-median joint evidence on complete test batches, averaging all four depths and 40 splits (160 targets) per row. Closed counts numerically closed minima; Zero counts zero-query certificates. Each target uses $\alpha=.10$ and either $\varepsilon=\lceil .02|S_0|\rceil$ (primary) or zero (exact). Mean lower and upper bounds include every target. The positive mean below 0.1 is shown to three decimals; an unresolved target is not replaced by a claimed minimum. Pools of size six and eight use the first members in the frozen evaluator order. Changing $M$ also changes the candidate family and cutoff, so these are separate certification tasks.}
+\label{tab:even-median-panels}
+\end{table*}

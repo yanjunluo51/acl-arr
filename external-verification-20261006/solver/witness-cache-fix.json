@@ -1,0 +1,31 @@
+{
+  "status": "PASS_TARGETED_WITNESS_RECONSTRUCTION_REGRESSION",
+  "issue": "A partial target optimum can be cached without its achieving masks; a better cached target must reconstruct a witness before declaring a global optimum.",
+  "fix": "Only bypass targets whose proved union value is no better than the available feasible incumbent.",
+  "files": {
+    "resumable_union.py": {
+      "before_sha256": "c720cc06feb1d64c5167cea87bd81611dd32e75dfda1781ddef7d0fdf9f26752",
+      "after_sha256": "874e9c6b2ea135f838c8009062dc21eb0c4ba410e9489fc3e20b2ead6ab5e0f3"
+    },
+    "target_aware_union.py": {
+      "before_sha256": "60230034b1b1b444cf2f7eb7f17d9f523a04c904984f6e8b5ef27a3660706a83",
+      "after_sha256": "d6867a360565d0901c852ea6b2e459e1ffb9c55a7502d4d1c8fd7ac27cd22acd"
+    },
+    "improving_union.py": {
+      "before_sha256": "c898d706eb4d41358571c67d0dbc4d656d3631a509623363d9640bea6d763dfb",
+      "after_sha256": "8ffd42219b1649e27273e5fde5edf94047253d9bffbcddd7e4ca85bd7410a028"
+    },
+    "tight_union.py": {
+      "before_sha256": "3b6ba32d2a2399fa355b2d64cf26b426cb5a71bf15c4d510ab8de70a7e7723b1",
+      "after_sha256": "922a509da485c6e0030b5bf6983b251b09091c0cb0db929f0359c85eeb31c615"
+    },
+    "partition_union.py": {
+      "before_sha256": "5277b24803e6621714bc14694468e6807d7396a997b9ab1279cc8dc9f084486a",
+      "after_sha256": "bb3581b595aba0ca3f8c46df9e1b4e1d96ac369b2d3076f2a5ec60078159c89e"
+    },
+    "screened_partition_union.py": {
+      "before_sha256": "9eb66aa4c713ed64500bd57ecbe24483cfe4d68a629caea64d9bd37f481b7723",
+      "after_sha256": "2c8050c67dc0cf78438bde962286701e0bb7ec1c386649383f4834cec49e53a7"
+    }
+  }
+}

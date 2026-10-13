@@ -1,0 +1,36 @@
+\begin{table*}[t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Panel & $q$ & Mean $Q$ & Closed & $n_+$ & Ref. & Width & Frontier & Gain/n \\
+\midrule
+RewardBench 2 & 0.05 & 663.2 & 40 & 40 & 1.098 & 1.165 & 1.134 & 0/40 \\
+RewardBench 2 & 0.10 & 1157.8 & 40 & 40 & 1.114 & 1.173 & 1.139 & 0/40 \\
+RewardBench 2 & 0.20 & 1605.5 & 40 & 40 & 1.197 & 1.200 & 1.147 & 0/40 \\
+RewardBench 2 & 0.30 & 1441.1 & 40 & 40 & 1.410 & 1.237 & 1.192 & 0/40 \\
+WMT23, 13 & 0.05 & 1709.4 & 40 & 40 & 1.105 & 1.197 & 1.132 & 2/40 \\
+WMT23, 13 & 0.10 & 3289.3 & 40 & 40 & 1.070 & 1.153 & 1.108 & 0/40 \\
+WMT23, 13 & 0.20 & 1712.0 & 40 & 40 & 1.427 & 1.267 & 1.208 & 0/40 \\
+WMT23, 13 & 0.30 & 1337.7 & 40 & 40 & 1.976 & 1.350 & 1.297 & 0/40 \\
+WMT23, 12 & 0.05 & 1613.3 & 40 & 40 & 1.090 & 1.150 & 1.117 & 5/40 \\
+WMT23, 12 & 0.10 & 2834.3 & 40 & 40 & 1.073 & 1.141 & 1.106 & 0/40 \\
+WMT23, 12 & 0.20 & 1769.1 & 40 & 40 & 1.381 & 1.285 & 1.246 & 0/40 \\
+WMT23, 12 & 0.30 & 1880.7 & 40 & 40 & 1.618 & 1.345 & 1.302 & 0/40 \\
+WMT24 en-de & 0.05 & 5144.4 & 40 & 40 & 1.097 & 1.170 & 1.133 & 0/40 \\
+WMT24 en-de & 0.10 & 5886.1 & 40 & 40 & 1.120 & 1.157 & 1.123 & 0/40 \\
+WMT24 en-de & 0.20 & 8277.0 & 40 & 40 & 1.181 & 1.208 & 1.183 & 0/40 \\
+WMT24 en-de & 0.30 & 8383.2 & 40 & 40 & 1.343 & 1.264 & 1.223 & 0/40 \\
+WMT24 en-es & 0.05 & 4641.5 & 40 & 40 & 1.067 & 1.132 & 1.102 & 1/40 \\
+WMT24 en-es & 0.10 & 5401.0 & 40 & 40 & 1.124 & 1.165 & 1.127 & 0/40 \\
+WMT24 en-es & 0.20 & 7306.3 & 40 & 40 & 1.169 & 1.215 & 1.191 & 0/40 \\
+WMT24 en-es & 0.30 & 6525.0 & 40 & 40 & 1.387 & 1.279 & 1.241 & 0/40 \\
+WMT24 ja-zh & 0.05 & 4115.2 & 40 & 40 & 1.087 & 1.156 & 1.142 & 12/40 \\
+WMT24 ja-zh & 0.10 & 7347.5 & 40 & 40 & 1.080 & 1.150 & 1.126 & 11/40 \\
+WMT24 ja-zh & 0.20 & 11132.9 & 40 & 40 & 1.131 & 1.196 & 1.178 & 1/40 \\
+WMT24 ja-zh & 0.30 & 12272.4 & 40 & 40 & 1.179 & 1.242 & 1.206 & 0/40 \\
+\bottomrule
+\end{tabular}
+\caption{Full-batch mean evidence from empty history, $\alpha=.10$, $\varepsilon=\lceil .02|S_0|\rceil$. All four depths and 40 original splits are included. $Q$ averages the matching minimum joint entry count over all 40 splits; all targets are numerically closed. Closed counts minima whose feasible value matches the numerical global lower bound; $n_+$ counts positive matching minima. Ref., Width and Frontier average $Q_{\rm online}/Q$ only on these $n_+$ matching instances, with zero minima excluded. Gain/n counts $Q_{\rm joint}<Q_{\cup,\rm sep}$ among n closed union comparisons. Historical resource-limited attempts are retained separately. Candidate-test score entries are the cost unit.}
+\label{tab:full-mean-primary}
+\end{table*}

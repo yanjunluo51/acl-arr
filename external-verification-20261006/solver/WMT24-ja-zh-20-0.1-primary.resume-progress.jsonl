@@ -1,0 +1,3 @@
+{"event": "solver_call", "receipt": {"target": 957, "mode": "union", "status": 1, "message": "Time limit reached. (HiGHS Status 13: Time limit reached)", "optimality_gap": 0.0008041278563291563, "dual_bound": 14911.0, "variables": 10495, "constraints": 11202, "presolve": false}}
+{"event": "target", "result": {"target": 957, "safety_minimum": 13200, "exclusion_minimum": 2498, "union_minimum": 14923, "proven": false}}
+{"event": "solver_call", "receipt": {"target": 954, "mode": "exclusion", "status": 0, "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)", "optimality_gap": 0.0, "dual_bound": 2685.9999999999995, "variables": 3188, "constraints": 1013, "presolve": false}}

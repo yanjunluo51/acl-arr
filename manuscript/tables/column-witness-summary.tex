@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering\small
+
+
+\begin{tabular}{lrrrrrr}
+\toprule
+Panel & $K_{\rm col}>0$ & $Q_{\rm exact}$ & $K_{\rm col}$ & Min. (\%) & Ref. cols & Ratio \\
+\midrule
+RewardBench 2 & 40 & 196.6 & 4.93 & 70.4 & 5.63 & 1.183 \\
+WMT23, 13 streams & 36 & 415.9 & 7.75 & 45.6 & 8.35 & 1.000 \\
+WMT23, 12 streams & 4 & 41.1 & 0.83 & 4.9 & 0.95 & 1.100 \\
+WMT24 en-de & 3 & 37.1 & 0.25 & 1.8 & 0.25 & 1.000 \\
+WMT24 en-es & 2 & 19.0 & 0.23 & 1.6 & 0.28 & 1.125 \\
+WMT24 ja-zh & 13 & 271.6 & 2.45 & 16.3 & 2.63 & 1.000 \\
+\bottomrule
+\end{tabular}
+\caption{Exact median column witnesses at $q=.05$, $\alpha=.10$, full-reference right ECDF. $Q_{\rm exact}$ is the entry witness; $K_{\rm col}$ is the minimum whole-column witness. Counts and Min.\ ($100K_{\rm col}/T$) average all 40 splits; Ratio is the median of per-split $K_{\rm ref}/K_{\rm col}$ over $K_{\rm col}>0$ splits, where $K_{\rm ref}$ is the exact reference-order column count. The $K_{\rm col}>0$ column reports split count. Whole-column score cost is $NK_{\rm col}$. These exact costs have a different target from the positive-gap costs in Table~\ref{tab:column-summary}.}
+\label{tab:column-witness-summary}
+\end{table*}

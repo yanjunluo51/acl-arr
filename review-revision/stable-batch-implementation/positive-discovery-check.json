@@ -1,0 +1,35 @@
+{
+  "status": "PASS_EXACT_FINITE_POSITIVE_TOLERANCE_CHECKS",
+  "reference_cutoff": "83/140",
+  "reference_base": [
+    "1",
+    "3/20",
+    "3/10",
+    "9/20",
+    "3/5",
+    "3/4",
+    "9/10"
+  ],
+  "explicit_flips": {
+    "0": 7,
+    "1": 0
+  },
+  "parameter_sizes_checked": 2002,
+  "all_subset_checks": {
+    "2": {
+      "subsets": 16384,
+      "successful": 11626
+    },
+    "3": {
+      "subsets": 2097152,
+      "successful": 655676
+    }
+  },
+  "minimum_additional_entries": {
+    "2": 2,
+    "3": 2
+  },
+  "adversarial_histories_checked": 63466,
+  "general_theorem_independently_human_verified": false,
+  "new_NLP_experiment": false
+}

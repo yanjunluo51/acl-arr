@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrrr}
+\toprule
+Panel & Pooling & $|S_0|/k$ & \shortstack{Zero coverage\\(\%)} & Active (\%) & $Q_{\rm exact}$ & Jaccard \\
+\midrule
+RewardBench 2 & median & 0.99--1.03 & 80.9--82.6 & 53.5--61.4 & 178.9--196.6 & 0.84--1.00 \\
+RewardBench 2 & mean & 1.01--1.05 & 20.3--21.5 & 85.3--86.6 & -- & 0.90--1.00 \\
+WMT23, 13 streams & median & 1.04--1.15 & 84.9--99.8 & 0.3--45.1 & 5.1--415.9 & 0.72--1.00 \\
+WMT23, 13 streams & mean & 1.02--1.12 & 20.3--21.3 & 84.6--87.5 & -- & 0.78--1.00 \\
+WMT23, 12 streams & median & 1.01--1.20 & 95.5--99.2 & 3.8--24.1 & 41.1--220.6 & 0.66--1.00 \\
+WMT23, 12 streams & mean & 1.04--1.14 & 20.4--22.1 & 83.3--85.4 & -- & 0.73--1.00 \\
+WMT24 en-de & median & 1.09--1.37 & 96.7--99.5 & 1.3--13.1 & 37.1--408.2 & 0.65--1.00 \\
+WMT24 en-de & mean & 1.08--1.35 & 22.0--23.6 & 80.8--83.9 & -- & 0.64--1.00 \\
+WMT24 en-es & median & 1.11--1.35 & 96.9--99.8 & 1.1--14.4 & 18.1--343.9 & 0.71--1.00 \\
+WMT24 en-es & mean & 1.11--1.29 & 20.9--22.0 & 81.6--83.4 & -- & 0.71--1.00 \\
+WMT24 ja-zh & median & 1.25--1.66 & 92.9--98.1 & 10.8--34.0 & 194.1--1143.5 & 0.61--1.00 \\
+WMT24 ja-zh & mean & 1.20--1.48 & 21.4--25.4 & 82.2--85.9 & -- & 0.43--1.00 \\
+\bottomrule
+\end{tabular}
+\caption{Mapping sensitivity at $q=.05$, $\alpha=.10$. Ranges span six protocol-specific 40-split means (full/half/quarter reference, right/midrank ECDF), keeping test groups fixed. Zero is zero-query selected coverage in percent. Active is the mean percentage of active entries queried by reference priority, $100Q/(mT)$, at the stop $V^+-V^-\le\lceil.02|S_0|\rceil$; it is zero when $m=0$. $Q_{\rm exact}$ is the 40-split mean entry witness under median pooling, an exact target. Jaccard compares base selected sets with full-reference right ECDF. Active and witness columns use different stopping targets and do not form an online-to-lower-bound ratio. Ranges are not confidence intervals.}
+\label{tab:mapping-summary}
+\end{table*}

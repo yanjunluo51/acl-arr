@@ -1,0 +1,168 @@
+\begin{table*}[t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{rlrrrrrrrr}
+\toprule
+$q$ & Method & $K$ & Cov. & Risk & Over & Ref. & Cal. & Test & Total \\
+\midrule
+0.05 & Zero & 95.5 & 80.9 & 0.053 & 0 & 0.998 & 0.000 & 0.000 & 0.998 \\
+0.05 & Reference & 115.6 & 97.3 & 0.077 & 0 & 0.998 & 0.000 & 0.018 & 1.016 \\
+0.05 & CRC & 85.6 & 72.2 & 0.079 & 2 & 0.998 & 0.998 & 1.000 & 2.997 \\
+0.05 & SCoRE & 114.1 & 96.4 & 0.078 & 1 & 0.998 & 0.998 & 0.000 & 1.997 \\
+0.10 & Zero & 198.2 & 84.9 & 0.048 & 0 & 0.998 & 0.000 & 0.000 & 0.998 \\
+0.10 & Reference & 229.1 & 97.8 & 0.066 & 0 & 0.998 & 0.000 & 0.024 & 1.022 \\
+0.10 & CRC & 186.1 & 79.5 & 0.079 & 6 & 0.998 & 0.998 & 1.000 & 2.997 \\
+0.10 & SCoRE & 234.3 & 100.0 & 0.070 & 0 & 0.998 & 0.998 & 0.000 & 1.997 \\
+0.20 & Zero & 435.7 & 94.6 & 0.043 & 0 & 0.998 & 0.000 & 0.000 & 0.998 \\
+0.20 & Reference & 451.4 & 97.9 & 0.047 & 0 & 0.998 & 0.000 & 0.012 & 1.010 \\
+0.20 & CRC & 436.5 & 94.7 & 0.089 & 9 & 0.998 & 0.998 & 1.000 & 2.997 \\
+0.20 & SCoRE & 460.9 & 100.0 & 0.050 & 0 & 0.998 & 0.998 & 0.000 & 1.997 \\
+0.30 & Zero & 685.9 & 99.8 & 0.041 & 0 & 0.998 & 0.000 & 0.000 & 0.998 \\
+0.30 & Reference & 686.0 & 99.9 & 0.041 & 0 & 0.998 & 0.000 & 0.000 & 0.998 \\
+0.30 & CRC & 687.0 & 100.0 & 0.091 & 0 & 0.998 & 0.998 & 1.000 & 2.997 \\
+0.30 & SCoRE & 687.1 & 100.0 & 0.041 & 0 & 0.998 & 0.998 & 0.000 & 1.997 \\
+\bottomrule
+\end{tabular}
+\caption{RewardBench 2, median pooling, $\alpha=.10$: common recorded churn and candidate-score accounting. Risk is replacement-average churn, averaged across the 40 splits. $K$ is returned count; Cov.\ is selected coverage in percent; Over counts batches above budget out of 40. Ref., Cal., Test and Total are logical candidate entries divided by the same test $NT$; Total includes the three stages and can exceed one. K, coverage, risk and stage-cost ratios are splitwise means; Over is a count of splits. Reference priority stops at $V^+-V^-\le\lceil.02|S_0|\rceil$. Zero and Reference give deterministic batch feasibility; CRC and SCoRE give expectation guarantees under group exchangeability, so Over does not refute these guarantees. SCoRE decides whole groups. Reference setup is charged as recorded, not minimized. Pool scores and panel-preprocessing reads are separate; full matrices used only for posthoc validation are outside selection-visible information. Full pool-stage counts accompany the records.}
+\label{tab:common-RewardBench2-median}
+\end{table*}
+\begin{table*}[t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{rlrrrrrrrr}
+\toprule
+$q$ & Method & $K$ & Cov. & Risk & Over & Ref. & Cal. & Test & Total \\
+\midrule
+0.05 & Zero & 24.0 & 20.3 & 0.012 & 0 & 0.998 & 0.000 & 0.000 & 0.998 \\
+0.05 & Reference & 117.3 & 97.5 & 0.068 & 0 & 0.998 & 0.000 & 0.045 & 1.043 \\
+0.05 & CRC & 97.3 & 81.1 & 0.095 & 15 & 0.998 & 0.998 & 1.000 & 2.997 \\
+0.05 & SCoRE & 118.7 & 98.8 & 0.072 & 0 & 0.998 & 0.998 & 0.000 & 1.997 \\
+0.10 & Zero & 74.9 & 31.7 & 0.005 & 0 & 0.998 & 0.000 & 0.000 & 0.998 \\
+0.10 & Reference & 231.8 & 97.8 & 0.059 & 0 & 0.998 & 0.000 & 0.080 & 1.078 \\
+0.10 & CRC & 207.3 & 87.4 & 0.093 & 12 & 0.998 & 0.998 & 1.000 & 2.997 \\
+0.10 & SCoRE & 237.0 & 100.0 & 0.063 & 0 & 0.998 & 0.998 & 0.000 & 1.997 \\
+0.20 & Zero & 238.7 & 51.7 & 0.003 & 0 & 0.998 & 0.000 & 0.000 & 0.998 \\
+0.20 & Reference & 452.8 & 97.9 & 0.045 & 0 & 0.998 & 0.000 & 0.119 & 1.117 \\
+0.20 & CRC & 454.6 & 98.3 & 0.097 & 15 & 0.998 & 0.998 & 1.000 & 2.997 \\
+0.20 & SCoRE & 462.5 & 100.0 & 0.048 & 0 & 0.998 & 0.998 & 0.000 & 1.997 \\
+0.30 & Zero & 487.7 & 70.8 & 0.006 & 0 & 0.998 & 0.000 & 0.000 & 0.998 \\
+0.30 & Reference & 675.1 & 97.9 & 0.036 & 0 & 0.998 & 0.000 & 0.126 & 1.124 \\
+0.30 & CRC & 689.0 & 100.0 & 0.084 & 0 & 0.998 & 0.998 & 1.000 & 2.997 \\
+0.30 & SCoRE & 689.3 & 100.0 & 0.039 & 0 & 0.998 & 0.998 & 0.000 & 1.997 \\
+\bottomrule
+\end{tabular}
+\caption{RewardBench 2, mean pooling, $\alpha=.10$: common recorded churn and candidate-score accounting. Risk is replacement-average churn, averaged across the 40 splits. $K$ is returned count; Cov.\ is selected coverage in percent; Over counts batches above budget out of 40. Ref., Cal., Test and Total are logical candidate entries divided by the same test $NT$; Total includes the three stages and can exceed one. K, coverage, risk and stage-cost ratios are splitwise means; Over is a count of splits. Reference priority stops at $V^+-V^-\le\lceil.02|S_0|\rceil$. Zero and Reference give deterministic batch feasibility; CRC and SCoRE give expectation guarantees under group exchangeability, so Over does not refute these guarantees. SCoRE decides whole groups. Reference setup is charged as recorded, not minimized. Pool scores and panel-preprocessing reads are separate; full matrices used only for posthoc validation are outside selection-visible information. Full pool-stage counts accompany the records.}
+\label{tab:common-RewardBench2-mean}
+\end{table*}
+\begin{table*}[t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{rlrrrrrrrr}
+\toprule
+$q$ & Method & $K$ & Cov. & Risk & Over & Ref. & Cal. & Test & Total \\
+\midrule
+0.05 & Zero & 117.9 & 84.9 & 0.056 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.05 & Reference & 134.8 & 97.7 & 0.078 & 0 & 0.989 & 0.000 & 0.013 & 1.002 \\
+0.05 & CRC & 107.9 & 77.0 & 0.067 & 1 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.05 & SCoRE & 114.9 & 82.2 & 0.049 & 0 & 0.989 & 0.989 & 0.000 & 1.979 \\
+0.10 & Zero & 241.3 & 100.0 & 0.035 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.10 & Reference & 241.3 & 100.0 & 0.035 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.10 & CRC & 239.1 & 99.1 & 0.064 & 0 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.10 & SCoRE & 241.4 & 100.0 & 0.035 & 0 & 0.989 & 0.989 & 0.000 & 1.979 \\
+0.20 & Zero & 489.1 & 100.0 & 0.035 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.20 & Reference & 489.1 & 100.0 & 0.035 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.20 & CRC & 487.2 & 99.6 & 0.060 & 0 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.20 & SCoRE & 489.1 & 100.0 & 0.035 & 0 & 0.989 & 0.989 & 0.000 & 1.979 \\
+0.30 & Zero & 730.9 & 100.0 & 0.033 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.30 & Reference & 730.9 & 100.0 & 0.033 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.30 & CRC & 730.3 & 99.9 & 0.066 & 0 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.30 & SCoRE & 730.9 & 100.0 & 0.033 & 0 & 0.989 & 0.989 & 0.000 & 1.979 \\
+\bottomrule
+\end{tabular}
+\caption{WMT23, 13, median pooling, $\alpha=.10$: common recorded churn and candidate-score accounting. Risk is replacement-average churn, averaged across the 40 splits. $K$ is returned count; Cov.\ is selected coverage in percent; Over counts batches above budget out of 40. Ref., Cal., Test and Total are logical candidate entries divided by the same test $NT$; Total includes the three stages and can exceed one. K, coverage, risk and stage-cost ratios are splitwise means; Over is a count of splits. Reference priority stops at $V^+-V^-\le\lceil.02|S_0|\rceil$. Zero and Reference give deterministic batch feasibility; CRC and SCoRE give expectation guarantees under group exchangeability, so Over does not refute these guarantees. SCoRE decides whole groups. Reference setup is charged as recorded, not minimized. Pool scores and panel-preprocessing reads are separate; full matrices used only for posthoc validation are outside selection-visible information. Full pool-stage counts accompany the records.}
+\label{tab:common-WMT23-median}
+\end{table*}
+\begin{table*}[t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{rlrrrrrrrr}
+\toprule
+$q$ & Method & $K$ & Cov. & Risk & Over & Ref. & Cal. & Test & Total \\
+\midrule
+0.05 & Zero & 24.0 & 20.3 & 0.015 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.05 & Reference & 123.4 & 97.5 & 0.072 & 0 & 0.989 & 0.000 & 0.045 & 1.035 \\
+0.05 & CRC & 116.2 & 91.8 & 0.074 & 0 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.05 & SCoRE & 96.5 & 75.7 & 0.051 & 2 & 0.989 & 0.989 & 0.000 & 1.979 \\
+0.10 & Zero & 48.0 & 19.9 & 0.012 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.10 & Reference & 241.9 & 97.8 & 0.056 & 0 & 0.989 & 0.000 & 0.085 & 1.074 \\
+0.10 & CRC & 242.6 & 98.1 & 0.080 & 2 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.10 & SCoRE & 246.9 & 99.8 & 0.061 & 0 & 0.989 & 0.989 & 0.000 & 1.979 \\
+0.20 & Zero & 377.6 & 77.6 & 0.012 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.20 & Reference & 476.4 & 97.9 & 0.031 & 0 & 0.989 & 0.000 & 0.059 & 1.048 \\
+0.20 & CRC & 484.4 & 99.6 & 0.058 & 0 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.20 & SCoRE & 486.5 & 100.0 & 0.034 & 0 & 0.989 & 0.989 & 0.000 & 1.979 \\
+0.30 & Zero & 638.5 & 87.7 & 0.017 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.30 & Reference & 714.8 & 97.9 & 0.031 & 0 & 0.989 & 0.000 & 0.057 & 1.047 \\
+0.30 & CRC & 729.3 & 99.9 & 0.065 & 0 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.30 & SCoRE & 730.0 & 100.0 & 0.034 & 0 & 0.989 & 0.989 & 0.000 & 1.979 \\
+\bottomrule
+\end{tabular}
+\caption{WMT23, 13, mean pooling, $\alpha=.10$: common recorded churn and candidate-score accounting. Risk is replacement-average churn, averaged across the 40 splits. $K$ is returned count; Cov.\ is selected coverage in percent; Over counts batches above budget out of 40. Ref., Cal., Test and Total are logical candidate entries divided by the same test $NT$; Total includes the three stages and can exceed one. K, coverage, risk and stage-cost ratios are splitwise means; Over is a count of splits. Reference priority stops at $V^+-V^-\le\lceil.02|S_0|\rceil$. Zero and Reference give deterministic batch feasibility; CRC and SCoRE give expectation guarantees under group exchangeability, so Over does not refute these guarantees. SCoRE decides whole groups. Reference setup is charged as recorded, not minimized. Pool scores and panel-preprocessing reads are separate; full matrices used only for posthoc validation are outside selection-visible information. Full pool-stage counts accompany the records.}
+\label{tab:common-WMT23-mean}
+\end{table*}
+\begin{table*}[t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{rlrrrrrrrr}
+\toprule
+$q$ & Method & $K$ & Cov. & Risk & Over & Ref. & Cal. & Test & Total \\
+\midrule
+0.05 & Zero & 112.4 & 99.2 & 0.042 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.05 & Reference & 113.3 & 99.6 & 0.043 & 0 & 0.989 & 0.000 & 0.001 & 0.990 \\
+0.05 & CRC & 106.9 & 95.2 & 0.062 & 1 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.05 & SCoRE & 109.6 & 97.2 & 0.037 & 0 & 0.989 & 0.989 & 0.000 & 1.979 \\
+0.10 & Zero & 226.6 & 99.4 & 0.047 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.10 & Reference & 227.4 & 99.6 & 0.048 & 0 & 0.989 & 0.000 & 0.001 & 0.990 \\
+0.10 & CRC & 225.3 & 98.8 & 0.075 & 3 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.10 & SCoRE & 228.5 & 100.0 & 0.048 & 0 & 0.989 & 0.989 & 0.000 & 1.979 \\
+0.20 & Zero & 456.8 & 99.9 & 0.041 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.20 & Reference & 457.3 & 99.9 & 0.042 & 0 & 0.989 & 0.000 & 0.000 & 0.990 \\
+0.20 & CRC & 456.4 & 99.7 & 0.076 & 1 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.20 & SCoRE & 457.6 & 100.0 & 0.042 & 0 & 0.989 & 0.989 & 0.000 & 1.979 \\
+0.30 & Zero & 680.3 & 99.9 & 0.040 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.30 & Reference & 680.8 & 99.9 & 0.040 & 0 & 0.989 & 0.000 & 0.000 & 0.990 \\
+0.30 & CRC & 681.3 & 100.0 & 0.079 & 0 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.30 & SCoRE & 681.6 & 100.0 & 0.040 & 0 & 0.989 & 0.989 & 0.000 & 1.979 \\
+\bottomrule
+\end{tabular}
+\caption{WMT23, 12, median pooling, $\alpha=.10$: common recorded churn and candidate-score accounting. Risk is replacement-average churn, averaged across the 40 splits. $K$ is returned count; Cov.\ is selected coverage in percent; Over counts batches above budget out of 40. Ref., Cal., Test and Total are logical candidate entries divided by the same test $NT$; Total includes the three stages and can exceed one. K, coverage, risk and stage-cost ratios are splitwise means; Over is a count of splits. Reference priority stops at $V^+-V^-\le\lceil.02|S_0|\rceil$. Zero and Reference give deterministic batch feasibility; CRC and SCoRE give expectation guarantees under group exchangeability, so Over does not refute these guarantees. SCoRE decides whole groups. Reference setup is charged as recorded, not minimized. Pool scores and panel-preprocessing reads are separate; full matrices used only for posthoc validation are outside selection-visible information. Full pool-stage counts accompany the records.}
+\label{tab:common-WMT23-without-synthetic-ref-median}
+\end{table*}
+\begin{table*}[t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{rlrrrrrrrr}
+\toprule
+$q$ & Method & $K$ & Cov. & Risk & Over & Ref. & Cal. & Test & Total \\
+\midrule
+0.05 & Zero & 22.0 & 20.6 & 0.015 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.05 & Reference & 113.7 & 97.0 & 0.069 & 0 & 0.989 & 0.000 & 0.046 & 1.035 \\
+0.05 & CRC & 103.8 & 89.0 & 0.077 & 4 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.05 & SCoRE & 89.2 & 77.6 & 0.048 & 1 & 0.989 & 0.989 & 0.000 & 1.979 \\
+0.10 & Zero & 55.6 & 24.3 & 0.010 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.10 & Reference & 222.2 & 97.8 & 0.049 & 0 & 0.989 & 0.000 & 0.080 & 1.069 \\
+0.10 & CRC & 222.6 & 98.2 & 0.076 & 2 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.10 & SCoRE & 226.3 & 99.5 & 0.054 & 0 & 0.989 & 0.989 & 0.000 & 1.979 \\
+0.20 & Zero & 342.0 & 75.8 & 0.011 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.20 & Reference & 442.1 & 97.9 & 0.037 & 0 & 0.989 & 0.000 & 0.063 & 1.053 \\
+0.20 & CRC & 450.3 & 99.7 & 0.075 & 0 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.20 & SCoRE & 451.6 & 100.0 & 0.040 & 0 & 0.989 & 0.989 & 0.000 & 1.979 \\
+0.30 & Zero & 563.3 & 82.9 & 0.015 & 0 & 0.989 & 0.000 & 0.000 & 0.989 \\
+0.30 & Reference & 666.9 & 97.9 & 0.036 & 0 & 0.989 & 0.000 & 0.078 & 1.067 \\
+0.30 & CRC & 680.3 & 99.9 & 0.076 & 0 & 0.989 & 0.989 & 1.000 & 2.979 \\
+0.30 & SCoRE & 681.0 & 100.0 & 0.039 & 0 & 0.989 & 0.989 & 0.000 & 1.979 \\
+\bottomrule
+\end{tabular}
+\caption{WMT23, 12, mean pooling, $\alpha=.10$: common recorded churn and candidate-score accounting. Risk is replacement-average churn, averaged across the 40 splits. $K$ is returned count; Cov.\ is selected coverage in percent; Over counts batches above budget out of 40. Ref., Cal., Test and Total are logical candidate entries divided by the same test $NT$; Total includes the three stages and can exceed one. K, coverage, risk and stage-cost ratios are splitwise means; Over is a count of splits. Reference priority stops at $V^+-V^-\le\lceil.02|S_0|\rceil$. Zero and Reference give deterministic batch feasibility; CRC and SCoRE give expectation guarantees under group exchangeability, so Over does not refute these guarantees. SCoRE decides whole groups. Reference setup is charged as recorded, not minimized. Pool scores and panel-preprocessing reads are separate; full matrices used only for posthoc validation are outside selection-visible information. Full pool-stage counts accompany the records.}
+\label{tab:common-WMT23-without-synthetic-ref-mean}
+\end{table*}

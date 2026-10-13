@@ -1,0 +1,2 @@
+# Optional PDF QA dependency, separate from the analysis environment.
+PyMuPDF==1.26.5

@@ -1,0 +1,16 @@
+{
+  "status": "PASS_SCOPED_MATCHED_TIE_CONTROL",
+  "configurations": 1920,
+  "budget_feasibility_records": 5760,
+  "original_native_and_frozen_records_reconciled": 3840,
+  "matched_optima_independently_recomputed": 96,
+  "matched_risk_fields_independently_recomputed": 96,
+  "reindexing_equivariance_checked_on_all_replacements_for_96_configurations": true,
+  "labels_loaded": false,
+  "new_online_certificate": false,
+  "physical_model_inference": false,
+  "baseline_changed_configurations": 452,
+  "replacement_changed_configurations": 1869,
+  "mask_changed_configurations": 453,
+  "returned_ordering_sign_changed_configurations": 0
+}

@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+Panel & $q$ & Safety & Exclusion & Offline & Fixed & Ref. \\
+\midrule
+RewardBench 2 & 0.05 & 158.8 & 37.9 & 196.6 & 338.8 & 327.6 \\
+RewardBench 2 & 0.10 & 249.2 & 0.0 & 249.2 & 487.3 & 446.9 \\
+WMT23, 13 streams & 0.05 & 319.5 & 96.5 & 415.9 & 774.0 & 622.6 \\
+WMT23, 13 streams & 0.10 & 1.3 & 0.0 & 1.3 & 2.6 & 3.4 \\
+WMT23, 12 streams & 0.05 & 20.5 & 20.6 & 41.1 & 59.0 & 56.0 \\
+WMT23, 12 streams & 0.10 & 31.1 & 0.0 & 31.1 & 81.0 & 74.6 \\
+\bottomrule
+\end{tabular}
+\caption{Count means use decimal half-up rounding after aggregating integer records. Exact median stopping, $\alpha=.10$: mean entry counts over 40 splits. Safety counts agreement entries; Exclusion counts opposition entries. They sum to the offline minimum before separate rounding. For every instance, Fixed and Ref.\ online counts are no smaller than this minimum.}
+\label{tab:certificates}
+\end{table*}

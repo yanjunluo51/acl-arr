@@ -1,0 +1,25 @@
+{
+  "status": "PREPARED_PENDING_AUDIT",
+  "archives": {
+    "manuscript/source_private.zip": {
+      "sha256": "9a246d17bfd047f33c8b07fdcecedfab6349a226c23541bf7ed45ec0b7116b3f",
+      "members": 1878,
+      "updated": 174
+    },
+    "packages/current_mapping_column_code_private.zip": {
+      "sha256": "befc5d66dba0698a1f6fae261fa30337bac5f8dbb8cfe8cbbf2dacc50ef6001e",
+      "members": 3189,
+      "updated": 174
+    },
+    "packages/current_anonymous_source.zip": {
+      "sha256": "a0fac306ebbadc00f96d77afbe221a638314b24fe06434cafb5fcd45ceb06d3a",
+      "members": 1878,
+      "updated": 174
+    },
+    "packages/current_anonymous_code.zip": {
+      "sha256": "4d0b1faae82a9924808a0dabd788f5d96a995d1be2cdbba366f553a6b352baf9",
+      "members": 3189,
+      "updated": 174
+    }
+  }
+}

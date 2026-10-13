@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-10-02T13:04:34.700715+00:00",
+  "legacy_official_url": "https://storage.googleapis.com/mt-metrics-eval/mt-metrics-eval-v2.tgz",
+  "legacy_status": 403,
+  "replacement_official_url": "https://data.statmt.org/wmt26/mt-metrics-eval-v2.tgz",
+  "authority": "Repository maintainer danieldeutsch comment on google-research/mt-metrics-eval issue 27",
+  "authority_url": "https://github.com/google-research/mt-metrics-eval/issues/27",
+  "numeric_scores_opened": false,
+  "protocol_change": "None; maintainer-authorized hosting migration only"
+}

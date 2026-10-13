@@ -1,0 +1,29 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+Panel & Pool & Min., primary & Min., exact & Ref., exact & Zero, exact \\
+\midrule
+RewardBench & Mean & 96.1 & 99.6 & 99.6 & 0/40 \\
+RewardBench & Median 6 & 79.1 & 85.0 & 91.2 & 0/40 \\
+RewardBench & Median 8 & 42.1 & 50.0 & 60.4 & 1/40 \\
+WMT23 (13) & Mean & 90.0 & 92.1 & 92.1 & 0/40 \\
+WMT23 (13) & Median 6 & 3.3 & 7.1 & 12.5 & 20/40 \\
+WMT23 (13) & Median 8 & 0.2 & 0.6 & 0.8 & 37/40 \\
+WMT23 (12) & Mean & 89.6 & 91.5 & 91.5 & 0/40 \\
+WMT23 (12) & Median 6 & 6.9 & 10.6 & 15.4 & 27/40 \\
+WMT23 (12) & Median 8 & 1.6 & 3.8 & 4.8 & 34/40 \\
+WMT24 en-de & Mean & 88.9 & 90.0 & 91.1 & 0/40 \\
+WMT24 en-de & Median 6 & 3.3 & 4.7 & 5.3 & 34/40 \\
+WMT24 en-de & Median 8 & 0.0 & 0.6 & 0.8 & 38/40 \\
+WMT24 en-es & Mean & 87.5 & 89.1 & 90.5 & 0/40 \\
+WMT24 en-es & Median 6 & 5.5 & 8.7 & 10.0 & 29/40 \\
+WMT24 en-es & Median 8 & 1.0 & 1.5 & 1.5 & 38/40 \\
+WMT24 ja-zh & Mean & 92.2 & 94.2 & 94.3 & 0/40 \\
+WMT24 ja-zh & Median 6 & 50.6 & 56.7 & 59.4 & 6/40 \\
+WMT24 ja-zh & Median 8 & 8.4 & 13.2 & 14.6 & 30/40 \\
+\bottomrule
+\end{tabular}
+\caption{Whole-column certification at $q=.05$ and $\alpha=.10$. Percentages use all $NT$ candidate-test scores, averaging all 40 splits. Min. is the offline minimum; Ref. is the reference column order. Primary tolerance is $\lceil.02|S_0|\rceil$; exact tolerance is zero. Median 6 and 8 average their two central scores. Zero reports exact zero-query splits. Full depth and policy results accompany the supplement.}
+\label{tab:mean-even-columns}
+\end{table*}

@@ -1,0 +1,10 @@
+{
+  "status": "PASS_COMPLETE_SMALL_BATCH_ORIGINAL_POLICY_EXECUTION",
+  "configuration_cases": 1920,
+  "original_policies": 4,
+  "paths": 7680,
+  "stopping_records": 15360,
+  "summary_cells": 384,
+  "full_panel_minimum_claim": false,
+  "elapsed_seconds": 68.34246375
+}

@@ -1,0 +1,3 @@
+{"event": "solver_call", "receipt": {"target": 398, "mode": "union", "status": 1, "message": "highspy 1.15.1: Time limit reached", "optimality_gap": Infinity, "dual_bound": 6324.0, "variables": 5617, "constraints": 6043, "presolve": true, "improvement_cutoff": 6326}}
+{"event": "target", "result": {"target": 398, "safety_minimum": 5419, "exclusion_minimum": 1571, "union_minimum": null, "proven": false}}
+{"event": "solver_call", "receipt": {"target": 399, "mode": "exclusion", "status": 1, "message": "highspy 1.15.1: Time limit reached", "optimality_gap": 0.0019467878001277242, "dual_bound": 1538.0, "variables": 1670, "constraints": 437, "presolve": true, "improvement_cutoff": null}}

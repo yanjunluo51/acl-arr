@@ -1,0 +1,23 @@
+{
+  "primary_key": [
+    "WMT24-ja-zh",
+    3,
+    0.05,
+    64
+  ],
+  "safe_target": 33,
+  "screened_thresholds": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "seconds_per_threshold": 60,
+  "outside_thresholds_impossible_even_with_true_costs": true,
+  "original_records_preserved": true
+}

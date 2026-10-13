@@ -1,0 +1,16 @@
+{
+  "pass_1_version": {
+    "manuscript": "Current 92-page manuscript, granularity-risk-selfcheck delivery",
+    "review": "ccfa-review-reports/granularity-risk-review-assessment.md",
+    "original_solver": "Live frozen run, do not replace records"
+  },
+  "pass_2_mathematics": {
+    "construction": "For h>=0: k=20h+17,N=20k,m=7h+6,M=T=7,q=1/20,alpha=1/10. Selected k outputs comprise m boundary rows and k-m invariant selected rows. Other N-k rows are invariant unselected. One active candidate cell agrees, all others oppose. b_H=196h+166, b=49h+41=mT-1.",
+    "claims": "Exact offline certificate=1; deterministic worst-case mT, randomized some fixed instance expected >=(mT+1)/2. Correctness remains over full Cartesian completions, no promise of exactly one agreement. Initial count gap=1, so no positive-tolerance lower bound."
+  },
+  "pass_3_spine": {
+    "single_question": "Evidence needed and cost of discovering it",
+    "replace_not_append": "Replace old M=1 search paragraph with fixed-parameter construction; connect Discussion to exact versus positive tolerance. Integrate exact column necessity with existing condition.",
+    "scope": "Constructed score matrices, not a new NLP task or evidence of realized inference savings"
+  }
+}

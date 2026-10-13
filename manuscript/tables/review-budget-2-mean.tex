@@ -1,0 +1,32 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{rrrrrrr}
+\toprule
+ & & \multicolumn{3}{c}{Selected coverage (\%)} & & \\
+$q$ & $\alpha$ & Zero & Opt. & Ref. & Active (\%) & Queries \\
+\midrule
+0.05 & 0.02 & 3.7 & 69.4 & 69.4 & 87.3 & 1731.3 \\
+0.05 & 0.05 & 10.3 & 90.0 & 89.2 & 93.4 & 1865.9 \\
+0.05 & 0.10 & 20.6 & 99.1 & 97.0 & 85.4 & 1757.7 \\
+0.05 & 0.15 & 30.9 & 100.0 & 97.6 & 72.0 & 1507.2 \\
+0.05 & 0.20 & 41.2 & 100.0 & 97.6 & 59.5 & 1275.4 \\
+0.10 & 0.02 & 7.6 & 83.5 & 83.3 & 90.9 & 3362.6 \\
+0.10 & 0.05 & 14.2 & 97.5 & 96.2 & 95.1 & 3539.8 \\
+0.10 & 0.10 & 24.3 & 100.0 & 97.8 & 81.3 & 3047.4 \\
+0.10 & 0.15 & 34.8 & 100.0 & 97.8 & 68.8 & 2591.7 \\
+0.10 & 0.20 & 44.9 & 100.0 & 97.8 & 57.1 & 2170.3 \\
+0.20 & 0.02 & 57.6 & 91.7 & 91.4 & 91.2 & 3627.8 \\
+0.20 & 0.05 & 65.0 & 99.9 & 97.9 & 86.0 & 3450.4 \\
+0.20 & 0.10 & 75.8 & 100.0 & 97.9 & 59.9 & 2413.8 \\
+0.20 & 0.15 & 85.9 & 100.0 & 97.9 & 37.1 & 1523.3 \\
+0.20 & 0.20 & 95.2 & 100.0 & 98.5 & 13.5 & 591.2 \\
+0.30 & 0.02 & 63.7 & 91.7 & 91.6 & 90.6 & 4889.9 \\
+0.30 & 0.05 & 71.8 & 100.0 & 97.9 & 84.3 & 4572.6 \\
+0.30 & 0.10 & 82.9 & 100.0 & 97.9 & 54.5 & 2979.8 \\
+0.30 & 0.15 & 92.8 & 100.0 & 98.0 & 24.9 & 1406.4 \\
+0.30 & 0.20 & 99.5 & 100.0 & 99.6 & 1.0 & 63.3 \\
+\bottomrule
+\end{tabular}
+\caption{WMT23, 12 streams, mean pooling: all budgets and depths, 40 split means. Zero, Opt.\ and Ref.\ are zero-query, full-information and reference-priority selected coverage $K/|S_0|$ in percent. Reference priority stops when $V^+-V^-\le\lceil.02|S_0|\rceil$. Active is queried $mT$ fraction in percent, with zero for empty active sets; Queries is the separately averaged entry count; Active averages splitwise queried fractions, not a ratio of mean counts.}
+\label{tab:review-budget-2-mean}
+\end{table*}

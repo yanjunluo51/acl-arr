@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+Panel & Pooling & Zero (\%) & Ref. (\%) & 10--90\% & $\Delta$ Width \\
+\midrule
+RewardBench 2 & median & 81.6 & 55.8 & 43.7--68.9 & -6.3 \\
+RewardBench 2 & mean & 20.9 & 86.9 & 84.1--94.4 & -4.8 \\
+WMT23, 13 streams & median & 98.6 & 2.5 & 0.0--67.8 & 0.0 \\
+WMT23, 13 streams & mean & 20.8 & 81.6 & 79.0--84.4 & -4.3 \\
+WMT23, 12 streams & median & 98.1 & 6.4 & 2.8--29.3 & -0.4 \\
+WMT23, 12 streams & mean & 21.1 & 81.2 & 78.5--87.0 & -3.9 \\
+\bottomrule
+\end{tabular}
+\caption{At $q=.05$: Random evaluator composition at $\alpha=.10$, 20 pools with 40 splits each. Zero is the median of pool-wise mean zero-query selected coverage. Ref.\ is the median pool-wise mean queried fraction of $mT$ in percent, with descriptive 10th--90th percentiles; empty active sets contribute zero. Within each pool we average splitwise Reference minus Width active-inspection differences. $\Delta$ is the median of these 20 differences in percentage points; positive values mean more Reference queries.}
+\label{tab:review-composition}
+\end{table*}

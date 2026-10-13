@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrrrrrr}
+\toprule
+Panel & $\varepsilon$ & Mean $Q_{\rm joint}$ & $n_+$ & Fixed & Random & Width & Reference \\
+\midrule
+RewardBench 2 & 0 & 19.63 & 40 & 1.405 & 1.447 & 1.456 & 1.288 \\
+RewardBench 2 & 1 & 12.73 & 40 & 1.741 & 2.029 & 2.180 & 1.710 \\
+WMT23, 13 streams & 0 & 39.18 & 40 & 1.795 & 1.844 & 1.836 & 1.774 \\
+WMT23, 13 streams & 1 & 23.18 & 40 & 2.666 & 3.179 & 3.312 & 3.061 \\
+WMT23, 12 streams & 0 & 43.25 & 40 & 1.587 & 1.658 & 1.642 & 1.406 \\
+WMT23, 12 streams & 1 & 26.75 & 40 & 2.090 & 2.431 & 2.481 & 2.080 \\
+WMT24 en-de & 0 & 37.85 & 40 & 1.562 & 1.591 & 1.573 & 1.474 \\
+WMT24 en-de & 1 & 24.48 & 40 & 1.956 & 2.362 & 2.452 & 2.130 \\
+WMT24 en-es & 0 & 40.68 & 40 & 1.384 & 1.421 & 1.422 & 1.324 \\
+WMT24 en-es & 1 & 26.83 & 40 & 1.689 & 2.127 & 2.215 & 1.858 \\
+WMT24 ja-zh & 0 & 40.13 & 40 & 1.563 & 1.563 & 1.561 & 1.361 \\
+WMT24 ja-zh & 1 & 25.68 & 40 & 1.954 & 2.156 & 2.217 & 1.818 \\
+\bottomrule
+\end{tabular}
+\caption{Mean-pooling discovery ratios from empty history on the same predefined subbatches at $q=.05$, $\alpha=.10$. The four policies use their original full definitions, including WMT24 priorities. Policy columns average $Q_{\rm online}/Q_{\rm joint}$ over the $n_+$ splits with positive matching minima; zero minima have undefined ratios. Mean $Q_{\rm joint}$ counts entry observations; policy columns are dimensionless mean splitwise ratios. Counts and certificate gaps concern this separate small-batch task, not the full-panel acquisition records.}
+\label{tab:joint-discovery}
+\end{table*}

@@ -1,0 +1,27 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrrrr}
+\toprule
+Panel & Pooling & $q$ & $K$ & $K_{\rm lab}$ & Obs. (\%) & MQM & $\Delta$ \\
+\midrule
+WMT23 (13) & median & 0.05 & 134.8 & 38.5 & 28.3 & -0.3402 & -0.0020 \\
+WMT23 (13) & median & 0.10 & 241.3 & 101.0 & 41.1 & -0.4141 & 0.0000 \\
+WMT23 (13) & median & 0.20 & 489.1 & 297.8 & 60.7 & -0.7860 & 0.0000 \\
+WMT23 (13) & median & 0.30 & 730.9 & 490.4 & 67.0 & -1.3198 & 0.0000 \\
+WMT23 (13) & mean & 0.05 & 123.4 & 43.6 & 35.4 & -0.3046 & 0.0092 \\
+WMT23 (13) & mean & 0.10 & 241.9 & 112.2 & 45.8 & -0.5335 & 0.0016 \\
+WMT23 (13) & mean & 0.20 & 476.4 & 281.6 & 58.8 & -0.8979 & -0.0163 \\
+WMT23 (13) & mean & 0.30 & 714.8 & 472.0 & 65.9 & -1.3320 & 0.0031 \\
+WMT23 (12) & median & 0.05 & 113.3 & 87.6 & 77.3 & -0.3996 & -0.0002 \\
+WMT23 (12) & median & 0.10 & 227.4 & 185.1 & 81.5 & -0.6429 & -0.0013 \\
+WMT23 (12) & median & 0.20 & 457.3 & 374.4 & 81.9 & -1.0051 & 0.0013 \\
+WMT23 (12) & median & 0.30 & 680.8 & 559.3 & 82.1 & -1.5591 & 0.0013 \\
+WMT23 (12) & mean & 0.05 & 113.7 & 88.2 & 77.3 & -0.4973 & 0.0063 \\
+WMT23 (12) & mean & 0.10 & 222.2 & 175.2 & 79.1 & -0.6437 & -0.0042 \\
+WMT23 (12) & mean & 0.20 & 442.1 & 358.4 & 81.0 & -1.1279 & -0.0090 \\
+WMT23 (12) & mean & 0.30 & 666.9 & 542.7 & 81.3 & -1.5970 & -0.0293 \\
+\bottomrule
+\end{tabular}
+\caption{Post hoc WMT23 MQM diagnostic for the original reference-priority positive-gap stop, $\alpha=.10$, full-reference right ECDF. $K$ counts all returned outputs and $K_{\rm lab}$ the labeled ones. Obs. averages splitwise labeled fractions. MQM is higher-is-better on labeled outputs; $\Delta$ subtracts the consensus-ranked comparator with the same labeled count. Each row averages 40 overlapping splits; no population inference or missing-label imputation is made. All four acquisition methods, both stops and the two controls are included in the reproducibility results.}
+\label{tab:wmt23-native-quality}
+\end{table*}

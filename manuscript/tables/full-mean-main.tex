@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrrrr}
+\toprule
+Panel & Num. closed & Primary $Q$ & Primary Ref./$Q$ & Exact Ref./$Q$ & Gain/num. closed \\
+\midrule
+RewardBench 2 & 320/320 & 1216.9 & 1.205 & 1.186 & 0/320 \\
+WMT23, 13 & 320/320 & 2012.1 & 1.394 & 1.318 & 7/320 \\
+WMT23, 12 & 320/320 & 2024.3 & 1.291 & 1.258 & 13/320 \\
+WMT24 en-de & 320/320 & 6922.7 & 1.185 & 1.169 & 3/320 \\
+WMT24 en-es & 320/320 & 5968.4 & 1.187 & 1.174 & 3/320 \\
+WMT24 ja-zh & 320/320 & 8717.0 & 1.119 & 1.107 & 63/320 \\
+\bottomrule
+\end{tabular}
+\caption{Full-test mean evidence at $\alpha=.10$: four depths, 40 splits, and two count-gap targets per panel. Primary uses $\varepsilon=\lceil .02|S_0|\rceil$; exact uses zero. Primary $Q$ averages the minimum joint entry count over 160 primary targets per panel; each ratio uses its matching stopping target. All joint and union minima are numerically closed. Ratios average splitwise reference queries divided by numerically closed positive matching minima, excluding zero minima. Strict gain compares joint evidence with the best union of separately optimal witnesses. Appendix~\ref{app:full-mean-grid} reports all depths.}
+\label{tab:full-mean-main}
+\end{table*}

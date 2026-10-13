@@ -1,0 +1,35 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+$q$ & Policy & Risk & Sel.\ cov.\ (\%) & Returned (outputs) & Precision \\
+\midrule
+0.05 & No queries & 0.012 & 20.3 & 24.0 & 0.861 \\
+0.05 & Envelope CRC & 0.095 & 81.1 & 97.3 & 0.846 \\
+0.05 & Batch threshold & 0.096 & 81.4 & 97.5 & 0.846 \\
+0.05 & Batch cardinality & 0.099 & 82.2 & 98.6 & 0.845 \\
+0.05 & Batch retention & 0.073 & 100.0 & 120.2 & 0.824 \\
+0.05 & Fixed-count retention & 0.084 & 100.0 & 115.0 & 0.830 \\
+0.10 & No queries & 0.005 & 31.7 & 74.9 & 0.880 \\
+0.10 & Envelope CRC & 0.093 & 87.4 & 207.3 & 0.726 \\
+0.10 & Batch threshold & 0.097 & 88.2 & 209.0 & 0.725 \\
+0.10 & Batch cardinality & 0.100 & 88.8 & 210.3 & 0.723 \\
+0.10 & Batch retention & 0.063 & 100.0 & 237.0 & 0.704 \\
+0.10 & Fixed-count retention & 0.073 & 100.0 & 230.0 & 0.709 \\
+0.20 & No queries & 0.003 & 51.7 & 238.7 & 0.705 \\
+0.20 & Envelope CRC & 0.097 & 98.3 & 454.6 & 0.593 \\
+0.20 & Batch threshold & 0.099 & 98.8 & 456.8 & 0.592 \\
+0.20 & Batch cardinality & 0.099 & 98.9 & 457.2 & 0.592 \\
+0.20 & Batch retention & 0.048 & 100.0 & 462.5 & 0.589 \\
+0.20 & Fixed-count retention & 0.053 & 100.0 & 460.0 & 0.588 \\
+0.30 & No queries & 0.006 & 70.8 & 487.7 & 0.581 \\
+0.30 & Envelope CRC & 0.084 & 100.0 & 689.0 & 0.526 \\
+0.30 & Batch threshold & 0.084 & 100.0 & 689.3 & 0.526 \\
+0.30 & Batch cardinality & 0.084 & 100.0 & 689.3 & 0.526 \\
+0.30 & Batch retention & 0.039 & 100.0 & 689.3 & 0.526 \\
+0.30 & Fixed-count retention & 0.042 & 100.0 & 690.0 & 0.525 \\
+\bottomrule
+\end{tabular}
+\caption{Count means use decimal half-up rounding after aggregating integer records. Risk is the mean of replacement-average churn $R(C)$ over 40 splits; Returned is the mean output count $K$. RewardBench 2, mean pooling, all depths, $\alpha=.10$. Metrics and averaging follow Table~\ref{tab:baselines}; coverage uses each policy\textquotesingle s own baseline list. Precision is the preferred fraction among returned outputs.}
+\label{tab:baseline-0-mean}
+\end{table*}

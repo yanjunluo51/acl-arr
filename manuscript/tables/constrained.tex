@@ -1,0 +1,39 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{@{}llrrrrrrrr@{}}
+\toprule
+& & \multicolumn{3}{c}{Zero-query safe count} & \multicolumn{3}{c}{Primary-stop queries} & \multicolumn{2}{c}{Ref.\ constants valid (\%)}\\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}\cmidrule(l){9-10}
+Panel & Pool & None & Dev. & Lip. & None & Dev. & Lip. & Dev. & Lip.\\
+\midrule
+\multicolumn{10}{@{}l}{$q=.05$}\\
+RewardBench~2 & median & 95.5 & 95.5 & 95.5 & 285.0 & 285.0 & 284.9 & 96.4 & 98.9\\
+RewardBench~2 & mean & 24.0 & 54.0 & 24.0 & 727.9 & 723.2 & 723.9 & 93.2 & 88.6\\
+WMT23 (13) & median & 117.9 & 118.4 & 117.9 & 523.2 & 518.3 & 252.1 & 87.5 & 92.4\\
+WMT23 (13) & mean & 24.0 & 47.7 & 24.0 & 1873.7 & 1847.7 & 1851.7 & 90.9 & 88.4\\
+WMT23 (12) & median & 112.4 & 112.4 & 112.4 & 43.3 & 43.3 & 42.9 & 91.3 & 96.8\\
+WMT23 (12) & mean & 22.0 & 49.0 & 22.0 & 1757.7 & 1706.3 & 1733.4 & 88.2 & 77.4\\
+WMT24 en-de & median & 461.9 & 462.0 & 461.9 & 44.1 & 44.1 & 26.1 & 92.1 & 98.4\\
+WMT24 en-de & mean & 84.4 & 139.0 & 84.4 & 5619.0 & 5529.0 & 5526.4 & 73.6 & 86.4\\
+WMT24 en-es & median & 410.5 & 410.5 & 410.5 & 33.2 & 33.2 & 33.2 & 93.8 & 97.9\\
+WMT24 en-es & mean & 74.5 & 146.3 & 74.5 & 4962.1 & 4853.0 & 4858.2 & 78.4 & 82.1\\
+WMT24 ja-zh & median & 333.7 & 333.7 & 333.7 & 276.4 & 276.4 & 275.9 & 91.8 & 95.7\\
+WMT24 ja-zh & mean & 54.0 & 63.1 & 54.0 & 4402.5 & 4399.7 & 4395.3 & 77.3 & 84.8\\
+\multicolumn{10}{@{}l}{$q=.10$}\\
+RewardBench~2 & median & 198.2 & 198.2 & 198.2 & 378.4 & 378.4 & 378.4 & 89.3 & 96.1\\
+RewardBench~2 & mean & 74.9 & 128.4 & 74.9 & 1289.6 & 1278.7 & 1283.0 & 90.0 & 83.9\\
+WMT23 (13) & median & 241.3 & 241.3 & 241.3 & 0.0 & 0.0 & 0.0 & 77.5 & 97.6\\
+WMT23 (13) & mean & 48.0 & 117.6 & 48.0 & 3518.8 & 3501.0 & 3500.3 & 77.9 & 76.2\\
+WMT23 (12) & median & 226.6 & 226.6 & 226.6 & 29.8 & 29.8 & 29.7 & 84.9 & 93.1\\
+WMT23 (12) & mean & 55.6 & 137.7 & 55.6 & 3047.4 & 3004.4 & 3030.1 & 76.8 & 70.0\\
+WMT24 en-de & median & 921.3 & 921.3 & 921.3 & 25.7 & 25.7 & 25.3 & 80.9 & 98.6\\
+WMT24 en-de & mean & 485.6 & 616.3 & 485.6 & 6538.0 & 6378.6 & 6473.0 & 74.3 & 89.6\\
+WMT24 en-es & median & 809.4 & 809.4 & 809.4 & 0.0 & 0.0 & 0.0 & 85.9 & 98.6\\
+WMT24 en-es & mean & 406.0 & 546.2 & 406.0 & 6038.1 & 5891.2 & 5955.6 & 80.4 & 84.5\\
+WMT24 ja-zh & median & 624.4 & 624.4 & 624.4 & 159.1 & 159.1 & 158.9 & 86.2 & 98.5\\
+WMT24 ja-zh & mean & 108.5 & 175.8 & 108.5 & 7834.2 & 7817.8 & 7823.6 & 69.5 & 84.2\\
+\bottomrule
+\end{tabular}
+\caption{Certification under oracle-valid deviation caps (Dev.) and Lipschitz bounds in base-score space (Lip.), $\alpha=.10$, means over 40 splits. Queries follow the unchanged reference-priority path. The last two columns give the share of candidates whose reference-estimated constant also holds on the test batch.}
+\label{tab:constrained}
+\end{table*}

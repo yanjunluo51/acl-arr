@@ -1,0 +1,35 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+Panel & $q$ & Reference & Width & True row & True candidate & Both \\
+\midrule
+RewardBench 2 & 0.05 & 727.9 & 770.6 & 712.7 & 715.1 & 712.0 \\
+RewardBench 2 & 0.10 & 1289.6 & 1356.2 & 1261.0 & 1281.5 & 1260.2 \\
+RewardBench 2 & 0.20 & 1919.6 & 1925.8 & 1874.5 & 1914.8 & 1874.1 \\
+RewardBench 2 & 0.30 & 2028.7 & 1781.6 & 1956.5 & 2043.4 & 1956.3 \\
+WMT23, 13 streams & 0.05 & 1873.7 & 2013.2 & 1892.9 & 1862.9 & 1892.1 \\
+WMT23, 13 streams & 0.10 & 3518.8 & 3782.5 & 3498.5 & 3474.3 & 3497.0 \\
+WMT23, 13 streams & 0.20 & 2419.2 & 2167.6 & 2349.9 & 2445.1 & 2349.7 \\
+WMT23, 13 streams & 0.30 & 2363.8 & 1800.6 & 2180.3 & 2396.4 & 2180.0 \\
+WMT23, 12 streams & 0.05 & 1757.7 & 1841.1 & 1744.7 & 1726.6 & 1743.8 \\
+WMT23, 12 streams & 0.10 & 3047.4 & 3239.9 & 3013.7 & 3015.1 & 3012.6 \\
+WMT23, 12 streams & 0.20 & 2413.8 & 2273.8 & 2341.4 & 2438.5 & 2340.9 \\
+WMT23, 12 streams & 0.30 & 2979.8 & 2520.6 & 2794.5 & 3030.0 & 2793.9 \\
+WMT24 en-de & 0.05 & 5619.0 & 5920.0 & 5582.0 & 5524.8 & 5581.3 \\
+WMT24 en-de & 0.10 & 6538.0 & 6785.0 & 6398.8 & 6544.7 & 6398.4 \\
+WMT24 en-de & 0.20 & 9591.7 & 9911.6 & 9341.0 & 9663.8 & 9340.2 \\
+WMT24 en-de & 0.30 & 11135.4 & 10569.2 & 10633.1 & 11310.4 & 10633.0 \\
+WMT24 en-es & 0.05 & 4962.1 & 5228.2 & 4923.6 & 4907.8 & 4922.6 \\
+WMT24 en-es & 0.10 & 6038.1 & 6272.6 & 5913.7 & 6028.0 & 5913.1 \\
+WMT24 en-es & 0.20 & 8509.9 & 8836.9 & 8319.1 & 8563.8 & 8318.7 \\
+WMT24 en-es & 0.30 & 8924.9 & 8309.6 & 8534.1 & 9060.6 & 8533.9 \\
+WMT24 ja-zh & 0.05 & 4402.5 & 4590.0 & 4399.6 & 4336.6 & 4398.6 \\
+WMT24 ja-zh & 0.10 & 7834.2 & 8182.0 & 7738.2 & 7687.3 & 7736.9 \\
+WMT24 ja-zh & 0.20 & 12544.0 & 13133.2 & 12318.3 & 12202.0 & 12316.7 \\
+WMT24 ja-zh & 0.30 & 14436.1 & 15180.5 & 14236.8 & 14304.0 & 14235.6 \\
+\bottomrule
+\end{tabular}
+\caption{Same-instance mean-pooling interventions on complete original batches. Entries are mean candidate--output query counts over 40 splits, computed from integer sums with decimal half-up rounding. All use $\alpha=.10$ and first stop at $V^+-V^-\le\lceil .02|S_0|\rceil$. True row replaces predicted row totals in reference priority; True candidate uses true within-row flip contributions; Both combines them. These full-information diagnostics keep maps, cutoff, initial endpoint bounds, update rules, budget and stopping target fixed. They are not deployable policies. Median and exact-stop summaries accompany the code.}
+\label{tab:query-interventions}
+\end{table*}

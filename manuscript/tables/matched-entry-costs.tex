@@ -1,0 +1,35 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lllrrrrr}
+\toprule
+Panel & Pool & Stop & $\overline{Q}_{\min}$ & $\overline{Q}_{\rm ref}$ & $\overline{\Delta Q}$ & Med. $\Delta Q$ & Zero / $n$ \\
+\midrule
+RewardBench 2 & median & primary & 119.6 & 213.4 & 93.8 & 88.0 & 43 / 160 \\
+RewardBench 2 & median & exact & 157.5 & 270.2 & 112.7 & 111.0 & 35 / 160 \\
+RewardBench 2 & mean & primary & 1,216.9 & 1,491.5 & 274.6 & 216.5 & 0 / 160 \\
+RewardBench 2 & mean & exact & 1,297.0 & 1,564.0 & 267.1 & 208.5 & 0 / 160 \\
+WMT23, 13 & median & primary & 83.1 & 130.8 & 47.7 & 0.0 & 124 / 160 \\
+WMT23, 13 & median & exact & 104.3 & 156.5 & 52.2 & 0.0 & 123 / 160 \\
+WMT23, 13 & mean & primary & 2,012.1 & 2,543.9 & 531.8 & 437.5 & 0 / 160 \\
+WMT23, 13 & mean & exact & 2,180.2 & 2,722.3 & 542.2 & 475.0 & 0 / 160 \\
+WMT23, 12 & median & primary & 15.8 & 26.6 & 10.7 & 0.0 & 150 / 160 \\
+WMT23, 12 & median & exact & 26.4 & 48.7 & 22.3 & 0.0 & 145 / 160 \\
+WMT23, 12 & mean & primary & 2,024.3 & 2,549.7 & 525.3 & 431.0 & 0 / 160 \\
+WMT23, 12 & mean & exact & 2,189.7 & 2,717.2 & 527.5 & 435.5 & 0 / 160 \\
+WMT24 en-de & median & primary & 10.6 & 17.4 & 6.8 & 0.0 & 153 / 160 \\
+WMT24 en-de & median & exact & 27.3 & 46.7 & 19.4 & 0.0 & 152 / 160 \\
+WMT24 en-de & mean & primary & 6,922.7 & 8,221.0 & 1,298.3 & 930.0 & 0 / 160 \\
+WMT24 en-de & mean & exact & 7,420.0 & 8,711.0 & 1,291.1 & 909.0 & 0 / 160 \\
+WMT24 en-es & median & primary & 3.4 & 8.3 & 4.9 & 0.0 & 159 / 160 \\
+WMT24 en-es & median & exact & 8.9 & 19.3 & 10.4 & 0.0 & 154 / 160 \\
+WMT24 en-es & mean & primary & 5,968.4 & 7,108.7 & 1,140.3 & 853.5 & 0 / 160 \\
+WMT24 en-es & mean & exact & 6,390.6 & 7,551.2 & 1,160.6 & 873.0 & 0 / 160 \\
+WMT24 ja-zh & median & primary & 53.2 & 111.1 & 57.9 & 0.0 & 145 / 160 \\
+WMT24 ja-zh & median & exact & 98.4 & 174.1 & 75.7 & 0.0 & 136 / 160 \\
+WMT24 ja-zh & mean & primary & 8,717.0 & 9,804.2 & 1,087.2 & 897.5 & 0 / 160 \\
+WMT24 ja-zh & mean & exact & 9,260.6 & 10,252.2 & 991.5 & 714.5 & 0 / 160 \\
+\bottomrule
+\end{tabular}
+\caption{Matched entry costs for reference priority at $\alpha=.10$, full-reference right ECDF and all four depths. $Q_{\min}$ is the median gap witness or mean joint minimum for the same instance and stopping target; $\Delta Q=Q_{\rm ref}-Q_{\min}$. Primary uses $\varepsilon=\lceil.02|S_0|\rceil$ and exact uses zero. Means include zero-query instances; the last column counts them. The supplement reports per-depth and nonzero-query summaries, quantiles and all four common policies. Ratios exclude zero minima. Overlapping splits support descriptive comparisons.}
+\label{tab:matched-entry-costs}
+\end{table*}

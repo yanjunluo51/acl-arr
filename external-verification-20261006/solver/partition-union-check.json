@@ -1,0 +1,5 @@
+{
+  "status": "PASS_20_PARTITIONED_UNION_CASES",
+  "cases": 20,
+  "positive_tolerance_cases": 5
+}

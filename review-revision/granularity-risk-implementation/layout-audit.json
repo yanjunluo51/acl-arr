@@ -1,0 +1,15 @@
+{
+  "status": "PASS_COLUMN_MINIMA_AND_SUFFICIENT_CONDITION",
+  "targets": 570,
+  "witnesses": 570,
+  "independent_predecessor_subsets": 9236,
+  "finite_integer_instances": 66339,
+  "finite_covered": 6318,
+  "condition_coverage": {
+    "primary": 45,
+    "exact": 56
+  },
+  "eligible_instances": 57,
+  "coverage_is_posthoc": true,
+  "seconds": 6.603669584
+}

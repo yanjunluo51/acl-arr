@@ -1,0 +1,56 @@
+{
+  "cases": [
+    [
+      "RewardBench2",
+      0.05
+    ],
+    [
+      "WMT23_without_synthetic_ref",
+      0.05
+    ],
+    [
+      "WMT23",
+      0.05
+    ],
+    [
+      "RewardBench2",
+      0.3
+    ],
+    [
+      "WMT23",
+      0.3
+    ],
+    [
+      "WMT24-en-de",
+      0.05
+    ],
+    [
+      "WMT23_without_synthetic_ref",
+      0.3
+    ],
+    [
+      "WMT24-en-de",
+      0.3
+    ],
+    [
+      "WMT24-ja-zh",
+      0.05
+    ],
+    [
+      "WMT24-en-es",
+      0.3
+    ],
+    [
+      "WMT24-en-es",
+      0.05
+    ],
+    [
+      "WMT24-ja-zh",
+      0.3
+    ]
+  ],
+  "sampling_interval_seconds": 0.01,
+  "entire_full_panel": true,
+  "includes_python_inputs_solver_and_resident_cache": true,
+  "timing_not_a_controlled_speed_comparison": true
+}

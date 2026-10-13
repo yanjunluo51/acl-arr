@@ -1,0 +1,1358 @@
+{
+  "revision": "review-evidence-extension-1",
+  "frozen_before_first_execution": true,
+  "central_question": "Candidate score information needed for certified stable selected retention",
+  "pool_size": 7,
+  "quantiles": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "splits": 40,
+  "aggregators": [
+    "median",
+    "mean"
+  ],
+  "acquisition_methods": [
+    "fixed",
+    "random",
+    "largest_width",
+    "reference_priority"
+  ],
+  "panels": [
+    "RewardBench2",
+    "WMT23",
+    "WMT23_without_synthetic_ref"
+  ],
+  "checkpoints": [
+    0,
+    0.1,
+    0.25,
+    0.5,
+    1
+  ],
+  "epsilon": "ceil(0.02 * base_selected_count)",
+  "integer_budget": "floor(2*k*M*T*alpha) with rational alpha",
+  "query_unit": "One cached candidate-output score; no live model cost",
+  "shared_trace": "Acquisition orders are budget-independent. Each alpha uses only its independently recorded prefix and first stopping states. Require exact original alpha=.10 trace/metric agreement before publication.",
+  "quality": "Native RB chosen labels only after stopping; WMT23 quality absent",
+  "pool_selection": "Metadata and preregistered RNG only; no label, churn or acquisition-outcome selection",
+  "prior_data_exposure": "All three original panels are development panels, not new holdout",
+  "experiment": "composition",
+  "alphas": [
+    "1/10"
+  ],
+  "pool_definitions": {
+    "RewardBench2": [
+      {
+        "id": "random-01",
+        "indices": [
+          1,
+          2,
+          3,
+          9,
+          11,
+          12,
+          13
+        ],
+        "models": [
+          "QRM-Gemma-27B",
+          "WorldPM-72B",
+          "Skywork-V2-8B",
+          "OffsetBias-8B",
+          "Skywork-V2-3B",
+          "LDL-Gemma-27B",
+          "BTRM-Qwen2-7B"
+        ]
+      },
+      {
+        "id": "random-02",
+        "indices": [
+          1,
+          3,
+          4,
+          5,
+          6,
+          7,
+          11
+        ],
+        "models": [
+          "QRM-Gemma-27B",
+          "Skywork-V2-8B",
+          "DeBERTa-v3",
+          "InternLM2-20B",
+          "Starling-34B",
+          "UltraRM-13B",
+          "Skywork-V2-3B"
+        ]
+      },
+      {
+        "id": "random-03",
+        "indices": [
+          2,
+          3,
+          5,
+          7,
+          8,
+          11,
+          13
+        ],
+        "models": [
+          "WorldPM-72B",
+          "Skywork-V2-8B",
+          "InternLM2-20B",
+          "UltraRM-13B",
+          "URM-LLaMa-8B",
+          "Skywork-V2-3B",
+          "BTRM-Qwen2-7B"
+        ]
+      },
+      {
+        "id": "random-04",
+        "indices": [
+          3,
+          5,
+          6,
+          7,
+          8,
+          11,
+          13
+        ],
+        "models": [
+          "Skywork-V2-8B",
+          "InternLM2-20B",
+          "Starling-34B",
+          "UltraRM-13B",
+          "URM-LLaMa-8B",
+          "Skywork-V2-3B",
+          "BTRM-Qwen2-7B"
+        ]
+      },
+      {
+        "id": "random-05",
+        "indices": [
+          1,
+          3,
+          6,
+          7,
+          8,
+          9,
+          12
+        ],
+        "models": [
+          "QRM-Gemma-27B",
+          "Skywork-V2-8B",
+          "Starling-34B",
+          "UltraRM-13B",
+          "URM-LLaMa-8B",
+          "OffsetBias-8B",
+          "LDL-Gemma-27B"
+        ]
+      },
+      {
+        "id": "random-06",
+        "indices": [
+          0,
+          1,
+          4,
+          7,
+          8,
+          12,
+          13
+        ],
+        "models": [
+          "Tulu-3-8B",
+          "QRM-Gemma-27B",
+          "DeBERTa-v3",
+          "UltraRM-13B",
+          "URM-LLaMa-8B",
+          "LDL-Gemma-27B",
+          "BTRM-Qwen2-7B"
+        ]
+      },
+      {
+        "id": "random-07",
+        "indices": [
+          2,
+          4,
+          5,
+          6,
+          9,
+          10,
+          13
+        ],
+        "models": [
+          "WorldPM-72B",
+          "DeBERTa-v3",
+          "InternLM2-20B",
+          "Starling-34B",
+          "OffsetBias-8B",
+          "GRM-Llama3-8B",
+          "BTRM-Qwen2-7B"
+        ]
+      },
+      {
+        "id": "random-08",
+        "indices": [
+          1,
+          2,
+          3,
+          7,
+          8,
+          12,
+          13
+        ],
+        "models": [
+          "QRM-Gemma-27B",
+          "WorldPM-72B",
+          "Skywork-V2-8B",
+          "UltraRM-13B",
+          "URM-LLaMa-8B",
+          "LDL-Gemma-27B",
+          "BTRM-Qwen2-7B"
+        ]
+      },
+      {
+        "id": "random-09",
+        "indices": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "models": [
+          "Tulu-3-8B",
+          "WorldPM-72B",
+          "Skywork-V2-8B",
+          "DeBERTa-v3",
+          "InternLM2-20B",
+          "Starling-34B",
+          "URM-LLaMa-8B"
+        ]
+      },
+      {
+        "id": "random-10",
+        "indices": [
+          0,
+          1,
+          4,
+          7,
+          8,
+          10,
+          12
+        ],
+        "models": [
+          "Tulu-3-8B",
+          "QRM-Gemma-27B",
+          "DeBERTa-v3",
+          "UltraRM-13B",
+          "URM-LLaMa-8B",
+          "GRM-Llama3-8B",
+          "LDL-Gemma-27B"
+        ]
+      },
+      {
+        "id": "random-11",
+        "indices": [
+          1,
+          3,
+          4,
+          6,
+          7,
+          10,
+          12
+        ],
+        "models": [
+          "QRM-Gemma-27B",
+          "Skywork-V2-8B",
+          "DeBERTa-v3",
+          "Starling-34B",
+          "UltraRM-13B",
+          "GRM-Llama3-8B",
+          "LDL-Gemma-27B"
+        ]
+      },
+      {
+        "id": "random-12",
+        "indices": [
+          0,
+          1,
+          3,
+          5,
+          6,
+          9,
+          12
+        ],
+        "models": [
+          "Tulu-3-8B",
+          "QRM-Gemma-27B",
+          "Skywork-V2-8B",
+          "InternLM2-20B",
+          "Starling-34B",
+          "OffsetBias-8B",
+          "LDL-Gemma-27B"
+        ]
+      },
+      {
+        "id": "random-13",
+        "indices": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          10,
+          13
+        ],
+        "models": [
+          "QRM-Gemma-27B",
+          "WorldPM-72B",
+          "Skywork-V2-8B",
+          "DeBERTa-v3",
+          "Starling-34B",
+          "GRM-Llama3-8B",
+          "BTRM-Qwen2-7B"
+        ]
+      },
+      {
+        "id": "random-14",
+        "indices": [
+          3,
+          7,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "models": [
+          "Skywork-V2-8B",
+          "UltraRM-13B",
+          "OffsetBias-8B",
+          "GRM-Llama3-8B",
+          "Skywork-V2-3B",
+          "LDL-Gemma-27B",
+          "BTRM-Qwen2-7B"
+        ]
+      },
+      {
+        "id": "random-15",
+        "indices": [
+          0,
+          3,
+          6,
+          7,
+          8,
+          9,
+          13
+        ],
+        "models": [
+          "Tulu-3-8B",
+          "Skywork-V2-8B",
+          "Starling-34B",
+          "UltraRM-13B",
+          "URM-LLaMa-8B",
+          "OffsetBias-8B",
+          "BTRM-Qwen2-7B"
+        ]
+      },
+      {
+        "id": "random-16",
+        "indices": [
+          2,
+          4,
+          5,
+          8,
+          11,
+          12,
+          13
+        ],
+        "models": [
+          "WorldPM-72B",
+          "DeBERTa-v3",
+          "InternLM2-20B",
+          "URM-LLaMa-8B",
+          "Skywork-V2-3B",
+          "LDL-Gemma-27B",
+          "BTRM-Qwen2-7B"
+        ]
+      },
+      {
+        "id": "random-17",
+        "indices": [
+          2,
+          3,
+          4,
+          9,
+          10,
+          12,
+          13
+        ],
+        "models": [
+          "WorldPM-72B",
+          "Skywork-V2-8B",
+          "DeBERTa-v3",
+          "OffsetBias-8B",
+          "GRM-Llama3-8B",
+          "LDL-Gemma-27B",
+          "BTRM-Qwen2-7B"
+        ]
+      },
+      {
+        "id": "random-18",
+        "indices": [
+          1,
+          2,
+          5,
+          6,
+          7,
+          9,
+          12
+        ],
+        "models": [
+          "QRM-Gemma-27B",
+          "WorldPM-72B",
+          "InternLM2-20B",
+          "Starling-34B",
+          "UltraRM-13B",
+          "OffsetBias-8B",
+          "LDL-Gemma-27B"
+        ]
+      },
+      {
+        "id": "random-19",
+        "indices": [
+          0,
+          1,
+          3,
+          7,
+          9,
+          12,
+          13
+        ],
+        "models": [
+          "Tulu-3-8B",
+          "QRM-Gemma-27B",
+          "Skywork-V2-8B",
+          "UltraRM-13B",
+          "OffsetBias-8B",
+          "LDL-Gemma-27B",
+          "BTRM-Qwen2-7B"
+        ]
+      },
+      {
+        "id": "random-20",
+        "indices": [
+          0,
+          1,
+          3,
+          4,
+          5,
+          11,
+          12
+        ],
+        "models": [
+          "Tulu-3-8B",
+          "QRM-Gemma-27B",
+          "Skywork-V2-8B",
+          "DeBERTa-v3",
+          "InternLM2-20B",
+          "Skywork-V2-3B",
+          "LDL-Gemma-27B"
+        ]
+      }
+    ],
+    "WMT23": [
+      {
+        "id": "random-01",
+        "indices": [
+          4,
+          8,
+          9,
+          13,
+          18,
+          19,
+          21
+        ],
+        "models": [
+          "Calibri-COMET22",
+          "MetricX-23-b",
+          "MetricX-23-c",
+          "XLsim",
+          "embed_llama",
+          "f200spBLEU",
+          "mre-score-labse-regular"
+        ]
+      },
+      {
+        "id": "random-02",
+        "indices": [
+          3,
+          7,
+          11,
+          15,
+          16,
+          17,
+          18
+        ],
+        "models": [
+          "COMET",
+          "MetricX-23",
+          "XCOMET-XL",
+          "chrF",
+          "docWMT22CometDA",
+          "eBLEU",
+          "embed_llama"
+        ]
+      },
+      {
+        "id": "random-03",
+        "indices": [
+          4,
+          6,
+          7,
+          11,
+          16,
+          19,
+          21
+        ],
+        "models": [
+          "Calibri-COMET22",
+          "MaTESe",
+          "MetricX-23",
+          "XCOMET-XL",
+          "docWMT22CometDA",
+          "f200spBLEU",
+          "mre-score-labse-regular"
+        ]
+      },
+      {
+        "id": "random-04",
+        "indices": [
+          1,
+          10,
+          11,
+          14,
+          15,
+          19,
+          23
+        ],
+        "models": [
+          "BLEU",
+          "XCOMET-Ensemble",
+          "XCOMET-XL",
+          "YiSi-1",
+          "chrF",
+          "f200spBLEU",
+          "tokengram_F"
+        ]
+      },
+      {
+        "id": "random-05",
+        "indices": [
+          5,
+          11,
+          13,
+          15,
+          16,
+          18,
+          19
+        ],
+        "models": [
+          "MEE4",
+          "XCOMET-XL",
+          "XLsim",
+          "chrF",
+          "docWMT22CometDA",
+          "embed_llama",
+          "f200spBLEU"
+        ]
+      },
+      {
+        "id": "random-06",
+        "indices": [
+          1,
+          4,
+          5,
+          6,
+          8,
+          10,
+          21
+        ],
+        "models": [
+          "BLEU",
+          "Calibri-COMET22",
+          "MEE4",
+          "MaTESe",
+          "MetricX-23-b",
+          "XCOMET-Ensemble",
+          "mre-score-labse-regular"
+        ]
+      },
+      {
+        "id": "random-07",
+        "indices": [
+          4,
+          5,
+          7,
+          9,
+          15,
+          17,
+          19
+        ],
+        "models": [
+          "Calibri-COMET22",
+          "MEE4",
+          "MetricX-23",
+          "MetricX-23-c",
+          "chrF",
+          "eBLEU",
+          "f200spBLEU"
+        ]
+      },
+      {
+        "id": "random-08",
+        "indices": [
+          2,
+          3,
+          5,
+          7,
+          13,
+          15,
+          21
+        ],
+        "models": [
+          "BLEURT-20",
+          "COMET",
+          "MEE4",
+          "MetricX-23",
+          "XLsim",
+          "chrF",
+          "mre-score-labse-regular"
+        ]
+      },
+      {
+        "id": "random-09",
+        "indices": [
+          2,
+          8,
+          14,
+          16,
+          17,
+          18,
+          20
+        ],
+        "models": [
+          "BLEURT-20",
+          "MetricX-23-b",
+          "YiSi-1",
+          "docWMT22CometDA",
+          "eBLEU",
+          "embed_llama",
+          "instructscore"
+        ]
+      },
+      {
+        "id": "random-10",
+        "indices": [
+          0,
+          3,
+          10,
+          14,
+          16,
+          19,
+          20
+        ],
+        "models": [
+          "BERTscore",
+          "COMET",
+          "XCOMET-Ensemble",
+          "YiSi-1",
+          "docWMT22CometDA",
+          "f200spBLEU",
+          "instructscore"
+        ]
+      },
+      {
+        "id": "random-11",
+        "indices": [
+          2,
+          5,
+          12,
+          15,
+          16,
+          18,
+          22
+        ],
+        "models": [
+          "BLEURT-20",
+          "MEE4",
+          "XCOMET-XXL",
+          "chrF",
+          "docWMT22CometDA",
+          "embed_llama",
+          "prismRef"
+        ]
+      },
+      {
+        "id": "random-12",
+        "indices": [
+          1,
+          2,
+          5,
+          8,
+          13,
+          14,
+          22
+        ],
+        "models": [
+          "BLEU",
+          "BLEURT-20",
+          "MEE4",
+          "MetricX-23-b",
+          "XLsim",
+          "YiSi-1",
+          "prismRef"
+        ]
+      },
+      {
+        "id": "random-13",
+        "indices": [
+          2,
+          3,
+          13,
+          17,
+          18,
+          20,
+          21
+        ],
+        "models": [
+          "BLEURT-20",
+          "COMET",
+          "XLsim",
+          "eBLEU",
+          "embed_llama",
+          "instructscore",
+          "mre-score-labse-regular"
+        ]
+      },
+      {
+        "id": "random-14",
+        "indices": [
+          4,
+          6,
+          10,
+          15,
+          17,
+          21,
+          22
+        ],
+        "models": [
+          "Calibri-COMET22",
+          "MaTESe",
+          "XCOMET-Ensemble",
+          "chrF",
+          "eBLEU",
+          "mre-score-labse-regular",
+          "prismRef"
+        ]
+      },
+      {
+        "id": "random-15",
+        "indices": [
+          5,
+          9,
+          10,
+          11,
+          13,
+          17,
+          23
+        ],
+        "models": [
+          "MEE4",
+          "MetricX-23-c",
+          "XCOMET-Ensemble",
+          "XCOMET-XL",
+          "XLsim",
+          "eBLEU",
+          "tokengram_F"
+        ]
+      },
+      {
+        "id": "random-16",
+        "indices": [
+          6,
+          7,
+          10,
+          12,
+          13,
+          15,
+          19
+        ],
+        "models": [
+          "MaTESe",
+          "MetricX-23",
+          "XCOMET-Ensemble",
+          "XCOMET-XXL",
+          "XLsim",
+          "chrF",
+          "f200spBLEU"
+        ]
+      },
+      {
+        "id": "random-17",
+        "indices": [
+          0,
+          11,
+          12,
+          15,
+          16,
+          18,
+          20
+        ],
+        "models": [
+          "BERTscore",
+          "XCOMET-XL",
+          "XCOMET-XXL",
+          "chrF",
+          "docWMT22CometDA",
+          "embed_llama",
+          "instructscore"
+        ]
+      },
+      {
+        "id": "random-18",
+        "indices": [
+          1,
+          3,
+          4,
+          6,
+          16,
+          20,
+          21
+        ],
+        "models": [
+          "BLEU",
+          "COMET",
+          "Calibri-COMET22",
+          "MaTESe",
+          "docWMT22CometDA",
+          "instructscore",
+          "mre-score-labse-regular"
+        ]
+      },
+      {
+        "id": "random-19",
+        "indices": [
+          0,
+          3,
+          6,
+          8,
+          12,
+          14,
+          18
+        ],
+        "models": [
+          "BERTscore",
+          "COMET",
+          "MaTESe",
+          "MetricX-23-b",
+          "XCOMET-XXL",
+          "YiSi-1",
+          "embed_llama"
+        ]
+      },
+      {
+        "id": "random-20",
+        "indices": [
+          3,
+          4,
+          6,
+          8,
+          12,
+          20,
+          23
+        ],
+        "models": [
+          "COMET",
+          "Calibri-COMET22",
+          "MaTESe",
+          "MetricX-23-b",
+          "XCOMET-XXL",
+          "instructscore",
+          "tokengram_F"
+        ]
+      },
+      {
+        "id": "overlap-balanced",
+        "indices": [
+          3,
+          5,
+          12,
+          15,
+          17,
+          18,
+          19
+        ],
+        "models": [
+          "COMET",
+          "MEE4",
+          "XCOMET-XXL",
+          "chrF",
+          "eBLEU",
+          "embed_llama",
+          "f200spBLEU"
+        ],
+        "composition": "3 declared surface-overlap metrics, 4 remaining metrics; other metrics are not assumed uniformly learned"
+      }
+    ],
+    "WMT23_without_synthetic_ref": [
+      {
+        "id": "random-01",
+        "indices": [
+          4,
+          8,
+          9,
+          13,
+          18,
+          19,
+          21
+        ],
+        "models": [
+          "Calibri-COMET22",
+          "MetricX-23-b",
+          "MetricX-23-c",
+          "XLsim",
+          "embed_llama",
+          "f200spBLEU",
+          "mre-score-labse-regular"
+        ]
+      },
+      {
+        "id": "random-02",
+        "indices": [
+          3,
+          7,
+          11,
+          15,
+          16,
+          17,
+          18
+        ],
+        "models": [
+          "COMET",
+          "MetricX-23",
+          "XCOMET-XL",
+          "chrF",
+          "docWMT22CometDA",
+          "eBLEU",
+          "embed_llama"
+        ]
+      },
+      {
+        "id": "random-03",
+        "indices": [
+          4,
+          6,
+          7,
+          11,
+          16,
+          19,
+          21
+        ],
+        "models": [
+          "Calibri-COMET22",
+          "MaTESe",
+          "MetricX-23",
+          "XCOMET-XL",
+          "docWMT22CometDA",
+          "f200spBLEU",
+          "mre-score-labse-regular"
+        ]
+      },
+      {
+        "id": "random-04",
+        "indices": [
+          1,
+          10,
+          11,
+          14,
+          15,
+          19,
+          23
+        ],
+        "models": [
+          "BLEU",
+          "XCOMET-Ensemble",
+          "XCOMET-XL",
+          "YiSi-1",
+          "chrF",
+          "f200spBLEU",
+          "tokengram_F"
+        ]
+      },
+      {
+        "id": "random-05",
+        "indices": [
+          5,
+          11,
+          13,
+          15,
+          16,
+          18,
+          19
+        ],
+        "models": [
+          "MEE4",
+          "XCOMET-XL",
+          "XLsim",
+          "chrF",
+          "docWMT22CometDA",
+          "embed_llama",
+          "f200spBLEU"
+        ]
+      },
+      {
+        "id": "random-06",
+        "indices": [
+          1,
+          4,
+          5,
+          6,
+          8,
+          10,
+          21
+        ],
+        "models": [
+          "BLEU",
+          "Calibri-COMET22",
+          "MEE4",
+          "MaTESe",
+          "MetricX-23-b",
+          "XCOMET-Ensemble",
+          "mre-score-labse-regular"
+        ]
+      },
+      {
+        "id": "random-07",
+        "indices": [
+          4,
+          5,
+          7,
+          9,
+          15,
+          17,
+          19
+        ],
+        "models": [
+          "Calibri-COMET22",
+          "MEE4",
+          "MetricX-23",
+          "MetricX-23-c",
+          "chrF",
+          "eBLEU",
+          "f200spBLEU"
+        ]
+      },
+      {
+        "id": "random-08",
+        "indices": [
+          2,
+          3,
+          5,
+          7,
+          13,
+          15,
+          21
+        ],
+        "models": [
+          "BLEURT-20",
+          "COMET",
+          "MEE4",
+          "MetricX-23",
+          "XLsim",
+          "chrF",
+          "mre-score-labse-regular"
+        ]
+      },
+      {
+        "id": "random-09",
+        "indices": [
+          2,
+          8,
+          14,
+          16,
+          17,
+          18,
+          20
+        ],
+        "models": [
+          "BLEURT-20",
+          "MetricX-23-b",
+          "YiSi-1",
+          "docWMT22CometDA",
+          "eBLEU",
+          "embed_llama",
+          "instructscore"
+        ]
+      },
+      {
+        "id": "random-10",
+        "indices": [
+          0,
+          3,
+          10,
+          14,
+          16,
+          19,
+          20
+        ],
+        "models": [
+          "BERTscore",
+          "COMET",
+          "XCOMET-Ensemble",
+          "YiSi-1",
+          "docWMT22CometDA",
+          "f200spBLEU",
+          "instructscore"
+        ]
+      },
+      {
+        "id": "random-11",
+        "indices": [
+          2,
+          5,
+          12,
+          15,
+          16,
+          18,
+          22
+        ],
+        "models": [
+          "BLEURT-20",
+          "MEE4",
+          "XCOMET-XXL",
+          "chrF",
+          "docWMT22CometDA",
+          "embed_llama",
+          "prismRef"
+        ]
+      },
+      {
+        "id": "random-12",
+        "indices": [
+          1,
+          2,
+          5,
+          8,
+          13,
+          14,
+          22
+        ],
+        "models": [
+          "BLEU",
+          "BLEURT-20",
+          "MEE4",
+          "MetricX-23-b",
+          "XLsim",
+          "YiSi-1",
+          "prismRef"
+        ]
+      },
+      {
+        "id": "random-13",
+        "indices": [
+          2,
+          3,
+          13,
+          17,
+          18,
+          20,
+          21
+        ],
+        "models": [
+          "BLEURT-20",
+          "COMET",
+          "XLsim",
+          "eBLEU",
+          "embed_llama",
+          "instructscore",
+          "mre-score-labse-regular"
+        ]
+      },
+      {
+        "id": "random-14",
+        "indices": [
+          4,
+          6,
+          10,
+          15,
+          17,
+          21,
+          22
+        ],
+        "models": [
+          "Calibri-COMET22",
+          "MaTESe",
+          "XCOMET-Ensemble",
+          "chrF",
+          "eBLEU",
+          "mre-score-labse-regular",
+          "prismRef"
+        ]
+      },
+      {
+        "id": "random-15",
+        "indices": [
+          5,
+          9,
+          10,
+          11,
+          13,
+          17,
+          23
+        ],
+        "models": [
+          "MEE4",
+          "MetricX-23-c",
+          "XCOMET-Ensemble",
+          "XCOMET-XL",
+          "XLsim",
+          "eBLEU",
+          "tokengram_F"
+        ]
+      },
+      {
+        "id": "random-16",
+        "indices": [
+          6,
+          7,
+          10,
+          12,
+          13,
+          15,
+          19
+        ],
+        "models": [
+          "MaTESe",
+          "MetricX-23",
+          "XCOMET-Ensemble",
+          "XCOMET-XXL",
+          "XLsim",
+          "chrF",
+          "f200spBLEU"
+        ]
+      },
+      {
+        "id": "random-17",
+        "indices": [
+          0,
+          11,
+          12,
+          15,
+          16,
+          18,
+          20
+        ],
+        "models": [
+          "BERTscore",
+          "XCOMET-XL",
+          "XCOMET-XXL",
+          "chrF",
+          "docWMT22CometDA",
+          "embed_llama",
+          "instructscore"
+        ]
+      },
+      {
+        "id": "random-18",
+        "indices": [
+          1,
+          3,
+          4,
+          6,
+          16,
+          20,
+          21
+        ],
+        "models": [
+          "BLEU",
+          "COMET",
+          "Calibri-COMET22",
+          "MaTESe",
+          "docWMT22CometDA",
+          "instructscore",
+          "mre-score-labse-regular"
+        ]
+      },
+      {
+        "id": "random-19",
+        "indices": [
+          0,
+          3,
+          6,
+          8,
+          12,
+          14,
+          18
+        ],
+        "models": [
+          "BERTscore",
+          "COMET",
+          "MaTESe",
+          "MetricX-23-b",
+          "XCOMET-XXL",
+          "YiSi-1",
+          "embed_llama"
+        ]
+      },
+      {
+        "id": "random-20",
+        "indices": [
+          3,
+          4,
+          6,
+          8,
+          12,
+          20,
+          23
+        ],
+        "models": [
+          "COMET",
+          "Calibri-COMET22",
+          "MaTESe",
+          "MetricX-23-b",
+          "XCOMET-XXL",
+          "instructscore",
+          "tokengram_F"
+        ]
+      },
+      {
+        "id": "overlap-balanced",
+        "indices": [
+          3,
+          5,
+          12,
+          15,
+          17,
+          18,
+          19
+        ],
+        "models": [
+          "COMET",
+          "MEE4",
+          "XCOMET-XXL",
+          "chrF",
+          "eBLEU",
+          "embed_llama",
+          "f200spBLEU"
+        ],
+        "composition": "3 declared surface-overlap metrics, 4 remaining metrics; other metrics are not assumed uniformly learned"
+      }
+    ]
+  }
+}

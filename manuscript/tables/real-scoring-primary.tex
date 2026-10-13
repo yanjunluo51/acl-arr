@@ -1,0 +1,14 @@
+\begin{table*}[t]\centering\small
+\begin{tabular}{lrrrrr}\toprule
+Method & Candidate entries & Metric calls & Total seconds & Time/full & Allocated USD\\\midrule
+Full scoring & 1088.00 & 10.00 & 108.18 & 1.000 & 0.01797 \\
+Reference & 120.25 & 128.25 & 89.97 & 0.832 & 0.01495 \\
+Width & 123.25 & 131.25 & 90.43 & 0.836 & 0.01502 \\
+Fixed & 125.25 & 133.25 & 89.51 & 0.827 & 0.01487 \\
+Random & 124.12 & 132.12 & 89.95 & 0.832 & 0.01494 \\
+Joint frontier & 123.50 & 131.50 & 90.24 & 0.834 & 0.01499 \\
+Safety-only & 124.00 & 132.00 & 90.26 & 0.834 & 0.01499 \\
+Exclusion-only & 122.88 & 130.88 & 90.37 & 0.835 & 0.01501 \\
+\bottomrule\end{tabular}
+\caption{Fresh SummEval scoring at $\alpha=.10$ and primary stopping, $V^+-V^-\le\lceil.02|S_0|\rceil$. Means cover mean and three-member median pooling, $q\in\{.05,.10,.20,.30\}$ and three repetitions (24 runs per method). Total time includes model loading and reference/base scoring. Time/full averages paired ratios. Metric calls include reference/base calls and may process multiple outputs; USD is duration times USD 0.598/hour, not a per-run invoice.}
+\label{tab:real-scoring-primary}\end{table*}

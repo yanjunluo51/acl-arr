@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrrrr}
+\toprule
+Panel & $q$ & $|S_0|$ & $Q_{\rm joint}$ & Reference & Width & Frontier & Exact $Q_{\rm joint}$ \\
+\midrule
+en-de & 0.05 & 385 & 3923 & 4032 & 4241 & 4206 & 4035 \\
+en-de & 0.1 & 869 & 8657 & 9123 & 9778 & 9698 & 8951 \\
+en-de & 0.2 & 1643 & 8202 & 10151 & 9896 & 9668 & 8741 \\
+en-de & 0.3 & 2354 & 7197 & 10534 & 9307 & 9292 & 7981 \\
+en-ru & 0.05 & 476 & 4472 & 4645 & 5026 & 4873 & 4602 \\
+en-ru & 0.1 & 1084 & 10632 & 10934 & 11951 & 11664 & 10918 \\
+en-ru & 0.2 & 2309 & 12054 & 13993 & 14242 & 13843 & 12767 \\
+en-ru & 0.3 & 3315 & 8746 & 13980 & 11313 & 11121 & 9762 \\
+zh-en & 0.05 & 663 & 7535 & 7837 & 8363 & 8258 & 7745 \\
+zh-en & 0.1 & 1189 & 12676 & 13268 & 14209 & 13836 & 13068 \\
+zh-en & 0.2 & 2183 & 9902 & 12099 & 12061 & 11599 & 10620 \\
+zh-en & 0.3 & 3114 & 6231 & 10254 & 8075 & 7760 & 7260 \\
+\bottomrule
+\end{tabular}
+\caption{WMT22 additional-panel mean-pooling check, one document partition per panel. Query counts use entries. The joint, reference, width and frontier query columns use $V^+-V^-\le\lceil.02|S_0|\rceil$; the final query column uses exact stopping. The selected count $|S_0|$ is an instance property. All results have $\alpha=.10$. Every instance permits full retention and has equal joint and optimal separate-union minima at both stops. Frontier is the joint variant; all other policies and median results remain in the 48-row supplement.}
+\label{tab:wmt22-confirmation}
+\end{table*}

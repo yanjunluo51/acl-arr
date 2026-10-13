@@ -1,0 +1,27 @@
+{
+  "status": "PASS_ISOLATED_BRANCH_WITNESSES_AND_EXHAUSTIVE_THRESHOLD_ACCOUNTING",
+  "baseline_targets": 1920,
+  "initial_pending_targets": 22,
+  "initial_joint_unresolved": 8,
+  "initial_union_unresolved": 22,
+  "joint_remaining": 0,
+  "union_remaining": 0,
+  "first_pass_completed": 22,
+  "global_target_bound_closures": 14,
+  "failed_attempts": {
+    "failed-attempts.jsonl": 0,
+    "resume-failures.jsonl": 0,
+    "modern-failures.jsonl": 0,
+    "fast-failures.jsonl": 0,
+    "union-follow-failures.jsonl": 0,
+    "union-improvement-failures.jsonl": 0,
+    "union-tight-failures.jsonl": 0,
+    "union-partition-failures.jsonl": 0,
+    "union-screened-failures.jsonl": 0,
+    "union-final-failures.jsonl": 0
+  },
+  "canonical_manuscript_and_packages_unchanged": false,
+  "delivery_bindings_checked": false,
+  "human_proof_certified": false,
+  "all_computation_terminal": true
+}

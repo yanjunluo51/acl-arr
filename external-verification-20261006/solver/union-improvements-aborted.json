@@ -1,0 +1,8 @@
+{
+  "status": "ABORTED_SUPERSEDED_BY_VERIFIED_THRESHOLD_PARTITION",
+  "pid": 93808,
+  "driver": "close_union_improvements.py",
+  "reason": "Equivalent threshold partition closed the persistent split-37 primary union; preserve all prior complete records and saved partial receipts while avoiding duplicate full-grid solves.",
+  "verified_progress_sha256": "d27f95eaf05206970f40d329c21d35393172618296843d41032ea76af4402ebf",
+  "unsaved_inflight_work_not_inferred": true
+}

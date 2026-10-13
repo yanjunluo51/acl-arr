@@ -1,0 +1,13 @@
+{
+  "status": "PASS_SCOPED_FROZEN_NEW_YEAR_CONFIRMATION",
+  "execution_record": "progress.json",
+  "audits": [
+    "audit.json",
+    "admission-check.json"
+  ],
+  "independent_team": false,
+  "all_mean_joint_union_gains": 0,
+  "primary_entry_bounds": "NUMERICAL",
+  "exact_mean_entry_bounds": "INTEGER_REDUCTION_CHECKED",
+  "new_raw_scores_in_packages": false
+}

@@ -1,0 +1,8 @@
+{
+  "status": "COMPLETE_EXECUTION_PENDING_AUDIT",
+  "total_cases": 3936,
+  "inferred": 3544,
+  "fresh_expected": 392,
+  "fresh_done": 392,
+  "elapsed_seconds": 20.724659916999997
+}

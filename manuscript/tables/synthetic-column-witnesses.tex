@@ -1,0 +1,37 @@
+\begin{table*}[t]
+\centering\small
+
+
+\begin{tabular}{rrrrrrrr}
+\toprule
+$m$ & $T$ & $d$ & $b$ & $Q_{\rm exact}$ & Shared & Cyclic & Independent \\
+\midrule
+32 & 7 & 1 & 0 & 32 & 1.00 & 7.00 & 7.00 \\
+32 & 7 & 1 & 44 & 180 & 6.00 & 7.00 & 7.00 \\
+32 & 7 & 1 & 112 & 112 & 4.00 & 5.00 & 4.00 \\
+32 & 7 & 3 & 0 & 32 & 1.00 & 3.00 & 3.63 \\
+32 & 7 & 3 & 44 & 150 & 7.00 & 7.00 & 7.00 \\
+32 & 7 & 3 & 112 & 112 & 4.00 & 7.00 & 6.13 \\
+32 & 12 & 1 & 0 & 32 & 1.00 & 12.00 & 11.50 \\
+32 & 12 & 1 & 76 & 308 & 10.00 & 11.00 & 11.00 \\
+32 & 12 & 1 & 192 & 192 & 6.00 & 7.00 & 7.00 \\
+32 & 12 & 3 & 0 & 32 & 1.00 & 4.00 & 5.00 \\
+32 & 12 & 3 & 76 & 319 & 12.00 & 12.00 & 12.00 \\
+32 & 12 & 3 & 192 & 192 & 6.00 & 8.00 & 8.00 \\
+128 & 7 & 1 & 0 & 128 & 1.00 & 7.00 & 7.00 \\
+128 & 7 & 1 & 179 & 717 & 6.00 & 7.00 & 7.00 \\
+128 & 7 & 1 & 448 & 448 & 4.00 & 5.00 & 4.13 \\
+128 & 7 & 3 & 0 & 128 & 1.00 & 3.00 & 4.25 \\
+128 & 7 & 3 & 179 & 618 & 7.00 & 7.00 & 7.00 \\
+128 & 7 & 3 & 448 & 448 & 4.00 & 7.00 & 6.25 \\
+128 & 12 & 1 & 0 & 128 & 1.00 & 12.00 & 12.00 \\
+128 & 12 & 1 & 307 & 1229 & 10.00 & 11.00 & 11.00 \\
+128 & 12 & 1 & 768 & 768 & 6.00 & 7.00 & 7.00 \\
+128 & 12 & 3 & 0 & 128 & 1.00 & 4.00 & 7.25 \\
+128 & 12 & 3 & 307 & 1300 & 12.00 & 12.00 & 12.00 \\
+128 & 12 & 3 & 768 & 768 & 6.00 & 8.00 & 8.00 \\
+\bottomrule
+\end{tabular}
+\caption{Controlled exact-stop column-evidence sharing for seven-member median pools. Each row represents eight seeds in each of three layouts with identical $m,T,d,b$ and minimum entry-witness size. For each seed, we verify a certificate of size $K_{\rm col}$ and rule out every smaller column subset. Shared, Cyclic and Independent report mean minimum column counts across eight seeds; row costs and the entry minimum are identical across layouts. All 576 instances use the complete entry and column acquisition solvers. The synthetic inputs test query geometry, not NLP quality.}
+\label{tab:synthetic-column-witnesses}
+\end{table*}

@@ -1,0 +1,222 @@
+[
+  {
+    "key": [
+      "WMT24-ja-zh",
+      27,
+      0.05,
+      "exact"
+    ],
+    "joint_lower": 7644,
+    "joint_upper": 7644
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      29,
+      0.1,
+      "exact"
+    ],
+    "joint_lower": 16442,
+    "joint_upper": 16442
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      39,
+      0.05,
+      "primary"
+    ],
+    "joint_lower": 5335,
+    "joint_upper": 5345
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      37,
+      0.1,
+      "primary"
+    ],
+    "joint_lower": 6167,
+    "joint_upper": 6167
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      22,
+      0.05,
+      "primary"
+    ],
+    "joint_lower": 7066,
+    "joint_upper": 7066
+  },
+  {
+    "key": [
+      "WMT24-en-es",
+      33,
+      0.05,
+      "primary"
+    ],
+    "joint_lower": 6840,
+    "joint_upper": 6840
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      27,
+      0.05,
+      "primary"
+    ],
+    "joint_lower": 7448,
+    "joint_upper": 7451
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      26,
+      0.05,
+      "primary"
+    ],
+    "joint_lower": 7489,
+    "joint_upper": 7489
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      17,
+      0.05,
+      "primary"
+    ],
+    "joint_lower": 8085,
+    "joint_upper": 8085
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      7,
+      0.1,
+      "primary"
+    ],
+    "joint_lower": 9013,
+    "joint_upper": 9024
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      16,
+      0.05,
+      "primary"
+    ],
+    "joint_lower": 8725,
+    "joint_upper": 8725
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      29,
+      0.05,
+      "primary"
+    ],
+    "joint_lower": 8717,
+    "joint_upper": 8717
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      20,
+      0.05,
+      "primary"
+    ],
+    "joint_lower": 9658,
+    "joint_upper": 9659
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      39,
+      0.1,
+      "primary"
+    ],
+    "joint_lower": 10006,
+    "joint_upper": 10006
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      4,
+      0.05,
+      "primary"
+    ],
+    "joint_lower": 9833,
+    "joint_upper": 9834
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      22,
+      0.1,
+      "primary"
+    ],
+    "joint_lower": 12126,
+    "joint_upper": 12126
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      37,
+      0.2,
+      "primary"
+    ],
+    "joint_lower": 11493,
+    "joint_upper": 11515
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      17,
+      0.1,
+      "primary"
+    ],
+    "joint_lower": 13488,
+    "joint_upper": 13489
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      16,
+      0.1,
+      "primary"
+    ],
+    "joint_lower": 14140,
+    "joint_upper": 14154
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      20,
+      0.1,
+      "primary"
+    ],
+    "joint_lower": 14630,
+    "joint_upper": 14630
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      4,
+      0.1,
+      "primary"
+    ],
+    "joint_lower": 16006,
+    "joint_upper": 16006
+  },
+  {
+    "key": [
+      "WMT24-ja-zh",
+      29,
+      0.1,
+      "primary"
+    ],
+    "joint_lower": 15975,
+    "joint_upper": 15975
+  }
+]

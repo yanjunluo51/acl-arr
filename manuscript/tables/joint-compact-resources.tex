@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrrrr}
+\toprule
+Size & Row DP & Entry MILP & Outcome MILP & Outcome vars & Median s \\
+\midrule
+4 & 96/96 & 96/96 & 96/96 & 45 & 0.017 \\
+8 & 81/96 & 96/96 & 96/96 & 76 & 0.033 \\
+16 & 48/96 & 96/96 & 96/96 & 132 & 0.059 \\
+32 & 14/96 & 95/96 & 95/96 & 281 & 0.107 \\
+64 & 16/96 & 95/96 & 95/96 & 497 & 0.154 \\
+full & 8/96 & 95/96 & 95/96 & 11116 & 0.128 \\
+\bottomrule
+\end{tabular}
+\caption{Matching empty-history exact mean tasks at $\alpha=.10$: 96 cases per size. Counts require both joint and separate optima within the initial resource budget. Each MILP backend receives 60 seconds shared between these optimizations; DP additionally has state/transition limits. Outcome MILP groups equal integer flip contributions (Proposition~\ref{prop:compact-joint}); its median time includes unresolved attempts. Outcome MILP numerically closes 573/576 joint-and-separate pairs in the initial run. Append-only retries numerically close two more pairs; exhaustive feasible-threshold decomposition numerically closes the last joint minimum, completing all 576 pairs. Initial censoring remains in this table. Outcome vars counts the largest outcome-count formulation represented in each row, not a bound on solve time.}
+\label{tab:joint-compact-resources}
+\end{table*}

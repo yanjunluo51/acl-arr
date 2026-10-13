@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrrrr}
+\toprule
+Method & Stop & Closed & Mean s & Median s & Max s & RSS MiB & Gap \\
+\midrule
+Row DP & primary & 4 & 8.82 & 9.04 & 12.34 & 138.6 & 7371.6 \\
+Row DP & exact & 82 & 6.83 & 7.20 & 10.57 & 137.7 & 7279.6 \\
+Entry MILP & primary & 920 & 4.09 & 0.46 & 62.50 & 1116.9 & 169.2 \\
+Entry MILP & exact & 933 & 2.26 & 0.07 & 66.91 & 1081.8 & 0.7 \\
+Outcome MILP & primary & 931 & 2.21 & 0.05 & 60.12 & 618.9 & 132.7 \\
+Outcome MILP & exact & 945 & 1.49 & 0.02 & 60.34 & 420.4 & 0.1 \\
+\bottomrule
+\end{tabular}
+\caption{Sequential single-thread measurements on the same 1,920 full mean targets, with 960 targets per stopping criterion. RSS is the maximum sampled whole-process memory across attempts in the row; Gap averages final feasible query counts minus numerical lower bounds over all 960 attempts in each row, each retaining a feasible incumbent. Each attempt has a nominal 60-second algorithm budget, not an external wall-clock cutoff; DP also retains its 100,000-state and 10-million-transition caps. All 5,760 saved attempts with resource measurements enter timing and memory summaries, including attempts with unresolved targets; the interrupted attempt without recoverable timing is excluded. RSS is sampled whole-process memory, not solver-only allocation.}
+\label{tab:controlled-resources}
+\end{table*}

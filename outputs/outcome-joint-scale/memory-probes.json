@@ -1,0 +1,180 @@
+{
+  "protocol": {
+    "cases": [
+      [
+        "RewardBench2",
+        0.05
+      ],
+      [
+        "WMT23_without_synthetic_ref",
+        0.05
+      ],
+      [
+        "WMT23",
+        0.05
+      ],
+      [
+        "RewardBench2",
+        0.3
+      ],
+      [
+        "WMT23",
+        0.3
+      ],
+      [
+        "WMT24-en-de",
+        0.05
+      ],
+      [
+        "WMT23_without_synthetic_ref",
+        0.3
+      ],
+      [
+        "WMT24-en-de",
+        0.3
+      ],
+      [
+        "WMT24-ja-zh",
+        0.05
+      ],
+      [
+        "WMT24-en-es",
+        0.3
+      ],
+      [
+        "WMT24-en-es",
+        0.05
+      ],
+      [
+        "WMT24-ja-zh",
+        0.3
+      ]
+    ],
+    "sampling_interval_seconds": 0.01,
+    "entire_full_panel": true,
+    "includes_python_inputs_solver_and_resident_cache": true,
+    "timing_not_a_controlled_speed_comparison": true
+  },
+  "records": [
+    {
+      "dataset": "RewardBench2",
+      "q": 0.05,
+      "active_rows": 116,
+      "rss_baseline_bytes": 89980928,
+      "sampled_peak_rss_bytes": 92389376,
+      "status": "OPTIMAL",
+      "query_count": 654,
+      "seconds": 0.003977416999999983
+    },
+    {
+      "dataset": "WMT23_without_synthetic_ref",
+      "q": 0.05,
+      "active_rows": 118,
+      "rss_baseline_bytes": 92372992,
+      "sampled_peak_rss_bytes": 92684288,
+      "status": "OPTIMAL",
+      "query_count": 1626,
+      "seconds": 0.004401790999999988
+    },
+    {
+      "dataset": "WMT23",
+      "q": 0.05,
+      "active_rows": 136,
+      "rss_baseline_bytes": 92667904,
+      "sampled_peak_rss_bytes": 93650944,
+      "status": "OPTIMAL",
+      "query_count": 1898,
+      "seconds": 0.004604417000000027
+    },
+    {
+      "dataset": "RewardBench2",
+      "q": 0.3,
+      "active_rows": 474,
+      "rss_baseline_bytes": 93634560,
+      "sampled_peak_rss_bytes": 100712448,
+      "status": "OPTIMAL",
+      "query_count": 1790,
+      "seconds": 0.01727183299999996
+    },
+    {
+      "dataset": "WMT23",
+      "q": 0.3,
+      "active_rows": 264,
+      "rss_baseline_bytes": 100696064,
+      "sampled_peak_rss_bytes": 103464960,
+      "status": "OPTIMAL",
+      "query_count": 1182,
+      "seconds": 0.016963083000000045
+    },
+    {
+      "dataset": "WMT24-en-de",
+      "q": 0.05,
+      "active_rows": 288,
+      "rss_baseline_bytes": 103448576,
+      "sampled_peak_rss_bytes": 103546880,
+      "status": "OPTIMAL",
+      "query_count": 3024,
+      "seconds": 0.008629957999999993
+    },
+    {
+      "dataset": "WMT23_without_synthetic_ref",
+      "q": 0.3,
+      "active_rows": 305,
+      "rss_baseline_bytes": 103530496,
+      "sampled_peak_rss_bytes": 104284160,
+      "status": "OPTIMAL",
+      "query_count": 1974,
+      "seconds": 0.019349124999999967
+    },
+    {
+      "dataset": "WMT24-en-de",
+      "q": 0.3,
+      "active_rows": 1145,
+      "rss_baseline_bytes": 104267776,
+      "sampled_peak_rss_bytes": 112410624,
+      "status": "OPTIMAL",
+      "query_count": 7989,
+      "seconds": 0.057227915999999934
+    },
+    {
+      "dataset": "WMT24-ja-zh",
+      "q": 0.05,
+      "active_rows": 177,
+      "rss_baseline_bytes": 112132096,
+      "sampled_peak_rss_bytes": 112132096,
+      "status": "OPTIMAL",
+      "query_count": 1764,
+      "seconds": 0.006736124999999982
+    },
+    {
+      "dataset": "WMT24-en-es",
+      "q": 0.3,
+      "active_rows": 1112,
+      "rss_baseline_bytes": 111869952,
+      "sampled_peak_rss_bytes": 120520704,
+      "status": "OPTIMAL",
+      "query_count": 8323,
+      "seconds": 0.06090637499999996
+    },
+    {
+      "dataset": "WMT24-en-es",
+      "q": 0.05,
+      "active_rows": 243,
+      "rss_baseline_bytes": 120504320,
+      "sampled_peak_rss_bytes": 120504320,
+      "status": "OPTIMAL",
+      "query_count": 2509,
+      "seconds": 0.007829625000000062
+    },
+    {
+      "dataset": "WMT24-ja-zh",
+      "q": 0.3,
+      "active_rows": 970,
+      "rss_baseline_bytes": 120242176,
+      "sampled_peak_rss_bytes": 121012224,
+      "status": "OPTIMAL",
+      "query_count": 8380,
+      "seconds": 0.05153320799999994
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "status": "EXECUTED_PENDING_INDEPENDENT_AUDIT",
+  "expected": 24,
+  "completed": [
+    {
+      "panel": "en-de",
+      "pooling": "median",
+      "q": 0.1,
+      "seconds": 0.800351,
+      "file": "en-de_median_0.10.json.gz"
+    },
+    {
+      "panel": "en-de",
+      "pooling": "median",
+      "q": 0.05,
+      "seconds": 0.83053775,
+      "file": "en-de_median_0.05.json.gz"
+    },
+    {
+      "panel": "en-de",
+      "pooling": "median",
+      "q": 0.2,
+      "seconds": 0.787589459,
+      "file": "en-de_median_0.20.json.gz"
+    },
+    {
+      "panel": "en-de",
+      "pooling": "median",
+      "q": 0.3,
+      "seconds": 0.49367683399999995,
+      "file": "en-de_median_0.30.json.gz"
+    },
+    {
+      "panel": "en-de",
+      "pooling": "mean",
+      "q": 0.05,
+      "seconds": 1.506186625,
+      "file": "en-de_mean_0.05.json.gz"
+    },
+    {
+      "panel": "en-de",
+      "pooling": "mean",
+      "q": 0.1,
+      "seconds": 5.278442625,
+      "file": "en-de_mean_0.10.json.gz"
+    },
+    {
+      "panel": "en-ru",
+      "pooling": "median",
+      "q": 0.05,
+      "seconds": 0.42505912500000065,
+      "file": "en-ru_median_0.05.json.gz"
+    },
+    {
+      "panel": "en-ru",
+      "pooling": "median",
+      "q": 0.1,
+      "seconds": 0.47889470799999945,
+      "file": "en-ru_median_0.10.json.gz"
+    },
+    {
+      "panel": "en-ru",
+      "pooling": "median",
+      "q": 0.2,
+      "seconds": 0.5354817080000007,
+      "file": "en-ru_median_0.20.json.gz"
+    },
+    {
+      "panel": "en-ru",
+      "pooling": "median",
+      "q": 0.3,
+      "seconds": 0.4794835830000004,
+      "file": "en-ru_median_0.30.json.gz"
+    },
+    {
+      "panel": "en-de",
+      "pooling": "mean",
+      "q": 0.2,
+      "seconds": 7.726546957999999,
+      "file": "en-de_mean_0.20.json.gz"
+    },
+    {
+      "panel": "en-ru",
+      "pooling": "mean",
+      "q": 0.05,
+      "seconds": 1.8898266249999995,
+      "file": "en-ru_mean_0.05.json.gz"
+    },
+    {
+      "panel": "en-de",
+      "pooling": "mean",
+      "q": 0.3,
+      "seconds": 9.201227208,
+      "file": "en-de_mean_0.30.json.gz"
+    },
+    {
+      "panel": "en-ru",
+      "pooling": "mean",
+      "q": 0.1,
+      "seconds": 6.340600167,
+      "file": "en-ru_mean_0.10.json.gz"
+    },
+    {
+      "panel": "zh-en",
+      "pooling": "median",
+      "q": 0.05,
+      "seconds": 0.6756556660000008,
+      "file": "zh-en_median_0.05.json.gz"
+    },
+    {
+      "panel": "zh-en",
+      "pooling": "median",
+      "q": 0.1,
+      "seconds": 0.42757124999999974,
+      "file": "zh-en_median_0.10.json.gz"
+    },
+    {
+      "panel": "zh-en",
+      "pooling": "median",
+      "q": 0.2,
+      "seconds": 0.49295858300000006,
+      "file": "zh-en_median_0.20.json.gz"
+    },
+    {
+      "panel": "zh-en",
+      "pooling": "median",
+      "q": 0.3,
+      "seconds": 0.6151000840000016,
+      "file": "zh-en_median_0.30.json.gz"
+    },
+    {
+      "panel": "zh-en",
+      "pooling": "mean",
+      "q": 0.05,
+      "seconds": 3.029387959000001,
+      "file": "zh-en_mean_0.05.json.gz"
+    },
+    {
+      "panel": "en-ru",
+      "pooling": "mean",
+      "q": 0.2,
+      "seconds": 11.470631250000002,
+      "file": "en-ru_mean_0.20.json.gz"
+    },
+    {
+      "panel": "en-ru",
+      "pooling": "mean",
+      "q": 0.3,
+      "seconds": 12.568446875000001,
+      "file": "en-ru_mean_0.30.json.gz"
+    },
+    {
+      "panel": "zh-en",
+      "pooling": "mean",
+      "q": 0.1,
+      "seconds": 9.803021708,
+      "file": "zh-en_mean_0.10.json.gz"
+    },
+    {
+      "panel": "zh-en",
+      "pooling": "mean",
+      "q": 0.2,
+      "seconds": 10.942204499999999,
+      "file": "zh-en_mean_0.20.json.gz"
+    },
+    {
+      "panel": "zh-en",
+      "pooling": "mean",
+      "q": 0.3,
+      "seconds": 11.115418042000002,
+      "file": "zh-en_mean_0.30.json.gz"
+    }
+  ]
+}

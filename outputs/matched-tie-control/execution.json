@@ -1,0 +1,10 @@
+{
+  "status": "COMPLETE_PENDING_INDEPENDENT_RECONCILIATION",
+  "configurations": 1920,
+  "records": 5760,
+  "runtime_seconds": 53.565306708,
+  "quality_labels_loaded": false,
+  "model_inference": false,
+  "original_native_evidence_overwritten": false,
+  "new_online_certificate": false
+}

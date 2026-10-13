@@ -1,0 +1,5466 @@
+{
+  "format": "lossless-display-grids-v1",
+  "scope": "All 18 moved grids, including headers, captions, units, failures and adverse results. Rounded display values are not raw per-split records.",
+  "tables": [
+    {
+      "table_id": "query-full-baselines-0-median",
+      "labels": [
+        "tab:baseline-0-median"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{llrrrr}\n\\toprule\n$q$ & Policy & Risk & Sel.\\ cov.\\ (\\%) & Returned (outputs) & Precision \\\\\n\\midrule\n0.05 & No queries & 0.053 & 80.9 & 95.5 & 0.844 \\\\\n0.05 & Envelope CRC & 0.079 & 72.2 & 85.6 & 0.868 \\\\\n0.05 & Batch threshold & 0.081 & 72.9 & 86.4 & 0.868 \\\\\n0.05 & Batch cardinality & 0.099 & 77.3 & 91.5 & 0.865 \\\\\n0.05 & Batch retention & 0.082 & 99.6 & 118.4 & 0.823 \\\\\n0.05 & Fixed-count retention & 0.096 & 99.3 & 114.3 & 0.828 \\\\\n0.10 & No queries & 0.048 & 84.9 & 198.2 & 0.723 \\\\\n0.10 & Envelope CRC & 0.079 & 79.5 & 186.1 & 0.746 \\\\\n0.10 & Batch threshold & 0.085 & 81.5 & 190.5 & 0.739 \\\\\n0.10 & Batch cardinality & 0.100 & 85.4 & 199.8 & 0.732 \\\\\n0.10 & Batch retention & 0.070 & 100.0 & 234.3 & 0.700 \\\\\n0.10 & Fixed-count retention & 0.084 & 100.0 & 230.0 & 0.702 \\\\\n0.20 & No queries & 0.043 & 94.6 & 435.7 & 0.589 \\\\\n0.20 & Envelope CRC & 0.089 & 94.7 & 436.5 & 0.598 \\\\\n0.20 & Batch threshold & 0.088 & 94.7 & 435.9 & 0.598 \\\\\n0.20 & Batch cardinality & 0.100 & 97.3 & 448.5 & 0.592 \\\\\n0.20 & Batch retention & 0.050 & 100.0 & 460.9 & 0.585 \\\\\n0.20 & Fixed-count retention & 0.060 & 100.0 & 460.0 & 0.584 \\\\\n0.30 & No queries & 0.041 & 99.8 & 685.9 & 0.511 \\\\\n0.30 & Envelope CRC & 0.091 & 100.0 & 687.0 & 0.511 \\\\\n0.30 & Batch threshold & 0.091 & 100.0 & 687.1 & 0.511 \\\\\n0.30 & Batch cardinality & 0.091 & 100.0 & 687.1 & 0.511 \\\\\n0.30 & Batch retention & 0.041 & 100.0 & 687.1 & 0.511 \\\\\n0.30 & Fixed-count retention & 0.048 & 100.0 & 690.0 & 0.510 \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{Count means use decimal half-up rounding after aggregating integer records. Risk denotes $R(C)$; Returned is the mean output count $K$. RewardBench 2, median pooling, all depths, $\\alpha=.10$. Metrics and averaging follow Table~\\ref{tab:baselines}; coverage uses each policy\\textquotesingle s own baseline list. Precision is the preferred fraction among returned outputs.}\n\\label{tab:baseline-0-median}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "$q$",
+            "Policy",
+            "Risk",
+            "Sel.\\ cov.\\ (\\%)",
+            "Returned (outputs)",
+            "Precision"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 7,
+          "row_index": 1,
+          "cells_latex": [
+            "0.05",
+            "No queries",
+            "0.053",
+            "80.9",
+            "95.5",
+            "0.844"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "Envelope CRC",
+            "0.079",
+            "72.2",
+            "85.6",
+            "0.868"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "Batch threshold",
+            "0.081",
+            "72.9",
+            "86.4",
+            "0.868"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "Batch cardinality",
+            "0.099",
+            "77.3",
+            "91.5",
+            "0.865"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "Batch retention",
+            "0.082",
+            "99.6",
+            "118.4",
+            "0.823"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.05",
+            "Fixed-count retention",
+            "0.096",
+            "99.3",
+            "114.3",
+            "0.828"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "No queries",
+            "0.048",
+            "84.9",
+            "198.2",
+            "0.723"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "Envelope CRC",
+            "0.079",
+            "79.5",
+            "186.1",
+            "0.746"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "Batch threshold",
+            "0.085",
+            "81.5",
+            "190.5",
+            "0.739"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "Batch cardinality",
+            "0.100",
+            "85.4",
+            "199.8",
+            "0.732"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.10",
+            "Batch retention",
+            "0.070",
+            "100.0",
+            "234.3",
+            "0.700"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.10",
+            "Fixed-count retention",
+            "0.084",
+            "100.0",
+            "230.0",
+            "0.702"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "No queries",
+            "0.043",
+            "94.6",
+            "435.7",
+            "0.589"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "Envelope CRC",
+            "0.089",
+            "94.7",
+            "436.5",
+            "0.598"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "Batch threshold",
+            "0.088",
+            "94.7",
+            "435.9",
+            "0.598"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.20",
+            "Batch cardinality",
+            "0.100",
+            "97.3",
+            "448.5",
+            "0.592"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.20",
+            "Batch retention",
+            "0.050",
+            "100.0",
+            "460.9",
+            "0.585"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.20",
+            "Fixed-count retention",
+            "0.060",
+            "100.0",
+            "460.0",
+            "0.584"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "No queries",
+            "0.041",
+            "99.8",
+            "685.9",
+            "0.511"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "Envelope CRC",
+            "0.091",
+            "100.0",
+            "687.0",
+            "0.511"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 27,
+          "row_index": 21,
+          "cells_latex": [
+            "0.30",
+            "Batch threshold",
+            "0.091",
+            "100.0",
+            "687.1",
+            "0.511"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 28,
+          "row_index": 22,
+          "cells_latex": [
+            "0.30",
+            "Batch cardinality",
+            "0.091",
+            "100.0",
+            "687.1",
+            "0.511"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 29,
+          "row_index": 23,
+          "cells_latex": [
+            "0.30",
+            "Batch retention",
+            "0.041",
+            "100.0",
+            "687.1",
+            "0.511"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-median",
+          "source_line": 30,
+          "row_index": 24,
+          "cells_latex": [
+            "0.30",
+            "Fixed-count retention",
+            "0.048",
+            "100.0",
+            "690.0",
+            "0.510"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "query-full-baselines-0-mean",
+      "labels": [
+        "tab:baseline-0-mean"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{llrrrr}\n\\toprule\n$q$ & Policy & Risk & Sel.\\ cov.\\ (\\%) & Returned (outputs) & Precision \\\\\n\\midrule\n0.05 & No queries & 0.012 & 20.3 & 24.0 & 0.861 \\\\\n0.05 & Envelope CRC & 0.095 & 81.1 & 97.3 & 0.846 \\\\\n0.05 & Batch threshold & 0.096 & 81.4 & 97.5 & 0.846 \\\\\n0.05 & Batch cardinality & 0.099 & 82.2 & 98.6 & 0.845 \\\\\n0.05 & Batch retention & 0.073 & 100.0 & 120.2 & 0.824 \\\\\n0.05 & Fixed-count retention & 0.084 & 100.0 & 115.0 & 0.830 \\\\\n0.10 & No queries & 0.005 & 31.7 & 74.9 & 0.880 \\\\\n0.10 & Envelope CRC & 0.093 & 87.4 & 207.3 & 0.726 \\\\\n0.10 & Batch threshold & 0.097 & 88.2 & 209.0 & 0.725 \\\\\n0.10 & Batch cardinality & 0.100 & 88.8 & 210.3 & 0.723 \\\\\n0.10 & Batch retention & 0.063 & 100.0 & 237.0 & 0.704 \\\\\n0.10 & Fixed-count retention & 0.073 & 100.0 & 230.0 & 0.709 \\\\\n0.20 & No queries & 0.003 & 51.7 & 238.7 & 0.705 \\\\\n0.20 & Envelope CRC & 0.097 & 98.3 & 454.6 & 0.593 \\\\\n0.20 & Batch threshold & 0.099 & 98.8 & 456.8 & 0.592 \\\\\n0.20 & Batch cardinality & 0.099 & 98.9 & 457.2 & 0.592 \\\\\n0.20 & Batch retention & 0.048 & 100.0 & 462.5 & 0.589 \\\\\n0.20 & Fixed-count retention & 0.053 & 100.0 & 460.0 & 0.588 \\\\\n0.30 & No queries & 0.006 & 70.8 & 487.7 & 0.581 \\\\\n0.30 & Envelope CRC & 0.084 & 100.0 & 689.0 & 0.526 \\\\\n0.30 & Batch threshold & 0.084 & 100.0 & 689.3 & 0.526 \\\\\n0.30 & Batch cardinality & 0.084 & 100.0 & 689.3 & 0.526 \\\\\n0.30 & Batch retention & 0.039 & 100.0 & 689.3 & 0.526 \\\\\n0.30 & Fixed-count retention & 0.042 & 100.0 & 690.0 & 0.525 \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{Count means use decimal half-up rounding after aggregating integer records. Risk denotes $R(C)$; Returned is the mean output count $K$. RewardBench 2, mean pooling, all depths, $\\alpha=.10$. Metrics and averaging follow Table~\\ref{tab:baselines}; coverage uses each policy\\textquotesingle s own baseline list. Precision is the preferred fraction among returned outputs.}\n\\label{tab:baseline-0-mean}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "$q$",
+            "Policy",
+            "Risk",
+            "Sel.\\ cov.\\ (\\%)",
+            "Returned (outputs)",
+            "Precision"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 7,
+          "row_index": 1,
+          "cells_latex": [
+            "0.05",
+            "No queries",
+            "0.012",
+            "20.3",
+            "24.0",
+            "0.861"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "Envelope CRC",
+            "0.095",
+            "81.1",
+            "97.3",
+            "0.846"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "Batch threshold",
+            "0.096",
+            "81.4",
+            "97.5",
+            "0.846"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "Batch cardinality",
+            "0.099",
+            "82.2",
+            "98.6",
+            "0.845"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "Batch retention",
+            "0.073",
+            "100.0",
+            "120.2",
+            "0.824"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.05",
+            "Fixed-count retention",
+            "0.084",
+            "100.0",
+            "115.0",
+            "0.830"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "No queries",
+            "0.005",
+            "31.7",
+            "74.9",
+            "0.880"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "Envelope CRC",
+            "0.093",
+            "87.4",
+            "207.3",
+            "0.726"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "Batch threshold",
+            "0.097",
+            "88.2",
+            "209.0",
+            "0.725"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "Batch cardinality",
+            "0.100",
+            "88.8",
+            "210.3",
+            "0.723"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.10",
+            "Batch retention",
+            "0.063",
+            "100.0",
+            "237.0",
+            "0.704"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.10",
+            "Fixed-count retention",
+            "0.073",
+            "100.0",
+            "230.0",
+            "0.709"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "No queries",
+            "0.003",
+            "51.7",
+            "238.7",
+            "0.705"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "Envelope CRC",
+            "0.097",
+            "98.3",
+            "454.6",
+            "0.593"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "Batch threshold",
+            "0.099",
+            "98.8",
+            "456.8",
+            "0.592"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.20",
+            "Batch cardinality",
+            "0.099",
+            "98.9",
+            "457.2",
+            "0.592"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.20",
+            "Batch retention",
+            "0.048",
+            "100.0",
+            "462.5",
+            "0.589"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.20",
+            "Fixed-count retention",
+            "0.053",
+            "100.0",
+            "460.0",
+            "0.588"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "No queries",
+            "0.006",
+            "70.8",
+            "487.7",
+            "0.581"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "Envelope CRC",
+            "0.084",
+            "100.0",
+            "689.0",
+            "0.526"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 27,
+          "row_index": 21,
+          "cells_latex": [
+            "0.30",
+            "Batch threshold",
+            "0.084",
+            "100.0",
+            "689.3",
+            "0.526"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 28,
+          "row_index": 22,
+          "cells_latex": [
+            "0.30",
+            "Batch cardinality",
+            "0.084",
+            "100.0",
+            "689.3",
+            "0.526"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 29,
+          "row_index": 23,
+          "cells_latex": [
+            "0.30",
+            "Batch retention",
+            "0.039",
+            "100.0",
+            "689.3",
+            "0.526"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-0-mean",
+          "source_line": 30,
+          "row_index": 24,
+          "cells_latex": [
+            "0.30",
+            "Fixed-count retention",
+            "0.042",
+            "100.0",
+            "690.0",
+            "0.525"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "query-full-baselines-1-median",
+      "labels": [
+        "tab:baseline-1-median"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{llrrrr}\n\\toprule\n$q$ & Policy & Risk & Sel.\\ cov.\\ (\\%) & Returned (outputs) & Precision \\\\\n\\midrule\n0.05 & No queries & 0.056 & 84.9 & 117.9 & -- \\\\\n0.05 & Envelope CRC & 0.067 & 77.0 & 107.9 & -- \\\\\n0.05 & Batch threshold & 0.085 & 86.0 & 119.8 & -- \\\\\n0.05 & Batch cardinality & 0.096 & 91.1 & 126.5 & -- \\\\\n0.05 & Batch retention & 0.082 & 99.5 & 137.3 & -- \\\\\n0.05 & Fixed-count retention & 0.056 & 100.0 & 122.0 & -- \\\\\n0.10 & No queries & 0.035 & 100.0 & 241.3 & -- \\\\\n0.10 & Envelope CRC & 0.064 & 99.1 & 239.1 & -- \\\\\n0.10 & Batch threshold & 0.066 & 99.9 & 241.2 & -- \\\\\n0.10 & Batch cardinality & 0.066 & 100.0 & 241.3 & -- \\\\\n0.10 & Batch retention & 0.035 & 100.0 & 241.4 & -- \\\\\n0.10 & Fixed-count retention & 0.037 & 100.0 & 243.0 & -- \\\\\n0.20 & No queries & 0.035 & 100.0 & 489.1 & -- \\\\\n0.20 & Envelope CRC & 0.060 & 99.6 & 487.2 & -- \\\\\n0.20 & Batch threshold & 0.061 & 100.0 & 489.1 & -- \\\\\n0.20 & Batch cardinality & 0.061 & 100.0 & 489.1 & -- \\\\\n0.20 & Batch retention & 0.035 & 100.0 & 489.1 & -- \\\\\n0.20 & Fixed-count retention & 0.034 & 100.0 & 486.0 & -- \\\\\n0.30 & No queries & 0.033 & 100.0 & 730.9 & -- \\\\\n0.30 & Envelope CRC & 0.066 & 99.9 & 730.3 & -- \\\\\n0.30 & Batch threshold & 0.067 & 100.0 & 730.9 & -- \\\\\n0.30 & Batch cardinality & 0.067 & 100.0 & 730.9 & -- \\\\\n0.30 & Batch retention & 0.033 & 100.0 & 730.9 & -- \\\\\n0.30 & Fixed-count retention & 0.036 & 100.0 & 729.0 & -- \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{Count means use decimal half-up rounding after aggregating integer records. Risk denotes $R(C)$; Returned is the mean output count $K$. WMT23, 13 streams, median pooling, all depths, $\\alpha=.10$. Metrics and averaging follow Table~\\ref{tab:baselines}; coverage uses each policy\\textquotesingle s own baseline list. These controls do not use human-quality labels; the separate WMT23 MQM diagnostic is in Appendix~\\ref{app:quality}.}\n\\label{tab:baseline-1-median}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "$q$",
+            "Policy",
+            "Risk",
+            "Sel.\\ cov.\\ (\\%)",
+            "Returned (outputs)",
+            "Precision"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 7,
+          "row_index": 1,
+          "cells_latex": [
+            "0.05",
+            "No queries",
+            "0.056",
+            "84.9",
+            "117.9",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "Envelope CRC",
+            "0.067",
+            "77.0",
+            "107.9",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "Batch threshold",
+            "0.085",
+            "86.0",
+            "119.8",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "Batch cardinality",
+            "0.096",
+            "91.1",
+            "126.5",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "Batch retention",
+            "0.082",
+            "99.5",
+            "137.3",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.05",
+            "Fixed-count retention",
+            "0.056",
+            "100.0",
+            "122.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "No queries",
+            "0.035",
+            "100.0",
+            "241.3",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "Envelope CRC",
+            "0.064",
+            "99.1",
+            "239.1",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "Batch threshold",
+            "0.066",
+            "99.9",
+            "241.2",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "Batch cardinality",
+            "0.066",
+            "100.0",
+            "241.3",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.10",
+            "Batch retention",
+            "0.035",
+            "100.0",
+            "241.4",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.10",
+            "Fixed-count retention",
+            "0.037",
+            "100.0",
+            "243.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "No queries",
+            "0.035",
+            "100.0",
+            "489.1",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "Envelope CRC",
+            "0.060",
+            "99.6",
+            "487.2",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "Batch threshold",
+            "0.061",
+            "100.0",
+            "489.1",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.20",
+            "Batch cardinality",
+            "0.061",
+            "100.0",
+            "489.1",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.20",
+            "Batch retention",
+            "0.035",
+            "100.0",
+            "489.1",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.20",
+            "Fixed-count retention",
+            "0.034",
+            "100.0",
+            "486.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "No queries",
+            "0.033",
+            "100.0",
+            "730.9",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "Envelope CRC",
+            "0.066",
+            "99.9",
+            "730.3",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 27,
+          "row_index": 21,
+          "cells_latex": [
+            "0.30",
+            "Batch threshold",
+            "0.067",
+            "100.0",
+            "730.9",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 28,
+          "row_index": 22,
+          "cells_latex": [
+            "0.30",
+            "Batch cardinality",
+            "0.067",
+            "100.0",
+            "730.9",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 29,
+          "row_index": 23,
+          "cells_latex": [
+            "0.30",
+            "Batch retention",
+            "0.033",
+            "100.0",
+            "730.9",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-median",
+          "source_line": 30,
+          "row_index": 24,
+          "cells_latex": [
+            "0.30",
+            "Fixed-count retention",
+            "0.036",
+            "100.0",
+            "729.0",
+            "--"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "query-full-baselines-1-mean",
+      "labels": [
+        "tab:baseline-1-mean"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{llrrrr}\n\\toprule\n$q$ & Policy & Risk & Sel.\\ cov.\\ (\\%) & Returned (outputs) & Precision \\\\\n\\midrule\n0.05 & No queries & 0.015 & 20.3 & 24.0 & -- \\\\\n0.05 & Envelope CRC & 0.074 & 91.8 & 116.2 & -- \\\\\n0.05 & Batch threshold & 0.089 & 97.8 & 123.2 & -- \\\\\n0.05 & Batch cardinality & 0.090 & 97.9 & 123.4 & -- \\\\\n0.05 & Batch retention & 0.077 & 99.7 & 126.1 & -- \\\\\n0.05 & Fixed-count retention & 0.044 & 100.0 & 122.0 & -- \\\\\n0.10 & No queries & 0.012 & 19.9 & 48.0 & -- \\\\\n0.10 & Envelope CRC & 0.080 & 98.1 & 242.6 & -- \\\\\n0.10 & Batch threshold & 0.085 & 99.7 & 246.6 & -- \\\\\n0.10 & Batch cardinality & 0.085 & 99.8 & 246.7 & -- \\\\\n0.10 & Batch retention & 0.061 & 100.0 & 247.3 & -- \\\\\n0.10 & Fixed-count retention & 0.042 & 100.0 & 243.0 & -- \\\\\n0.20 & No queries & 0.012 & 77.6 & 377.6 & -- \\\\\n0.20 & Envelope CRC & 0.058 & 99.6 & 484.4 & -- \\\\\n0.20 & Batch threshold & 0.060 & 100.0 & 486.5 & -- \\\\\n0.20 & Batch cardinality & 0.060 & 100.0 & 486.5 & -- \\\\\n0.20 & Batch retention & 0.034 & 100.0 & 486.5 & -- \\\\\n0.20 & Fixed-count retention & 0.030 & 100.0 & 486.0 & -- \\\\\n0.30 & No queries & 0.017 & 87.7 & 638.5 & -- \\\\\n0.30 & Envelope CRC & 0.065 & 99.9 & 729.3 & -- \\\\\n0.30 & Batch threshold & 0.065 & 100.0 & 730.0 & -- \\\\\n0.30 & Batch cardinality & 0.065 & 100.0 & 730.0 & -- \\\\\n0.30 & Batch retention & 0.034 & 100.0 & 730.0 & -- \\\\\n0.30 & Fixed-count retention & 0.032 & 100.0 & 729.0 & -- \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{Count means use decimal half-up rounding after aggregating integer records. Risk denotes $R(C)$; Returned is the mean output count $K$. WMT23, 13 streams, mean pooling, all depths, $\\alpha=.10$. Metrics and averaging follow Table~\\ref{tab:baselines}; coverage uses each policy\\textquotesingle s own baseline list. These controls do not use human-quality labels; the separate WMT23 MQM diagnostic is in Appendix~\\ref{app:quality}.}\n\\label{tab:baseline-1-mean}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "$q$",
+            "Policy",
+            "Risk",
+            "Sel.\\ cov.\\ (\\%)",
+            "Returned (outputs)",
+            "Precision"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 7,
+          "row_index": 1,
+          "cells_latex": [
+            "0.05",
+            "No queries",
+            "0.015",
+            "20.3",
+            "24.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "Envelope CRC",
+            "0.074",
+            "91.8",
+            "116.2",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "Batch threshold",
+            "0.089",
+            "97.8",
+            "123.2",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "Batch cardinality",
+            "0.090",
+            "97.9",
+            "123.4",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "Batch retention",
+            "0.077",
+            "99.7",
+            "126.1",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.05",
+            "Fixed-count retention",
+            "0.044",
+            "100.0",
+            "122.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "No queries",
+            "0.012",
+            "19.9",
+            "48.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "Envelope CRC",
+            "0.080",
+            "98.1",
+            "242.6",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "Batch threshold",
+            "0.085",
+            "99.7",
+            "246.6",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "Batch cardinality",
+            "0.085",
+            "99.8",
+            "246.7",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.10",
+            "Batch retention",
+            "0.061",
+            "100.0",
+            "247.3",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.10",
+            "Fixed-count retention",
+            "0.042",
+            "100.0",
+            "243.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "No queries",
+            "0.012",
+            "77.6",
+            "377.6",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "Envelope CRC",
+            "0.058",
+            "99.6",
+            "484.4",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "Batch threshold",
+            "0.060",
+            "100.0",
+            "486.5",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.20",
+            "Batch cardinality",
+            "0.060",
+            "100.0",
+            "486.5",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.20",
+            "Batch retention",
+            "0.034",
+            "100.0",
+            "486.5",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.20",
+            "Fixed-count retention",
+            "0.030",
+            "100.0",
+            "486.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "No queries",
+            "0.017",
+            "87.7",
+            "638.5",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "Envelope CRC",
+            "0.065",
+            "99.9",
+            "729.3",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 27,
+          "row_index": 21,
+          "cells_latex": [
+            "0.30",
+            "Batch threshold",
+            "0.065",
+            "100.0",
+            "730.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 28,
+          "row_index": 22,
+          "cells_latex": [
+            "0.30",
+            "Batch cardinality",
+            "0.065",
+            "100.0",
+            "730.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 29,
+          "row_index": 23,
+          "cells_latex": [
+            "0.30",
+            "Batch retention",
+            "0.034",
+            "100.0",
+            "730.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-1-mean",
+          "source_line": 30,
+          "row_index": 24,
+          "cells_latex": [
+            "0.30",
+            "Fixed-count retention",
+            "0.032",
+            "100.0",
+            "729.0",
+            "--"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "query-full-baselines-2-median",
+      "labels": [
+        "tab:baseline-2-median"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{llrrrr}\n\\toprule\n$q$ & Policy & Risk & Sel.\\ cov.\\ (\\%) & Returned (outputs) & Precision \\\\\n\\midrule\n0.05 & No queries & 0.042 & 99.2 & 112.4 & -- \\\\\n0.05 & Envelope CRC & 0.062 & 95.2 & 106.9 & -- \\\\\n0.05 & Batch threshold & 0.071 & 98.6 & 111.5 & -- \\\\\n0.05 & Batch cardinality & 0.072 & 98.9 & 112.1 & -- \\\\\n0.05 & Batch retention & 0.044 & 99.9 & 113.7 & -- \\\\\n0.05 & Fixed-count retention & 0.043 & 100.0 & 112.0 & -- \\\\\n0.10 & No queries & 0.047 & 99.4 & 226.6 & -- \\\\\n0.10 & Envelope CRC & 0.075 & 98.8 & 225.3 & -- \\\\\n0.10 & Batch threshold & 0.077 & 99.6 & 227.4 & -- \\\\\n0.10 & Batch cardinality & 0.077 & 99.7 & 227.6 & -- \\\\\n0.10 & Batch retention & 0.048 & 100.0 & 228.5 & -- \\\\\n0.10 & Fixed-count retention & 0.045 & 100.0 & 224.0 & -- \\\\\n0.20 & No queries & 0.041 & 99.9 & 456.8 & -- \\\\\n0.20 & Envelope CRC & 0.076 & 99.7 & 456.4 & -- \\\\\n0.20 & Batch threshold & 0.076 & 99.9 & 457.0 & -- \\\\\n0.20 & Batch cardinality & 0.076 & 99.9 & 457.1 & -- \\\\\n0.20 & Batch retention & 0.042 & 100.0 & 457.6 & -- \\\\\n0.20 & Fixed-count retention & 0.042 & 100.0 & 449.0 & -- \\\\\n0.30 & No queries & 0.040 & 99.9 & 680.3 & -- \\\\\n0.30 & Envelope CRC & 0.079 & 100.0 & 681.3 & -- \\\\\n0.30 & Batch threshold & 0.079 & 100.0 & 681.6 & -- \\\\\n0.30 & Batch cardinality & 0.079 & 100.0 & 681.6 & -- \\\\\n0.30 & Batch retention & 0.040 & 100.0 & 681.6 & -- \\\\\n0.30 & Fixed-count retention & 0.042 & 100.0 & 673.0 & -- \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{Count means use decimal half-up rounding after aggregating integer records. Risk denotes $R(C)$; Returned is the mean output count $K$. WMT23, 12 streams, median pooling, all depths, $\\alpha=.10$. Metrics and averaging follow Table~\\ref{tab:baselines}; coverage uses each policy\\textquotesingle s own baseline list. These controls do not use human-quality labels; the separate WMT23 MQM diagnostic is in Appendix~\\ref{app:quality}.}\n\\label{tab:baseline-2-median}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "$q$",
+            "Policy",
+            "Risk",
+            "Sel.\\ cov.\\ (\\%)",
+            "Returned (outputs)",
+            "Precision"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 7,
+          "row_index": 1,
+          "cells_latex": [
+            "0.05",
+            "No queries",
+            "0.042",
+            "99.2",
+            "112.4",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "Envelope CRC",
+            "0.062",
+            "95.2",
+            "106.9",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "Batch threshold",
+            "0.071",
+            "98.6",
+            "111.5",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "Batch cardinality",
+            "0.072",
+            "98.9",
+            "112.1",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "Batch retention",
+            "0.044",
+            "99.9",
+            "113.7",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.05",
+            "Fixed-count retention",
+            "0.043",
+            "100.0",
+            "112.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "No queries",
+            "0.047",
+            "99.4",
+            "226.6",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "Envelope CRC",
+            "0.075",
+            "98.8",
+            "225.3",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "Batch threshold",
+            "0.077",
+            "99.6",
+            "227.4",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "Batch cardinality",
+            "0.077",
+            "99.7",
+            "227.6",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.10",
+            "Batch retention",
+            "0.048",
+            "100.0",
+            "228.5",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.10",
+            "Fixed-count retention",
+            "0.045",
+            "100.0",
+            "224.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "No queries",
+            "0.041",
+            "99.9",
+            "456.8",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "Envelope CRC",
+            "0.076",
+            "99.7",
+            "456.4",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "Batch threshold",
+            "0.076",
+            "99.9",
+            "457.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.20",
+            "Batch cardinality",
+            "0.076",
+            "99.9",
+            "457.1",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.20",
+            "Batch retention",
+            "0.042",
+            "100.0",
+            "457.6",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.20",
+            "Fixed-count retention",
+            "0.042",
+            "100.0",
+            "449.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "No queries",
+            "0.040",
+            "99.9",
+            "680.3",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "Envelope CRC",
+            "0.079",
+            "100.0",
+            "681.3",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 27,
+          "row_index": 21,
+          "cells_latex": [
+            "0.30",
+            "Batch threshold",
+            "0.079",
+            "100.0",
+            "681.6",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 28,
+          "row_index": 22,
+          "cells_latex": [
+            "0.30",
+            "Batch cardinality",
+            "0.079",
+            "100.0",
+            "681.6",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 29,
+          "row_index": 23,
+          "cells_latex": [
+            "0.30",
+            "Batch retention",
+            "0.040",
+            "100.0",
+            "681.6",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-median",
+          "source_line": 30,
+          "row_index": 24,
+          "cells_latex": [
+            "0.30",
+            "Fixed-count retention",
+            "0.042",
+            "100.0",
+            "673.0",
+            "--"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "query-full-baselines-2-mean",
+      "labels": [
+        "tab:baseline-2-mean"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{llrrrr}\n\\toprule\n$q$ & Policy & Risk & Sel.\\ cov.\\ (\\%) & Returned (outputs) & Precision \\\\\n\\midrule\n0.05 & No queries & 0.015 & 20.6 & 22.0 & -- \\\\\n0.05 & Envelope CRC & 0.077 & 89.0 & 103.8 & -- \\\\\n0.05 & Batch threshold & 0.091 & 94.4 & 109.6 & -- \\\\\n0.05 & Batch cardinality & 0.092 & 94.6 & 109.9 & -- \\\\\n0.05 & Batch retention & 0.074 & 99.1 & 116.1 & -- \\\\\n0.05 & Fixed-count retention & 0.057 & 100.0 & 112.0 & -- \\\\\n0.10 & No queries & 0.010 & 24.3 & 55.6 & -- \\\\\n0.10 & Envelope CRC & 0.076 & 98.2 & 222.6 & -- \\\\\n0.10 & Batch threshold & 0.081 & 99.8 & 226.5 & -- \\\\\n0.10 & Batch cardinality & 0.081 & 99.8 & 226.5 & -- \\\\\n0.10 & Batch retention & 0.054 & 100.0 & 227.2 & -- \\\\\n0.10 & Fixed-count retention & 0.041 & 100.0 & 224.0 & -- \\\\\n0.20 & No queries & 0.011 & 75.8 & 342.0 & -- \\\\\n0.20 & Envelope CRC & 0.075 & 99.7 & 450.3 & -- \\\\\n0.20 & Batch threshold & 0.076 & 100.0 & 451.6 & -- \\\\\n0.20 & Batch cardinality & 0.076 & 100.0 & 451.6 & -- \\\\\n0.20 & Batch retention & 0.040 & 100.0 & 451.6 & -- \\\\\n0.20 & Fixed-count retention & 0.037 & 100.0 & 449.0 & -- \\\\\n0.30 & No queries & 0.015 & 82.9 & 563.3 & -- \\\\\n0.30 & Envelope CRC & 0.076 & 99.9 & 680.3 & -- \\\\\n0.30 & Batch threshold & 0.076 & 100.0 & 681.0 & -- \\\\\n0.30 & Batch cardinality & 0.076 & 100.0 & 681.0 & -- \\\\\n0.30 & Batch retention & 0.039 & 100.0 & 681.0 & -- \\\\\n0.30 & Fixed-count retention & 0.038 & 100.0 & 673.0 & -- \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{Count means use decimal half-up rounding after aggregating integer records. Risk denotes $R(C)$; Returned is the mean output count $K$. WMT23, 12 streams, mean pooling, all depths, $\\alpha=.10$. Metrics and averaging follow Table~\\ref{tab:baselines}; coverage uses each policy\\textquotesingle s own baseline list. These controls do not use human-quality labels; the separate WMT23 MQM diagnostic is in Appendix~\\ref{app:quality}.}\n\\label{tab:baseline-2-mean}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "$q$",
+            "Policy",
+            "Risk",
+            "Sel.\\ cov.\\ (\\%)",
+            "Returned (outputs)",
+            "Precision"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 7,
+          "row_index": 1,
+          "cells_latex": [
+            "0.05",
+            "No queries",
+            "0.015",
+            "20.6",
+            "22.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "Envelope CRC",
+            "0.077",
+            "89.0",
+            "103.8",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "Batch threshold",
+            "0.091",
+            "94.4",
+            "109.6",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "Batch cardinality",
+            "0.092",
+            "94.6",
+            "109.9",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "Batch retention",
+            "0.074",
+            "99.1",
+            "116.1",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.05",
+            "Fixed-count retention",
+            "0.057",
+            "100.0",
+            "112.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "No queries",
+            "0.010",
+            "24.3",
+            "55.6",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "Envelope CRC",
+            "0.076",
+            "98.2",
+            "222.6",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "Batch threshold",
+            "0.081",
+            "99.8",
+            "226.5",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "Batch cardinality",
+            "0.081",
+            "99.8",
+            "226.5",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.10",
+            "Batch retention",
+            "0.054",
+            "100.0",
+            "227.2",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.10",
+            "Fixed-count retention",
+            "0.041",
+            "100.0",
+            "224.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "No queries",
+            "0.011",
+            "75.8",
+            "342.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "Envelope CRC",
+            "0.075",
+            "99.7",
+            "450.3",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "Batch threshold",
+            "0.076",
+            "100.0",
+            "451.6",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.20",
+            "Batch cardinality",
+            "0.076",
+            "100.0",
+            "451.6",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.20",
+            "Batch retention",
+            "0.040",
+            "100.0",
+            "451.6",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.20",
+            "Fixed-count retention",
+            "0.037",
+            "100.0",
+            "449.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "No queries",
+            "0.015",
+            "82.9",
+            "563.3",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "Envelope CRC",
+            "0.076",
+            "99.9",
+            "680.3",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 27,
+          "row_index": 21,
+          "cells_latex": [
+            "0.30",
+            "Batch threshold",
+            "0.076",
+            "100.0",
+            "681.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 28,
+          "row_index": 22,
+          "cells_latex": [
+            "0.30",
+            "Batch cardinality",
+            "0.076",
+            "100.0",
+            "681.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 29,
+          "row_index": 23,
+          "cells_latex": [
+            "0.30",
+            "Batch retention",
+            "0.039",
+            "100.0",
+            "681.0",
+            "--"
+          ]
+        },
+        {
+          "table_id": "query-full-baselines-2-mean",
+          "source_line": 30,
+          "row_index": 24,
+          "cells_latex": [
+            "0.30",
+            "Fixed-count retention",
+            "0.038",
+            "100.0",
+            "673.0",
+            "--"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "review-budget-0-median",
+      "labels": [
+        "tab:review-budget-0-median"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{rrrrrrr}\n\\toprule\n & & \\multicolumn{3}{c}{Selected coverage (\\%)} & & \\\\\n$q$ & $\\alpha$ & Zero & Opt. & Ref. & Active (\\%) & Queries \\\\\n\\midrule\n0.05 & 0.02 & 53.5 & 69.4 & 69.0 & 72.9 & 321.4 \\\\\n0.05 & 0.05 & 63.8 & 86.3 & 85.6 & 88.7 & 392.0 \\\\\n0.05 & 0.10 & 80.9 & 99.6 & 97.3 & 61.4 & 285.0 \\\\\n0.05 & 0.15 & 96.1 & 100.0 & 98.8 & 10.6 & 56.5 \\\\\n0.05 & 0.20 & 99.8 & 100.0 & 99.9 & 0.5 & 2.9 \\\\\n0.10 & 0.02 & 57.4 & 75.0 & 74.6 & 77.4 & 627.9 \\\\\n0.10 & 0.05 & 67.7 & 91.6 & 90.7 & 91.3 & 741.1 \\\\\n0.10 & 0.10 & 84.9 & 100.0 & 97.8 & 45.1 & 378.4 \\\\\n0.10 & 0.15 & 98.8 & 100.0 & 99.4 & 2.0 & 18.9 \\\\\n0.10 & 0.20 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.20 & 0.02 & 66.6 & 84.5 & 84.2 & 80.5 & 1047.8 \\\\\n0.20 & 0.05 & 77.0 & 99.5 & 97.8 & 88.2 & 1151.6 \\\\\n0.20 & 0.10 & 94.6 & 100.0 & 97.9 & 14.1 & 189.4 \\\\\n0.20 & 0.15 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.20 & 0.20 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.30 & 0.02 & 73.5 & 89.7 & 89.0 & 82.6 & 1326.7 \\\\\n0.30 & 0.05 & 84.0 & 100.0 & 97.9 & 68.2 & 1100.1 \\\\\n0.30 & 0.10 & 99.8 & 100.0 & 99.9 & 0.0 & 0.8 \\\\\n0.30 & 0.15 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.30 & 0.20 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{RewardBench 2, median pooling: all budgets and depths, 40 split means. Zero, Opt.\\ and Ref.\\ are zero-query, full-information and reference-priority selected coverage $K/|S_0|$ in percent. Reference priority stops when $V^+-V^-\\le\\lceil.02|S_0|\\rceil$. Active is queried $mT$ fraction in percent, with zero for empty active sets; Queries is the separately averaged entry count; Active averages splitwise queried fractions, not a ratio of mean counts.}\n\\label{tab:review-budget-0-median}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "",
+            "",
+            "\\multicolumn{3}{c}{Selected coverage (\\%)}",
+            "",
+            ""
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 6,
+          "row_index": 1,
+          "cells_latex": [
+            "$q$",
+            "$\\alpha$",
+            "Zero",
+            "Opt.",
+            "Ref.",
+            "Active (\\%)",
+            "Queries"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "0.02",
+            "53.5",
+            "69.4",
+            "69.0",
+            "72.9",
+            "321.4"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "0.05",
+            "63.8",
+            "86.3",
+            "85.6",
+            "88.7",
+            "392.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "0.10",
+            "80.9",
+            "99.6",
+            "97.3",
+            "61.4",
+            "285.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "0.15",
+            "96.1",
+            "100.0",
+            "98.8",
+            "10.6",
+            "56.5"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.05",
+            "0.20",
+            "99.8",
+            "100.0",
+            "99.9",
+            "0.5",
+            "2.9"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "0.02",
+            "57.4",
+            "75.0",
+            "74.6",
+            "77.4",
+            "627.9"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "0.05",
+            "67.7",
+            "91.6",
+            "90.7",
+            "91.3",
+            "741.1"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "0.10",
+            "84.9",
+            "100.0",
+            "97.8",
+            "45.1",
+            "378.4"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "0.15",
+            "98.8",
+            "100.0",
+            "99.4",
+            "2.0",
+            "18.9"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.10",
+            "0.20",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.20",
+            "0.02",
+            "66.6",
+            "84.5",
+            "84.2",
+            "80.5",
+            "1047.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "0.05",
+            "77.0",
+            "99.5",
+            "97.8",
+            "88.2",
+            "1151.6"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "0.10",
+            "94.6",
+            "100.0",
+            "97.9",
+            "14.1",
+            "189.4"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "0.15",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.20",
+            "0.20",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.30",
+            "0.02",
+            "73.5",
+            "89.7",
+            "89.0",
+            "82.6",
+            "1326.7"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.30",
+            "0.05",
+            "84.0",
+            "100.0",
+            "97.9",
+            "68.2",
+            "1100.1"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "0.10",
+            "99.8",
+            "100.0",
+            "99.9",
+            "0.0",
+            "0.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "0.15",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-median",
+          "source_line": 27,
+          "row_index": 21,
+          "cells_latex": [
+            "0.30",
+            "0.20",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "review-budget-0-mean",
+      "labels": [
+        "tab:review-budget-0-mean"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{rrrrrrr}\n\\toprule\n & & \\multicolumn{3}{c}{Selected coverage (\\%)} & & \\\\\n$q$ & $\\alpha$ & Zero & Opt. & Ref. & Active (\\%) & Queries \\\\\n\\midrule\n0.05 & 0.02 & 4.8 & 75.2 & 75.1 & 87.7 & 732.1 \\\\\n0.05 & 0.05 & 10.6 & 92.1 & 91.5 & 95.7 & 799.8 \\\\\n0.05 & 0.10 & 20.3 & 100.0 & 97.5 & 86.5 & 727.9 \\\\\n0.05 & 0.15 & 30.1 & 100.0 & 97.5 & 73.8 & 622.8 \\\\\n0.05 & 0.20 & 39.7 & 100.0 & 97.5 & 62.5 & 529.4 \\\\\n0.10 & 0.02 & 13.9 & 79.9 & 79.8 & 90.2 & 1387.9 \\\\\n0.10 & 0.05 & 21.0 & 95.5 & 94.7 & 96.8 & 1488.8 \\\\\n0.10 & 0.10 & 31.7 & 100.0 & 97.8 & 83.5 & 1289.5 \\\\\n0.10 & 0.15 & 41.5 & 100.0 & 97.8 & 70.4 & 1088.1 \\\\\n0.10 & 0.20 & 51.3 & 100.0 & 97.8 & 58.1 & 900.1 \\\\\n0.20 & 0.02 & 31.6 & 87.2 & 87.0 & 92.1 & 2320.7 \\\\\n0.20 & 0.05 & 40.0 & 99.9 & 97.9 & 94.6 & 2383.7 \\\\\n0.20 & 0.10 & 51.7 & 100.0 & 97.9 & 76.0 & 1919.6 \\\\\n0.20 & 0.15 & 62.5 & 100.0 & 97.9 & 60.4 & 1528.5 \\\\\n0.20 & 0.20 & 72.5 & 100.0 & 97.9 & 45.8 & 1161.9 \\\\\n0.30 & 0.02 & 49.0 & 92.3 & 91.9 & 93.1 & 2814.8 \\\\\n0.30 & 0.05 & 58.4 & 100.0 & 97.9 & 88.3 & 2670.4 \\\\\n0.30 & 0.10 & 70.8 & 100.0 & 97.9 & 67.0 & 2028.7 \\\\\n0.30 & 0.15 & 81.5 & 100.0 & 97.9 & 47.6 & 1442.6 \\\\\n0.30 & 0.20 & 91.5 & 100.0 & 97.9 & 25.0 & 764.6 \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{RewardBench 2, mean pooling: all budgets and depths, 40 split means. Zero, Opt.\\ and Ref.\\ are zero-query, full-information and reference-priority selected coverage $K/|S_0|$ in percent. Reference priority stops when $V^+-V^-\\le\\lceil.02|S_0|\\rceil$. Active is queried $mT$ fraction in percent, with zero for empty active sets; Queries is the separately averaged entry count; Active averages splitwise queried fractions, not a ratio of mean counts.}\n\\label{tab:review-budget-0-mean}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "",
+            "",
+            "\\multicolumn{3}{c}{Selected coverage (\\%)}",
+            "",
+            ""
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 6,
+          "row_index": 1,
+          "cells_latex": [
+            "$q$",
+            "$\\alpha$",
+            "Zero",
+            "Opt.",
+            "Ref.",
+            "Active (\\%)",
+            "Queries"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "0.02",
+            "4.8",
+            "75.2",
+            "75.1",
+            "87.7",
+            "732.1"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "0.05",
+            "10.6",
+            "92.1",
+            "91.5",
+            "95.7",
+            "799.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "0.10",
+            "20.3",
+            "100.0",
+            "97.5",
+            "86.5",
+            "727.9"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "0.15",
+            "30.1",
+            "100.0",
+            "97.5",
+            "73.8",
+            "622.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.05",
+            "0.20",
+            "39.7",
+            "100.0",
+            "97.5",
+            "62.5",
+            "529.4"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "0.02",
+            "13.9",
+            "79.9",
+            "79.8",
+            "90.2",
+            "1387.9"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "0.05",
+            "21.0",
+            "95.5",
+            "94.7",
+            "96.8",
+            "1488.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "0.10",
+            "31.7",
+            "100.0",
+            "97.8",
+            "83.5",
+            "1289.5"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "0.15",
+            "41.5",
+            "100.0",
+            "97.8",
+            "70.4",
+            "1088.1"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.10",
+            "0.20",
+            "51.3",
+            "100.0",
+            "97.8",
+            "58.1",
+            "900.1"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.20",
+            "0.02",
+            "31.6",
+            "87.2",
+            "87.0",
+            "92.1",
+            "2320.7"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "0.05",
+            "40.0",
+            "99.9",
+            "97.9",
+            "94.6",
+            "2383.7"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "0.10",
+            "51.7",
+            "100.0",
+            "97.9",
+            "76.0",
+            "1919.6"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "0.15",
+            "62.5",
+            "100.0",
+            "97.9",
+            "60.4",
+            "1528.5"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.20",
+            "0.20",
+            "72.5",
+            "100.0",
+            "97.9",
+            "45.8",
+            "1161.9"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.30",
+            "0.02",
+            "49.0",
+            "92.3",
+            "91.9",
+            "93.1",
+            "2814.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.30",
+            "0.05",
+            "58.4",
+            "100.0",
+            "97.9",
+            "88.3",
+            "2670.4"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "0.10",
+            "70.8",
+            "100.0",
+            "97.9",
+            "67.0",
+            "2028.7"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "0.15",
+            "81.5",
+            "100.0",
+            "97.9",
+            "47.6",
+            "1442.6"
+          ]
+        },
+        {
+          "table_id": "review-budget-0-mean",
+          "source_line": 27,
+          "row_index": 21,
+          "cells_latex": [
+            "0.30",
+            "0.20",
+            "91.5",
+            "100.0",
+            "97.9",
+            "25.0",
+            "764.6"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "review-budget-1-median",
+      "labels": [
+        "tab:review-budget-1-median"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{rrrrrrr}\n\\toprule\n & & \\multicolumn{3}{c}{Selected coverage (\\%)} & & \\\\\n$q$ & $\\alpha$ & Zero & Opt. & Ref. & Active (\\%) & Queries \\\\\n\\midrule\n0.05 & 0.02 & 60.3 & 69.0 & 68.9 & 83.5 & 869.0 \\\\\n0.05 & 0.05 & 69.9 & 83.7 & 83.5 & 89.7 & 952.9 \\\\\n0.05 & 0.10 & 84.9 & 99.5 & 97.7 & 45.1 & 523.2 \\\\\n0.05 & 0.15 & 97.4 & 100.0 & 99.0 & 5.4 & 70.3 \\\\\n0.05 & 0.20 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.10 & 0.02 & 86.0 & 92.4 & 91.8 & 81.7 & 711.8 \\\\\n0.10 & 0.05 & 96.0 & 99.9 & 98.5 & 24.0 & 267.8 \\\\\n0.10 & 0.10 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.10 & 0.15 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.10 & 0.20 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.20 & 0.02 & 84.3 & 92.3 & 91.9 & 83.2 & 1566.8 \\\\\n0.20 & 0.05 & 94.8 & 100.0 & 98.2 & 30.2 & 633.9 \\\\\n0.20 & 0.10 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.20 & 0.15 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.20 & 0.20 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.30 & 0.02 & 83.5 & 93.0 & 92.5 & 84.3 & 2474.9 \\\\\n0.30 & 0.05 & 93.9 & 100.0 & 98.3 & 30.7 & 1004.0 \\\\\n0.30 & 0.10 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.30 & 0.15 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.30 & 0.20 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{WMT23, 13 streams, median pooling: all budgets and depths, 40 split means. Zero, Opt.\\ and Ref.\\ are zero-query, full-information and reference-priority selected coverage $K/|S_0|$ in percent. Reference priority stops when $V^+-V^-\\le\\lceil.02|S_0|\\rceil$. Active is queried $mT$ fraction in percent, with zero for empty active sets; Queries is the separately averaged entry count; Active averages splitwise queried fractions, not a ratio of mean counts.}\n\\label{tab:review-budget-1-median}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "",
+            "",
+            "\\multicolumn{3}{c}{Selected coverage (\\%)}",
+            "",
+            ""
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 6,
+          "row_index": 1,
+          "cells_latex": [
+            "$q$",
+            "$\\alpha$",
+            "Zero",
+            "Opt.",
+            "Ref.",
+            "Active (\\%)",
+            "Queries"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "0.02",
+            "60.3",
+            "69.0",
+            "68.9",
+            "83.5",
+            "869.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "0.05",
+            "69.9",
+            "83.7",
+            "83.5",
+            "89.7",
+            "952.9"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "0.10",
+            "84.9",
+            "99.5",
+            "97.7",
+            "45.1",
+            "523.2"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "0.15",
+            "97.4",
+            "100.0",
+            "99.0",
+            "5.4",
+            "70.3"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.05",
+            "0.20",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "0.02",
+            "86.0",
+            "92.4",
+            "91.8",
+            "81.7",
+            "711.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "0.05",
+            "96.0",
+            "99.9",
+            "98.5",
+            "24.0",
+            "267.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "0.10",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "0.15",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.10",
+            "0.20",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.20",
+            "0.02",
+            "84.3",
+            "92.3",
+            "91.9",
+            "83.2",
+            "1566.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "0.05",
+            "94.8",
+            "100.0",
+            "98.2",
+            "30.2",
+            "633.9"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "0.10",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "0.15",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.20",
+            "0.20",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.30",
+            "0.02",
+            "83.5",
+            "93.0",
+            "92.5",
+            "84.3",
+            "2474.9"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.30",
+            "0.05",
+            "93.9",
+            "100.0",
+            "98.3",
+            "30.7",
+            "1004.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "0.10",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "0.15",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-median",
+          "source_line": 27,
+          "row_index": 21,
+          "cells_latex": [
+            "0.30",
+            "0.20",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "review-budget-1-mean",
+      "labels": [
+        "tab:review-budget-1-mean"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{rrrrrrr}\n\\toprule\n & & \\multicolumn{3}{c}{Selected coverage (\\%)} & & \\\\\n$q$ & $\\alpha$ & Zero & Opt. & Ref. & Active (\\%) & Queries \\\\\n\\midrule\n0.05 & 0.02 & 3.4 & 60.9 & 60.9 & 90.7 & 1950.0 \\\\\n0.05 & 0.05 & 10.1 & 88.3 & 88.2 & 96.0 & 2063.5 \\\\\n0.05 & 0.10 & 20.3 & 99.7 & 97.5 & 85.7 & 1873.7 \\\\\n0.05 & 0.15 & 30.4 & 100.0 & 97.6 & 72.2 & 1599.1 \\\\\n0.05 & 0.20 & 40.5 & 100.0 & 97.6 & 60.9 & 1371.2 \\\\\n0.10 & 0.02 & 3.7 & 78.8 & 78.6 & 90.8 & 3818.3 \\\\\n0.10 & 0.05 & 9.9 & 95.9 & 94.9 & 96.7 & 4062.8 \\\\\n0.10 & 0.10 & 19.9 & 100.0 & 97.8 & 83.2 & 3518.8 \\\\\n0.10 & 0.15 & 29.8 & 100.0 & 97.8 & 70.7 & 3005.5 \\\\\n0.10 & 0.20 & 40.1 & 100.0 & 97.8 & 59.6 & 2548.4 \\\\\n0.20 & 0.02 & 59.6 & 94.4 & 94.0 & 93.3 & 3899.5 \\\\\n0.20 & 0.05 & 66.9 & 100.0 & 97.9 & 82.3 & 3453.8 \\\\\n0.20 & 0.10 & 77.6 & 100.0 & 97.9 & 57.4 & 2419.2 \\\\\n0.20 & 0.15 & 87.7 & 100.0 & 97.9 & 34.8 & 1491.1 \\\\\n0.20 & 0.20 & 96.8 & 100.0 & 98.7 & 9.7 & 445.7 \\\\\n0.30 & 0.02 & 69.2 & 94.3 & 94.0 & 91.8 & 4676.1 \\\\\n0.30 & 0.05 & 77.0 & 100.0 & 97.9 & 77.6 & 3990.8 \\\\\n0.30 & 0.10 & 87.7 & 100.0 & 97.9 & 45.1 & 2363.8 \\\\\n0.30 & 0.15 & 97.0 & 100.0 & 98.7 & 11.5 & 652.6 \\\\\n0.30 & 0.20 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{WMT23, 13 streams, mean pooling: all budgets and depths, 40 split means. Zero, Opt.\\ and Ref.\\ are zero-query, full-information and reference-priority selected coverage $K/|S_0|$ in percent. Reference priority stops when $V^+-V^-\\le\\lceil.02|S_0|\\rceil$. Active is queried $mT$ fraction in percent, with zero for empty active sets; Queries is the separately averaged entry count; Active averages splitwise queried fractions, not a ratio of mean counts.}\n\\label{tab:review-budget-1-mean}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "",
+            "",
+            "\\multicolumn{3}{c}{Selected coverage (\\%)}",
+            "",
+            ""
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 6,
+          "row_index": 1,
+          "cells_latex": [
+            "$q$",
+            "$\\alpha$",
+            "Zero",
+            "Opt.",
+            "Ref.",
+            "Active (\\%)",
+            "Queries"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "0.02",
+            "3.4",
+            "60.9",
+            "60.9",
+            "90.7",
+            "1950.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "0.05",
+            "10.1",
+            "88.3",
+            "88.2",
+            "96.0",
+            "2063.5"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "0.10",
+            "20.3",
+            "99.7",
+            "97.5",
+            "85.7",
+            "1873.7"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "0.15",
+            "30.4",
+            "100.0",
+            "97.6",
+            "72.2",
+            "1599.1"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.05",
+            "0.20",
+            "40.5",
+            "100.0",
+            "97.6",
+            "60.9",
+            "1371.2"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "0.02",
+            "3.7",
+            "78.8",
+            "78.6",
+            "90.8",
+            "3818.3"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "0.05",
+            "9.9",
+            "95.9",
+            "94.9",
+            "96.7",
+            "4062.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "0.10",
+            "19.9",
+            "100.0",
+            "97.8",
+            "83.2",
+            "3518.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "0.15",
+            "29.8",
+            "100.0",
+            "97.8",
+            "70.7",
+            "3005.5"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.10",
+            "0.20",
+            "40.1",
+            "100.0",
+            "97.8",
+            "59.6",
+            "2548.4"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.20",
+            "0.02",
+            "59.6",
+            "94.4",
+            "94.0",
+            "93.3",
+            "3899.5"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "0.05",
+            "66.9",
+            "100.0",
+            "97.9",
+            "82.3",
+            "3453.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "0.10",
+            "77.6",
+            "100.0",
+            "97.9",
+            "57.4",
+            "2419.2"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "0.15",
+            "87.7",
+            "100.0",
+            "97.9",
+            "34.8",
+            "1491.1"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.20",
+            "0.20",
+            "96.8",
+            "100.0",
+            "98.7",
+            "9.7",
+            "445.7"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.30",
+            "0.02",
+            "69.2",
+            "94.3",
+            "94.0",
+            "91.8",
+            "4676.1"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.30",
+            "0.05",
+            "77.0",
+            "100.0",
+            "97.9",
+            "77.6",
+            "3990.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "0.10",
+            "87.7",
+            "100.0",
+            "97.9",
+            "45.1",
+            "2363.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "0.15",
+            "97.0",
+            "100.0",
+            "98.7",
+            "11.5",
+            "652.6"
+          ]
+        },
+        {
+          "table_id": "review-budget-1-mean",
+          "source_line": 27,
+          "row_index": 21,
+          "cells_latex": [
+            "0.30",
+            "0.20",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "review-budget-2-median",
+      "labels": [
+        "tab:review-budget-2-median"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{rrrrrrr}\n\\toprule\n & & \\multicolumn{3}{c}{Selected coverage (\\%)} & & \\\\\n$q$ & $\\alpha$ & Zero & Opt. & Ref. & Active (\\%) & Queries \\\\\n\\midrule\n0.05 & 0.02 & 81.8 & 88.4 & 88.0 & 77.9 & 377.5 \\\\\n0.05 & 0.05 & 92.2 & 98.5 & 97.3 & 44.4 & 275.5 \\\\\n0.05 & 0.10 & 99.2 & 99.9 & 99.6 & 3.8 & 43.3 \\\\\n0.05 & 0.15 & 99.8 & 100.0 & 99.9 & 1.1 & 14.8 \\\\\n0.05 & 0.20 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.10 & 0.02 & 78.6 & 86.3 & 86.1 & 82.4 & 902.7 \\\\\n0.10 & 0.05 & 89.3 & 98.4 & 96.8 & 61.1 & 757.0 \\\\\n0.10 & 0.10 & 99.4 & 100.0 & 99.6 & 1.8 & 29.8 \\\\\n0.10 & 0.15 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.10 & 0.20 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.20 & 0.02 & 80.4 & 88.9 & 88.6 & 82.2 & 1692.9 \\\\\n0.20 & 0.05 & 90.9 & 99.7 & 97.9 & 53.8 & 1224.3 \\\\\n0.20 & 0.10 & 99.9 & 100.0 & 99.9 & 0.5 & 16.0 \\\\\n0.20 & 0.15 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.20 & 0.20 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.30 & 0.02 & 79.0 & 89.2 & 88.9 & 83.1 & 2705.1 \\\\\n0.30 & 0.05 & 89.4 & 99.9 & 97.9 & 54.4 & 1915.3 \\\\\n0.30 & 0.10 & 99.9 & 100.0 & 99.9 & 0.4 & 17.1 \\\\\n0.30 & 0.15 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n0.30 & 0.20 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{WMT23, 12 streams, median pooling: all budgets and depths, 40 split means. Zero, Opt.\\ and Ref.\\ are zero-query, full-information and reference-priority selected coverage $K/|S_0|$ in percent. Reference priority stops when $V^+-V^-\\le\\lceil.02|S_0|\\rceil$. Active is queried $mT$ fraction in percent, with zero for empty active sets; Queries is the separately averaged entry count; Active averages splitwise queried fractions, not a ratio of mean counts.}\n\\label{tab:review-budget-2-median}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "",
+            "",
+            "\\multicolumn{3}{c}{Selected coverage (\\%)}",
+            "",
+            ""
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 6,
+          "row_index": 1,
+          "cells_latex": [
+            "$q$",
+            "$\\alpha$",
+            "Zero",
+            "Opt.",
+            "Ref.",
+            "Active (\\%)",
+            "Queries"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "0.02",
+            "81.8",
+            "88.4",
+            "88.0",
+            "77.9",
+            "377.5"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "0.05",
+            "92.2",
+            "98.5",
+            "97.3",
+            "44.4",
+            "275.5"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "0.10",
+            "99.2",
+            "99.9",
+            "99.6",
+            "3.8",
+            "43.3"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "0.15",
+            "99.8",
+            "100.0",
+            "99.9",
+            "1.1",
+            "14.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.05",
+            "0.20",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "0.02",
+            "78.6",
+            "86.3",
+            "86.1",
+            "82.4",
+            "902.7"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "0.05",
+            "89.3",
+            "98.4",
+            "96.8",
+            "61.1",
+            "757.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "0.10",
+            "99.4",
+            "100.0",
+            "99.6",
+            "1.8",
+            "29.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "0.15",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.10",
+            "0.20",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.20",
+            "0.02",
+            "80.4",
+            "88.9",
+            "88.6",
+            "82.2",
+            "1692.9"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "0.05",
+            "90.9",
+            "99.7",
+            "97.9",
+            "53.8",
+            "1224.3"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "0.10",
+            "99.9",
+            "100.0",
+            "99.9",
+            "0.5",
+            "16.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "0.15",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.20",
+            "0.20",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.30",
+            "0.02",
+            "79.0",
+            "89.2",
+            "88.9",
+            "83.1",
+            "2705.1"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.30",
+            "0.05",
+            "89.4",
+            "99.9",
+            "97.9",
+            "54.4",
+            "1915.3"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "0.10",
+            "99.9",
+            "100.0",
+            "99.9",
+            "0.4",
+            "17.1"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "0.15",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-median",
+          "source_line": 27,
+          "row_index": 21,
+          "cells_latex": [
+            "0.30",
+            "0.20",
+            "100.0",
+            "100.0",
+            "100.0",
+            "0.0",
+            "0.0"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "review-budget-2-mean",
+      "labels": [
+        "tab:review-budget-2-mean"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{rrrrrrr}\n\\toprule\n & & \\multicolumn{3}{c}{Selected coverage (\\%)} & & \\\\\n$q$ & $\\alpha$ & Zero & Opt. & Ref. & Active (\\%) & Queries \\\\\n\\midrule\n0.05 & 0.02 & 3.7 & 69.4 & 69.4 & 87.3 & 1731.3 \\\\\n0.05 & 0.05 & 10.3 & 90.0 & 89.2 & 93.4 & 1865.9 \\\\\n0.05 & 0.10 & 20.6 & 99.1 & 97.0 & 85.4 & 1757.7 \\\\\n0.05 & 0.15 & 30.9 & 100.0 & 97.6 & 72.0 & 1507.2 \\\\\n0.05 & 0.20 & 41.2 & 100.0 & 97.6 & 59.5 & 1275.4 \\\\\n0.10 & 0.02 & 7.6 & 83.5 & 83.3 & 90.9 & 3362.6 \\\\\n0.10 & 0.05 & 14.2 & 97.5 & 96.2 & 95.1 & 3539.8 \\\\\n0.10 & 0.10 & 24.3 & 100.0 & 97.8 & 81.3 & 3047.4 \\\\\n0.10 & 0.15 & 34.8 & 100.0 & 97.8 & 68.8 & 2591.7 \\\\\n0.10 & 0.20 & 44.9 & 100.0 & 97.8 & 57.1 & 2170.2 \\\\\n0.20 & 0.02 & 57.6 & 91.7 & 91.4 & 91.2 & 3627.8 \\\\\n0.20 & 0.05 & 65.0 & 99.9 & 97.9 & 86.0 & 3450.4 \\\\\n0.20 & 0.10 & 75.8 & 100.0 & 97.9 & 59.9 & 2413.8 \\\\\n0.20 & 0.15 & 85.9 & 100.0 & 97.9 & 37.1 & 1523.3 \\\\\n0.20 & 0.20 & 95.2 & 100.0 & 98.5 & 13.5 & 591.1 \\\\\n0.30 & 0.02 & 63.7 & 91.7 & 91.6 & 90.6 & 4889.9 \\\\\n0.30 & 0.05 & 71.8 & 100.0 & 97.9 & 84.3 & 4572.6 \\\\\n0.30 & 0.10 & 82.9 & 100.0 & 97.9 & 54.5 & 2979.8 \\\\\n0.30 & 0.15 & 92.8 & 100.0 & 98.0 & 24.9 & 1406.4 \\\\\n0.30 & 0.20 & 99.5 & 100.0 & 99.6 & 1.0 & 63.3 \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{WMT23, 12 streams, mean pooling: all budgets and depths, 40 split means. Zero, Opt.\\ and Ref.\\ are zero-query, full-information and reference-priority selected coverage $K/|S_0|$ in percent. Reference priority stops when $V^+-V^-\\le\\lceil.02|S_0|\\rceil$. Active is queried $mT$ fraction in percent, with zero for empty active sets; Queries is the separately averaged entry count; Active averages splitwise queried fractions, not a ratio of mean counts.}\n\\label{tab:review-budget-2-mean}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "",
+            "",
+            "\\multicolumn{3}{c}{Selected coverage (\\%)}",
+            "",
+            ""
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 6,
+          "row_index": 1,
+          "cells_latex": [
+            "$q$",
+            "$\\alpha$",
+            "Zero",
+            "Opt.",
+            "Ref.",
+            "Active (\\%)",
+            "Queries"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "0.02",
+            "3.7",
+            "69.4",
+            "69.4",
+            "87.3",
+            "1731.3"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "0.05",
+            "10.3",
+            "90.0",
+            "89.2",
+            "93.4",
+            "1865.9"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "0.10",
+            "20.6",
+            "99.1",
+            "97.0",
+            "85.4",
+            "1757.7"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "0.15",
+            "30.9",
+            "100.0",
+            "97.6",
+            "72.0",
+            "1507.2"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.05",
+            "0.20",
+            "41.2",
+            "100.0",
+            "97.6",
+            "59.5",
+            "1275.4"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "0.02",
+            "7.6",
+            "83.5",
+            "83.3",
+            "90.9",
+            "3362.6"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "0.05",
+            "14.2",
+            "97.5",
+            "96.2",
+            "95.1",
+            "3539.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "0.10",
+            "24.3",
+            "100.0",
+            "97.8",
+            "81.3",
+            "3047.4"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "0.15",
+            "34.8",
+            "100.0",
+            "97.8",
+            "68.8",
+            "2591.7"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.10",
+            "0.20",
+            "44.9",
+            "100.0",
+            "97.8",
+            "57.1",
+            "2170.2"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.20",
+            "0.02",
+            "57.6",
+            "91.7",
+            "91.4",
+            "91.2",
+            "3627.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "0.05",
+            "65.0",
+            "99.9",
+            "97.9",
+            "86.0",
+            "3450.4"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "0.10",
+            "75.8",
+            "100.0",
+            "97.9",
+            "59.9",
+            "2413.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "0.15",
+            "85.9",
+            "100.0",
+            "97.9",
+            "37.1",
+            "1523.3"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.20",
+            "0.20",
+            "95.2",
+            "100.0",
+            "98.5",
+            "13.5",
+            "591.1"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.30",
+            "0.02",
+            "63.7",
+            "91.7",
+            "91.6",
+            "90.6",
+            "4889.9"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.30",
+            "0.05",
+            "71.8",
+            "100.0",
+            "97.9",
+            "84.3",
+            "4572.6"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "0.10",
+            "82.9",
+            "100.0",
+            "97.9",
+            "54.5",
+            "2979.8"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "0.15",
+            "92.8",
+            "100.0",
+            "98.0",
+            "24.9",
+            "1406.4"
+          ]
+        },
+        {
+          "table_id": "review-budget-2-mean",
+          "source_line": 27,
+          "row_index": 21,
+          "cells_latex": [
+            "0.30",
+            "0.20",
+            "99.5",
+            "100.0",
+            "99.6",
+            "1.0",
+            "63.3"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "review-score-0-median",
+      "labels": [
+        "tab:review-score-0-median"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{rrrrr}\n\\toprule\n$q$ & $\\alpha$ & Risk & Sel. (\\%) & Over / 40 \\\\\n\\midrule\n0.05 & 0.02 & 0.003 & 48.3 & 0 \\\\\n0.05 & 0.05 & 0.033 & 66.1 & 3 \\\\\n0.05 & 0.10 & 0.078 & 96.4 & 1 \\\\\n0.05 & 0.15 & 0.083 & 100.0 & 0 \\\\\n0.05 & 0.20 & 0.083 & 100.0 & 0 \\\\\n0.10 & 0.02 & 0.011 & 57.8 & 0 \\\\\n0.10 & 0.05 & 0.040 & 77.6 & 4 \\\\\n0.10 & 0.10 & 0.070 & 100.0 & 0 \\\\\n0.10 & 0.15 & 0.070 & 100.0 & 0 \\\\\n0.10 & 0.20 & 0.070 & 100.0 & 0 \\\\\n0.20 & 0.02 & 0.016 & 71.9 & 4 \\\\\n0.20 & 0.05 & 0.045 & 95.8 & 3 \\\\\n0.20 & 0.10 & 0.050 & 100.0 & 0 \\\\\n0.20 & 0.15 & 0.050 & 100.0 & 0 \\\\\n0.20 & 0.20 & 0.050 & 100.0 & 0 \\\\\n0.30 & 0.02 & 0.017 & 80.2 & 8 \\\\\n0.30 & 0.05 & 0.041 & 100.0 & 0 \\\\\n0.30 & 0.10 & 0.041 & 100.0 & 0 \\\\\n0.30 & 0.15 & 0.041 & 100.0 & 0 \\\\\n0.30 & 0.20 & 0.041 & 100.0 & 0 \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{RewardBench 2, median pooling: grouped SCoRE-MDR for the same churn loss and target $\\alpha/B$. Risk and selected coverage $K/|S_0|$ average 40 splits. Over/40 counts splits whose realized churn exceeds the budget. Calibration candidate scores are fully observed; selection uses no candidate test scores. Guarantee assumptions and score-entry accounting appear in Appendix~\\ref{app:review-score} and Table~\\ref{tab:review-workload}.}\n\\label{tab:review-score-0-median}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "$q$",
+            "$\\alpha$",
+            "Risk",
+            "Sel. (\\%)",
+            "Over / 40"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 7,
+          "row_index": 1,
+          "cells_latex": [
+            "0.05",
+            "0.02",
+            "0.003",
+            "48.3",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "0.05",
+            "0.033",
+            "66.1",
+            "3"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "0.10",
+            "0.078",
+            "96.4",
+            "1"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "0.15",
+            "0.083",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "0.20",
+            "0.083",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.10",
+            "0.02",
+            "0.011",
+            "57.8",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "0.05",
+            "0.040",
+            "77.6",
+            "4"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "0.10",
+            "0.070",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "0.15",
+            "0.070",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "0.20",
+            "0.070",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.20",
+            "0.02",
+            "0.016",
+            "71.9",
+            "4"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.20",
+            "0.05",
+            "0.045",
+            "95.8",
+            "3"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "0.10",
+            "0.050",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "0.15",
+            "0.050",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "0.20",
+            "0.050",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.30",
+            "0.02",
+            "0.017",
+            "80.2",
+            "8"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.30",
+            "0.05",
+            "0.041",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.30",
+            "0.10",
+            "0.041",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "0.15",
+            "0.041",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-median",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "0.20",
+            "0.041",
+            "100.0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "review-score-0-mean",
+      "labels": [
+        "tab:review-score-0-mean"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{rrrrr}\n\\toprule\n$q$ & $\\alpha$ & Risk & Sel. (\\%) & Over / 40 \\\\\n\\midrule\n0.05 & 0.02 & 0.004 & 11.1 & 1 \\\\\n0.05 & 0.05 & 0.037 & 59.1 & 5 \\\\\n0.05 & 0.10 & 0.072 & 98.8 & 0 \\\\\n0.05 & 0.15 & 0.073 & 100.0 & 0 \\\\\n0.05 & 0.20 & 0.073 & 100.0 & 0 \\\\\n0.10 & 0.02 & 0.011 & 43.4 & 0 \\\\\n0.10 & 0.05 & 0.042 & 83.2 & 9 \\\\\n0.10 & 0.10 & 0.063 & 100.0 & 0 \\\\\n0.10 & 0.15 & 0.063 & 100.0 & 0 \\\\\n0.10 & 0.20 & 0.063 & 100.0 & 0 \\\\\n0.20 & 0.02 & 0.016 & 60.8 & 4 \\\\\n0.20 & 0.05 & 0.045 & 98.3 & 5 \\\\\n0.20 & 0.10 & 0.048 & 100.0 & 0 \\\\\n0.20 & 0.15 & 0.048 & 100.0 & 0 \\\\\n0.20 & 0.20 & 0.048 & 100.0 & 0 \\\\\n0.30 & 0.02 & 0.018 & 77.5 & 10 \\\\\n0.30 & 0.05 & 0.039 & 100.0 & 0 \\\\\n0.30 & 0.10 & 0.039 & 100.0 & 0 \\\\\n0.30 & 0.15 & 0.039 & 100.0 & 0 \\\\\n0.30 & 0.20 & 0.039 & 100.0 & 0 \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{RewardBench 2, mean pooling: grouped SCoRE-MDR for the same churn loss and target $\\alpha/B$. Risk and selected coverage $K/|S_0|$ average 40 splits. Over/40 counts splits whose realized churn exceeds the budget. Calibration candidate scores are fully observed; selection uses no candidate test scores. Guarantee assumptions and score-entry accounting appear in Appendix~\\ref{app:review-score} and Table~\\ref{tab:review-workload}.}\n\\label{tab:review-score-0-mean}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "$q$",
+            "$\\alpha$",
+            "Risk",
+            "Sel. (\\%)",
+            "Over / 40"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 7,
+          "row_index": 1,
+          "cells_latex": [
+            "0.05",
+            "0.02",
+            "0.004",
+            "11.1",
+            "1"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "0.05",
+            "0.037",
+            "59.1",
+            "5"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "0.10",
+            "0.072",
+            "98.8",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "0.15",
+            "0.073",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "0.20",
+            "0.073",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.10",
+            "0.02",
+            "0.011",
+            "43.4",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "0.05",
+            "0.042",
+            "83.2",
+            "9"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "0.10",
+            "0.063",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "0.15",
+            "0.063",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "0.20",
+            "0.063",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.20",
+            "0.02",
+            "0.016",
+            "60.8",
+            "4"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.20",
+            "0.05",
+            "0.045",
+            "98.3",
+            "5"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "0.10",
+            "0.048",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "0.15",
+            "0.048",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "0.20",
+            "0.048",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.30",
+            "0.02",
+            "0.018",
+            "77.5",
+            "10"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.30",
+            "0.05",
+            "0.039",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.30",
+            "0.10",
+            "0.039",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "0.15",
+            "0.039",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-0-mean",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "0.20",
+            "0.039",
+            "100.0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "review-score-1-median",
+      "labels": [
+        "tab:review-score-1-median"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{rrrrr}\n\\toprule\n$q$ & $\\alpha$ & Risk & Sel. (\\%) & Over / 40 \\\\\n\\midrule\n0.05 & 0.02 & 0.000 & 54.4 & 0 \\\\\n0.05 & 0.05 & 0.000 & 54.4 & 0 \\\\\n0.05 & 0.10 & 0.049 & 82.2 & 0 \\\\\n0.05 & 0.15 & 0.081 & 99.0 & 0 \\\\\n0.05 & 0.20 & 0.083 & 100.0 & 0 \\\\\n0.10 & 0.02 & 0.000 & 78.8 & 0 \\\\\n0.10 & 0.05 & 0.023 & 93.3 & 0 \\\\\n0.10 & 0.10 & 0.035 & 100.0 & 0 \\\\\n0.10 & 0.15 & 0.035 & 100.0 & 0 \\\\\n0.10 & 0.20 & 0.035 & 100.0 & 0 \\\\\n0.20 & 0.02 & 0.007 & 82.1 & 0 \\\\\n0.20 & 0.05 & 0.034 & 99.4 & 0 \\\\\n0.20 & 0.10 & 0.035 & 100.0 & 0 \\\\\n0.20 & 0.15 & 0.035 & 100.0 & 0 \\\\\n0.20 & 0.20 & 0.035 & 100.0 & 0 \\\\\n0.30 & 0.02 & 0.011 & 84.9 & 1 \\\\\n0.30 & 0.05 & 0.033 & 99.9 & 0 \\\\\n0.30 & 0.10 & 0.033 & 100.0 & 0 \\\\\n0.30 & 0.15 & 0.033 & 100.0 & 0 \\\\\n0.30 & 0.20 & 0.033 & 100.0 & 0 \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{WMT23, 13 streams, median pooling: grouped SCoRE-MDR for the same churn loss and target $\\alpha/B$. Risk and selected coverage $K/|S_0|$ average 40 splits. Over/40 counts splits whose realized churn exceeds the budget. Calibration candidate scores are fully observed; selection uses no candidate test scores. Guarantee assumptions and score-entry accounting appear in Appendix~\\ref{app:review-score} and Table~\\ref{tab:review-workload}.}\n\\label{tab:review-score-1-median}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "$q$",
+            "$\\alpha$",
+            "Risk",
+            "Sel. (\\%)",
+            "Over / 40"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 7,
+          "row_index": 1,
+          "cells_latex": [
+            "0.05",
+            "0.02",
+            "0.000",
+            "54.4",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "0.05",
+            "0.000",
+            "54.4",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "0.10",
+            "0.049",
+            "82.2",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "0.15",
+            "0.081",
+            "99.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "0.20",
+            "0.083",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.10",
+            "0.02",
+            "0.000",
+            "78.8",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "0.05",
+            "0.023",
+            "93.3",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "0.10",
+            "0.035",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "0.15",
+            "0.035",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "0.20",
+            "0.035",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.20",
+            "0.02",
+            "0.007",
+            "82.1",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.20",
+            "0.05",
+            "0.034",
+            "99.4",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "0.10",
+            "0.035",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "0.15",
+            "0.035",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "0.20",
+            "0.035",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.30",
+            "0.02",
+            "0.011",
+            "84.9",
+            "1"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.30",
+            "0.05",
+            "0.033",
+            "99.9",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.30",
+            "0.10",
+            "0.033",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "0.15",
+            "0.033",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-median",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "0.20",
+            "0.033",
+            "100.0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "review-score-1-mean",
+      "labels": [
+        "tab:review-score-1-mean"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{rrrrr}\n\\toprule\n$q$ & $\\alpha$ & Risk & Sel. (\\%) & Over / 40 \\\\\n\\midrule\n0.05 & 0.02 & 0.000 & 0.0 & 0 \\\\\n0.05 & 0.05 & 0.000 & 0.0 & 0 \\\\\n0.05 & 0.10 & 0.051 & 75.7 & 2 \\\\\n0.05 & 0.15 & 0.076 & 99.0 & 0 \\\\\n0.05 & 0.20 & 0.079 & 100.0 & 0 \\\\\n0.10 & 0.02 & 0.000 & 0.0 & 0 \\\\\n0.10 & 0.05 & 0.026 & 65.1 & 1 \\\\\n0.10 & 0.10 & 0.061 & 99.8 & 0 \\\\\n0.10 & 0.15 & 0.061 & 100.0 & 0 \\\\\n0.10 & 0.20 & 0.061 & 100.0 & 0 \\\\\n0.20 & 0.02 & 0.007 & 66.4 & 0 \\\\\n0.20 & 0.05 & 0.033 & 99.8 & 0 \\\\\n0.20 & 0.10 & 0.034 & 100.0 & 0 \\\\\n0.20 & 0.15 & 0.034 & 100.0 & 0 \\\\\n0.20 & 0.20 & 0.034 & 100.0 & 0 \\\\\n0.30 & 0.02 & 0.012 & 77.9 & 1 \\\\\n0.30 & 0.05 & 0.034 & 100.0 & 0 \\\\\n0.30 & 0.10 & 0.034 & 100.0 & 0 \\\\\n0.30 & 0.15 & 0.034 & 100.0 & 0 \\\\\n0.30 & 0.20 & 0.034 & 100.0 & 0 \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{WMT23, 13 streams, mean pooling: grouped SCoRE-MDR for the same churn loss and target $\\alpha/B$. Risk and selected coverage $K/|S_0|$ average 40 splits. Over/40 counts splits whose realized churn exceeds the budget. Calibration candidate scores are fully observed; selection uses no candidate test scores. Guarantee assumptions and score-entry accounting appear in Appendix~\\ref{app:review-score} and Table~\\ref{tab:review-workload}.}\n\\label{tab:review-score-1-mean}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "$q$",
+            "$\\alpha$",
+            "Risk",
+            "Sel. (\\%)",
+            "Over / 40"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 7,
+          "row_index": 1,
+          "cells_latex": [
+            "0.05",
+            "0.02",
+            "0.000",
+            "0.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "0.05",
+            "0.000",
+            "0.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "0.10",
+            "0.051",
+            "75.7",
+            "2"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "0.15",
+            "0.076",
+            "99.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "0.20",
+            "0.079",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.10",
+            "0.02",
+            "0.000",
+            "0.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "0.05",
+            "0.026",
+            "65.1",
+            "1"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "0.10",
+            "0.061",
+            "99.8",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "0.15",
+            "0.061",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "0.20",
+            "0.061",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.20",
+            "0.02",
+            "0.007",
+            "66.4",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.20",
+            "0.05",
+            "0.033",
+            "99.8",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "0.10",
+            "0.034",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "0.15",
+            "0.034",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "0.20",
+            "0.034",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.30",
+            "0.02",
+            "0.012",
+            "77.9",
+            "1"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.30",
+            "0.05",
+            "0.034",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.30",
+            "0.10",
+            "0.034",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "0.15",
+            "0.034",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-1-mean",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "0.20",
+            "0.034",
+            "100.0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "review-score-2-median",
+      "labels": [
+        "tab:review-score-2-median"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{rrrrr}\n\\toprule\n$q$ & $\\alpha$ & Risk & Sel. (\\%) & Over / 40 \\\\\n\\midrule\n0.05 & 0.02 & 0.000 & 75.1 & 0 \\\\\n0.05 & 0.05 & 0.000 & 75.1 & 0 \\\\\n0.05 & 0.10 & 0.037 & 97.2 & 0 \\\\\n0.05 & 0.15 & 0.044 & 100.0 & 0 \\\\\n0.05 & 0.20 & 0.044 & 100.0 & 0 \\\\\n0.10 & 0.02 & 0.000 & 71.7 & 0 \\\\\n0.10 & 0.05 & 0.024 & 86.0 & 1 \\\\\n0.10 & 0.10 & 0.048 & 100.0 & 0 \\\\\n0.10 & 0.15 & 0.048 & 100.0 & 0 \\\\\n0.10 & 0.20 & 0.048 & 100.0 & 0 \\\\\n0.20 & 0.02 & 0.008 & 78.7 & 0 \\\\\n0.20 & 0.05 & 0.037 & 97.4 & 3 \\\\\n0.20 & 0.10 & 0.042 & 100.0 & 0 \\\\\n0.20 & 0.15 & 0.042 & 100.0 & 0 \\\\\n0.20 & 0.20 & 0.042 & 100.0 & 0 \\\\\n0.30 & 0.02 & 0.012 & 81.1 & 0 \\\\\n0.30 & 0.05 & 0.038 & 98.9 & 0 \\\\\n0.30 & 0.10 & 0.040 & 100.0 & 0 \\\\\n0.30 & 0.15 & 0.040 & 100.0 & 0 \\\\\n0.30 & 0.20 & 0.040 & 100.0 & 0 \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{WMT23, 12 streams, median pooling: grouped SCoRE-MDR for the same churn loss and target $\\alpha/B$. Risk and selected coverage $K/|S_0|$ average 40 splits. Over/40 counts splits whose realized churn exceeds the budget. Calibration candidate scores are fully observed; selection uses no candidate test scores. Guarantee assumptions and score-entry accounting appear in Appendix~\\ref{app:review-score} and Table~\\ref{tab:review-workload}.}\n\\label{tab:review-score-2-median}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "$q$",
+            "$\\alpha$",
+            "Risk",
+            "Sel. (\\%)",
+            "Over / 40"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 7,
+          "row_index": 1,
+          "cells_latex": [
+            "0.05",
+            "0.02",
+            "0.000",
+            "75.1",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "0.05",
+            "0.000",
+            "75.1",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "0.10",
+            "0.037",
+            "97.2",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "0.15",
+            "0.044",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "0.20",
+            "0.044",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.10",
+            "0.02",
+            "0.000",
+            "71.7",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "0.05",
+            "0.024",
+            "86.0",
+            "1"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "0.10",
+            "0.048",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "0.15",
+            "0.048",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "0.20",
+            "0.048",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.20",
+            "0.02",
+            "0.008",
+            "78.7",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.20",
+            "0.05",
+            "0.037",
+            "97.4",
+            "3"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "0.10",
+            "0.042",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "0.15",
+            "0.042",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "0.20",
+            "0.042",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.30",
+            "0.02",
+            "0.012",
+            "81.1",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.30",
+            "0.05",
+            "0.038",
+            "98.9",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.30",
+            "0.10",
+            "0.040",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "0.15",
+            "0.040",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-median",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "0.20",
+            "0.040",
+            "100.0",
+            "0"
+          ]
+        }
+      ]
+    },
+    {
+      "table_id": "review-score-2-mean",
+      "labels": [
+        "tab:review-score-2-mean"
+      ],
+      "source_latex": "\\begin{table*}[t]\n\\centering\\small\n\\begin{tabular}{rrrrr}\n\\toprule\n$q$ & $\\alpha$ & Risk & Sel. (\\%) & Over / 40 \\\\\n\\midrule\n0.05 & 0.02 & 0.000 & 0.0 & 0 \\\\\n0.05 & 0.05 & 0.000 & 0.0 & 0 \\\\\n0.05 & 0.10 & 0.048 & 77.6 & 1 \\\\\n0.05 & 0.15 & 0.076 & 98.8 & 0 \\\\\n0.05 & 0.20 & 0.078 & 100.0 & 0 \\\\\n0.10 & 0.02 & 0.000 & 3.2 & 0 \\\\\n0.10 & 0.05 & 0.027 & 69.9 & 3 \\\\\n0.10 & 0.10 & 0.054 & 99.5 & 0 \\\\\n0.10 & 0.15 & 0.054 & 100.0 & 0 \\\\\n0.10 & 0.20 & 0.054 & 100.0 & 0 \\\\\n0.20 & 0.02 & 0.007 & 64.0 & 0 \\\\\n0.20 & 0.05 & 0.037 & 97.9 & 0 \\\\\n0.20 & 0.10 & 0.040 & 100.0 & 0 \\\\\n0.20 & 0.15 & 0.040 & 100.0 & 0 \\\\\n0.20 & 0.20 & 0.040 & 100.0 & 0 \\\\\n0.30 & 0.02 & 0.013 & 73.2 & 0 \\\\\n0.30 & 0.05 & 0.038 & 99.6 & 0 \\\\\n0.30 & 0.10 & 0.039 & 100.0 & 0 \\\\\n0.30 & 0.15 & 0.039 & 100.0 & 0 \\\\\n0.30 & 0.20 & 0.039 & 100.0 & 0 \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{WMT23, 12 streams, mean pooling: grouped SCoRE-MDR for the same churn loss and target $\\alpha/B$. Risk and selected coverage $K/|S_0|$ average 40 splits. Over/40 counts splits whose realized churn exceeds the budget. Calibration candidate scores are fully observed; selection uses no candidate test scores. Guarantee assumptions and score-entry accounting appear in Appendix~\\ref{app:review-score} and Table~\\ref{tab:review-workload}.}\n\\label{tab:review-score-2-mean}\n\\end{table*}\n",
+      "rows": [
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 5,
+          "row_index": 0,
+          "cells_latex": [
+            "$q$",
+            "$\\alpha$",
+            "Risk",
+            "Sel. (\\%)",
+            "Over / 40"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 7,
+          "row_index": 1,
+          "cells_latex": [
+            "0.05",
+            "0.02",
+            "0.000",
+            "0.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 8,
+          "row_index": 2,
+          "cells_latex": [
+            "0.05",
+            "0.05",
+            "0.000",
+            "0.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 9,
+          "row_index": 3,
+          "cells_latex": [
+            "0.05",
+            "0.10",
+            "0.048",
+            "77.6",
+            "1"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 10,
+          "row_index": 4,
+          "cells_latex": [
+            "0.05",
+            "0.15",
+            "0.076",
+            "98.8",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 11,
+          "row_index": 5,
+          "cells_latex": [
+            "0.05",
+            "0.20",
+            "0.078",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 12,
+          "row_index": 6,
+          "cells_latex": [
+            "0.10",
+            "0.02",
+            "0.000",
+            "3.2",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 13,
+          "row_index": 7,
+          "cells_latex": [
+            "0.10",
+            "0.05",
+            "0.027",
+            "69.9",
+            "3"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 14,
+          "row_index": 8,
+          "cells_latex": [
+            "0.10",
+            "0.10",
+            "0.054",
+            "99.5",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 15,
+          "row_index": 9,
+          "cells_latex": [
+            "0.10",
+            "0.15",
+            "0.054",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 16,
+          "row_index": 10,
+          "cells_latex": [
+            "0.10",
+            "0.20",
+            "0.054",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 17,
+          "row_index": 11,
+          "cells_latex": [
+            "0.20",
+            "0.02",
+            "0.007",
+            "64.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 18,
+          "row_index": 12,
+          "cells_latex": [
+            "0.20",
+            "0.05",
+            "0.037",
+            "97.9",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 19,
+          "row_index": 13,
+          "cells_latex": [
+            "0.20",
+            "0.10",
+            "0.040",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 20,
+          "row_index": 14,
+          "cells_latex": [
+            "0.20",
+            "0.15",
+            "0.040",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 21,
+          "row_index": 15,
+          "cells_latex": [
+            "0.20",
+            "0.20",
+            "0.040",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 22,
+          "row_index": 16,
+          "cells_latex": [
+            "0.30",
+            "0.02",
+            "0.013",
+            "73.2",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 23,
+          "row_index": 17,
+          "cells_latex": [
+            "0.30",
+            "0.05",
+            "0.038",
+            "99.6",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 24,
+          "row_index": 18,
+          "cells_latex": [
+            "0.30",
+            "0.10",
+            "0.039",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 25,
+          "row_index": 19,
+          "cells_latex": [
+            "0.30",
+            "0.15",
+            "0.039",
+            "100.0",
+            "0"
+          ]
+        },
+        {
+          "table_id": "review-score-2-mean",
+          "source_line": 26,
+          "row_index": 20,
+          "cells_latex": [
+            "0.30",
+            "0.20",
+            "0.039",
+            "100.0",
+            "0"
+          ]
+        }
+      ]
+    }
+  ]
+}

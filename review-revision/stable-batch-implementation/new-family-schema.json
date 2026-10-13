@@ -1,0 +1,33 @@
+{
+  "status": "OFFICIAL_FILE_ACQUIRED_SCHEMA_INSPECTED",
+  "rows": 1600,
+  "top_level_keys": [
+    "decoded",
+    "expert_annotations",
+    "filepath",
+    "id",
+    "model_id",
+    "references",
+    "turker_annotations"
+  ],
+  "first_row_schema": {
+    "id": "str",
+    "decoded": "str",
+    "expert_annotations": {
+      "type": "list",
+      "example_element_type": "dict"
+    },
+    "turker_annotations": {
+      "type": "list",
+      "example_element_type": "dict"
+    },
+    "references": {
+      "type": "list",
+      "example_element_type": "str"
+    },
+    "model_id": "str",
+    "filepath": "str"
+  },
+  "outcome_analysis": false,
+  "redistribution_authorization": false
+}

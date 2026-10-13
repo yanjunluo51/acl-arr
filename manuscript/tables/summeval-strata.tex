@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lllrrrrr}\toprule
+Pooling & Stop & Stratum & Targets & Less & Equal & More & Mean query difference\\\midrule
+mean & exact & exclusion & 24 & 7 & 15 & 2 & -2.000 \\
+mean & exact & full & 16 & 0 & 11 & 5 & 1.188 \\
+mean & primary & exclusion & 16 & 7 & 7 & 2 & -2.000 \\
+mean & primary & full & 16 & 0 & 10 & 6 & 1.875 \\
+mean & primary & near full & 8 & 1 & 4 & 3 & 0.750 \\
+median & exact & exclusion & 22 & 5 & 11 & 6 & 0.136 \\
+median & exact & full & 18 & 1 & 12 & 5 & 1.222 \\
+median & primary & exclusion & 18 & 4 & 10 & 4 & 0.167 \\
+median & primary & full & 18 & 2 & 11 & 5 & 1.722 \\
+median & primary & near full & 4 & 2 & 0 & 2 & 1.750 \\
+\bottomrule\end{tabular}
+\caption{Joint frontier versus safety-only acquisition on the 160 cached-score SummEval targets: ten evaluator compositions, four depths, two pooling rules and two stopping rules at $\alpha=.10$, with primary $\varepsilon=\lceil.02|S_0|\rceil$ and exact $\varepsilon=0$. The final column is joint-frontier minus safety-only entry queries. Less/equal/more count query differences, not certificate-minimum differences. All 160 targets are included; strata use full information only after acquisition.}
+\label{tab:summeval-strata}\end{table*}

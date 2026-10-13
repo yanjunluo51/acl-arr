@@ -1,0 +1,23 @@
+{
+  "status": "PASS_SCOPED_DISCOVERY_REVISION",
+  "pdf_pages": 96,
+  "technical_main_pages": 8,
+  "limitations_page": 9,
+  "abstract_words": 180,
+  "citations": 46,
+  "font_margin_line_number_checks": true,
+  "prior_formal_blocks_unchanged_except_full_column": true,
+  "new_fixed_parameter_exact_bound": true,
+  "full_column_iff": true,
+  "general_joint_gain_characterization": false,
+  "new_model_inference": false,
+  "controlled_resource_targets": 8,
+  "controlled_closed": 4,
+  "controlled_unresolved": 4,
+  "source_hashes": {
+    "manuscript/main.tex": "5dd72a3043a66315fd46f4a8409e14e392ededc7eaa8a614eae0dd5c55760526",
+    "manuscript/appendix.tex": "6f914f8260e458c371def738e580ea1f109d1e5a557e97aa82552d76135d9972",
+    "manuscript/main.pdf": "c33eb90847a95570da0b25f0e1a934fcbf5bd51629b52366df41ef9ef830d202",
+    "manuscript/references.bib": "e773f872cf4b34fea59d58e1dfb40d3027e7ada3e33c990e4ce69ec649ef3d94"
+  }
+}

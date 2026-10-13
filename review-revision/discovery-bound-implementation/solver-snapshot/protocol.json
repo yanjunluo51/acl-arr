@@ -1,0 +1,25 @@
+{
+  "targets": 101,
+  "profiles": [
+    "recorded",
+    "tight"
+  ],
+  "tolerances": [
+    1e-07,
+    1e-09
+  ],
+  "seconds_per_objective_or_union_call": 60,
+  "workers": 4,
+  "highs_version": "1.15.1",
+  "zero_gaps": true,
+  "presolve": true,
+  "seed": 0,
+  "threads_per_solver": 1,
+  "selection": "All 89 historical strict gains and 12 preselected largest-active controls; posthoc robustness, not prospective confirmation",
+  "models": "unchanged full variable-target joint/additive and all-target best separate union; equal closed joint/additive uses bound sandwich",
+  "historical_inputs_unchanged": true,
+  "source_hashes": {
+    "scripts/variable_target_certificate.py": "9b5f5a8bc82852220e6ea3a81bacf1211c7755ae690e40f36f1d61ba0d7a26a7",
+    "scripts/deduplicated_certificates.py": "8c059af44218c735b77f41fe0c8a6dd28fbc3c7249af0dbab3727fa4fd5ab018"
+  }
+}

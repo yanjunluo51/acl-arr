@@ -1,0 +1,6 @@
+scope,history,epsilon,instances,joint_sum,union_sum,additive_sum,joint_below_union,double_count_reduction,genuine_joint_reduction,fresh_optimized
+full,empty,0,96,433231,433303,435876,4,2573,72,4
+small,empty,0,960,27502,27618,27808,84,190,116,186
+small,empty,1,960,15507,15578,15615,43,37,71,74
+small,quarter,0,960,19631,19682,19788,38,106,51,105
+small,quarter,1,960,8738,8756,8773,9,17,18,23

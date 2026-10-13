@@ -1,0 +1,17 @@
+{
+  "scope": "six complete panels; q=.05,.10,.20,.30; 40 splits; mean M7, even median M6/M8; primary and exact",
+  "expected": 5760,
+  "workers": 3,
+  "oracle": "whole column costs N entries",
+  "optimization": "complete cardinality subset enumeration from valid entry lower bound",
+  "policies": [
+    "column_fixed",
+    "column_random",
+    "column_reference"
+  ],
+  "inputs": {
+    "outputs/full-mean-grid-20261005/records.jsonl": "662df932e9b72254704a98d9df6adb81318dce53c9028b71631ad851120132c9",
+    "outputs/full-mean-grid-20261005/audited_records.csv": "e4e44e242a4cdf2ab409cc910a665f46a0bd12eaf07bb02cc809e44bda08bdf5",
+    "outputs/even-median-panels-20261007/records.jsonl": "8ab10ae646988fc56cbeb525a5e0c1332349cc2daf095d6b503feaf3aadb0485"
+  }
+}

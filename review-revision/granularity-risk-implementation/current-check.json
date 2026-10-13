@@ -1,0 +1,22 @@
+{
+  "status": "PASS_SCOPED_GRANULARITY_RISK_REVISION",
+  "pdf_pages": 92,
+  "technical_main_pages": 8,
+  "limitations_page": 9,
+  "abstract_words": 180,
+  "citations": 46,
+  "font_margin_line_number_checks": true,
+  "existing_formal_blocks_unchanged": true,
+  "new_sufficient_condition": true,
+  "general_necessity_characterization": false,
+  "layout_targets": 570,
+  "risk_masks": 15360,
+  "finite_condition_checks": 66339,
+  "new_model_inference": false,
+  "source_hashes": {
+    "manuscript/main.tex": "75c7d7245169381eb0f25638627a714f0ae822cf4c32216539b7880efcbe9add",
+    "manuscript/appendix.tex": "7f768f9c196153d4b29104505c109f0db913acc8ef7032892a19a289fa20674c",
+    "manuscript/main.pdf": "f481ad70ca8521c7930755bb0a248bc169dbedb6db259b9aaf6fe9fac04d4edc",
+    "manuscript/references.bib": "e773f872cf4b34fea59d58e1dfb40d3027e7ada3e33c990e4ce69ec649ef3d94"
+  }
+}

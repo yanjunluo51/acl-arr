@@ -1,0 +1,8 @@
+{
+  "status": "ABORTED_SUPERSEDED_AFTER_VERIFIED_CLOSURE",
+  "reason": "All eight joint targets closed by audited exhaustive fixed-target partitions; the slower duplicate modern-bounds attempt is unnecessary. Existing terminal and partial receipts remain unchanged.",
+  "driver_pid": 73121,
+  "joint_remaining_at_stop": 0,
+  "closure_evidence_sha256": "7efce5c1009c723f1c9dbfa829614adce58ab5e5dc938657e5281520663cfe49",
+  "time": "2026-10-06T22:36:25+0800"
+}

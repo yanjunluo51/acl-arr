@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+Language & Probe & Pearson & Pairs & Metric ties (\%) & Accuracy \\
+\midrule
+en-de & Source & 0.257 & 39819 & 100.0 & 0.500 \\
+en-de & Reference & 0.245 & 39819 & 100.0 & 0.500 \\
+en-es & Source & 0.207 & 21736 & 100.0 & 0.500 \\
+en-es & Reference & 0.195 & 21736 & 100.0 & 0.500 \\
+ja-zh & Source & 0.244 & 29850 & 100.0 & 0.500 \\
+ja-zh & Reference & 0.252 & 29850 & 100.0 & 0.500 \\
+\bottomrule
+\end{tabular}
+\caption{Official missing-information sentinel probes on native annotated WMT24 entries. Pooled Pearson can be positive despite complete within-paragraph ties across MT systems. Pair accuracy assigns one half to metric ties and excludes human-score ties. This descriptive diagnostic changes no candidate family and does not identify invalid real metrics.}
+\label{tab:review-sentinel}
+\end{table*}

@@ -1,0 +1,11 @@
+{
+  "status": "PASS_FULL_INTERVENTION_REPLY_MASK_FIRST_STOP_AUDIT",
+  "configuration_cases": 1920,
+  "paths_checked": 7680,
+  "stop_records_checked": 15360,
+  "actual_replies_checked": 21632445,
+  "choice_steps_independently_checked": 416920,
+  "choice_configurations": 48,
+  "full_information_oracle_diagnostic_only": true,
+  "elapsed_seconds": 154.07654441699998
+}

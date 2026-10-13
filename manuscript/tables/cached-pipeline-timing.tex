@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+Panel & Pool & Fixed & Random & Width & Reference \\
+\midrule
+RewardBench & Median & 12.7 & 12.9 & 12.6 & 28.7 \\
+RewardBench & Mean & 14.8 & 14.4 & 16.0 & 19.9 \\
+WMT23 (13) & Median & 23.5 & 22.8 & 25.0 & 58.3 \\
+WMT23 (13) & Mean & 36.1 & 33.0 & 36.0 & 49.1 \\
+WMT23 (12) & Median & 15.7 & 15.6 & 15.5 & 46.3 \\
+WMT23 (12) & Mean & 33.0 & 34.6 & 35.4 & 48.4 \\
+WMT24 en-de & Median & 54.4 & 54.5 & 54.5 & 142.4 \\
+WMT24 en-de & Mean & 99.1 & 96.2 & 107.5 & 146.5 \\
+WMT24 en-es & Median & 48.7 & 48.8 & 48.8 & 130.4 \\
+WMT24 en-es & Mean & 88.2 & 86.4 & 96.0 & 122.2 \\
+WMT24 ja-zh & Median & 33.4 & 33.7 & 33.6 & 82.3 \\
+WMT24 ja-zh & Mean & 79.6 & 76.3 & 84.7 & 113.6 \\
+\bottomrule
+\end{tabular}
+\caption{Instrumented cached-score pipeline time in milliseconds at $q=.05$, $\alpha=.10$ and exact stopping. Each cell averages eight splitwise medians of three serial runs. Full batches and original policies are used. Times include reference mapping, base setup and acquisition; only reference priority requires the timed ridge fit. Raw-file preload, imports, compilation and evaluator inference are excluded. Component times are supplied separately.}
+\label{tab:cached-pipeline-timing}
+\end{table*}

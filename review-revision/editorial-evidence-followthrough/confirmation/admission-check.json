@@ -1,0 +1,58 @@
+{
+  "status": "PASS_SOURCE_BLOCKS_REFERENCE_ORIENTATION_AND_FROZEN_CASES",
+  "cases": 24,
+  "panels": {
+    "en-de": {
+      "documents": 181,
+      "reference_documents": 60,
+      "calibration_documents": 60,
+      "test_documents": 61,
+      "test_outputs": 9675
+    },
+    "en-ru": {
+      "documents": 181,
+      "reference_documents": 60,
+      "calibration_documents": 60,
+      "test_documents": 61,
+      "test_outputs": 12208
+    },
+    "zh-en": {
+      "documents": 256,
+      "reference_documents": 85,
+      "calibration_documents": 85,
+      "test_documents": 86,
+      "test_outputs": 11088
+    }
+  },
+  "input_hashes": {
+    "protocol.json": "17059ec002e325cdd5c0d1f548c6253cefde83ff6122fc42dbfb42584b2aa4f9",
+    "admission.json": "a46aa1f342a0d24c13c0cc8db09f0f4565f656248f9a306d7ee1b971d4894704",
+    "en-de.npz": "0a71d9a2951d8eccb929113393edc21dcc415ccbfa1e453e934fb988805855db",
+    "en-ru.npz": "ab4d1e041436431f66d02c7ed1001573b0d2d7d67625e19814a6aa22671c76b4",
+    "zh-en.npz": "d81603590f83a671f6c780fc733123614b38ca02ccf89c34d08663b1b2151d4e",
+    "cases/en-de_mean_0.05.json.gz": "1cd3ffa9a7cd5a44dc71bc52b8e5acd156be978c623706dd241b83e99833c8ef",
+    "cases/en-de_mean_0.10.json.gz": "5ff573632cba9223a07b4638771309148113bfb4823e9fc765fc8895d58f303d",
+    "cases/en-de_mean_0.20.json.gz": "b30a2bb8a925a38b793ae7db0d6981e2e7088a278fa4b354c5846e870d158008",
+    "cases/en-de_mean_0.30.json.gz": "b91a9a4348f089748e9539bb9265acca375b0f1b68e7500b7c3c35eb098b09e4",
+    "cases/en-de_median_0.05.json.gz": "49877aad406f450a249fb13ed8773dd206be5eecccbf859f0c2f3845ddffec59",
+    "cases/en-de_median_0.10.json.gz": "ae964fdb472274a45885af8cdbba2aa79ede6bf2ecda9bcbb275b81dcfe412a2",
+    "cases/en-de_median_0.20.json.gz": "985f147eb1204c266dc1bfae50af1d033b98638f6b58fd43d25035f4ef3d17f6",
+    "cases/en-de_median_0.30.json.gz": "96910813d7b05eb0e7b69a3a18ddab53c96c6587cf70109db23b131c79c05c53",
+    "cases/en-ru_mean_0.05.json.gz": "6831df06adb9a6431380b8a003711b3b76d2901060c7c76e27bfcc9b9f458634",
+    "cases/en-ru_mean_0.10.json.gz": "7e579b90a3fe2ba11a1ee9056db3d81fb539e0178569cbf7ee1ec3f62240b283",
+    "cases/en-ru_mean_0.20.json.gz": "b0b27d9df7e30951cdb5167422ffa2404baf1092a7f0da0fe4e5513c76ed7282",
+    "cases/en-ru_mean_0.30.json.gz": "adbfa7ede5bb025627dd2706f9735ac379e65069c178300a3ebc7cc5a3d6c809",
+    "cases/en-ru_median_0.05.json.gz": "2e2dff50538664b427e9033e6321aea167f74f999f48cc033d4df0d17a9ac1cb",
+    "cases/en-ru_median_0.10.json.gz": "78d604bd8d46f08f1e23ee40c7d8fbc387ab906f883d864b740b1ea539e39f3b",
+    "cases/en-ru_median_0.20.json.gz": "9c1a2e0e7ffe4ee44188dc96d021d4bbfa0fa0fa6b09f2e247db92500e1bb736",
+    "cases/en-ru_median_0.30.json.gz": "27dc3afeae8b182c8cbb6490f497a1b448d8a691c202193ffbaa5bbd57db16d1",
+    "cases/zh-en_mean_0.05.json.gz": "98fa45e55370e1f104f3bf013ba2e70ae6cbfbb53ddb38ed600d2d27ff43270a",
+    "cases/zh-en_mean_0.10.json.gz": "1a13cd6059beab07959b9ab3a24ffebc3574d547543488f67ea0f533adb8fe94",
+    "cases/zh-en_mean_0.20.json.gz": "a9e379599c130df99da70d08893859673e87ebf1300e4e02785c1a0e170a24f0",
+    "cases/zh-en_mean_0.30.json.gz": "3bf64ed3e482c1b80954218ab0b6e98cd90ff4ed30ecde86b307d26383af96ca",
+    "cases/zh-en_median_0.05.json.gz": "435acdc3e7b570e709e1ffb07064d5c2005ca12fa19e8f2c4b695762720b77ff",
+    "cases/zh-en_median_0.10.json.gz": "78efd5205c07d1b664cf23eb5b5e50a75f9a4aa7e50307855b47163c46350ef8",
+    "cases/zh-en_median_0.20.json.gz": "63f4d79d6ad2118c6329026e1bfdc052b409e5fddc74fc62e661b1336b996dee",
+    "cases/zh-en_median_0.30.json.gz": "a74c6ae44240c09989ca404762b0992d01bc34fe61f518b959e41c787089c352"
+  }
+}

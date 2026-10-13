@@ -1,0 +1,5 @@
+{"event": "solver_call", "receipt": {"target": 343, "mode": "union", "status": 0, "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)", "optimality_gap": 0.0, "dual_bound": 5489.000000000007, "variables": 4937, "constraints": 5244, "presolve": false}}
+{"event": "target", "result": {"target": 343, "safety_minimum": 4477, "exclusion_minimum": 1520, "union_minimum": 5489, "proven": true}}
+{"event": "solver_call", "receipt": {"target": 348, "mode": "exclusion", "status": 0, "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)", "optimality_gap": 0.0, "dual_bound": 1242.0, "variables": 1476, "constraints": 379, "presolve": false}}
+{"event": "solver_call", "receipt": {"target": 348, "mode": "union", "status": 0, "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)", "optimality_gap": 0.0, "dual_bound": 5488.0, "variables": 4937, "constraints": 5244, "presolve": false}}
+{"event": "target", "result": {"target": 348, "safety_minimum": 4729, "exclusion_minimum": 1242, "union_minimum": 5488, "proven": true}}

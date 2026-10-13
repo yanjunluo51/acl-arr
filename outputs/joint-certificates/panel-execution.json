@@ -1,0 +1,11 @@
+{
+  "status": "PASS_FULL_SMALL_BATCH_EXECUTION_PENDING_INDEPENDENT_AUDIT",
+  "configuration_cases": 1920,
+  "joint_certificates": 7680,
+  "summary_cells": 192,
+  "maximum_selected_batch_size": 4,
+  "full_candidate_families_retained": true,
+  "full_panel_minimum_claim": false,
+  "new_model_inference": false,
+  "elapsed_seconds": 198.566074459
+}

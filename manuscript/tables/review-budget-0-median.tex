@@ -1,0 +1,32 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{rrrrrrr}
+\toprule
+ & & \multicolumn{3}{c}{Selected coverage (\%)} & & \\
+$q$ & $\alpha$ & Zero & Opt. & Ref. & Active (\%) & Queries \\
+\midrule
+0.05 & 0.02 & 53.5 & 69.4 & 69.0 & 72.9 & 321.4 \\
+0.05 & 0.05 & 63.8 & 86.3 & 85.6 & 88.7 & 392.0 \\
+0.05 & 0.10 & 80.9 & 99.6 & 97.3 & 61.4 & 285.0 \\
+0.05 & 0.15 & 96.1 & 100.0 & 98.8 & 10.6 & 56.6 \\
+0.05 & 0.20 & 99.8 & 100.0 & 99.9 & 0.5 & 2.9 \\
+0.10 & 0.02 & 57.4 & 75.0 & 74.6 & 77.4 & 627.9 \\
+0.10 & 0.05 & 67.7 & 91.6 & 90.7 & 91.3 & 741.1 \\
+0.10 & 0.10 & 84.9 & 100.0 & 97.8 & 45.1 & 378.4 \\
+0.10 & 0.15 & 98.8 & 100.0 & 99.4 & 2.0 & 18.9 \\
+0.10 & 0.20 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\
+0.20 & 0.02 & 66.6 & 84.5 & 84.2 & 80.5 & 1047.8 \\
+0.20 & 0.05 & 77.0 & 99.5 & 97.8 & 88.2 & 1151.6 \\
+0.20 & 0.10 & 94.6 & 100.0 & 97.9 & 14.1 & 189.5 \\
+0.20 & 0.15 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\
+0.20 & 0.20 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\
+0.30 & 0.02 & 73.5 & 89.7 & 89.0 & 82.6 & 1326.7 \\
+0.30 & 0.05 & 84.0 & 100.0 & 97.9 & 68.2 & 1100.1 \\
+0.30 & 0.10 & 99.8 & 100.0 & 99.9 & 0.0 & 0.8 \\
+0.30 & 0.15 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\
+0.30 & 0.20 & 100.0 & 100.0 & 100.0 & 0.0 & 0.0 \\
+\bottomrule
+\end{tabular}
+\caption{RewardBench 2, median pooling: all budgets and depths, 40 split means. Zero, Opt.\ and Ref.\ are zero-query, full-information and reference-priority selected coverage $K/|S_0|$ in percent. Reference priority stops when $V^+-V^-\le\lceil.02|S_0|\rceil$. Active is queried $mT$ fraction in percent, with zero for empty active sets; Queries is the separately averaged entry count; Active averages splitwise queried fractions, not a ratio of mean counts.}
+\label{tab:review-budget-0-median}
+\end{table*}

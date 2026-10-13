@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrrrrr}
+\toprule
+Panel & Pooling & Entry (\%) & Touched & Fixed (\%) & Random (\%) & Ref. (\%) & Cols. & $T$ \\
+\midrule
+RewardBench 2 & median & 1.77 & 7.0 & 69.3 & 71.4 & 71.8 & 5.0 & 7 \\
+RewardBench 2 & mean & 4.52 & 7.0 & 99.6 & 99.6 & 96.1 & 6.7 & 7 \\
+WMT23, 13 streams & median & 1.27 & 15.1 & 67.5 & 62.9 & 40.1 & 6.8 & 17 \\
+WMT23, 13 streams & mean & 4.53 & 17.0 & 95.4 & 94.7 & 90.1 & 15.3 & 17 \\
+WMT23, 12 streams & median & 0.11 & 1.3 & 4.1 & 4.3 & 4.1 & 0.7 & 17 \\
+WMT23, 12 streams & mean & 4.61 & 17.0 & 92.5 & 92.6 & 89.9 & 15.3 & 17 \\
+WMT24 en-de & median & 0.03 & 0.7 & 2.0 & 2.3 & 1.3 & 0.2 & 14 \\
+WMT24 en-de & mean & 4.69 & 14.0 & 92.1 & 92.1 & 89.6 & 12.6 & 14 \\
+WMT24 en-es & median & 0.03 & 0.4 & 1.3 & 1.4 & 1.4 & 0.2 & 14 \\
+WMT24 en-es & mean & 4.76 & 14.0 & 90.5 & 90.5 & 88.6 & 12.4 & 14 \\
+WMT24 ja-zh & median & 0.36 & 3.3 & 12.7 & 12.3 & 12.3 & 1.9 & 15 \\
+WMT24 ja-zh & mean & 5.46 & 15.0 & 93.0 & 93.5 & 92.8 & 13.9 & 15 \\
+\bottomrule
+\end{tabular}
+\caption{Whole-evaluator queries at $q=.05$, $\alpha=.10$, full-reference right ECDF, stopping when $V^+-V^-\le\lceil.02|S_0|\rceil$. Entry is reference-priority entry inspection; Touched counts candidate columns accessed by entry queries; it is not a scoring-call count. Fixed, Random and Ref.\ are column orders, charged $N$ scores per evaluator. Percentages divide by $NT$; Cols.\ counts reference-order evaluators. $T$ is the candidate count; the replacement family has $H=MT$ members. Counts and ratios average 40 splits separately. No inference time is measured.}
+\label{tab:column-summary}
+\end{table*}

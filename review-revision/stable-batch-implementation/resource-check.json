@@ -1,0 +1,13 @@
+{
+  "platform": "macOS-15.6-arm64-arm-64bit",
+  "physical_memory_bytes": 25769803776,
+  "free_disk_bytes": 5091233792,
+  "cached_model_directories": [
+    "models--BAAI--bge-small-en-v1.5",
+    "models--BAAI--bge-small-zh-v1.5",
+    "models--Qwen--Qwen2.5-0.5B-Instruct",
+    "models--google--mt5-small"
+  ],
+  "remote_environment": "NOT_PROVIDED_IN_SESSION",
+  "real_scorer_executed": false
+}

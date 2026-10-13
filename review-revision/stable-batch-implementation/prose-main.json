@@ -1,0 +1,36 @@
+{
+  "scope": "paper",
+  "word_count": 4188,
+  "em_dash_count": 0,
+  "em_dash_limit": 3,
+  "issue_count": 2,
+  "issues": [
+    {
+      "code": "uniform_sentence_run",
+      "severity": "warning",
+      "runs": [
+        {
+          "sentences": [
+            15,
+            19
+          ],
+          "word_counts": [
+            9,
+            7,
+            12,
+            10,
+            9
+          ]
+        }
+      ],
+      "message": "Review five-sentence runs with nearly identical length for repeated syntax."
+    },
+    {
+      "code": "semicolon_density",
+      "severity": "advisory",
+      "count": 48,
+      "per_1000_words": 11.46,
+      "message": "Review semicolon density above two per 1,000 prose words."
+    }
+  ]
+}

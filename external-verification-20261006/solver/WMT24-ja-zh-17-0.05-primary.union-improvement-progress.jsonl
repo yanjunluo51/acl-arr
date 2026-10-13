@@ -1,0 +1,2 @@
+{"event": "solver_call", "receipt": {"target": 526, "mode": "union", "status": 2, "message": "highspy 1.15.1: Infeasible", "optimality_gap": Infinity, "dual_bound": Infinity, "variables": 6432, "constraints": 6877, "presolve": true, "improvement_cutoff": 8224}}
+{"event": "target", "result": {"target": 526, "safety_minimum": 7586, "exclusion_minimum": 1129, "union_minimum": null, "proven": false}}

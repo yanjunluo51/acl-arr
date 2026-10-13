@@ -1,0 +1,42 @@
+{
+  "panels": [
+    "RewardBench2",
+    "WMT23",
+    "WMT23_without_synthetic_ref",
+    "WMT24-en-de",
+    "WMT24-en-es",
+    "WMT24-ja-zh"
+  ],
+  "splits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "q": 0.05,
+  "bootstrap_replicates": 50,
+  "seed": 620275,
+  "arms": [
+    "cutoff_only",
+    "maps_and_cutoff"
+  ],
+  "aggregators": [
+    "median",
+    "mean"
+  ],
+  "alpha": 0.1,
+  "unit": "whole original reference prompt/source/document group",
+  "original_test_groups_fixed": true,
+  "full_candidate_families": true,
+  "quality_labels_used": false,
+  "acquisition_policies_rerun": false,
+  "mean_minimum_claim": false,
+  "independent_protocol_instances": true,
+  "expected_records": 9600,
+  "workers": 4,
+  "pre_results_frozen": true
+}

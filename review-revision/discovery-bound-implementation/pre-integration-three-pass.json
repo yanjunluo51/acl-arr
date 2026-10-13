@@ -1,0 +1,5 @@
+{
+  "version": "Canonical manuscript still matches before/manuscript snapshots",
+  "mathematics": "273 explicit score/position checks and 1003 exact-arithmetic indices passed. Full completion correctness, no uniqueness promise; reference ECDF realizes cutoff 3/5. This refines the construction without changing k, budget or search bounds. 570 column targets independently check the omission equivalence.",
+  "scope": "Replace the earlier search reduction; integrate the column equivalence in the existing proposition. Exact-search result has initial gap one and gives no positive-tolerance lower bound. No claim of new NLP or human certification."
+}

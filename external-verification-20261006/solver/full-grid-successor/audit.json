@@ -1,0 +1,17 @@
+{
+  "status": "PASS_SUCCESSOR_FULL_MEAN_WITNESSES_AND_ACCOUNTING",
+  "records": 1920,
+  "source_instances_verified": 0,
+  "source_verification_requested": false,
+  "previous_exact_instances_matched": 96,
+  "primary_unclosed": 48,
+  "append_only_closures": 52,
+  "isolated_successor_targets": 22,
+  "joint_proven": 1920,
+  "separate_proven": 1920,
+  "union_proven": 1920,
+  "online_counts_checked": 13440,
+  "all_minima_closed": true,
+  "human_proof_certified": false,
+  "new_scoring_inference": false
+}

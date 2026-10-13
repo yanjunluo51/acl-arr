@@ -1,0 +1,17 @@
+{
+  "risk_analysis": "COMPLETE_AUDITED",
+  "layout_analysis": "COMPLETE_AUDITED",
+  "original_solver_pid": 24505,
+  "original_solver_snapshot": {
+    "status": "RUNNING",
+    "expected": 202,
+    "completed": 54,
+    "closed": 36,
+    "agrees": 36,
+    "unresolved": 18,
+    "errors": 0
+  },
+  "original_solver_progress_path": "review-revision/review-current-implementation/solver/progress.json",
+  "restart_existing_solver": false,
+  "resource_question": "GPU environment/model revision information requested; no response at this checkpoint"
+}

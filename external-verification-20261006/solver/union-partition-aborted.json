@@ -1,0 +1,7 @@
+{
+  "status": "ABORTED_SUPERSEDED_AFTER_ALL_REQUESTED_MINIMA_VERIFIED",
+  "pid": 62574,
+  "reason": "All original 8 joint and 22 union targets are closed by verified completed receipts; remaining queued work duplicates closed cases.",
+  "verification_sha256": "9881fb747796c27a633839d44540a2d3bcdc417ceb01de90882d98d39200ee11",
+  "unsaved_work_not_inferred": true
+}

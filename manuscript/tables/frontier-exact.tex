@@ -1,0 +1,36 @@
+\begin{table*}[t]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrrrrrr}
+\toprule
+Panel & $q$ & Reference & Width & Frontier & S-only & E-only & W/L Ref. & W/L Width \\
+\midrule
+RewardBench 2 & 0.05 & 759.2 & 787.8 & 771.2 & 764.6 & 787.8 & 5/34 & 32/2 \\
+RewardBench 2 & 0.10 & 1341.4 & 1387.1 & 1354.7 & 1353.8 & 1387.7 & 7/33 & 40/0 \\
+RewardBench 2 & 0.20 & 2006.6 & 2006.4 & 1906.4 & 1906.4 & 2006.4 & 40/0 & 40/0 \\
+RewardBench 2 & 0.30 & 2148.8 & 1906.5 & 1819.1 & 1819.1 & 1906.5 & 40/0 & 40/0 \\
+WMT23, 13 & 0.05 & 1940.4 & 2053.1 & 1964.4 & 1953.6 & 2053.0 & 11/28 & 40/0 \\
+WMT23, 13 & 0.10 & 3647.6 & 3856.5 & 3715.9 & 3715.9 & 3856.5 & 2/38 & 40/0 \\
+WMT23, 13 & 0.20 & 2615.6 & 2352.5 & 2254.1 & 2254.1 & 2352.5 & 40/0 & 40/0 \\
+WMT23, 13 & 0.30 & 2685.8 & 2108.1 & 2046.9 & 2046.9 & 2108.1 & 40/0 & 36/4 \\
+WMT23, 12 & 0.05 & 1823.0 & 1879.4 & 1839.6 & 1833.6 & 1879.2 & 13/26 & 37/2 \\
+WMT23, 12 & 0.10 & 3160.6 & 3311.7 & 3218.7 & 3217.8 & 3311.7 & 4/36 & 39/1 \\
+WMT23, 12 & 0.20 & 2611.1 & 2447.8 & 2377.0 & 2377.0 & 2447.8 & 40/0 & 38/1 \\
+WMT23, 12 & 0.30 & 3274.4 & 2816.3 & 2715.6 & 2715.6 & 2816.3 & 40/0 & 39/1 \\
+WMT24 en-de & 0.05 & 5809.8 & 6017.4 & 5921.8 & 5917.3 & 6017.4 & 6/33 & 35/3 \\
+WMT24 en-de & 0.10 & 6847.4 & 7007.2 & 6885.7 & 6884.6 & 7007.2 & 17/22 & 37/3 \\
+WMT24 en-de & 0.20 & 10201.6 & 10388.9 & 10236.8 & 10236.8 & 10388.9 & 20/20 & 34/5 \\
+WMT24 en-de & 0.30 & 11985.3 & 11327.7 & 10967.6 & 10967.6 & 11327.7 & 40/0 & 38/2 \\
+WMT24 en-es & 0.05 & 5126.9 & 5316.6 & 5227.0 & 5211.0 & 5316.6 & 4/36 & 34/6 \\
+WMT24 en-es & 0.10 & 6320.6 & 6471.5 & 6337.9 & 6337.9 & 6471.5 & 15/25 & 40/0 \\
+WMT24 en-es & 0.20 & 9054.4 & 9263.8 & 9094.9 & 9094.9 & 9263.8 & 17/23 & 37/3 \\
+WMT24 en-es & 0.30 & 9703.0 & 9008.4 & 8735.0 & 8735.0 & 9008.4 & 40/0 & 35/5 \\
+WMT24 ja-zh & 0.05 & 4554.2 & 4672.9 & 4628.0 & 4637.5 & 4670.3 & 12/28 & 29/10 \\
+WMT24 ja-zh & 0.10 & 8093.6 & 8332.5 & 8246.4 & 8251.1 & 8331.0 & 7/33 & 36/3 \\
+WMT24 ja-zh & 0.20 & 13115.0 & 13549.6 & 13380.4 & 13382.7 & 13548.5 & 10/29 & 35/5 \\
+WMT24 ja-zh & 0.30 & 15245.9 & 15846.2 & 15291.7 & 15291.7 & 15846.2 & 21/19 & 40/0 \\
+\bottomrule
+\end{tabular}
+\caption{Mean-pooling acquisition at $V^+=V^-$, $\alpha=.10$, on complete original batches. Query columns average entry counts across all 40 splits. Frontier sums predicted fractional progress toward safety and exclusion; S-only and E-only retain the corresponding single term. W/L counts Frontier strict wins/losses against Reference or Width; remaining splits tie. All methods use the same normalized scores, bound updates and certification target. Prediction-based methods share reference-fitted models; none uses quality labels. These descriptive comparisons do not establish a universally best policy.}
+\label{tab:frontier-exact}
+\end{table*}

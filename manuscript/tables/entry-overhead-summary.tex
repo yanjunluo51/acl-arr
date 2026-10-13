@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering\small
+
+
+\begin{tabular}{lrrrrr}
+\toprule
+Panel & $Q_{\rm exact}>0$ & $Q_{\rm exact}=0$ & Median & P90 & Max \\
+\midrule
+RewardBench 2 & 40 & 0 & 1.968 & 2.195 & 2.878 \\
+WMT23, 13 streams & 36 & 4 & 1.662 & 2.156 & 2.554 \\
+WMT23, 12 streams & 4 & 36 & 2.058 & 2.519 & 2.672 \\
+WMT24 en-de & 3 & 37 & 1.824 & 2.110 & 2.182 \\
+WMT24 en-es & 2 & 38 & 2.172 & 2.390 & 2.445 \\
+WMT24 ja-zh & 13 & 27 & 1.873 & 2.533 & 3.061 \\
+\bottomrule
+\end{tabular}
+\caption{Exact median entry-query discovery ratios at $q=.05$, $\alpha=.10$, full-reference right ECDF and reference priority. Ratios are $Q_{\rm online}/Q_{\rm exact}$ on positive-witness splits; zero-witness splits are separate and use no online queries. $Q_{\rm exact}>0$ and $Q_{\rm exact}=0$ report split counts; each panel has 40 splits. P90 uses linear interpolation; overlapping splits supply descriptive distributions, not population intervals.}
+\label{tab:entry-overhead-summary}
+\end{table*}

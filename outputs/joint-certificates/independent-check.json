@@ -1,0 +1,22 @@
+{
+  "status": "PASS_INDEPENDENT_EXHAUSTIVE_SUBSET_VALIDATION",
+  "capped_integer_cases": 6316,
+  "median_formula_crosschecks": 768,
+  "rational_realizable_mean_cases": 400,
+  "total_cases": 7484,
+  "dual_use_example": {
+    "queries": 2,
+    "query_mask": 3,
+    "safe_mask": 2,
+    "safe_target": 1,
+    "exclusion_target": 2,
+    "threshold": 1,
+    "true_optimum": 1,
+    "V_lower": 1,
+    "V_upper": 1,
+    "split_queries": 3
+  },
+  "elapsed_seconds": 1.621126125,
+  "solver_sha256": "0993ae1065bfb4d19b74a20dd03cc1ad2229b443875f88a8d62eb4b7b6cc9603",
+  "human_proof_certified": false
+}

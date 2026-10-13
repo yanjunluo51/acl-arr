@@ -1,0 +1,43 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lllr rrr}
+\toprule
+Pooling & $q$ & Strategy & $K$ & Precision & Top-$K$ & Difference \\
+\midrule
+median & 0.05 & fixed & 115.7 & 0.823 & 0.828 & -0.0048 \\
+median & 0.05 & random & 115.6 & 0.825 & 0.828 & -0.0033 \\
+median & 0.05 & largest\_width & 115.6 & 0.827 & 0.828 & -0.0008 \\
+median & 0.05 & reference\_priority & 115.6 & 0.827 & 0.828 & -0.0009 \\
+median & 0.10 & fixed & 229.1 & 0.702 & 0.706 & -0.0045 \\
+median & 0.10 & random & 229.1 & 0.705 & 0.706 & -0.0015 \\
+median & 0.10 & largest\_width & 229.1 & 0.705 & 0.706 & -0.0006 \\
+median & 0.10 & reference\_priority & 229.1 & 0.701 & 0.706 & -0.0046 \\
+median & 0.20 & fixed & 451.4 & 0.586 & 0.588 & -0.0020 \\
+median & 0.20 & random & 451.4 & 0.587 & 0.588 & -0.0013 \\
+median & 0.20 & largest\_width & 451.4 & 0.585 & 0.588 & -0.0030 \\
+median & 0.20 & reference\_priority & 451.4 & 0.586 & 0.588 & -0.0027 \\
+median & 0.30 & fixed & 686.0 & 0.511 & 0.511 & -0.0003 \\
+median & 0.30 & random & 686.0 & 0.511 & 0.511 & -0.0003 \\
+median & 0.30 & largest\_width & 686.0 & 0.511 & 0.511 & -0.0003 \\
+median & 0.30 & reference\_priority & 686.0 & 0.511 & 0.511 & -0.0003 \\
+mean & 0.05 & fixed & 117.3 & 0.825 & 0.827 & -0.0027 \\
+mean & 0.05 & random & 117.3 & 0.827 & 0.827 & 0.0001 \\
+mean & 0.05 & largest\_width & 117.3 & 0.829 & 0.827 & 0.0012 \\
+mean & 0.05 & reference\_priority & 117.3 & 0.826 & 0.827 & -0.0009 \\
+mean & 0.10 & fixed & 231.8 & 0.705 & 0.707 & -0.0019 \\
+mean & 0.10 & random & 231.8 & 0.710 & 0.707 & 0.0028 \\
+mean & 0.10 & largest\_width & 231.8 & 0.710 & 0.707 & 0.0032 \\
+mean & 0.10 & reference\_priority & 231.8 & 0.709 & 0.707 & 0.0014 \\
+mean & 0.20 & fixed & 452.8 & 0.591 & 0.593 & -0.0017 \\
+mean & 0.20 & random & 452.8 & 0.594 & 0.593 & 0.0004 \\
+mean & 0.20 & largest\_width & 452.8 & 0.595 & 0.593 & 0.0023 \\
+mean & 0.20 & reference\_priority & 452.8 & 0.588 & 0.593 & -0.0048 \\
+mean & 0.30 & fixed & 675.1 & 0.530 & 0.530 & -0.0004 \\
+mean & 0.30 & random & 675.1 & 0.530 & 0.530 & -0.0003 \\
+mean & 0.30 & largest\_width & 675.1 & 0.533 & 0.530 & 0.0034 \\
+mean & 0.30 & reference\_priority & 675.1 & 0.529 & 0.530 & -0.0015 \\
+\bottomrule
+\end{tabular}
+\caption{RewardBench preference diagnostic at matched returned count. All results use $\alpha=.10$ and the primary stopping criterion $V^+-V^-\le\lceil.02|S_0(P)|\rceil$. Within each of 40 grouped splits, the returned count $K$ determines the same-consensus top-$K$ comparator with label-blind seeded tie priorities. Precision and Top-$K$ are preferred-response fractions in the certified set and its matched-count comparator. Difference is certified-set precision minus comparator precision, in proportion units; multiplying by 100 gives percentage points. Entries are splitwise means, and differences are computed before display rounding. The comparator is constructed without a churn-budget constraint. This descriptive analysis was added after the inspection protocol; labels never enter acquisition or stopping. Count means use decimal half-up rounding after aggregating integer records.}
+\label{tab:query-quality}
+\end{table*}

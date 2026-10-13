@@ -1,0 +1,22 @@
+{
+  "scope": "targeted_context_not_exhaustive_novelty",
+  "sources": [
+    {
+      "id": "2402.07745",
+      "url": "https://arxiv.org/html/2402.07745v2",
+      "scope": "model update predictive churn and near-optimal model sets"
+    },
+    {
+      "id": "2605.13826",
+      "url": "https://arxiv.org/html/2605.13826v1",
+      "scope": "cross-training-sample prediction churn"
+    },
+    {
+      "id": "2607.27031",
+      "url": "https://arxiv.org/html/2607.27031v1",
+      "scope": "fixed operating thresholds and decision compatibility"
+    }
+  ],
+  "metadata": "official arXiv BibTeX exports stored separately; key renamed only",
+  "claim": "These studies motivate stability concerns but are not claimed to solve the same partial-score certificate problem. No theorem-level novelty certification."
+}

@@ -1,0 +1,33 @@
+\paragraph{Discovery at the primary positive tolerance.}
+A different construction keeps the primary gap nontrivial as the batch grows.
+\begin{proposition}[Positive-tolerance discovery with fixed parameters]
+\label{prop:positive-discovery}
+For every integer $m\ge2$, put $e=\lceil m/50\rceil$, $s=m-e-1$, $k=5s+4$ and $N=20k$. There is a family of mean-pooling instances with $M=T=7$, $q=1/20$, $\alpha=1/10$ and $|S_0|=m$, using the same reference-fitted maps and cutoff, whose minimum entry certificate at the primary tolerance $\varepsilon=e$ has size two. Every deterministic policy correct under the full completion model requires at least $m$ queries on some instance in this family. Every randomized always-valid policy has a fixed instance with expected cost at least $(m+1)/2$. Consequently, no competitive factor independent of batch size holds even at the primary positive tolerance.
+\end{proposition}
+\begin{proof}
+Use 20 reference outputs and raw scores $1+((a+3j)\bmod20)$ for output $a=0,\ldots,19$ and evaluator $j=0,\ldots,13$. Each right ECDF maps raw rank $v$ to $v/20$. Since $k_{\rm ref}=1$, the fitted mean cutoff is the largest reference consensus, $t_0=83/140$. Give every selected test row the base scores
+\[
+ (1,3/20,3/10,9/20,3/5,3/4,9/10),
+\]
+whose mean equals $t_0$. Every base score is positive, so a candidate score zero causes seven flips, whereas score one causes none. Set all other base rows to zero; they remain unselected even after replacing one base score by one, since $1/7<t_0$. These test scores are realized by the same reference ECDFs, using raw ranks or zero.
+
+All candidate scores on selected rows are zero except two entries in one hidden row, in fixed candidate columns, whose scores are one. Thus every selected row has cap seven and upper cost 49 initially. The hidden row has true cost 35; every other selected row has true cost 49. The common reference data reveal neither the hidden row nor its test scores. The budget is
+\[
+ b_H=\lfloor 2k\alpha MT\rfloor=49s+39.
+\]
+The initial safe and optimistic counts are $s$ and $m$, with gap $e+1$. Revealing both exceptional entries lowers one upper cost to 35. The safe count becomes $s+1$, the optimistic count remains $m$, and the gap becomes $e$. No single entry suffices. A zero-flip reply lowers one upper cost only to 42, leaving the safe count $s$ because $42>39$; a seven-flip reply leaves all upper costs unchanged. In either case the total lower cost is at most seven and all $m$ rows remain optimistically feasible. Hence the minimum is exactly two.
+
+Consider any history of at most $m-1$ queries with only seven-flip replies on selected rows. Its lower-cost sum is at most $7(m-1)\le b_H$, while its upper costs remain 49, so the gap stays $e+1$. Here $e\le m/2$ for $m\ge2$, which verifies the displayed budget inequality. At least one selected row has not been queried. Placing the two exceptional entries in that row gives a family member consistent with the history. A deterministic policy therefore cannot finish before $m$ queries in the worst case. Queries on invariant rows cannot shorten this history.
+
+For randomized policies, choose the hidden row uniformly among the $m$ selected rows, independently of the policy randomness. After $t<m$ queries, at most $t$ rows have been touched along the all-seven-flip path. With probability at least $1-t/m$, the hidden row is untouched and the policy cannot stop. If $Q$ is its query count, then
+\[
+ \begin{aligned}
+ \mathbb E Q&\ge\sum_{t=0}^{m-1}\Pr(Q>t)\\
+ &\ge\sum_{t=0}^{m-1}(1-t/m)=(m+1)/2.
+ \end{aligned}
+\]
+Averaging over rows gives a fixed instance with at least this expected cost. Policies must be valid on the full completion set; the exceptional-row pattern is not supplied as a promise. Since $N=20(5s+4)$ grows linearly with $m$, the cost ratio to the two-entry minimum is unbounded in batch size.
+\end{proof}
+
+This family uses the primary tolerance and fixed numerical parameters but changes the score geometry and selected fraction as specified above. It establishes a worst-case discovery obstruction, not the frequency or cause of overhead on NLP panels. Exact score reconstruction checks the reference cutoff and replacement outcomes. Independent enumeration checks all 16,384 and 2,097,152 entry subsets for $m=2,3$; further finite checks cover 2,002 parameter values and 63,466 adversarial histories. These checks supplement the proof (\nolinkurl{review-revision/stable-batch-implementation/check_positive_discovery.py}).
+

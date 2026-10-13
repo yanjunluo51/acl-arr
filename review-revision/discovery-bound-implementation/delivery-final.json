@@ -1,0 +1,53 @@
+{
+  "status": "PASS_SCOPED_DISCOVERY_DELIVERY",
+  "archives": {
+    "manuscript/source_private.zip": {
+      "sha256": "bb6d0e37f2714a148524ade1b912ea19bc0094eeec0f591e5c4fb5fcace8b22b",
+      "members": 1400,
+      "hash_crc_live_binding": true,
+      "anonymous_byte_scan": false
+    },
+    "packages/current_mapping_column_code_private.zip": {
+      "sha256": "181a8e288d4896e41d088deea2daa4619d87d3281cd10e6247bd464329bb4d55",
+      "members": 2711,
+      "hash_crc_live_binding": true,
+      "anonymous_byte_scan": false
+    },
+    "packages/current_anonymous_source.zip": {
+      "sha256": "10f115534a88b9b6ac1a641f4a981b0e8b34581035690250d8ffe32854eea6d6",
+      "members": 1400,
+      "hash_crc_live_binding": true,
+      "anonymous_byte_scan": true
+    },
+    "packages/current_anonymous_code.zip": {
+      "sha256": "945844bd719c70f81d564b2e29b46d4762a795d2eec6fe26786510fa0c05b8ca",
+      "members": 2711,
+      "hash_crc_live_binding": true,
+      "anonymous_byte_scan": true
+    }
+  },
+  "clean_builds": {
+    "private": {
+      "pages": 96,
+      "text_pixels_match": true,
+      "current_check": true,
+      "theory_and_column_replay": true,
+      "full_subset_example": true,
+      "scale_score_and_witness_replay": true,
+      "raw_scorer_reexecution": false
+    },
+    "anonymous": {
+      "pages": 96,
+      "text_pixels_match": true,
+      "current_check": true,
+      "theory_and_column_replay": true,
+      "full_subset_example": true,
+      "scale_score_and_witness_replay": true,
+      "raw_scorer_reexecution": false
+    }
+  },
+  "human_proof_review": false,
+  "complete_rights_authorization": false,
+  "new_scorer_inference": false,
+  "uploaded": false
+}

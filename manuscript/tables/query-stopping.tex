@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrrrr}
+\toprule
+Panel & Pooling & Z (\%) & Fixed (\%) & Random (\%) & Width (\%) & Ref. (\%) & Cov.\ (\%) \\
+\midrule
+RewardBench 2 & median & 0.0 & 63.8 & 64.0 & 63.0 & 61.4 & 97.3 \\
+WMT23, 13 streams & median & 10.0 & 57.9 & 58.4 & 65.0 & 45.1 & 97.7 \\
+WMT23, 12 streams & median & 92.5 & 3.9 & 3.8 & 3.9 & 3.8 & 99.6 \\
+RewardBench 2 & mean & 0.0 & 90.9 & 91.5 & 91.7 & 86.5 & 97.5 \\
+WMT23, 13 streams & mean & 0.0 & 91.3 & 92.2 & 92.6 & 85.7 & 97.5 \\
+WMT23, 12 streams & mean & 0.0 & 89.5 & 90.2 & 89.9 & 85.4 & 97.0 \\
+\bottomrule
+\end{tabular}
+\caption{$q=.05$, $\alpha=.10$, gap $V^+-V^-\le\lceil.02|S_0|\rceil$. Z: percentage of 40 splits stopping without queries. Order columns: mean active inspection ($100Q/(mT)$), zero for empty active sets. Ref.: reference priority; Cov.: its mean selected coverage ($100K/|S_0|$).}
+\label{tab:stopping}
+\end{table*}

@@ -1,0 +1,13 @@
+\begin{table}[t]
+\centering\small
+\begin{tabular}{rrrrr}
+\toprule
+$\eta$ & Fixed & Random & Width & Ref. \\
+\midrule
+.02 & 2067.3 & 2111.6 & 1800.6 & 2363.8 \\
+.10 & 567.4 & 667.3 & 660.9 & 940.7 \\
+\bottomrule
+\end{tabular}
+\caption{Mean queries on thirteen-stream WMT23, mean pooling, $q=.30$, $\alpha=.10$: the same 40 splits and fixed paths, with stopping gap $\lceil\eta|S_0|\rceil$. Counts are reaggregated from saved records and rounded half up. Width has the lowest mean at $.02$, fixed order at $.10$.}
+\label{tab:tolerance-order-check}
+\end{table}

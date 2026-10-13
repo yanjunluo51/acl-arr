@@ -1,0 +1,895 @@
+{
+  "status": "PASS_METADATA_FINITE_SCORE_AND_NATIVE_GOLD_ALIGNMENT",
+  "archive_sha256": "6708eec9aaa8a9deca5e370bdd0e23db4881aeca129f29d5281575eaa66c7e10",
+  "archive_bytes": 911710790,
+  "source": {
+    "checked_utc": "2026-10-02T13:04:34.700715+00:00",
+    "legacy_official_url": "https://storage.googleapis.com/mt-metrics-eval/mt-metrics-eval-v2.tgz",
+    "legacy_status": 403,
+    "replacement_official_url": "https://data.statmt.org/wmt26/mt-metrics-eval-v2.tgz",
+    "authority": "Repository maintainer danieldeutsch comment on google-research/mt-metrics-eval issue 27",
+    "authority_url": "https://github.com/google-research/mt-metrics-eval/issues/27",
+    "numeric_scores_opened": false,
+    "protocol_change": "None; maintainer-authorized hosting migration only"
+  },
+  "panels": [
+    {
+      "language": "en-de",
+      "status": "ADMITTED",
+      "reference": "refB",
+      "models": [
+        "BERTScore",
+        "BLCOM",
+        "BLCOM_1",
+        "BLEU",
+        "BLEURT-20",
+        "COMET-22",
+        "MEE4",
+        "MetricX-24",
+        "MetricX-24-Hybrid",
+        "PrismRefMedium",
+        "PrismRefSmall",
+        "XCOMET",
+        "YiSi-1",
+        "chrF",
+        "chrfS",
+        "damonmonli",
+        "metametrics_mt_mqm_hybrid_kendall",
+        "metametrics_mt_mqm_kendall",
+        "monmonli",
+        "sentinel-ref-mqm",
+        "spBLEU"
+      ],
+      "base_pool": [
+        "BERTScore",
+        "BLCOM",
+        "BLCOM_1",
+        "BLEU",
+        "BLEURT-20",
+        "COMET-22",
+        "MEE4"
+      ],
+      "candidates": [
+        "MetricX-24",
+        "MetricX-24-Hybrid",
+        "PrismRefMedium",
+        "PrismRefSmall",
+        "XCOMET",
+        "YiSi-1",
+        "chrF",
+        "chrfS",
+        "damonmonli",
+        "metametrics_mt_mqm_hybrid_kendall",
+        "metametrics_mt_mqm_kendall",
+        "monmonli",
+        "sentinel-ref-mqm",
+        "spBLEU"
+      ],
+      "systems": [
+        "AIST-AIRC",
+        "Aya23",
+        "CUNI-NL",
+        "Claude-3.5",
+        "CommandR-plus",
+        "CycleL",
+        "CycleL2",
+        "Dubformer",
+        "GPT-4",
+        "Gemini-1.5-Pro",
+        "IKUN",
+        "IKUN-C",
+        "IOL_Research",
+        "Llama3-70B",
+        "MSLC",
+        "Mistral-Large",
+        "NVIDIA-NeMo",
+        "ONLINE-A",
+        "ONLINE-B",
+        "ONLINE-G",
+        "ONLINE-W",
+        "Occiglot",
+        "Phi-3-Medium",
+        "TSU-HITs",
+        "TranssionMT",
+        "Unbabel-Tower70B"
+      ],
+      "excluded_human_references": [
+        "refA",
+        "refB"
+      ],
+      "systems_missing_from_some_metric_stream": [],
+      "original_paragraph_count": 998,
+      "retained_paragraph_count": 998,
+      "retained_document_count": 171,
+      "removed_nonfinite_paragraph_ids": [],
+      "exact_duplicate_streams": {
+        "metametrics_mt_mqm_same_source_targ": "metametrics_mt_mqm_hybrid_kendall"
+      },
+      "native_mqm_observed": 8279,
+      "native_mqm_possible": 25948,
+      "panel_sha256": "6105653ec43bc9052dfcae3b77a535461d611c0b3836bec65c6159c864a3ba9f",
+      "mqm_sha256": "069a67793a32917147a33dbf78e3b131feffd62e5dfdac6e10106463d76f850a",
+      "input_files": [
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/documents/en-de.docs",
+          "sha256": "e710720e5f9d1762a4c4b38b610420feddf02a7001ed8e88e7ebc3e51c370c1c"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/human-scores/en-de.mqm.seg.score",
+          "sha256": "3afcdc0d591af75eb0493e1669d4508a7adccee9fce5b1676dd693a71b083ca5"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/BERTScore-refB.seg.score",
+          "sha256": "715fb50c81c4196ada4c85403229c047dd8ee35c16d2fcf5d44538c9f226ed4b"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/BLCOM-refB.seg.score",
+          "sha256": "8a25bcdefce7511fce19c446d4faa0498f34d41a081d2f967dd1c89768d8b7e7"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/BLCOM_1-refB.seg.score",
+          "sha256": "0fee5748ded92f2bc6a05955076e2e5f2002932a2527780c698de060b04c90b6"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/BLEU-refB.seg.score",
+          "sha256": "a14856423a884a223231cf553a75236ae779d02ec757bfb8289c8201246686e8"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/BLEURT-20-refB.seg.score",
+          "sha256": "5ce83dfa1bd2481633e518b92a085ee78f9dcf2ff41b4304024e816523f1506c"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/COMET-22-refB.seg.score",
+          "sha256": "b3f976a70053b1f2f73505f5e49abeb8a709e06c29922803876519414a73e2fc"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/MEE4-refB.seg.score",
+          "sha256": "d07830fdb6db83e341b3013d914b8b41575a589c64323d5b540492eca86d7ebf"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/MetricX-24-Hybrid-refB.seg.score",
+          "sha256": "1bf29130762e96a98fd1b25df95a23cc8f1439854eeec8e26375647b06e71e0f"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/MetricX-24-refB.seg.score",
+          "sha256": "b168bc5455446cad6aa70901f7ba48781ee577cdbcebb7e9b6cab565648ce70d"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/PrismRefMedium-refB.seg.score",
+          "sha256": "8157fb8f161c0e6809bde1b701103f0af713cb0f5cce438358791104d8e360a5"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/PrismRefSmall-refB.seg.score",
+          "sha256": "d88b30874f3e4882f3987c3eb3b566194d4d4ff9abd131a985411ec4f0491bb4"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/XCOMET-refB.seg.score",
+          "sha256": "cd0f3a48b450a13a5a3ebde303f7e8fe7e2f22f0f4a0a27cb89d48a01542ce45"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/YiSi-1-refB.seg.score",
+          "sha256": "33850b23eee37807d43cb601f8aa0b29b2a3fa1d0a3e1f7ac37170c0da236cb0"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/chrF-refB.seg.score",
+          "sha256": "539e42975bd6bd94a95d1866aec861075c108c3203f7b305b35c04461c6767db"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/chrfS-refB.seg.score",
+          "sha256": "5c67c825a07569c607d34c6393924e468faa60e4fb5e21f7bcbe973a659a24c5"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/damonmonli-refB.seg.score",
+          "sha256": "e0078f162c285d4356d712cad7c3f0265e7be957cc93f09ff9ddf4a6c21e7483"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/metametrics_mt_mqm_hybrid_kendall-refB.seg.score",
+          "sha256": "8b8298e34df1914f2cbbbf01dad38418781639d08b839adbdcf4741889c3da33"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/metametrics_mt_mqm_kendall-refB.seg.score",
+          "sha256": "28530ab8c0a5e7191829a43bd9d602e4233f288dc698c612a31b656625677b9c"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/metametrics_mt_mqm_same_source_targ-refB.seg.score",
+          "sha256": "8b8298e34df1914f2cbbbf01dad38418781639d08b839adbdcf4741889c3da33"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/monmonli-refB.seg.score",
+          "sha256": "170099ae9f8d303b76b3f6970a65576aee034fe9faf9b5bb1d92a48f646688f4"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/sentinel-ref-mqm-refB.seg.score",
+          "sha256": "8c4c5b57efffe2cb40de65e305e521e4362ff41a40c568b0d0c5a088a3c6be93"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-de/spBLEU-refB.seg.score",
+          "sha256": "686e908d14dc38c752303b79a6dd78a6bc29b38871c68c8651b30962d40d19f3"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/references/en-de.refA.txt",
+          "sha256": "eba7b43c767cdb50a3b733486ecee386647bc599d0df32ed4586b425fef33391"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/references/en-de.refB.txt",
+          "sha256": "361aa5e86f32d1f8a0ac8848e9cec03ca590a0e4d23e90c28989ab0126edb06e"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/AIST-AIRC.txt",
+          "sha256": "2e02f9319f004ae47bf955a899a6b92756a13dc469247b6c622f13ecfba6c1e2"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/Aya23.txt",
+          "sha256": "f62238a7b8fba2147ebe3baa1bcd736baf77953d86a85f43bb8690a3cdfee867"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/CUNI-NL.txt",
+          "sha256": "d696d4be212fdc3cf741710ffd9158f087eba6220b84518a8fe87bac34e91cc8"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/Claude-3.5.txt",
+          "sha256": "c9d54829acdc7a288f5e2a9d2ff7ad2e2adf049bd5d0b5568ec2573ad02c6ab0"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/CommandR-plus.txt",
+          "sha256": "4f92b7aec56b3210f721737ad03b4088b982838523076185bfe3d00d9dbe4cb1"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/CycleL.txt",
+          "sha256": "121bd980417e1448a276f31eb55e7fb24567cc61851712e61d709389b86a0ab6"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/CycleL2.txt",
+          "sha256": "121bd980417e1448a276f31eb55e7fb24567cc61851712e61d709389b86a0ab6"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/Dubformer.txt",
+          "sha256": "f271b5d5e27705a2a95b87f428d74c3981f129f56592f401a17aebe64118bb33"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/GPT-4.txt",
+          "sha256": "ba06e7f99e0f73ffeb5646460aa0925726c01c5c027b72a679509e2ee1991ce7"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/Gemini-1.5-Pro.txt",
+          "sha256": "558857bff0860ed499306cdb38511288f13c3ba68741ff8330193b29db5d49da"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/IKUN-C.txt",
+          "sha256": "b6850e6dbcb0e9189889d89d6b4fad596d367ecd9115bdaafcb115724bfa4db9"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/IKUN.txt",
+          "sha256": "956a6ff9b7f9cac6b7b498b4327865d92462cc86198d64d4f3a7123b41637f1a"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/IOL_Research.txt",
+          "sha256": "3012b97b4f515506249084d74bb724c30b0482d2321ead03a925a46d3dd0ffc6"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/Llama3-70B.txt",
+          "sha256": "b028d2412bd1639a8fe928f3c8f13ef34c539e933e79877575fd050e5c842160"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/MSLC.txt",
+          "sha256": "a636c2fc62fe468f5d14caf10561f544f2ac134e421198211c64c1e925968b52"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/Mistral-Large.txt",
+          "sha256": "df6374ff9f945cacc930dd3417c03656ffdbd78eb442e6d313d5727ed587d35a"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/NVIDIA-NeMo.txt",
+          "sha256": "e4063c620bd6dcd53633bd163d620c68e339f5af3253e8dacdadf2a6f25e6b43"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/ONLINE-A.txt",
+          "sha256": "17efb5dafb536da2abb4a38c5d94e1103294ffb7b1db8a8a5614a2b1aab4cfc4"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/ONLINE-B.txt",
+          "sha256": "9664b263a3cfacf95cebdd6ea0ae2ea8ae6630e97275ac5574bbada8c65ef0d6"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/ONLINE-G.txt",
+          "sha256": "11507229429e64c6bb640cca7afad5845438ab435ee295862e7e8b0647f16162"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/ONLINE-W.txt",
+          "sha256": "acac9ba7ed49112acb99ec6892ce3cb766b179dac3b75faf610c034eca628d9e"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/Occiglot.txt",
+          "sha256": "35c9e142bd7d0241ae5afd63b45b995269cec544a9f227aa5f144e61d94379f4"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/Phi-3-Medium.txt",
+          "sha256": "b941fa3f96733e52afb3b3dcb0dcde5c22a211950bf1eaab5c0ed4ada7b64f64"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/TSU-HITs.txt",
+          "sha256": "25e360ebc9e05c3386256c65d18ced95c135a962eddd5dee151d7e942abd74b9"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/TranssionMT.txt",
+          "sha256": "340ccd6a12720d48ea85b3359393cafd087bd0cd0b9f7352634ec0138be82e1f"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-de/Unbabel-Tower70B.txt",
+          "sha256": "ade3c6984700a315cd89b5a12ec5e33b666400d28c084ce43370211abd324687"
+        }
+      ]
+    },
+    {
+      "language": "en-es",
+      "status": "ADMITTED",
+      "reference": "refA",
+      "models": [
+        "BERTScore",
+        "BLCOM",
+        "BLCOM_1",
+        "BLEU",
+        "BLEURT-20",
+        "COMET-22",
+        "MEE4",
+        "MetricX-24",
+        "MetricX-24-Hybrid",
+        "PrismRefMedium",
+        "PrismRefSmall",
+        "XCOMET",
+        "YiSi-1",
+        "chrF",
+        "chrfS",
+        "damonmonli",
+        "metametrics_mt_mqm_hybrid_kendall",
+        "metametrics_mt_mqm_kendall",
+        "monmonli",
+        "sentinel-ref-mqm",
+        "spBLEU"
+      ],
+      "base_pool": [
+        "BERTScore",
+        "BLCOM",
+        "BLCOM_1",
+        "BLEU",
+        "BLEURT-20",
+        "COMET-22",
+        "MEE4"
+      ],
+      "candidates": [
+        "MetricX-24",
+        "MetricX-24-Hybrid",
+        "PrismRefMedium",
+        "PrismRefSmall",
+        "XCOMET",
+        "YiSi-1",
+        "chrF",
+        "chrfS",
+        "damonmonli",
+        "metametrics_mt_mqm_hybrid_kendall",
+        "metametrics_mt_mqm_kendall",
+        "monmonli",
+        "sentinel-ref-mqm",
+        "spBLEU"
+      ],
+      "systems": [
+        "Aya23",
+        "Claude-3.5",
+        "CommandR-plus",
+        "CycleL",
+        "Dubformer",
+        "GPT-4",
+        "Gemini-1.5-Pro",
+        "IKUN",
+        "IKUN-C",
+        "IOL_Research",
+        "Llama3-70B",
+        "MSLC",
+        "Mistral-Large",
+        "NVIDIA-NeMo",
+        "ONLINE-A",
+        "ONLINE-B",
+        "ONLINE-G",
+        "ONLINE-W",
+        "Occiglot",
+        "Phi-3-Medium",
+        "TSU-HITs",
+        "TranssionMT",
+        "Unbabel-Tower70B"
+      ],
+      "excluded_human_references": [
+        "refA"
+      ],
+      "systems_missing_from_some_metric_stream": [],
+      "original_paragraph_count": 998,
+      "retained_paragraph_count": 998,
+      "retained_document_count": 171,
+      "removed_nonfinite_paragraph_ids": [],
+      "exact_duplicate_streams": {
+        "metametrics_mt_mqm_same_source_targ": "metametrics_mt_mqm_hybrid_kendall"
+      },
+      "native_mqm_observed": 8722,
+      "native_mqm_possible": 22954,
+      "panel_sha256": "0fba5c83c0b33d05c718e931ab7ac8bf14a236508e92239ce79bb70c8cda683b",
+      "mqm_sha256": "b9d07ad012379093e6d8e802746e71c3180b6d5e1ef94c033910fedd4c794247",
+      "input_files": [
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/documents/en-es.docs",
+          "sha256": "e710720e5f9d1762a4c4b38b610420feddf02a7001ed8e88e7ebc3e51c370c1c"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/human-scores/en-es.mqm.seg.score",
+          "sha256": "a37026cdf7a77ce7f3b38fa2b6763f53a0775379a21f65c548c709ba2056d019"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/BERTScore-refA.seg.score",
+          "sha256": "ca85f126e051ec871e282297c7d61f789d8513c29fe2acfc2d6f2b234f318eb7"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/BLCOM-refA.seg.score",
+          "sha256": "c182a9c25c8537dd7bd0ffa974ae2a22d1e02959c94b7b58d55308731f03d00d"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/BLCOM_1-refA.seg.score",
+          "sha256": "8e59dd18a84f62931223811790f8c522aa46667beed07e4d06337cc6271605ac"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/BLEU-refA.seg.score",
+          "sha256": "110337063f43d45b795151926ef09e0a47186638896833eba3792d079d5cc49a"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/BLEURT-20-refA.seg.score",
+          "sha256": "df7e66c779524e769019e364b623d9e1b776d010b3f7f83ad06825341102ee85"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/COMET-22-refA.seg.score",
+          "sha256": "6aa6ae78d9f1f6165efb72226140c5d2dd4b4d4e982db7067e423e02c6ccfef2"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/MEE4-refA.seg.score",
+          "sha256": "120bea37b320bd505a36b51dd2d408414f149b6fe0020b546e7b78bcfb2cd45b"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/MetricX-24-Hybrid-refA.seg.score",
+          "sha256": "94e6b9ed6d73facaf3b8eaf42b47b7f27469d643e08af4b2e27f203db6c28007"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/MetricX-24-refA.seg.score",
+          "sha256": "e1d32e420cc77b89a8f6852b34844201af2f370a1ca362532620404a10c34495"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/PrismRefMedium-refA.seg.score",
+          "sha256": "25280eb52dd1e5e13d4b85463298fe115da8765150298da023f0365a10a43240"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/PrismRefSmall-refA.seg.score",
+          "sha256": "18e7b9b84c1f6775f25699bfd76e743e170f4124ddc4169aeb1ad20932fb8ed5"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/XCOMET-refA.seg.score",
+          "sha256": "ad6e949a919d10ce020c4aa1eb5350b5e6edf0057e29a3294011af03121558ef"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/YiSi-1-refA.seg.score",
+          "sha256": "f5bd3848f7c177b626e24059b6d688936879c5fd6820f205f5dcd7c485e38db5"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/chrF-refA.seg.score",
+          "sha256": "28fd394e11f1f634581223774a8786cff7820dc815e5b2a2a1039ac8c32a1d02"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/chrfS-refA.seg.score",
+          "sha256": "1f83faddd88bbf9b304e9ca1051af39e30534d38b4d516474198d9eb3eef3057"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/damonmonli-refA.seg.score",
+          "sha256": "df844a11ff16aa2f855ceae4db90b23a81f188f99cf928b63d63fddca14630f3"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/metametrics_mt_mqm_hybrid_kendall-refA.seg.score",
+          "sha256": "5ff580f2f72aa19621d2f414656cb9f2fce1ec667f7a360ba0a012eff635bea0"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/metametrics_mt_mqm_kendall-refA.seg.score",
+          "sha256": "693cbdda9a3417e6d1a1dc2c5b296813832e0bddf99a20008ea77a412b8e2b7c"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/metametrics_mt_mqm_same_source_targ-refA.seg.score",
+          "sha256": "5ff580f2f72aa19621d2f414656cb9f2fce1ec667f7a360ba0a012eff635bea0"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/monmonli-refA.seg.score",
+          "sha256": "b9cf7844795109e42f483ab2975d434d730e6afb05cbac558e05014fef5b0e30"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/sentinel-ref-mqm-refA.seg.score",
+          "sha256": "6de3b96d47b85bac08eb043e86b34dc65914ef76b4f201e6344de65563a334ea"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/en-es/spBLEU-refA.seg.score",
+          "sha256": "8907396c3108366e7a7354406be0dda51fd1ba15a67391417ec0548cf9cc17ad"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/references/en-es.refA.txt",
+          "sha256": "0d26125a4b0f15e99825a059719e9fc48dde604b7509810a4712a6ab3ea82865"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/Aya23.txt",
+          "sha256": "a9c1cfc522422a05ba9d0e8af8dc64fcdd0f25c5f1421f6b3505699c3f2058ce"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/Claude-3.5.txt",
+          "sha256": "e24f0d5eb2105e853c68c50e6415db5912f298f760ed7f55d63f6f83e347c3a0"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/CommandR-plus.txt",
+          "sha256": "68e0a2cb6a706632a7f85231b6a1528f8029f373d6dd6b5656bc5301607e4295"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/CycleL.txt",
+          "sha256": "cba233c5f3c4e83668ac98bce1f3b3879ec891af9130afe3f58dc98c1b1afc83"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/Dubformer.txt",
+          "sha256": "068bc4ae0535254edf9ee943d5e0c60319b080eb7e2e3b8ec57fa56f93a21477"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/GPT-4.txt",
+          "sha256": "083611fc3ce905e97b7b9722be6753b7f1225f579ead61cb5a4cc08c314976e5"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/Gemini-1.5-Pro.txt",
+          "sha256": "8147efbddeae14007535d45af2f93b62c31fa5a542217c8e8930f2172504f406"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/IKUN-C.txt",
+          "sha256": "8551b4cbfdc8c77367b4a1fbf70d5cb2aec9183cb3eddbd4a8ba5dca49633daf"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/IKUN.txt",
+          "sha256": "adfe0a8e3282fdd280f87988499e712afbcc835b854de2fe6e4da4d8ebff3a33"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/IOL_Research.txt",
+          "sha256": "bd26b8d25ccbada3306ed79df1c8b26295a509cd0eb089dc7e2a17df0e10e346"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/Llama3-70B.txt",
+          "sha256": "bcfaf2d94720425beb315ee126edd7fc37432e262594f6c1010f063db82e66f7"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/MSLC.txt",
+          "sha256": "c08bcf6ada8f7a6b3af16671bafa41cdcb562d8865d3a992c9ac3f1ef553d1a2"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/Mistral-Large.txt",
+          "sha256": "34635efe1755985b443108bc63a841dfe19cbc6f9a3604a3ad17b6452f0f60ed"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/NVIDIA-NeMo.txt",
+          "sha256": "aae229b29283773047926e6567dfade22e41f287ba3396c18cd2e6e205ed5b1d"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/ONLINE-A.txt",
+          "sha256": "1a752c43e764918bc2ddc009d5f304fd7eba623503a6798e98d64df7a1ee2398"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/ONLINE-B.txt",
+          "sha256": "c0c6658f373c2be631c0cc4d472974f3e8183dd88f66244e9c67872a93ef286c"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/ONLINE-G.txt",
+          "sha256": "6371f8879c9f2312c44b5f3cab47f26247a464248794978a413f0f695557fc21"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/ONLINE-W.txt",
+          "sha256": "08d58f717aaa2d3afc9cae153d6dbc178e4d962edee564fe066a7daf67a34006"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/Occiglot.txt",
+          "sha256": "fd796133454c72110fa6701202119ab7f5d47de2a9e38c49fdf020c2a227999a"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/Phi-3-Medium.txt",
+          "sha256": "1e15ab198a99b2d17cc1de2c7eb55037ceb9a393ecf400c2687056efa7fcc8db"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/TSU-HITs.txt",
+          "sha256": "b8b2771010b9acbea47f4f6a261e9d82c2af9920d4755d8a7b6cc0c274680b7e"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/TranssionMT.txt",
+          "sha256": "81bc9ba49a511fd99e30e4151bc5abf6ce433255b75c376c3732e78d522fd1a9"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/en-es/Unbabel-Tower70B.txt",
+          "sha256": "491f5a95eb3ec029d415bb8dd14747fcf5f10a27c80a7a444378a3b9f9bd8e1a"
+        }
+      ]
+    },
+    {
+      "language": "ja-zh",
+      "status": "ADMITTED",
+      "reference": "refA",
+      "models": [
+        "BERTScore",
+        "BLCOM",
+        "BLCOM_1",
+        "BLEU",
+        "BLEURT-20",
+        "COMET-22",
+        "MEE4",
+        "MetricX-24",
+        "MetricX-24-Hybrid",
+        "PrismRefMedium",
+        "PrismRefSmall",
+        "XCOMET",
+        "YiSi-1",
+        "chrF",
+        "chrfS",
+        "damonmonli",
+        "metametrics_mt_mqm_hybrid_kendall",
+        "metametrics_mt_mqm_kendall",
+        "metametrics_mt_mqm_same_source_targ",
+        "monmonli",
+        "sentinel-ref-mqm",
+        "spBLEU"
+      ],
+      "base_pool": [
+        "BERTScore",
+        "BLCOM",
+        "BLCOM_1",
+        "BLEU",
+        "BLEURT-20",
+        "COMET-22",
+        "MEE4"
+      ],
+      "candidates": [
+        "MetricX-24",
+        "MetricX-24-Hybrid",
+        "PrismRefMedium",
+        "PrismRefSmall",
+        "XCOMET",
+        "YiSi-1",
+        "chrF",
+        "chrfS",
+        "damonmonli",
+        "metametrics_mt_mqm_hybrid_kendall",
+        "metametrics_mt_mqm_kendall",
+        "metametrics_mt_mqm_same_source_targ",
+        "monmonli",
+        "sentinel-ref-mqm",
+        "spBLEU"
+      ],
+      "systems": [
+        "Aya23",
+        "Claude-3.5",
+        "CommandR-plus",
+        "CycleL",
+        "DLUT_GTCOM",
+        "GPT-4",
+        "Gemini-1.5-Pro",
+        "IKUN",
+        "IKUN-C",
+        "IOL_Research",
+        "Llama3-70B",
+        "MSLC",
+        "Mistral-Large",
+        "NTTSU",
+        "ONLINE-A",
+        "ONLINE-B",
+        "ONLINE-G",
+        "ONLINE-W",
+        "Phi-3-Medium",
+        "Team-J",
+        "Unbabel-Tower70B",
+        "UvA-MT"
+      ],
+      "excluded_human_references": [
+        "refA"
+      ],
+      "systems_missing_from_some_metric_stream": [],
+      "original_paragraph_count": 722,
+      "retained_paragraph_count": 722,
+      "retained_document_count": 197,
+      "removed_nonfinite_paragraph_ids": [],
+      "exact_duplicate_streams": {},
+      "native_mqm_observed": 7840,
+      "native_mqm_possible": 15884,
+      "panel_sha256": "eade3ee009ccc0c7c30d718a011c09710eab6bfe08e4c020cec0356d12eec271",
+      "mqm_sha256": "4d515921f3036ea4febe8a057d5f6d8a46c3f8479bfcc486ad2bb89f07722381",
+      "input_files": [
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/documents/ja-zh.docs",
+          "sha256": "23cfbd979c4d2a032e41c174c4bc340c5f031ed7b81e8545e36db934b62818f4"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/human-scores/ja-zh.mqm.seg.score",
+          "sha256": "56da33ca78616af201ea00f81630a02b996dfb850c474086ac0b6c6f0ab2a6ca"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/BERTScore-refA.seg.score",
+          "sha256": "3c022e9d32490601bc09f746a2923d267bb55882d2ae5e16cf122c9b5dab9c8a"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/BLCOM-refA.seg.score",
+          "sha256": "fe6b18a6d1afb6547678baa2d6491cab369ad079efe60c5963e1560aa1b2d8cf"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/BLCOM_1-refA.seg.score",
+          "sha256": "f4f16b4116f8d5cbdfb84cc95dfaa7494bfd2895ffdfdd40c0383263f921db2d"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/BLEU-refA.seg.score",
+          "sha256": "cf682f8e5f1988144227f4968ec45c264a2a227883cb5b8a13fabb7fef93dd54"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/BLEURT-20-refA.seg.score",
+          "sha256": "f4980a2e3a603e2d64d767453b3ded76343fa345db0e7583d4741bcd9ca230bf"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/COMET-22-refA.seg.score",
+          "sha256": "0191af8162d6b3a82dbbf862f4282a823673da198cc1ff8473f3d8186aafbda2"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/MEE4-refA.seg.score",
+          "sha256": "0570bfe1ca64d081c2ae81a91d946357b1de658bd3dacf238e0d80b64159f795"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/MetricX-24-Hybrid-refA.seg.score",
+          "sha256": "8a931c73da6977cbf67e70e88933401c1a4be17c68ba061ec0a609f13b1eb8b5"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/MetricX-24-refA.seg.score",
+          "sha256": "c517124ab41ea26d20f2c0a376070aa959c8bbae3dbee53090d4ead3ef75e10d"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/PrismRefMedium-refA.seg.score",
+          "sha256": "ac2bac7f5b7d025295f2c8e9c26d61882d62332aa74112a47b93ad2f8b0eb959"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/PrismRefSmall-refA.seg.score",
+          "sha256": "1e7e5238c61e04c1da1a3283c3e2751fd7506d7dae983ec41c4831c9cc92f389"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/XCOMET-refA.seg.score",
+          "sha256": "04211ef21b5e7c926b51824948234f04dd2fb6a7362c136810115ab3cc8a2d15"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/YiSi-1-refA.seg.score",
+          "sha256": "adcd42ad61165dc32b0f18f5adc6b552f16631b911e1293933e488b2465cc2fc"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/chrF-refA.seg.score",
+          "sha256": "a485a366b0e1c62093354c58566a42eac65129a9cdc9f4342f73ba0f31cddaf9"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/chrfS-refA.seg.score",
+          "sha256": "efc72c62b1bf5f9d6cb98fff6fb725f2abd52c05e418b0e995d622c42cdff8d8"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/damonmonli-refA.seg.score",
+          "sha256": "586d6faf38d36b9ea65fd3d7158011ced103cbb3f5c18d9028dc67e22ae51645"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/metametrics_mt_mqm_hybrid_kendall-refA.seg.score",
+          "sha256": "bc5b861597680a89ed065628c9d1642aee1a2fd31fb1d881b787957032c90b61"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/metametrics_mt_mqm_kendall-refA.seg.score",
+          "sha256": "a7a75d8e23205afef33b80e76f12ddce62c09fb9a53c0bf0e14bfca5f28f3986"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/metametrics_mt_mqm_same_source_targ-refA.seg.score",
+          "sha256": "3df1f6b02b101d60c1eed0e3a2c055fc6587fc6439dcafa38f799d8506cc4db5"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/monmonli-refA.seg.score",
+          "sha256": "1703e9456aeed6bd3d6370caad22a22fdc18418e8f275bb15fd8c601ebc6ca49"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/sentinel-ref-mqm-refA.seg.score",
+          "sha256": "e06e97e73472253da5a9631139f47f6099433c9d58bf9d501efebcade653e64e"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/metric-scores/ja-zh/spBLEU-refA.seg.score",
+          "sha256": "72061ea2d5096e5bd653ddd88dec3e1b7ff59820fe1a5e34c67f89ca6cba0f59"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/references/ja-zh.refA.txt",
+          "sha256": "481dee10109f30b6970c53f51db0e05c0f9a6c10e17f81dfc4fbc498fd382746"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/Aya23.txt",
+          "sha256": "40d6bff499ab2881aabbb06974555f316e3491c6cd24f0fca487e96e53189861"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/Claude-3.5.txt",
+          "sha256": "7a016f240182b6501623ad3f25404f95890874d9203e2b490b5013b33cf64534"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/CommandR-plus.txt",
+          "sha256": "df9fa281f7d04c6b1fc92ddd3fdf05f2d1e90db197bff8dac10cd58fdb852a29"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/CycleL.txt",
+          "sha256": "adc867921ba6674815d6d9eb6130459dc0761df0a3fbfeaa90ef1b31d1cbe80f"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/DLUT_GTCOM.txt",
+          "sha256": "b8b14a9bf1e9905d6e7c67ef23bdebcf760ac04f7061367cd368e5a8733ca249"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/GPT-4.txt",
+          "sha256": "2b97cdab8239ac73e5982452dc241dbdb31c8f8492dd647c0f2de4efe3de736c"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/Gemini-1.5-Pro.txt",
+          "sha256": "2d4c940b3f990a8247188644268ba8003bea1613422f57f1ad4d8816b9493427"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/IKUN-C.txt",
+          "sha256": "b62e70f099d26003afa76f8e2e3df48d814f92bbe0d3c509983057b6f1af1d9f"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/IKUN.txt",
+          "sha256": "be4bbfc9c71a69ea98f4ff537c982d7f13aba4505927f7a5239a6bc8382b1251"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/IOL_Research.txt",
+          "sha256": "eac7302f28e25d6b59307f32ebf33b1555c25f57c90353bd38bd32575e5fa29d"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/Llama3-70B.txt",
+          "sha256": "3e74c63066bdd3f6aeec25d8a0ae698f8212d41e03fa77639d71aa16b8a60e07"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/MSLC.txt",
+          "sha256": "0e58ec1dd2a3d464a6fec3d329c129eb5ba8715d969b2b6c77f04fe54173b7a9"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/Mistral-Large.txt",
+          "sha256": "29ad0fba325d36e77b1043a068f295d9052d323313c6070e738c3b8500c2334c"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/NTTSU.txt",
+          "sha256": "0bf797a8450eed17d6b2e0545829fe79a9a34b9f459f2988df9da330544a73ef"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/ONLINE-A.txt",
+          "sha256": "34333644a0f9efe18a4ccc1ae9a1446a21eb94d72a57f250b634531c79d54abf"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/ONLINE-B.txt",
+          "sha256": "1ecea42ff4d5ddb3798c8295920fbc082c3aaa57fd18941c900c7412b5e98093"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/ONLINE-G.txt",
+          "sha256": "050c6e2bac3d381ee2010bdfcf4d48f206dd28231e861848034586aa47f27098"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/ONLINE-W.txt",
+          "sha256": "8bf8197a106cdf7870a8dd07d74351f4b723ca903aa14799aee5ad17dcf5fdd2"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/Phi-3-Medium.txt",
+          "sha256": "e1e724012e4c205167ec7517f4a3f0676cc0f2b9acf85fe60956e37450baf92f"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/Team-J.txt",
+          "sha256": "2fef924a4f2b4dd587d6849309302b9c2d2478a2b47270908cf05b408d1754d3"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/Unbabel-Tower70B.txt",
+          "sha256": "254a325ce90e283c7c561b76cdd3ac870525cc262fd7e878bc785dec4e792d0b"
+        },
+        {
+          "path": "extracted/mt-metrics-eval-v2/wmt24/system-outputs/ja-zh/UvA-MT.txt",
+          "sha256": "79263633eef8bbeda119e824603f05c2aceafb47b905a8190b5fbf637e6370fe"
+        }
+      ]
+    }
+  ],
+  "limitations": "No claim of independent human annotation verification or universal derived-data redistribution rights. WMT24 is project-unseen after method freeze, not evaluator-training-uncontaminated.",
+  "post_admission_numerical_amendment": "WMT24 reference-priority fixed-point ties added after failed exact replay. Original admission data, risk objective and splits unchanged; current execution protocol is not entirely pre-results-frozen."
+}

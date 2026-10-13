@@ -1,0 +1,12 @@
+{
+  "platform": "macOS-15.6-arm64-arm-64bit",
+  "machine": "arm64",
+  "processor": "arm",
+  "physical_memory_bytes": 25769803776,
+  "binding_time": "after execution; algorithm files independently bound in pre-execution protocol",
+  "files": {
+    "scale.py": "35a54fd2675a58988a774bfda7e23131fde2eed7c8452f0f8d7857a488c505c0",
+    "scale/protocol.json": "3095928fd742a4dba8d9af0b50f56599cf4421a3969b0fb472c446acc3cfa76c",
+    "scale/records.jsonl": "f00cb8936155a1f3787d55a80d88f1ab1a9c917485a131cc469ee0f91fa85ddd"
+  }
+}

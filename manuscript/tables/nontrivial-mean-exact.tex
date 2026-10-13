@@ -1,0 +1,37 @@
+\begin{table*}[t]
+\centering\small
+
+
+\begin{tabular}{llrrrrrrrr}
+\toprule
+Panel & $q$ & $n$ & Fixed & Random & Width & Ref. & Ref.\ active & $K$ & Gap \\
+\midrule
+RewardBench 2 & 0.05 & 40 & 786.6 & 786.5 & 787.8 & 759.2 & 90.2 & 120.2 & 0.0 \\
+RewardBench 2 & 0.10 & 40 & 1395.2 & 1394.8 & 1387.1 & 1341.4 & 86.9 & 237.0 & 0.0 \\
+RewardBench 2 & 0.20 & 40 & 2069.8 & 2068.5 & 2006.4 & 2006.6 & 79.5 & 462.5 & 0.0 \\
+RewardBench 2 & 0.30 & 40 & 2111.0 & 2111.6 & 1906.5 & 2148.8 & 71.0 & 689.3 & 0.0 \\
+WMT23, 13 & 0.05 & 40 & 2042.8 & 2041.7 & 2053.1 & 1940.4 & 88.8 & 126.1 & 0.0 \\
+WMT23, 13 & 0.10 & 40 & 3833.5 & 3838.8 & 3856.5 & 3647.6 & 86.3 & 247.3 & 0.0 \\
+WMT23, 13 & 0.20 & 40 & 2622.2 & 2621.9 & 2352.5 & 2615.6 & 62.1 & 486.5 & 0.0 \\
+WMT23, 13 & 0.30 & 40 & 2486.0 & 2473.2 & 2108.1 & 2685.8 & 51.6 & 730.0 & 0.0 \\
+WMT23, 12 & 0.05 & 40 & 1879.9 & 1880.6 & 1879.4 & 1823.0 & 88.7 & 116.1 & 0.0 \\
+WMT23, 12 & 0.10 & 40 & 3315.4 & 3314.0 & 3311.7 & 3160.6 & 84.3 & 227.2 & 0.0 \\
+WMT23, 12 & 0.20 & 40 & 2668.5 & 2666.6 & 2447.8 & 2611.1 & 64.8 & 451.6 & 0.0 \\
+WMT23, 12 & 0.30 & 40 & 3180.4 & 3181.9 & 2816.3 & 3274.4 & 60.0 & 681.0 & 0.0 \\
+WMT24 en-de & 0.05 & 40 & 5999.6 & 6004.5 & 6017.4 & 5809.8 & 86.2 & 461.0 & 0.0 \\
+WMT24 en-de & 0.10 & 40 & 7121.7 & 7122.1 & 7007.2 & 6847.4 & 73.1 & 919.4 & 0.0 \\
+WMT24 en-de & 0.20 & 40 & 10716.2 & 10718.8 & 10388.9 & 10201.6 & 67.2 & 1779.6 & 0.0 \\
+WMT24 en-de & 0.30 & 40 & 12079.3 & 12092.0 & 11327.7 & 11985.3 & 62.5 & 2645.1 & 0.0 \\
+WMT24 en-es & 0.05 & 40 & 5310.6 & 5312.2 & 5316.6 & 5126.9 & 84.9 & 413.0 & 0.0 \\
+WMT24 en-es & 0.10 & 40 & 6611.1 & 6612.9 & 6471.5 & 6320.6 & 75.9 & 805.7 & 0.0 \\
+WMT24 en-es & 0.20 & 40 & 9562.9 & 9563.1 & 9263.8 & 9054.4 & 68.5 & 1567.7 & 0.0 \\
+WMT24 en-es & 0.30 & 40 & 9699.3 & 9684.2 & 9008.4 & 9703.0 & 60.5 & 2348.7 & 0.0 \\
+WMT24 ja-zh & 0.05 & 40 & 4674.0 & 4678.6 & 4672.9 & 4554.2 & 89.1 & 310.5 & 0.0 \\
+WMT24 ja-zh & 0.10 & 40 & 8339.0 & 8340.0 & 8332.5 & 8093.6 & 89.1 & 570.1 & 0.0 \\
+WMT24 ja-zh & 0.20 & 40 & 13731.9 & 13735.6 & 13549.6 & 13115.0 & 86.4 & 1123.6 & 0.0 \\
+WMT24 ja-zh & 0.30 & 40 & 16379.6 & 16383.9 & 15846.2 & 15245.9 & 80.3 & 1667.1 & 0.0 \\
+\bottomrule
+\end{tabular}
+\caption{Mean entry acquisition with $\varepsilon=0$ and $\alpha=.10$. Each panel--depth setting has 40 splits. The shared subset has initial gap greater than $\varepsilon$; $n$ gives its size. Query counts are conditional means for fixed, random, largest-width and reference-priority acquisition. Ref.\ active is the mean $100Q/(mT)$. For reference priority, $K=V^-$ is returned count and Gap is $V^+-V^-$; both average the same initially non-stopping splits. Empty subsets are marked --. Integer count means use decimal half-up rounding; ratios are averaged separately. These overlapping splits give descriptive results.}
+\label{tab:nontrivial-mean-exact}
+\end{table*}

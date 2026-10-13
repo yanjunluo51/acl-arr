@@ -1,0 +1,57 @@
+Raw data, splits and labels are unchanged. The new distribution table reaggregates saved integer evidence; lossless export of repeated tables creates no new data redistribution permission. The manuscript and receipts are listed in LATEST_MANUSCRIPT.md.
+
+Optimality closure only re-optimized existing derived integer instances and recomputed statistics; the original scorers were not run and no annotations were added. Raw inputs and online paths are unchanged. There is still no complete redistribution confirmation.
+
+# Data provenance and acquisition for the current manuscript
+
+This statement accompanies this repository. It documents numerical evaluator panels, group identifiers, existing human labels, and separately generated synthetic scores. It does not grant redistribution rights to third-party data.
+
+## RewardBench 2
+
+The processed panel has 1,723 prompts, four completions each, and 14 reward-model streams. Ties and prompts without four eligible completions are excluded. Scores come from [allenai/reward-bench-2-results](https://huggingface.co/datasets/allenai/reward-bench-2-results), revision `b19c7033e964187d12e74a43a07f2d727a3d37e5`; native records and preference identities come from [allenai/reward-bench-2](https://huggingface.co/datasets/allenai/reward-bench-2), revision `7ff08853b0d5686e79b13fda8677024f566a104a`. The reconstruction keeps the last eligible occurrence of a repeated result ID. Prompt and all four completions are aligned separately for each evaluator's model-formatted input. A results revision identifies released scores, not a model-weight checkpoint. Preference labels are used after selection and do not fit maps, query priorities, or stopping rules.
+
+The benchmark card declares ODC-BY and additional third-party-output terms. The separate score repository had no license/card declaration in the recorded 2026-10-02 audit. Complete derived-score redistribution clearance is unresolved. The source and current code packages contain no original RewardBench score matrix or response text.
+
+## WMT23
+
+The processed en-de panel has 557 source segments, 13 output streams and 24 distinct reference-based metric streams. `synthetic_ref` is an output stream, not an evaluator. A twelve-stream sensitivity removes it before refitting maps and cutoff; it preserves the thirteen-stream input. The original processed score panels have no human-quality labels. A separate post hoc alignment now supplies official MQM diagnostics for the frozen masks; original score inputs and missing precision fields are preserved.
+
+The original builder uses [tttonyyy/mt-metrics-eval-v2](https://huggingface.co/datasets/tttonyyy/mt-metrics-eval-v2), revision `56352a3d563d371622935c84974b3f215abeede3`, aligning refA submissions by system/segment and removing exact duplicate score streams. Its acquisition is reproducible against that pinned mirror. The present supplemental audit also establishes exact equality of all 173,784 retained metric-score entries to the locally pinned official archive; this is a value/identity check, not a redistribution authorization. See the official [WMT23 metrics paper](https://aclanthology.org/2023.wmt-1.51/). The mirror's MIT card and the toolkit's Apache-2.0 license do not establish redistribution rights for every submitted score stream.
+
+Before assigning the experimental splits, the builder checks each retained metric's Pearson correlation with BLEURT-20 over all 557 source segments and 13 output streams. The full 24-metric matrix contains 173,784 score entries, including outputs later assigned to test splits. All correlations are positive (minimum 0.1842519491). The code copies score values unchanged and asserts positive correlation; it neither learns/flips score signs nor removes individual metrics on this criterion. A nonpositive correlation would reject the build. This full-panel check is excluded from the reported post-freeze acquisition counts. Those counts describe information requirements conditional on the frozen panel, not acquisition savings starting at panel construction or model inference cost.
+
+The post hoc reference-only diagnostic uses the original `87000+r` source-group splits, `r=0,...,39`, without modifying input values, metric membership or selection rules. All 960 metric/split checks in each output population are positive: minima 0.0944620166 for thirteen streams and 0.0793120831 for twelve streams without `synthetic_ref`. Checks include BLEURT-20 self-correlation. These diagnostics do not retroactively make the original builder reference-only and do not assert that future reference panels will pass. CDF maps and cutoff fitting remain a distinct, reference-only process. Reproduction instructions are in `ACQUISITION_INDEX.md` and `README.md`.
+
+The supplemental alignment uses the pinned official archive, which is not included here (see `ACQUISITION_INDEX.md`). Forty-four used files are bound by `review-revision/acceptance-review-implementation/wmt23-official-files.json`. Exact system names and original segment identifiers align MQM, with 460 of 557 segments labeled for each of twelve MT systems (5,520 of 7,241 thirteen-stream outputs). `synthetic_ref` has no label. Higher released MQM is better; no missing values are filled. Full masks and query paths are unchanged. All 6,400 records (including zero/full-information baselines) and 1,440 summary fields were independently recomputed. The primary comparator matches the returned annotated count, not total returned count. Forty overlapping splits yield descriptive diagnostics only. Official source text, score files and label arrays remain local and are excluded from source/code packages; complete redistribution clearance remains unresolved.
+
+## WMT24 and MQM
+
+Official release metadata and metric files follow the [WMT24 metrics paper](https://aclanthology.org/2024.wmt-1.2/) and [mt-metrics-eval](https://github.com/google-research/mt-metrics-eval). The maintainer documents the archive host change in [issue 27](https://github.com/google-research/mt-metrics-eval/issues/27); the recorded acquisition uses `https://data.statmt.org/wmt26/mt-metrics-eval-v2.tgz`. The local acquisition record pins the downloaded archive and used files. A current archive may change; using another release requires checking the admitted systems, metric streams and values against the declared protocol.
+
+En-de, en-es and ja-zh contain 998/998/722 source paragraphs, 26/23/22 MT output streams, and 21/21/22 finite distinct default-reference evaluator streams. Human-reference outputs are excluded; exact numerical duplicate metric streams are removed. References are refB for en-de and refA for en-es/ja-zh. Whole documents remain in one split. These are processed panels, not the size of the entire benchmark. Some released metrics can use human-score calibration; independence of metric training is not asserted.
+
+MQM aligns by exact system name and original paragraph index: 8,279/25,948, 8,722/22,954 and 7,840/15,884 annotated/admitted outputs. Missing annotations remain missing. MQM is used only after masks and acquisition paths are fixed. Quality means concern annotated outputs, without population imputation or equivalence claims. Sentinel probes use official source-only/reference-only score streams; they neither create labels nor remove real evaluators.
+
+The churn objective and admission rules preceded WMT24 result inspection. Per-cell fixed-point acquisition ties were added after an exact-replay failure; that ordering repair was not part of the pre-results freeze. The released-data identity and public download do not grant complete derived-metric-score/MQM redistribution. Full authorization remains unresolved; the original numerical panels and locally prepared data archive are excluded from the current source/code packages.
+
+## Synthetic scores and code
+
+The independent synthetic package contains 192 generated score panels, 576 median instances and reference results for 8,064 stopping states. It calls the full entry and column solvers and requires no third-party score panels or human labels. These inputs test evidence sharing under the declared completion model; they are not language responses, human annotations, inference-runtime evidence or additional NLP benchmarks. `scripts/run_synthetic_certificates.py` regenerates it, and `outputs/synthetic-certificates/results.json` holds the saved results.
+
+The code package preserves the existing attribution notices. ACL style files retain their upstream notices; `lineno.sty` retains LPPL 1.3a-or-later attribution. This preparation assigns no new software license on behalf of authors or third parties. Full novelty verification and external human proof review are distinct from compilation, arithmetic checks and source reconstruction.
+
+## Matched-tie revision and reconstruction
+
+`outputs/matched-tie-control/` contains derived aggregate records and packed returned-mask bits for a paired full-information control, with labels never loaded. Both baseline and replacement top-k rankings use decreasing consensus and increasing seeded label-blind priority. Original score matrices and labels are not included. This repository includes the model-file mapping and frozen manifest required by `scripts/fetch_inputs.py`. Two original panels were freshly rebuilt from the pinned remote snapshots with exact frozen SHA256. `scripts/fetch_external_inputs.py` separately reconstructs the six WMT24 numerical panel/MQM artifacts from the already pinned official archive, with exact original hashes; this is not a fresh network acquisition of that archive. These checks do not grant complete derived-score redistribution permission.
+
+## New derived certificate evidence
+
+This repository includes predefined small-batch integer flip matrices, endpoint caps, original output indices and reconstructed certificates, plus complete intervention traces containing integer flip contributions and stopping masks. These are derivatives of the same frozen evaluator panels; they contain no new response text or original raw scorer arrays. No model inference or new quality labeling was performed. Small batches reset N, k and the churn budget while retaining the original reference maps, cutoff and full candidate family. Full-information interventions use hidden costs for a diagnostic, not an online decision rule. Inclusion of derived evidence here does not establish permission to redistribute the underlying scores.
+
+## Joint scale and bootstrap
+
+The new material comes from derived integer flips/witnesses of the original frozen cached panels and from reference-group resampling. The original models were not rerun for inference. The added directories do not change the 276 original scientific outputs. This repository includes these derived witnesses, programs and saved receipts; it does not include the original response, score or MQM arrays. Complete redistribution permission for derived information is not yet certified.
+
+## Current checklist and disclosure mapping
+
+`RESPONSIBLE_NLP_CURRENT.md` maps each asset to its actual local use, recorded terms, package treatment and manuscript evidence. It also records the limits of content auditing and total compute accounting, and the scope of AI research, coding and writing assistance. It does not grant new redistribution rights or assert that author-side submission fields have been completed. The new cost contrasts reaggregate existing integer evidence; the display-grid supplement preserves all moved table rows and captions.

@@ -1,0 +1,4 @@
+usage: check_prose_quality.py [-h] [--scope {paper,section,paragraph}]
+                              [--format {text,json}] [--strict]
+                              [path]
+check_prose_quality.py: error: unrecognized arguments: manuscript/appendix.tex

@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrrr}
+\toprule
+Panel & Pooling & $q$ & Zero (\%) & Ref. (\%) & 10--90\% & $\Delta$ Width \\
+\midrule
+RewardBench 2 & mean & 0.05 & 20.9 & 86.9 & 84.1--94.4 & -4.8 \\
+RewardBench 2 & mean & 0.10 & 29.9 & 83.8 & 81.3--88.5 & -4.4 \\
+RewardBench 2 & mean & 0.20 & 52.2 & 75.4 & 74.6--77.3 & -0.3 \\
+RewardBench 2 & mean & 0.30 & 70.9 & 66.2 & 62.6--67.3 & 5.6 \\
+WMT23, 13 streams & mean & 0.05 & 20.8 & 81.6 & 79.0--84.4 & -4.3 \\
+WMT23, 13 streams & mean & 0.10 & 31.8 & 78.7 & 74.6--81.4 & -4.3 \\
+WMT23, 13 streams & mean & 0.20 & 72.9 & 60.8 & 55.0--68.3 & 2.2 \\
+WMT23, 13 streams & mean & 0.30 & 82.8 & 51.9 & 48.4--59.8 & 6.6 \\
+WMT23, 12 streams & mean & 0.05 & 21.1 & 81.2 & 78.5--87.0 & -3.9 \\
+WMT23, 12 streams & mean & 0.10 & 40.9 & 76.3 & 71.3--79.7 & -3.5 \\
+WMT23, 12 streams & mean & 0.20 & 69.4 & 63.9 & 61.1--69.3 & 0.1 \\
+WMT23, 12 streams & mean & 0.30 & 79.7 & 57.4 & 54.0--63.5 & 5.8 \\
+\bottomrule
+\end{tabular}
+\caption{Primary stopping uses $V^+-V^-\le\lceil.02|S_0|\rceil$. Mean pooling: Random evaluator composition at $\alpha=.10$, 20 pools with 40 splits each. Zero is the median of pool-wise mean zero-query selected coverage. Ref.\ is the median pool-wise mean queried fraction of $mT$ in percent, with descriptive 10th--90th percentiles; empty active sets contribute zero. Within each pool we average splitwise Reference minus Width active-inspection differences. $\Delta$ is the median of these 20 differences in percentage points; positive values mean more Reference queries.}
+\label{tab:review-composition-mean}
+\end{table*}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS_INDEPENDENT_REFERENCE_ECDF_AND_EXPLICIT_REPLACEMENTS",
+  "full_test_cases_reconstructed": 24,
+  "expected_cases": 24,
+  "reference_test_disjoint": true,
+  "public_quality_labels_used": false,
+  "all_9600_instances_independently_recomputed": false
+}

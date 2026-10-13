@@ -1,0 +1,11 @@
+{
+  "status": "PASS_VERSION_BINDING",
+  "current_pdf_pages": 95,
+  "source_hashes": {
+    "manuscript/main.tex": "b6951433c3451fa504ca5f4d36a8a749b63a61bb883535abec95d6a937eca886",
+    "manuscript/appendix.tex": "a47530aa5a78a5fd2b629c6d2f62df368f16acef73c52d0b92404771d610178d",
+    "manuscript/main.pdf": "bf2e7a72b7144c1d72f27639b82d61a58e53766fa3537ab1ba1a6e8b95ceb9fb",
+    "manuscript/references.bib": "e773f872cf4b34fea59d58e1dfb40d3027e7ada3e33c990e4ce69ec649ef3d94"
+  },
+  "scope": "single certification evidence and discovery question"
+}

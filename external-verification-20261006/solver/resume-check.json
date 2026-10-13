@@ -1,0 +1,63 @@
+{
+  "status": "PASS_EIGHT_PRIOR_AND_PARTIAL_RESUME_CASES",
+  "cases": [
+    [
+      "RewardBench2",
+      1,
+      0.3,
+      "quarter",
+      0
+    ],
+    [
+      "RewardBench2",
+      1,
+      0.3,
+      "empty",
+      0
+    ],
+    [
+      "RewardBench2",
+      3,
+      0.05,
+      "empty",
+      0
+    ],
+    [
+      "RewardBench2",
+      3,
+      0.2,
+      "empty",
+      0
+    ],
+    [
+      "RewardBench2",
+      3,
+      0.2,
+      "quarter",
+      0
+    ],
+    [
+      "RewardBench2",
+      3,
+      0.05,
+      "quarter",
+      0
+    ],
+    [
+      "RewardBench2",
+      3,
+      0.2,
+      "empty",
+      1
+    ],
+    [
+      "RewardBench2",
+      3,
+      0.05,
+      "empty",
+      1
+    ]
+  ],
+  "scope": "same MILP; only reuses matching optimal receipts",
+  "human_proof": false
+}

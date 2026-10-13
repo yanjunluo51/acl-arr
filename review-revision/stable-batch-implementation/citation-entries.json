@@ -1,0 +1,20 @@
+[
+  {
+    "id": "2402.07745",
+    "key": "watsondaniels2025predictive",
+    "url": "https://arxiv.org/bibtex/2402.07745",
+    "bib": "@misc{watsondaniels2025predictive,\n      title={Predictive Churn with the Set of Good Models}, \n      author={Jamelle Watson-Daniels and Flavio du Pin Calmon and Alexander D'Amour and Carol Long and David C. Parkes and Berk Ustun},\n      year={2025},\n      eprint={2402.07745},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG},\n      url={https://arxiv.org/abs/2402.07745}, \n}"
+  },
+  {
+    "id": "2605.13826",
+    "key": "prastalo2026reducing",
+    "url": "https://arxiv.org/bibtex/2605.13826",
+    "bib": "@misc{prastalo2026reducing,\n      title={Reducing cross-sample prediction churn in scientific machine learning}, \n      author={Gordan Prastalo and Kevin Maik Jablonka},\n      year={2026},\n      eprint={2605.13826},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG},\n      url={https://arxiv.org/abs/2605.13826}, \n}"
+  },
+  {
+    "id": "2607.27031",
+    "key": "kim2026lottery",
+    "url": "https://arxiv.org/bibtex/2607.27031",
+    "bib": "@misc{kim2026lottery,\n      title={Lottery Tickets Are Not Deployment Tickets}, \n      author={Bum Jun Kim},\n      year={2026},\n      eprint={2607.27031},\n      archivePrefix={arXiv},\n      primaryClass={cs.LG},\n      url={https://arxiv.org/abs/2607.27031}, \n}"
+  }
+]

@@ -1,0 +1,35 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+$q$ & Policy & Risk & Sel.\ cov.\ (\%) & Returned (outputs) & Precision \\
+\midrule
+0.05 & No queries & 0.042 & 99.2 & 112.4 & -- \\
+0.05 & Envelope CRC & 0.062 & 95.2 & 106.9 & -- \\
+0.05 & Batch threshold & 0.071 & 98.6 & 111.5 & -- \\
+0.05 & Batch cardinality & 0.072 & 98.9 & 112.1 & -- \\
+0.05 & Batch retention & 0.044 & 99.9 & 113.7 & -- \\
+0.05 & Fixed-count retention & 0.043 & 100.0 & 112.0 & -- \\
+0.10 & No queries & 0.047 & 99.4 & 226.6 & -- \\
+0.10 & Envelope CRC & 0.075 & 98.8 & 225.3 & -- \\
+0.10 & Batch threshold & 0.077 & 99.6 & 227.4 & -- \\
+0.10 & Batch cardinality & 0.077 & 99.7 & 227.6 & -- \\
+0.10 & Batch retention & 0.048 & 100.0 & 228.5 & -- \\
+0.10 & Fixed-count retention & 0.045 & 100.0 & 224.0 & -- \\
+0.20 & No queries & 0.041 & 99.9 & 456.8 & -- \\
+0.20 & Envelope CRC & 0.076 & 99.7 & 456.4 & -- \\
+0.20 & Batch threshold & 0.076 & 99.9 & 457.0 & -- \\
+0.20 & Batch cardinality & 0.076 & 99.9 & 457.1 & -- \\
+0.20 & Batch retention & 0.042 & 100.0 & 457.6 & -- \\
+0.20 & Fixed-count retention & 0.042 & 100.0 & 449.0 & -- \\
+0.30 & No queries & 0.040 & 99.9 & 680.3 & -- \\
+0.30 & Envelope CRC & 0.079 & 100.0 & 681.3 & -- \\
+0.30 & Batch threshold & 0.079 & 100.0 & 681.6 & -- \\
+0.30 & Batch cardinality & 0.079 & 100.0 & 681.6 & -- \\
+0.30 & Batch retention & 0.040 & 100.0 & 681.6 & -- \\
+0.30 & Fixed-count retention & 0.042 & 100.0 & 673.0 & -- \\
+\bottomrule
+\end{tabular}
+\caption{Count means use decimal half-up rounding after aggregating integer records. Risk is the mean of replacement-average churn $R(C)$ over 40 splits; Returned is the mean output count $K$. WMT23, 12 streams, median pooling, all depths, $\alpha=.10$. Metrics and averaging follow Table~\ref{tab:baselines}; coverage uses each policy\textquotesingle s own baseline list. These controls do not use human-quality labels; the separate WMT23 MQM diagnostic is in Appendix~\ref{app:quality}.}
+\label{tab:baseline-2-median}
+\end{table*}

@@ -1,0 +1,53 @@
+{
+  "revision": "review-evidence-extension-1",
+  "frozen_before_score_results_opened": false,
+  "candidate_dataset": "WMT24 metrics shared task",
+  "language_priority": [
+    "en-de",
+    "en-es",
+    "ja-zh"
+  ],
+  "admission_order": "Attempt all three stated directions, not select by outcomes",
+  "source": "Official google-research/mt-metrics-eval data; source release identity recorded at acquisition",
+  "evaluator_rule": "All distinct finite reference-based evaluator streams using the official default reference; require >=8; alphabetical order first seven base, remainder candidates",
+  "pool_size": 7,
+  "quantiles": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "alphas": [
+    "1/10"
+  ],
+  "splits": 40,
+  "seed_base": 924000,
+  "aggregators": [
+    "median",
+    "mean"
+  ],
+  "acquisition_methods": [
+    "fixed",
+    "random",
+    "largest_width",
+    "reference_priority"
+  ],
+  "ridge_penalty": 1.0,
+  "features": "Unchanged seven base scores, consensus-cutoff, range, p/M and intercept",
+  "group_rule": "All outputs from the same source document in one split; paragraph/source identifiers retained. Human references are excluded as output streams by metadata.",
+  "quality_rule": "Native MQM only after masks/paths fixed, exact paragraph-system alignment; no label-driven evaluator, source or system selection",
+  "missing_rule": "No numerical imputation; metadata common system coverage and finite-score rules fixed before analysis; report label missingness without filtering selection by quality",
+  "CRC": "Only where the original equal-output group control assumptions hold; document grouping with unequal sizes does not automatically transfer its guarantee",
+  "new_validation_scope": "Not used in this project development according to existing project inventory; not claimed uncontaminated by evaluator training",
+  "units": "Paragraph-level scores if the official release is paragraph-level; do not call them sentences",
+  "no_live_execution_claim": true,
+  "reference_priority_numerics": {
+    "fixed_point_scale": 1000000000000,
+    "rounding": "nearest integer tick, ties to even",
+    "candidate_tie_break": "candidate index",
+    "item_tie_break": "frozen item tie permutation",
+    "scope": "Priority estimates guide acquisition only; observed flip costs, budgets, frontiers and certificate masks stay integer and unquantized."
+  },
+  "original_risk_and_admission_frozen_before_results": true,
+  "numerical_amendment_after_exact_replay_failure": true
+}

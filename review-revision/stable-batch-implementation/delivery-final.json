@@ -1,0 +1,81 @@
+{
+  "status": "PASS_SCOPED_STABLE_BATCH_DELIVERY",
+  "archives": {
+    "manuscript/source_private.zip": {
+      "sha256": "9a246d17bfd047f33c8b07fdcecedfab6349a226c23541bf7ed45ec0b7116b3f",
+      "members": 1878,
+      "content_hashes_verified": true,
+      "anonymous_byte_scan": false,
+      "previously_archived_running_task_receipts": [
+        "ROOT/review-revision/review-current-implementation/solver/EXECUTION_STATUS.md",
+        "ROOT/review-revision/review-current-implementation/solver/finite-check.json",
+        "ROOT/review-revision/review-current-implementation/solver/frozen-scripts/deduplicated_certificates.py",
+        "ROOT/review-revision/review-current-implementation/solver/frozen-scripts/variable_target_certificate.py",
+        "ROOT/review-revision/review-current-implementation/solver/protocol.json",
+        "ROOT/review-revision/review-current-implementation/solver/recorded-effective-options.txt",
+        "ROOT/review-revision/review-current-implementation/solver/tight-effective-options.txt"
+      ]
+    },
+    "packages/current_mapping_column_code_private.zip": {
+      "sha256": "befc5d66dba0698a1f6fae261fa30337bac5f8dbb8cfe8cbbf2dacc50ef6001e",
+      "members": 3189,
+      "content_hashes_verified": true,
+      "anonymous_byte_scan": false,
+      "previously_archived_running_task_receipts": [
+        "review-revision/review-current-implementation/solver/EXECUTION_STATUS.md",
+        "review-revision/review-current-implementation/solver/finite-check.json",
+        "review-revision/review-current-implementation/solver/frozen-scripts/deduplicated_certificates.py",
+        "review-revision/review-current-implementation/solver/frozen-scripts/variable_target_certificate.py",
+        "review-revision/review-current-implementation/solver/protocol.json",
+        "review-revision/review-current-implementation/solver/recorded-effective-options.txt",
+        "review-revision/review-current-implementation/solver/tight-effective-options.txt"
+      ]
+    },
+    "packages/current_anonymous_source.zip": {
+      "sha256": "a0fac306ebbadc00f96d77afbe221a638314b24fe06434cafb5fcd45ceb06d3a",
+      "members": 1878,
+      "content_hashes_verified": true,
+      "anonymous_byte_scan": true,
+      "previously_archived_running_task_receipts": [
+        "ROOT/review-revision/review-current-implementation/solver/EXECUTION_STATUS.md",
+        "ROOT/review-revision/review-current-implementation/solver/finite-check.json",
+        "ROOT/review-revision/review-current-implementation/solver/frozen-scripts/deduplicated_certificates.py",
+        "ROOT/review-revision/review-current-implementation/solver/frozen-scripts/variable_target_certificate.py",
+        "ROOT/review-revision/review-current-implementation/solver/protocol.json",
+        "ROOT/review-revision/review-current-implementation/solver/recorded-effective-options.txt",
+        "ROOT/review-revision/review-current-implementation/solver/tight-effective-options.txt"
+      ]
+    },
+    "packages/current_anonymous_code.zip": {
+      "sha256": "4d0b1faae82a9924808a0dabd788f5d96a995d1be2cdbba366f553a6b352baf9",
+      "members": 3189,
+      "content_hashes_verified": true,
+      "anonymous_byte_scan": true,
+      "previously_archived_running_task_receipts": [
+        "review-revision/review-current-implementation/solver/EXECUTION_STATUS.md",
+        "review-revision/review-current-implementation/solver/finite-check.json",
+        "review-revision/review-current-implementation/solver/frozen-scripts/deduplicated_certificates.py",
+        "review-revision/review-current-implementation/solver/frozen-scripts/variable_target_certificate.py",
+        "review-revision/review-current-implementation/solver/protocol.json",
+        "review-revision/review-current-implementation/solver/recorded-effective-options.txt",
+        "review-revision/review-current-implementation/solver/tight-effective-options.txt"
+      ]
+    }
+  },
+  "clean_builds": {
+    "private": {
+      "pages": 96,
+      "text_pixels_match": true,
+      "raw_scorer_reexecution": false
+    },
+    "anonymous": {
+      "pages": 96,
+      "text_pixels_match": true,
+      "raw_scorer_reexecution": false
+    }
+  },
+  "human_proof_review": false,
+  "complete_rights_authorization": false,
+  "new_scorer_inference": false,
+  "uploaded": false
+}

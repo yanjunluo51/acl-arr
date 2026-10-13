@@ -1,0 +1,13 @@
+{
+  "status": "PASS_MATCHING_FULL_MEAN_MINIMA_AND_EXACT_DISCOVERY",
+  "full_instances": 96,
+  "discovery_records": 384,
+  "minimums_positive": 96,
+  "strict_sharing": 4,
+  "total_saved": 2645,
+  "total_separated": 435876,
+  "aggregate_saving_fraction": 0.006068239591076361,
+  "exact_stop_only": true,
+  "original_full_panel_N_and_budget": true,
+  "original_online_paths_unchanged": true
+}

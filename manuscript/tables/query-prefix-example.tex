@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Reference priority} & \multicolumn{3}{c}{Largest width} \\
+Stage & Queries & $V^-$ & $V^+$ & Queries & $V^-$ & $V^+$ \\
+\midrule
+Initial & 0 & 646 & 715 & 0 & 646 & 715 \\
+10\% allowance & 449 & 652 & 715 & 449 & 662 & 715 \\
+25\% allowance & 1122 & 674 & 715 & 1122 & 694 & 715 \\
+First positive-gap stop & 1715 & 700 & 715 & 1249 & 700 & 715 \\
+Exact stop & 2054 & 715 & 715 & 1558 & 715 & 715 \\
+\bottomrule
+\end{tabular}
+\caption{Query-prefix illustration from the first seeded split of thirteen-stream WMT23, mean pooling, $q=.30$ and $\alpha=.10$. Both orders begin with 646 safe outputs and 4,488 active entries. Allowance rows compare the two strategies after the same number of queries; stopping rows report each strategy's own first stopping state. The allowed gap is 15 outputs. Counts come from the existing traces, not a new evaluation sample.}
+\label{tab:query-prefix-example}
+\end{table*}

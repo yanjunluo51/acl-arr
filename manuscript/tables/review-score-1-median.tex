@@ -1,0 +1,31 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{rrrrr}
+\toprule
+$q$ & $\alpha$ & Risk & Sel. (\%) & Over / 40 \\
+\midrule
+0.05 & 0.02 & 0.000 & 54.4 & 0 \\
+0.05 & 0.05 & 0.000 & 54.4 & 0 \\
+0.05 & 0.10 & 0.049 & 82.2 & 0 \\
+0.05 & 0.15 & 0.081 & 99.0 & 0 \\
+0.05 & 0.20 & 0.083 & 100.0 & 0 \\
+0.10 & 0.02 & 0.000 & 78.8 & 0 \\
+0.10 & 0.05 & 0.023 & 93.3 & 0 \\
+0.10 & 0.10 & 0.035 & 100.0 & 0 \\
+0.10 & 0.15 & 0.035 & 100.0 & 0 \\
+0.10 & 0.20 & 0.035 & 100.0 & 0 \\
+0.20 & 0.02 & 0.007 & 82.1 & 0 \\
+0.20 & 0.05 & 0.034 & 99.4 & 0 \\
+0.20 & 0.10 & 0.035 & 100.0 & 0 \\
+0.20 & 0.15 & 0.035 & 100.0 & 0 \\
+0.20 & 0.20 & 0.035 & 100.0 & 0 \\
+0.30 & 0.02 & 0.011 & 84.9 & 1 \\
+0.30 & 0.05 & 0.033 & 99.9 & 0 \\
+0.30 & 0.10 & 0.033 & 100.0 & 0 \\
+0.30 & 0.15 & 0.033 & 100.0 & 0 \\
+0.30 & 0.20 & 0.033 & 100.0 & 0 \\
+\bottomrule
+\end{tabular}
+\caption{WMT23, 13 streams, median pooling: grouped SCoRE-MDR for the same churn loss and target $\alpha/B$. Risk and selected coverage $K/|S_0|$ average 40 splits. Over/40 counts splits whose realized churn exceeds the budget. Calibration candidate scores are fully observed; selection uses no candidate test scores. Guarantee assumptions and score-entry accounting appear in Appendix~\ref{app:review-score} and Table~\ref{tab:review-workload}.}
+\label{tab:review-score-1-median}
+\end{table*}

@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Panel & $d_*=0$ & $d_*>0$ & Unresolved sign & Closed objective \\
+\midrule
+RewardBench 2 & 13 / 4 & 147 / 156 & 0 / 0 & 160 / 160 \\
+WMT23, 13 & 132 / 108 & 28 / 52 & 0 / 0 & 159 / 160 \\
+WMT23, 12 & 98 / 65 & 62 / 95 & 0 / 0 & 159 / 160 \\
+WMT24 en-de & 147 / 121 & 13 / 39 & 0 / 0 & 160 / 160 \\
+WMT24 en-es & 152 / 132 & 8 / 28 & 0 / 0 & 160 / 160 \\
+WMT24 ja-zh & 28 / 24 & 132 / 136 & 0 / 0 & 139 / 142 \\
+\bottomrule
+\end{tabular}
+\caption{Secondary minimization of intermediate entries over all minimum joint witnesses in the full mean grid. Cells give primary / exact counts out of 160 targets (four depths and 40 overlapping splits) per panel, using full-reference right ECDF and $\alpha=.10$. Primary uses $\varepsilon=\lceil.02|S_0|\rceil$; exact uses zero. The first three columns classify targets using integer-checked witnesses and bounds from Corollary~\ref{cor:overlap-budget} or numerical optimization. Solver-based classifications depend on the validity of the numerical bounds. Closed objective counts equality of lower and upper bounds, conditional on the previously numerically closed joint minimum. The remaining objectives retain intervals; a positive sign does not imply an exact objective value.}
+\label{tab:overlap-diagnostic}
+\end{table*}

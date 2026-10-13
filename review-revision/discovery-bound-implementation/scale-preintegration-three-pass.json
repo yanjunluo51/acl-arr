@@ -1,0 +1,5 @@
+{
+  "source": "8/8 declared targets; frozen complete solver; full selected batches; all synthetic inputs and raw attempts saved.",
+  "evidence": "Independent explicit replacements reproduce each contribution/cap; all eight integer witnesses feasible. Four numerical closures and four unresolved intervals. Timing includes final validation beyond nominal solver budget; peak RSS includes Python/inputs.",
+  "spine": "One extension of existing computational-resource paragraph; exact joint target only. No speedup claim, no new NLP family, no positive-tolerance generalization."
+}

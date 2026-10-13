@@ -1,0 +1,28 @@
+{
+  "time": "2026-10-11T13:21:19.976780+08:00",
+  "checks": [
+    {
+      "pass": 1,
+      "finding": "Current source matches reviewed version; weighted, constrained and mixed-action discussions already exist. Do not duplicate."
+    },
+    {
+      "pass": 2,
+      "finding": "Row permutations preserve entry witnesses under uniform candidate weights; change only column grouping. Scenario risks average to existing cost/(2kMT); count all mask decisions."
+    },
+    {
+      "pass": 3,
+      "finding": "One spine: evidence sharing, query granularity, discovery cost. No new quality objective, multi-replacement theory or unsupported timing claims."
+    }
+  ],
+  "baseline_files": {
+    "manuscript/main.tex": "d16519794358035069d1d62a6f06fe8a413229d9e31e833f81868c7596844cf3",
+    "manuscript/appendix.tex": "2dee03a8a3e75ea4082a223168f368aee5a9181e133f064b62d5cbfae33f6af1",
+    "manuscript/main.pdf": "5d863ba0c90be8809ca5f1c9a46f8247b69f40c753da072e02667e876eaaf92b",
+    "manuscript/references.bib": "e773f872cf4b34fea59d58e1dfb40d3027e7ada3e33c990e4ce69ec649ef3d94",
+    "LATEST_MANUSCRIPT.md": "43963b6d9944c345b04d5e08eed629ec31932601cda28eaf9a8373236ce1b8b5",
+    "REPRODUCTION_CURRENT.md": "64a0613406cdb3f56806bb78fa07f4163c33c1ade51a5c74fd254c20be7d624b",
+    "LATEST_EXTERNAL_VERIFICATION.md": "40d25793f2ffe43989b874b6548f0b9ff360b90fba7e2fe12ffcf24129fd9c7a",
+    "PARTITION_AND_ARTIFACT_INDEX.md": "c1213da76e60f6f3adf980b5f414e3e6b45d22359d31fc69d0c590f206c3ce0c"
+  },
+  "authorized": "User requested all accepted changes; retain negative results and preserve original matrices."
+}

@@ -1,0 +1,30 @@
+{
+  "status": "PASS_FIXED_BOUNDARY_WITH_100_FRESH_CASES",
+  "problem": "zero global incumbent made default zero lower bound sufficient but the receipt construction indexed an absent key",
+  "fix": "use the same default zero bound in the receipt",
+  "full_partition_workers_loaded_prior_code": true,
+  "full_pending_cases_have_strictly_positive_joint_minima": true,
+  "files": {
+    "target_aware_union.py": {
+      "before_sha256": "80187e368568a2d238ed0d60188cd8d134c6baae194ae671ab631758eaa92b5a",
+      "after_sha256": "60230034b1b1b444cf2f7eb7f17d9f523a04c904984f6e8b5ef27a3660706a83",
+      "preserved_before": "implementation-history/target_aware_union-before-zero-bound-fix.py"
+    },
+    "improving_union.py": {
+      "before_sha256": "472f1c7041182d891f05575c7e8af0f1d2d0dd373262272115a9b70ef79dd8c0",
+      "after_sha256": "c898d706eb4d41358571c67d0dbc4d656d3631a509623363d9640bea6d763dfb",
+      "preserved_before": "implementation-history/improving_union-before-zero-bound-fix.py"
+    },
+    "tight_union.py": {
+      "before_sha256": "dded0e2c61cefb3b6e692d6a0d15dca794a7c321345514faeddf3a3c76df7eb5",
+      "after_sha256": "3b6ba32d2a2399fa355b2d64cf26b426cb5a71bf15c4d510ab8de70a7e7723b1",
+      "preserved_before": "implementation-history/tight_union-before-zero-bound-fix.py"
+    },
+    "partition_union.py": {
+      "before_sha256": "52ab71e8151c6a9472d4493531276c81d288db7842c649664f8ba5414585ef9f",
+      "after_sha256": "5277b24803e6621714bc14694468e6807d7396a997b9ab1279cc8dc9f084486a",
+      "preserved_before": "implementation-history/partition_union-before-zero-bound-fix.py"
+    }
+  },
+  "fresh_test": "partition-random-check.json"
+}

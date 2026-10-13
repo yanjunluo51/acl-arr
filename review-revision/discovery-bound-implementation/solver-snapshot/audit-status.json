@@ -1,0 +1,21 @@
+{
+  "status": "ERRORS_RETAINED",
+  "completed": 137,
+  "expected": 202,
+  "closed": 92,
+  "agrees": 92,
+  "unresolved": 45,
+  "integer_witness_checks": 387,
+  "error_records": [
+    [
+      "WMT24-ja-zh",
+      22,
+      0.05,
+      "primary"
+    ]
+  ],
+  "all_requested_executions_complete": false,
+  "all_optima_closed": false,
+  "independent_integer_feasibility": true,
+  "numerical_lower_bounds_not_rational_proofs": true
+}

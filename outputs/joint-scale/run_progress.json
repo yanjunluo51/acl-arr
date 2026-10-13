@@ -1,0 +1,9 @@
+{
+  "status": "COMPLETE_EXECUTION_PENDING_AUDIT",
+  "cases": 2304,
+  "expected_records": 2304,
+  "platform": "macOS-15.6-arm64-arm-64bit",
+  "python": "3.9.6",
+  "workers": 6,
+  "elapsed_seconds": 1660.389133875
+}

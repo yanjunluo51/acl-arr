@@ -1,0 +1,24 @@
+{
+  "panels": [
+    "RewardBench2",
+    "WMT23",
+    "WMT23_without_synthetic_ref",
+    "WMT24-en-de",
+    "WMT24-en-es",
+    "WMT24-ja-zh"
+  ],
+  "configurations": 1920,
+  "alpha": "1/10",
+  "q": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "tie_order": "np.lexsort((tie,-consensus))[:k] for baseline AND every replacement",
+  "native_control_preserved": true,
+  "labels_loaded": false,
+  "models_called": false,
+  "online_query_protocol_changed": false,
+  "claim_scope": "Full-information selection sensitivity with matched output tie priority; different baseline tasks remain."
+}

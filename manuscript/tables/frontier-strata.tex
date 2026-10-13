@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+Stop & Instance condition & Targets & Mean $\Delta Q$ & Median $\Delta Q$ & Wins/losses/ties\\
+\midrule
+Primary & $V^*+\varepsilon<|S_0|$ & 32 & -20.28 & -11 & 25/6/1 \\
+Primary & $V^*=|S_0|$ & 903 & +3.72 & +0 & 2/65/836 \\
+Primary & $V^*<|S_0|\le V^*+\varepsilon$ & 25 & +6.40 & +3 & 10/14/1 \\
+Exact & $V^*+\varepsilon<|S_0|$ & 57 & -20.21 & -7 & 40/10/7 \\
+Exact & $V^*=|S_0|$ & 903 & +2.63 & +0 & 5/55/843 \\
+\bottomrule
+\end{tabular}
+\caption{Matched frontier ablation by instance condition on the original mean panels, at $\alpha=.10$ and all four depths. $\Delta Q$ is the joint-frontier query count minus the safety-only count, so negative values and wins favor joint frontier. Both counts use the same instance and stopping target. Primary uses $\varepsilon=\lceil.02|S_0|\rceil$; exact uses zero. The non-full, tolerance-covered stratum is empty at exact stopping. Conditions use full-information $V^*$ for post hoc diagnosis only. These descriptive comparisons reuse saved paths and do not treat overlapping splits as independent samples.}
+\label{tab:frontier-strata}
+\end{table*}

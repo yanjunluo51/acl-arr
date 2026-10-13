@@ -1,0 +1,7 @@
+{
+  "status": "PASS_BOTH_SCREEN_MUTATIONS_REJECTED",
+  "rejected": [
+    "alter_component_minimum",
+    "remove_component_receipt"
+  ]
+}

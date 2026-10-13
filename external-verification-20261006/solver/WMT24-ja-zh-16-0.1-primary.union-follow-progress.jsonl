@@ -1,0 +1,6 @@
+{"event": "solver_call", "receipt": {"target": 910, "mode": "safety", "status": 0, "message": "highspy 1.15.1: Optimal", "optimality_gap": 0.0, "dual_bound": 12461.0, "variables": 5327, "constraints": 6065, "presolve": true}}
+{"event": "solver_call", "receipt": {"target": 910, "mode": "exclusion", "status": 0, "message": "highspy 1.15.1: Optimal", "optimality_gap": 0.0, "dual_bound": 3068.0, "variables": 3307, "constraints": 991, "presolve": true}}
+{"event": "solver_call", "receipt": {"target": 910, "mode": "union", "status": 0, "message": "highspy 1.15.1: Optimal", "optimality_gap": 0.0, "dual_bound": 14544.999999999998, "variables": 10950, "constraints": 11690, "presolve": true}}
+{"event": "target", "result": {"target": 910, "safety_minimum": 12461, "exclusion_minimum": 3068, "union_minimum": 14545, "proven": true}}
+{"event": "solver_call", "receipt": {"target": 911, "mode": "safety", "status": 0, "message": "highspy 1.15.1: Optimal", "optimality_gap": 0.0, "dual_bound": 12490.0, "variables": 5327, "constraints": 6065, "presolve": true}}
+{"event": "solver_call", "receipt": {"target": 911, "mode": "exclusion", "status": 0, "message": "highspy 1.15.1: Optimal", "optimality_gap": 0.0, "dual_bound": 2991.9999999999964, "variables": 3307, "constraints": 991, "presolve": true}}

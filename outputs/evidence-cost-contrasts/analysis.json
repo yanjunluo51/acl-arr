@@ -1,0 +1,62 @@
+{
+  "status": "MATCHED_SAVED_RECORD_ANALYSIS_AFTER_OPTIMALITY_CLOSURE",
+  "records": 13440,
+  "targets": 1920,
+  "policies": [
+    "fixed",
+    "random",
+    "largest_width",
+    "reference_priority",
+    "frontier_joint",
+    "frontier_safety",
+    "frontier_exclusion"
+  ],
+  "reference_summary": [
+    {
+      "dataset": "ALL",
+      "stopping": "primary",
+      "method": "reference_priority",
+      "tasks": 960,
+      "closed_union": 960,
+      "closed_joint": 960,
+      "zero_minima": 0,
+      "positive_ratio_n": 960,
+      "dedup_saving_sum_closed_union": 17939,
+      "dedup_saving_mean_closed_union": 18.686458333333334,
+      "dedup_saving_positive_closed_union": 32,
+      "joint_gain_sum_closed_union": 5131,
+      "joint_gain_mean_closed_union": 5.344791666666667,
+      "joint_gain_positive_closed_union": 32,
+      "online_excess_sum_closed_union": 777194,
+      "online_excess_mean_closed_union": 809.5770833333333,
+      "online_excess_positive_closed_union": 960,
+      "online_excess_mean_lower_all": 809.5770833333333,
+      "online_excess_mean_upper_all": 809.5770833333333,
+      "online_ratio_median_positive": 1.1446732525496606
+    },
+    {
+      "dataset": "ALL",
+      "stopping": "exact",
+      "method": "reference_priority",
+      "tasks": 960,
+      "closed_union": 960,
+      "closed_joint": 960,
+      "zero_minima": 0,
+      "positive_ratio_n": 960,
+      "dedup_saving_sum_closed_union": 78519,
+      "dedup_saving_mean_closed_union": 81.790625,
+      "dedup_saving_positive_closed_union": 57,
+      "joint_gain_sum_closed_union": 1138,
+      "joint_gain_mean_closed_union": 1.1854166666666666,
+      "joint_gain_positive_closed_union": 57,
+      "online_excess_sum_closed_union": 764797,
+      "online_excess_mean_closed_union": 796.6635416666667,
+      "online_excess_positive_closed_union": 960,
+      "online_excess_mean_lower_all": 796.6635416666667,
+      "online_excess_mean_upper_all": 796.6635416666667,
+      "online_ratio_median_positive": 1.1397878380724782
+    }
+  ],
+  "new_scorer_runs": false,
+  "additional_solver_receipts": "external-verification-20261006/solver/"
+}

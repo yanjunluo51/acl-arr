@@ -1,0 +1,1058 @@
+[
+ {
+  "table": "acquisition-mean.tex",
+  "renderer": "render_acquisition_mechanisms",
+  "row_cells": [
+   "RewardBench 2",
+   "0.05",
+   "0.235",
+   "0.297 (40)",
+   "0.152",
+   "-42.6",
+   "40"
+  ],
+  "column_index": 5,
+  "column": "$\\Delta Q$",
+  "printed": "-42.6",
+  "half_up": "-42.7",
+  "exact_value": "-853/20"
+ },
+ {
+  "table": "acquisition-mean.tex",
+  "renderer": "render_acquisition_mechanisms",
+  "row_cells": [
+   "WMT23, 12 streams",
+   "0.30",
+   "0.264",
+   "0.753 (40)",
+   "0.134",
+   "459.2",
+   "0"
+  ],
+  "column_index": 5,
+  "column": "$\\Delta Q$",
+  "printed": "459.2",
+  "half_up": "459.3",
+  "exact_value": "1837/4"
+ },
+ {
+  "table": "acquisition-mean.tex",
+  "renderer": "render_acquisition_mechanisms",
+  "row_cells": [
+   "WMT24 en-de",
+   "0.30",
+   "0.237",
+   "0.685 (40)",
+   "0.145",
+   "566.1",
+   "0"
+  ],
+  "column_index": 5,
+  "column": "$\\Delta Q$",
+  "printed": "566.1",
+  "half_up": "566.2",
+  "exact_value": "11323/20"
+ },
+ {
+  "table": "acquisition-median.tex",
+  "renderer": "render_acquisition_mechanisms",
+  "row_cells": [
+   "WMT24 ja-zh",
+   "0.10",
+   "0.540",
+   "-0.054 (40)",
+   "0.279",
+   "-24.1",
+   "4"
+  ],
+  "column_index": 5,
+  "column": "$\\Delta Q$",
+  "printed": "-24.1",
+  "half_up": "-24.2",
+  "exact_value": "-483/20"
+ },
+ {
+  "table": "column-all-depths.tex",
+  "renderer": "render_cached_mapping_tables",
+  "row_cells": [
+   "median",
+   "0.05",
+   "0.03",
+   "0.7",
+   "2.0",
+   "2.3",
+   "1.2",
+   "0.2",
+   "14"
+  ],
+  "column_index": 6,
+  "column": "Ref. (\\%)",
+  "printed": "1.2",
+  "half_up": "1.3",
+  "exact_value": "5/4"
+ },
+ {
+  "table": "column-all-depths.tex",
+  "renderer": "render_cached_mapping_tables",
+  "row_cells": [
+   "median",
+   "0.10",
+   "0.02",
+   "1.2",
+   "1.4",
+   "1.2",
+   "1.1",
+   "0.1",
+   "14"
+  ],
+  "column_index": 5,
+  "column": "Random (\\%)",
+  "printed": "1.2",
+  "half_up": "1.3",
+  "exact_value": "5/4"
+ },
+ {
+  "table": "column-all-depths.tex",
+  "renderer": "render_cached_mapping_tables",
+  "row_cells": [
+   "median",
+   "0.10",
+   "0.02",
+   "1.2",
+   "1.4",
+   "1.2",
+   "1.1",
+   "0.1",
+   "14"
+  ],
+  "column_index": 7,
+  "column": "Cols.",
+  "printed": "0.1",
+  "half_up": "0.2",
+  "exact_value": "3/20"
+ },
+ {
+  "table": "column-all-depths.tex",
+  "renderer": "render_cached_mapping_tables",
+  "row_cells": [
+   "median",
+   "0.05",
+   "0.03",
+   "0.3",
+   "1.2",
+   "1.4",
+   "1.4",
+   "0.2",
+   "14"
+  ],
+  "column_index": 3,
+  "column": "Touched",
+  "printed": "0.3",
+  "half_up": "0.4",
+  "exact_value": "7/20"
+ },
+ {
+  "table": "column-all-depths.tex",
+  "renderer": "render_cached_mapping_tables",
+  "row_cells": [
+   "median",
+   "0.05",
+   "0.03",
+   "0.3",
+   "1.2",
+   "1.4",
+   "1.4",
+   "0.2",
+   "14"
+  ],
+  "column_index": 4,
+  "column": "Fixed (\\%)",
+  "printed": "1.2",
+  "half_up": "1.3",
+  "exact_value": "5/4"
+ },
+ {
+  "table": "column-summary.tex",
+  "renderer": "render_cached_mapping_tables",
+  "row_cells": [
+   "WMT24 en-de",
+   "median",
+   "0.03",
+   "0.7",
+   "2.0",
+   "2.3",
+   "1.2",
+   "0.2",
+   "14"
+  ],
+  "column_index": 6,
+  "column": "Ref. (\\%)",
+  "printed": "1.2",
+  "half_up": "1.3",
+  "exact_value": "5/4"
+ },
+ {
+  "table": "column-summary.tex",
+  "renderer": "render_cached_mapping_tables",
+  "row_cells": [
+   "WMT24 en-es",
+   "median",
+   "0.03",
+   "0.3",
+   "1.2",
+   "1.4",
+   "1.4",
+   "0.2",
+   "14"
+  ],
+  "column_index": 3,
+  "column": "Touched",
+  "printed": "0.3",
+  "half_up": "0.4",
+  "exact_value": "7/20"
+ },
+ {
+  "table": "column-summary.tex",
+  "renderer": "render_cached_mapping_tables",
+  "row_cells": [
+   "WMT24 en-es",
+   "median",
+   "0.03",
+   "0.3",
+   "1.2",
+   "1.4",
+   "1.4",
+   "0.2",
+   "14"
+  ],
+  "column_index": 4,
+  "column": "Fixed (\\%)",
+  "printed": "1.2",
+  "half_up": "1.3",
+  "exact_value": "5/4"
+ },
+ {
+  "table": "cutoff-bootstrap.tex",
+  "renderer": "render_joint_scale",
+  "row_cells": [
+   "WMT23, 12 streams",
+   "median",
+   "0.847",
+   "0.842",
+   "82.2",
+   "80.8",
+   "0.0",
+   "0.0"
+  ],
+  "column_index": 4,
+  "column": "\\shortstack{Zero stops\\\\$t$ (\\%)}",
+  "printed": "82.2",
+  "half_up": "82.3",
+  "exact_value": "329/4"
+ },
+ {
+  "table": "cutoff-bootstrap.tex",
+  "renderer": "render_joint_scale",
+  "row_cells": [
+   "WMT24 en-es",
+   "median",
+   "0.851",
+   "0.854",
+   "98.0",
+   "95.2",
+   "0.0",
+   "0.0"
+  ],
+  "column_index": 5,
+  "column": "\\shortstack{Zero stops\\\\map+$t$ (\\%)}",
+  "printed": "95.2",
+  "half_up": "95.3",
+  "exact_value": "381/4"
+ },
+ {
+  "table": "joint-discovery.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "RewardBench 2",
+   "0",
+   "19.62",
+   "40",
+   "1.405",
+   "1.447",
+   "1.456",
+   "1.288"
+  ],
+  "column_index": 2,
+  "column": "Mean $Q_{\\rm joint}$",
+  "printed": "19.62",
+  "half_up": "19.63",
+  "exact_value": "157/8"
+ },
+ {
+  "table": "joint-discovery.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "RewardBench 2",
+   "1",
+   "12.72",
+   "40",
+   "1.741",
+   "2.029",
+   "2.180",
+   "1.710"
+  ],
+  "column_index": 2,
+  "column": "Mean $Q_{\\rm joint}$",
+  "printed": "12.72",
+  "half_up": "12.73",
+  "exact_value": "509/40"
+ },
+ {
+  "table": "joint-discovery.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT23, 13 streams",
+   "0",
+   "39.17",
+   "40",
+   "1.795",
+   "1.844",
+   "1.836",
+   "1.774"
+  ],
+  "column_index": 2,
+  "column": "Mean $Q_{\\rm joint}$",
+  "printed": "39.17",
+  "half_up": "39.18",
+  "exact_value": "1567/40"
+ },
+ {
+  "table": "joint-discovery.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT24 en-es",
+   "0",
+   "40.67",
+   "40",
+   "1.384",
+   "1.421",
+   "1.422",
+   "1.324"
+  ],
+  "column_index": 2,
+  "column": "Mean $Q_{\\rm joint}$",
+  "printed": "40.67",
+  "half_up": "40.68",
+  "exact_value": "1627/40"
+ },
+ {
+  "table": "joint-discovery.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT24 en-es",
+   "1",
+   "26.82",
+   "40",
+   "1.689",
+   "2.127",
+   "2.215",
+   "1.858"
+  ],
+  "column_index": 2,
+  "column": "Mean $Q_{\\rm joint}$",
+  "printed": "26.82",
+  "half_up": "26.83",
+  "exact_value": "1073/40"
+ },
+ {
+  "table": "joint-discovery.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT24 ja-zh",
+   "0",
+   "40.12",
+   "40",
+   "1.563",
+   "1.563",
+   "1.561",
+   "1.361"
+  ],
+  "column_index": 2,
+  "column": "Mean $Q_{\\rm joint}$",
+  "printed": "40.12",
+  "half_up": "40.13",
+  "exact_value": "321/8"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "RewardBench 2",
+   "0.05",
+   "19.62",
+   "19.95",
+   "13",
+   "13.85",
+   "13.95",
+   "4"
+  ],
+  "column_index": 2,
+  "column": "$Q_{\\rm joint}$",
+  "printed": "19.62",
+  "half_up": "19.63",
+  "exact_value": "157/8"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "RewardBench 2",
+   "0.20",
+   "13.95",
+   "14.47",
+   "11",
+   "10.72",
+   "11.05",
+   "8"
+  ],
+  "column_index": 3,
+  "column": "$Q_{\\rm split}$",
+  "printed": "14.47",
+  "half_up": "14.48",
+  "exact_value": "579/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "RewardBench 2",
+   "0.20",
+   "13.95",
+   "14.47",
+   "11",
+   "10.72",
+   "11.05",
+   "8"
+  ],
+  "column_index": 5,
+  "column": "$Q_{\\rm joint}(\\mathcal O)$",
+  "printed": "10.72",
+  "half_up": "10.73",
+  "exact_value": "429/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "RewardBench 2",
+   "0.30",
+   "12.93",
+   "13.07",
+   "5",
+   "9.55",
+   "9.70",
+   "5"
+  ],
+  "column_index": 3,
+  "column": "$Q_{\\rm split}$",
+  "printed": "13.07",
+  "half_up": "13.08",
+  "exact_value": "523/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT23, 13 streams",
+   "0.05",
+   "39.17",
+   "39.30",
+   "4",
+   "25.48",
+   "25.57",
+   "4"
+  ],
+  "column_index": 2,
+  "column": "$Q_{\\rm joint}$",
+  "printed": "39.17",
+  "half_up": "39.18",
+  "exact_value": "1567/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT23, 13 streams",
+   "0.05",
+   "39.17",
+   "39.30",
+   "4",
+   "25.48",
+   "25.57",
+   "4"
+  ],
+  "column_index": 6,
+  "column": "$Q_{\\rm split}(\\mathcal O)$",
+  "printed": "25.57",
+  "half_up": "25.58",
+  "exact_value": "1023/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT23, 13 streams",
+   "0.10",
+   "49.33",
+   "49.65",
+   "8",
+   "35.92",
+   "36.05",
+   "3"
+  ],
+  "column_index": 5,
+  "column": "$Q_{\\rm joint}(\\mathcal O)$",
+  "printed": "35.92",
+  "half_up": "35.93",
+  "exact_value": "1437/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT23, 13 streams",
+   "0.20",
+   "21.05",
+   "21.18",
+   "5",
+   "15.25",
+   "15.32",
+   "3"
+  ],
+  "column_index": 6,
+  "column": "$Q_{\\rm split}(\\mathcal O)$",
+  "printed": "15.32",
+  "half_up": "15.33",
+  "exact_value": "613/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT23, 12 streams",
+   "0.05",
+   "43.25",
+   "43.25",
+   "0",
+   "29.52",
+   "29.52",
+   "0"
+  ],
+  "column_index": 5,
+  "column": "$Q_{\\rm joint}(\\mathcal O)$",
+  "printed": "29.52",
+  "half_up": "29.53",
+  "exact_value": "1181/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT23, 12 streams",
+   "0.05",
+   "43.25",
+   "43.25",
+   "0",
+   "29.52",
+   "29.52",
+   "0"
+  ],
+  "column_index": 6,
+  "column": "$Q_{\\rm split}(\\mathcal O)$",
+  "printed": "29.52",
+  "half_up": "29.53",
+  "exact_value": "1181/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT23, 12 streams",
+   "0.10",
+   "46.38",
+   "46.42",
+   "2",
+   "33.08",
+   "33.08",
+   "0"
+  ],
+  "column_index": 3,
+  "column": "$Q_{\\rm split}$",
+  "printed": "46.42",
+  "half_up": "46.43",
+  "exact_value": "1857/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT23, 12 streams",
+   "0.20",
+   "19.30",
+   "19.62",
+   "5",
+   "13.82",
+   "14.00",
+   "3"
+  ],
+  "column_index": 3,
+  "column": "$Q_{\\rm split}$",
+  "printed": "19.62",
+  "half_up": "19.63",
+  "exact_value": "157/8"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT23, 12 streams",
+   "0.20",
+   "19.30",
+   "19.62",
+   "5",
+   "13.82",
+   "14.00",
+   "3"
+  ],
+  "column_index": 5,
+  "column": "$Q_{\\rm joint}(\\mathcal O)$",
+  "printed": "13.82",
+  "half_up": "13.83",
+  "exact_value": "553/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT23, 12 streams",
+   "0.30",
+   "19.07",
+   "19.60",
+   "13",
+   "13.18",
+   "13.35",
+   "7"
+  ],
+  "column_index": 2,
+  "column": "$Q_{\\rm joint}$",
+  "printed": "19.07",
+  "half_up": "19.08",
+  "exact_value": "763/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT24 en-de",
+   "0.20",
+   "21.32",
+   "21.73",
+   "12",
+   "14.72",
+   "14.97",
+   "8"
+  ],
+  "column_index": 2,
+  "column": "$Q_{\\rm joint}$",
+  "printed": "21.32",
+  "half_up": "21.33",
+  "exact_value": "853/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT24 en-de",
+   "0.20",
+   "21.32",
+   "21.73",
+   "12",
+   "14.72",
+   "14.97",
+   "8"
+  ],
+  "column_index": 5,
+  "column": "$Q_{\\rm joint}(\\mathcal O)$",
+  "printed": "14.72",
+  "half_up": "14.73",
+  "exact_value": "589/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT24 en-de",
+   "0.20",
+   "21.32",
+   "21.73",
+   "12",
+   "14.72",
+   "14.97",
+   "8"
+  ],
+  "column_index": 6,
+  "column": "$Q_{\\rm split}(\\mathcal O)$",
+  "printed": "14.97",
+  "half_up": "14.98",
+  "exact_value": "599/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT24 en-de",
+   "0.30",
+   "18.82",
+   "19.10",
+   "6",
+   "13.07",
+   "13.25",
+   "5"
+  ],
+  "column_index": 2,
+  "column": "$Q_{\\rm joint}$",
+  "printed": "18.82",
+  "half_up": "18.83",
+  "exact_value": "753/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT24 en-de",
+   "0.30",
+   "18.82",
+   "19.10",
+   "6",
+   "13.07",
+   "13.25",
+   "5"
+  ],
+  "column_index": 5,
+  "column": "$Q_{\\rm joint}(\\mathcal O)$",
+  "printed": "13.07",
+  "half_up": "13.08",
+  "exact_value": "523/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT24 en-es",
+   "0.05",
+   "40.67",
+   "40.95",
+   "10",
+   "28.98",
+   "29.12",
+   "5"
+  ],
+  "column_index": 2,
+  "column": "$Q_{\\rm joint}$",
+  "printed": "40.67",
+  "half_up": "40.68",
+  "exact_value": "1627/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT24 en-es",
+   "0.05",
+   "40.67",
+   "40.95",
+   "10",
+   "28.98",
+   "29.12",
+   "5"
+  ],
+  "column_index": 6,
+  "column": "$Q_{\\rm split}(\\mathcal O)$",
+  "printed": "29.12",
+  "half_up": "29.13",
+  "exact_value": "233/8"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT24 en-es",
+   "0.20",
+   "23.02",
+   "23.23",
+   "6",
+   "16.23",
+   "16.38",
+   "4"
+  ],
+  "column_index": 2,
+  "column": "$Q_{\\rm joint}$",
+  "printed": "23.02",
+  "half_up": "23.03",
+  "exact_value": "921/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT24 ja-zh",
+   "0.05",
+   "40.12",
+   "40.70",
+   "13",
+   "28.40",
+   "28.75",
+   "8"
+  ],
+  "column_index": 2,
+  "column": "$Q_{\\rm joint}$",
+  "printed": "40.12",
+  "half_up": "40.13",
+  "exact_value": "321/8"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT24 ja-zh",
+   "0.10",
+   "40.25",
+   "40.83",
+   "12",
+   "29.65",
+   "29.82",
+   "6"
+  ],
+  "column_index": 6,
+  "column": "$Q_{\\rm split}(\\mathcal O)$",
+  "printed": "29.82",
+  "half_up": "29.83",
+  "exact_value": "1193/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT24 ja-zh",
+   "0.30",
+   "28.57",
+   "29.55",
+   "18",
+   "20.77",
+   "21.20",
+   "10"
+  ],
+  "column_index": 2,
+  "column": "$Q_{\\rm joint}$",
+  "printed": "28.57",
+  "half_up": "28.58",
+  "exact_value": "1143/40"
+ },
+ {
+  "table": "joint-small-batches.tex",
+  "renderer": "render_joint_revision",
+  "row_cells": [
+   "WMT24 ja-zh",
+   "0.30",
+   "28.57",
+   "29.55",
+   "18",
+   "20.77",
+   "21.20",
+   "10"
+  ],
+  "column_index": 5,
+  "column": "$Q_{\\rm joint}(\\mathcal O)$",
+  "printed": "20.77",
+  "half_up": "20.78",
+  "exact_value": "831/40"
+ },
+ {
+  "table": "review-budget-0-mean.tex",
+  "renderer": "render_review",
+  "row_cells": [
+   "0.10",
+   "0.10",
+   "31.7",
+   "100.0",
+   "97.8",
+   "83.5",
+   "1289.5"
+  ],
+  "column_index": 6,
+  "column": "Queries",
+  "printed": "1289.5",
+  "half_up": "1289.6",
+  "exact_value": "25791/20"
+ },
+ {
+  "table": "review-budget-0-median.tex",
+  "renderer": "render_review",
+  "row_cells": [
+   "0.05",
+   "0.15",
+   "96.1",
+   "100.0",
+   "98.8",
+   "10.6",
+   "56.5"
+  ],
+  "column_index": 6,
+  "column": "Queries",
+  "printed": "56.5",
+  "half_up": "56.6",
+  "exact_value": "1131/20"
+ },
+ {
+  "table": "review-budget-0-median.tex",
+  "renderer": "render_review",
+  "row_cells": [
+   "0.20",
+   "0.10",
+   "94.6",
+   "100.0",
+   "97.9",
+   "14.1",
+   "189.4"
+  ],
+  "column_index": 6,
+  "column": "Queries",
+  "printed": "189.4",
+  "half_up": "189.5",
+  "exact_value": "3789/20"
+ },
+ {
+  "table": "review-budget-1-mean.tex",
+  "renderer": "render_review",
+  "row_cells": [
+   "0.10",
+   "0.05",
+   "9.9",
+   "95.9",
+   "94.9",
+   "96.7",
+   "4062.8"
+  ],
+  "column_index": 6,
+  "column": "Queries",
+  "printed": "4062.8",
+  "half_up": "4062.9",
+  "exact_value": "81257/20"
+ },
+ {
+  "table": "review-budget-1-mean.tex",
+  "renderer": "render_review",
+  "row_cells": [
+   "0.10",
+   "0.20",
+   "40.1",
+   "100.0",
+   "97.8",
+   "59.6",
+   "2548.4"
+  ],
+  "column_index": 6,
+  "column": "Queries",
+  "printed": "2548.4",
+  "half_up": "2548.5",
+  "exact_value": "50969/20"
+ },
+ {
+  "table": "review-budget-1-mean.tex",
+  "renderer": "render_review",
+  "row_cells": [
+   "0.30",
+   "0.15",
+   "97.0",
+   "100.0",
+   "98.7",
+   "11.5",
+   "652.6"
+  ],
+  "column_index": 6,
+  "column": "Queries",
+  "printed": "652.6",
+  "half_up": "652.7",
+  "exact_value": "13053/20"
+ },
+ {
+  "table": "review-budget-1-median.tex",
+  "renderer": "render_review",
+  "row_cells": [
+   "0.05",
+   "0.15",
+   "97.4",
+   "100.0",
+   "99.0",
+   "5.4",
+   "70.3"
+  ],
+  "column_index": 6,
+  "column": "Queries",
+  "printed": "70.3",
+  "half_up": "70.4",
+  "exact_value": "1407/20"
+ },
+ {
+  "table": "review-budget-2-mean.tex",
+  "renderer": "render_review",
+  "row_cells": [
+   "0.10",
+   "0.20",
+   "44.9",
+   "100.0",
+   "97.8",
+   "57.1",
+   "2170.2"
+  ],
+  "column_index": 6,
+  "column": "Queries",
+  "printed": "2170.2",
+  "half_up": "2170.3",
+  "exact_value": "8681/4"
+ },
+ {
+  "table": "review-budget-2-mean.tex",
+  "renderer": "render_review",
+  "row_cells": [
+   "0.20",
+   "0.20",
+   "95.2",
+   "100.0",
+   "98.5",
+   "13.5",
+   "591.1"
+  ],
+  "column_index": 6,
+  "column": "Queries",
+  "printed": "591.1",
+  "half_up": "591.2",
+  "exact_value": "11823/20"
+ },
+ {
+  "table": "review-replacement-mean.tex",
+  "renderer": "render_review",
+  "row_cells": [
+   "WMT24 en-es",
+   "0.10",
+   "0.037",
+   "0.087",
+   "1.2"
+  ],
+  "column_index": 4,
+  "column": "Over (\\%)",
+  "printed": "1.2",
+  "half_up": "1.3",
+  "exact_value": "5/4"
+ }
+]

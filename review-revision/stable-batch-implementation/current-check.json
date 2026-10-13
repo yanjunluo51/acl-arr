@@ -1,0 +1,25 @@
+{
+  "status": "PASS_SCOPED_STABLE_BATCH_REVISION",
+  "pdf_pages": 96,
+  "technical_main_pages": 8,
+  "limitations_page": 9,
+  "abstract_words": 186,
+  "citations": 49,
+  "edit_chain_checked": true,
+  "previous_formal_blocks_unchanged": true,
+  "new_positive_tolerance_proposition": true,
+  "font_margin_line_number_checks": true,
+  "overfull_boxes": 0,
+  "prior_witness_receipt_records": 1920,
+  "prior_witness_replay_reexecuted": false,
+  "new_construction_subsets_checked": 2113536,
+  "adversarial_histories_checked": 63466,
+  "formal_lower_bounds_verified": false,
+  "new_inference": false,
+  "source_hashes": {
+    "manuscript/main.tex": "2983807cb868dfd20d58c6c64212736576871e93771dc12f6ea775c25302544f",
+    "manuscript/appendix.tex": "c46fa30615ab85a5f06cb72a7c5c6a4869a637d0afec80148fb0e9494cd47d58",
+    "manuscript/main.pdf": "7dfcb61593d1d80068ec27bb655c8108686441fc97282cb3f4451bb5f3798f4b",
+    "manuscript/references.bib": "bd075c496e30026042461a444c83fc0eaffaf2aa32c969635a724ff38f6a7c60"
+  }
+}

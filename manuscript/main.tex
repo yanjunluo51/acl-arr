@@ -1,0 +1,310 @@
+\documentclass[11pt]{article}
+\usepackage[review]{acl}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,booktabs,graphicx}
+\usepackage{algorithm,algorithmic}
+\usepackage{placeins}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\SD}{\mathbin{\triangle}}
+\input{tables/query-numbers}
+\input{tables/review-numbers}
+\input{tables/granularity-numbers}
+\input{tables/deduplicated-numbers}
+\input{tables/evidence-main-numbers}
+\input{tables/secondary-numbers}
+\input{tables/editorial-evidence-numbers}
+\title{How Many Evaluator Scores Certify Output Retention Under a Churn Budget?}
+\author{Anonymous ACL submission}
+\begin{document}
+\maketitle
+\begin{abstract}
+Replacing an evaluator can change which language outputs pass an ensemble cutoff. We study how many candidate-evaluator scores certify a retained subset of selected outputs. Its replacement-average churn must meet a budget, and its size must lie within a stated tolerance of the largest feasible retained count. Normalization, cutoff and a finite family of single-evaluator replacements are fixed; guarantees hold for every assignment of unseen scores consistent with observations. We characterize the smallest certificates chosen with complete score knowledge and the queries needed to find one. For odd median pools, safety and exclusion evidence are disjoint, yielding closed-form minima. Mean and even-median pools allow sharing. Under exact certification from empty history, we construct mean-pooling families whose joint certificate approaches half the best union of separately minimum certificates as pools grow. We solved 1,920 targets numerically from 960 cached mean-pooling instances of RewardBench~2 and five WMT panels. Joint gains of at most 2.61\% beyond the best separate union appeared in 89 targets. Whole-column targets showed no joint gain. Finding a two-entry certificate can require queries linear in batch size, even at positive tolerance. Certificate size, discovery cost and inference time require separate evaluation; retention stability does not certify output quality.
+\end{abstract}
+
+\section{Introduction}
+Reward models, translation metrics and LLM judges score language outputs \citep{malik2026rewardbench2,freitag2023wmt23,zheng2023judging}. Replacing one evaluator can move previously accepted outputs across the same ensemble cutoff. Before rescoring the whole batch, an analyst may retain part of the original list and defer the remaining decisions for review. Deferring every decision trivially meets a budget on these membership changes (churn). Useful certification must also limit how many outputs are lost relative to the budget-constrained optimum. Two questions follow: how many observed scores suffice to certify near-optimal retention, and how many queries are needed to find them?
+
+We fix the score-normalization maps, the cutoff and the finite family of candidate replacements. A completion assigns unseen scores consistently with the observations. A certificate bounds replacement-average churn and retained-count loss for every completion. The formulation caps average, not per-replacement, churn and imposes no return-size or per-prompt quotas. Stability differs from quality: evaluator agreement can coexist with shared errors and reward hacking \citep{eisenstein2024herding}.
+
+A certificate shows two things. The retained set meets the churn budget (safety), and no consistent completion admits a feasible set larger by more than the tolerance (exclusion). The central question is whether separately minimum safety and exclusion witnesses, optimally deduplicated over the same safe-count targets, combine into a minimum certificate. Changing the retained subset can lengthen its safety proof while shortening the combined evidence. Odd medians use disjoint agreements and oppositions, yielding closed-form minima. Mean and even-median observations can support both tasks. We characterize joint minima. Under exact stopping from empty history, mean families approach a factor-two advantage over the best separate union as pools grow. Short certificates can require discovery cost linear in batch size even at positive tolerance. On 1,920 mean targets from NLP panels, numerical joint gains occurred in 89 targets and were modest.
+
+\section{Related Work}
+\label{sec:related}
+\paragraph{Risk control.}
+Conformal risk control (CRC) bounds expected monotone loss and risk-controlling prediction sets give high-probability bounds \citep{angelopoulos2024crc,yeh2025conformal,bates2021rcps}. SCoRE controls general bounded losses in selective deployment \citep{bai2026score}. SCOPE and multi-expert CRC address pairwise acceptance and multiple judges \citep{badshah2026scope,cheng2026multiexpert}, and replicable calibration stabilizes thresholds across samples \citep{papamichalis2026replicableconformalprediction}. These guarantees hold under their sampling assumptions. Ours holds for every completion of one fixed batch under declared evaluator replacements; input and order perturbations, which change LLM-judge verdicts \citep{wang2024fair,li2026llmsreliablyjudgeyet}, lie outside it. Ensemble agreement need not exclude common error \citep{afrin2026evaluatorensemblesrewardhacking}.
+
+\paragraph{Verification and selection.}
+Priced information and matroid verification distinguish proof size from discovery cost \citep{charikar2002priced,diwan2026basis}. Matroid verification also selects the certified basis \citep{diwan2026basis}. Boolean evaluation studies adaptive queries \citep{deshpande2016sbfe,gkenosis2018ssclass}. Robust selection and knapsack choose queries before uncertain parameters are resolved \citep{chen2026selection,goerigk2015robustqueries}. Uncertain-profit knapsack certifies good packings and excludes better ones under resource augmentation \citep{schloter2025knapsack}. Here replacement-average flip costs couple two proof tasks, safety and count exclusion. Odd medians keep their evidence disjoint, whereas mean pools can beat optimally deduplicated separate minima. Unlike black-box certification \citep{blanc2022certification,gupta2022monotone}, we query a fixed matrix under known pooling. Recoverable selection, covering and query-competition models study later exchanges, sharing and discovery \citep{chassein2017recoverabletwostagerobustselection,megow2023set,erlebach2015survey,erlebach2021parallel}.
+
+\paragraph{Ranking and NLP scoring.}
+Ranking robustness covers weight changes, preference completions and word attacks \citep{asudeh2018stable,imber2020topk,wu2022certdr}. PAC selection samples rewards \citep{kalyanakrishnan2012pac}. Uncertain top-$k$ combines rankings with possible worlds or averages completions \citep{soliman2007topk,amarilli2017topk}; our safe and optimistic counts play the role of necessary and possible answers. Col-Bandit queries MaxSim entries \citep{pony2026colbanditquerytimetopkestimation}; budget-adaptive ranking uses joint confidence intervals \citep{oettershagen2026topkbudgetadaptiveranking}. Sorted-list aggregation supports sorted and random accesses \citep{fagin2003optimal}; our completion certificates assume no sorted oracle. Selective ensembles address prediction consistency \citep{black2022selective}; pruning and early exit reduce scoring, and Best-of-Evidence queries factors within a fixed pool \citep{li2022pruning,inoue2019ensemble,busolin2021exit,zhang2026bestofevidencebestofnselectionpartial}. MT filtering \citep{perrella-etal-2024-beyond} and metric biases toward adequacy \citep{shayegh-etal-2025-feeding} motivate separate quality assessment. Predictive churn concerns model updates and training-sample changes \citep{watsondaniels2025predictive,prastalo2026reducing}; fixed-threshold routing can change even with matching class predictions \citep{kim2026lottery}. We instead certify a retained subset within a count tolerance of the largest feasible count and use minimum certificates to benchmark acquisition.
+
+\section{Selection under Evaluator Replacements}
+\label{sec:setting}
+Certification concerns one partly observed score matrix: rows index outputs and columns index evaluators. Pools $P,R$ contain $M\ge1$ base and $T\ge1$ candidate evaluators, respectively. We fit normalization maps and cutoff $0<t_0\le1$ on a reference split of scored outputs. Reference denotes this fitting split, not a human translation. Write $s_e(i)\in[0,1]$ for normalized scores. Replacing base member $j$ with candidate $r$ gives $P^{j\to r}$; all $H=MT$ replacements have uniform weight. The partly observed matrix, maps and cutoff remain fixed. Base scores are initially visible; queries reveal candidate test scores.
+
+The base list is $S_0(P)=\{i:c_P(i)\ge t_0\}$, where $c_P$ is median or mean consensus. For even-sized pools, the median averages the two central scores; the closed-form median witness results require odd $M$. Cutoff ties are included. For a batch of $N\ge1$ outputs, choose a nominal selection fraction $q\in(0,1]$ and budget $\alpha\ge0$. Let $k=\max(1,\operatorname{round}(qN))$ be the nominal count, rounding half-integers to even. This count scales risk without imposing a return quota. Write $\sigma_Q(i)=\one[i\in S_0(Q)]$. Known base scores and one candidate score determine all $M$ row replacement outcomes. Define their flip count $f_{ir}$ and row total $F_i$:
+\begin{align}
+ f_{ir}&=\sum_{j=1}^{M}\one[\sigma_P(i)\ne\sigma_{P^{j\to r}}(i)],\nonumber\\
+ F_i&=\sum_{r=1}^{T}f_{ir}.
+ \label{eq:cost}
+\end{align}
+The commitment mask $C$ contains outputs whose baseline decisions are accepted without review; the returned set is $S_0(P)\cap C$. Its average normalized churn over the declared replacements is
+\begin{align}
+ R(C)&=\frac1H\sum_{j,r}\frac{|(S_0(P)\SD S_0(P^{j\to r}))\cap C|}{2k}\nonumber\\
+ &=\frac{\sum_{i\in C}F_i}{2kH}.
+ \label{eq:risk}
+\end{align}
+Decisions outside $C$ are referred for review. Allowing $\rho$ average membership changes per replacement gives $\alpha=\rho/(2k)$. We maximize returned count subject to $R(C)\le\alpha$. Only baseline-selected outputs receive entry queries; an unselected output enters $C$ only when no declared replacement can change its membership. A whole-evaluator query still reveals all $N$ rows.
+
+The integer flip budget is $b_H=\lfloor2k\alpha H\rfloor$. With all costs $F_i$ observed, sort baseline-selected outputs by increasing $F_i$. The cardinality of the longest prefix within $b_H$ is the full-information optimum $V^*$.
+
+\section{Certificates from Partial Scores}
+\label{sec:partial}
+A certificate uses visible base and queried candidate scores to verify churn feasibility and bound count shortfall. Unobserved scores range freely over $[0,1]$; this is a completion set, not a statistical independence assumption.
+
+Let $f_i(x)$ count flips across the $M$ replacements when a candidate assigns score $x$ to output $i$. Thus $f_{ir}=f_i(s_r(i))$ and $p_i=\max_{x\in[0,1]}f_i(x)$. Under either pooling rule, replacement consensus is nondecreasing in $x$. For selected outputs, $f_i(x)$ is nonincreasing, with its maximum at $x=0$ and zero at $x=1$. For unselected outputs, it is nondecreasing, with its maximum at $x=1$ and zero at $x=0$. Visible base scores determine $p_i$ exactly.
+
+After $n_i$ queries on row $i$, let $\ell_i$ sum their observed flip contributions. Bounding each unobserved count between zero and $p_i$ gives
+\begin{equation}
+ \ell_i\le F_i\le u_i=\ell_i+(T-n_i)p_i.
+ \label{eq:interval}
+\end{equation}
+For nonnegative costs $w$, define retention capacity
+\[
+ V(w)=\max\{|C\cap S_0(P)|:\sum_{i\in C}w_i\le b_H\}.
+\]
+Sorting selected-output costs computes $V(w)$. Maximizing retention under $u$ yields a mask, feasible for every consistent completion, returning $V^-=V(u)$ outputs. The optimistic count $V^+=V(\ell)$ is attainable in some completion.
+
+Keeping observed values fixed, assigning every unobserved entry its zero-flip endpoint realizes $\ell$; assigning these entries their maximum-flip endpoints realizes $u$. Known caps on a candidate's deviation from consensus, or Lipschitz bounds in base-score space, keep both endpoint vectors attainable with narrower entry ranges.
+\begin{proposition}[Safe retention and stopping]
+\label{prop:stop}
+At any adaptive query history, let $C^-$ maximize retained count subject to the upper-cost budget. Then
+\[
+ R(C^-)\le\alpha,\qquad V^-\le V^*\le V^+.
+\]
+If $V^+-V^-\le\varepsilon$, its returned count is at most $\varepsilon$ outputs below $V^*$. Under the declared replacement family and completion model, these guarantees hold for every acquisition order and stopping time.
+\end{proposition}
+\begin{proof}
+Equation~\ref{eq:interval} bounds each true cost, so upper-cost feasibility implies true and then lower-cost feasibility. Maximizing cardinality gives the count bounds, and the returned count $V^-$ falls at most the gap below $V^*$.
+\end{proof}
+
+Integer $\varepsilon\ge0$ bounds count shortfall; zero requires count optimality. Full revelation gives $V^-=V^+=V^*$.
+
+An output is structurally invariant ($p_i=0$) if no candidate score can change its membership. Zero-query retention uses upper costs $Tp_i$ and can also admit noninvariant outputs. Strategies start there and recompute masks after queries; the safe count never decreases, though retained sets need not be nested. Let $m_0$ and $m$ count invariant and active ($p_i>0$) selected rows; only active rows are queryable. For $Q$ entry queries, active inspection is $Q/(mT)$, or zero when $m=0$ (Appendix~\ref{app:protocol}).
+
+\section{Minimum Certificate Complexity}
+\label{sec:median}
+To measure how few revealed entries suffice, an offline constructor uses the true matrix to choose entries. The verifier sees only revealed entries and checks every consistent completion. Each entry has unit cost.
+
+\paragraph{Odd medians: disjoint evidence.}
+For $M=2h+1$ with nonnegative integer $h$, median selection requires $h+1$ votes at or above $t_0$. A single replacement changes at most one vote. Selected rows with at least $h+2$ votes are invariant interior rows; rows with exactly $h+1$ are boundary rows. A below-cutoff candidate excludes a boundary row precisely when replacing one of its $h+1$ voting members. Thus $p_i=h+1$ at the selected boundary and zero in the interior.
+
+Here the active selected rows form the boundary set $\mathcal B$, and the $m_0$ invariant selected rows are interior. For $i\in\mathcal B$, define opposition bits and their true row sums by
+\[
+ y_{ir}=\one[s_r(i)<t_0],\qquad z_i=\sum_{r=1}^{T}y_{ir}.
+\]
+Each opposition causes $h+1$ flips, so $F_i=(h+1)z_i$. Measuring boundary costs in opposition units, feasibility is exactly $\sum_{i\in C\cap\mathcal B}z_i\le b$, where
+\begin{equation}
+ b=\left\lfloor\frac{b_H}{h+1}\right\rfloor=\left\lfloor\frac{2k\alpha MT}{h+1}\right\rfloor.
+ \label{eq:booleanbudget}
+\end{equation}
+Thus $\alpha$ budgets normalized churn, $b_H$ counts flips, and $b$ counts oppositions. For $M=7$, $T=3$, $k=2$ and $\alpha=.10$, these budgets are $b_H=8$ and $b=2$ (Appendix~\ref{app:worked-example}). Query counts measure observations. On a selected boundary row, an agreement (candidate score at or above the cutoff) reduces the upper opposition bound by one. A below-cutoff opposition increases the lower bound by one. With $a_i$ agreements and $o_i$ oppositions observed, $o_i\le z_i\le T-a_i$.
+
+\begin{theorem}[Safety witness]
+\label{thm:safe}
+If the true matrix admits a feasible set of $L$ boundary rows, the minimum number of observations needed to certify feasibility of an $L$-row set under every consistent completion is
+\[
+ Q_{\rm safe}(L)=\max\{0,LT-b\}.
+\]
+If no $L$-row set is feasible under true costs, no such certificate exists.
+\end{theorem}
+An $L$-row set starts with upper cost $LT$; only agreements reduce it, one unit each, proving necessity. Any truly feasible $L$-row set contains enough agreements to attain the bound. Appendix~\ref{app:proofs} gives full proofs, endpoints and a worked example.
+
+Feasibility need not establish optimality: a larger retained set may still be possible. Let $z_{(1)}\le\cdots\le z_{(m)}$ and let $L$ be the largest prefix size whose sum is at most $b$. The full retained optimum is $m_0+L$. If $L<m$, then $\sum_{i=1}^{L+1}z_{(i)}>b$, so the threshold $t^*$ below exists.
+\begin{theorem}[Exact optimality witness]
+\label{thm:exact}
+If $L=m$, the minimum certificate proving exact optimality is $\max(0,mT-b)$. Otherwise set $p=L+1$, $B_0=b+1$ and $D(t)=\sum_{i=1}^{p}\min(z_{(i)},t)$. Define
+\begin{equation}
+ t^*=\min\{t\in\{0,\ldots,T\}:D(t)\ge B_0\}.
+ \label{eq:level}
+\end{equation}
+The exact offline certificate size is
+\begin{equation}
+ Q_{\rm exact}=\max(0,LT-b)+B_0+(m-p)t^*.
+ \label{eq:exact}
+\end{equation}
+\end{theorem}
+The opposition cap $t^*$ differs from cutoff $t_0$. For $L<m$, order rows by true cost. Reveal $b+1$ oppositions across the first $p$ rows, capped at $\min(z_{(i)},t^*)$ in row $i$, and $t^*$ oppositions in every remaining row. These cells are disjoint from safety agreements, so their costs add. For $L=m$, safety alone suffices (Appendix~\ref{app:proofs}).
+
+
+
+Let $s$ be the certified safe boundary count. Gap tolerance $\varepsilon$ requires optimistic boundary count at most $s+\varepsilon$, so every $(s+\varepsilon+1)$-row boundary set must be excluded unless $s+\varepsilon+1>m$.
+\begin{corollary}[Minimum gap witness]
+\label{cor:gap-witness}
+Let $L^*$ be the true optimal boundary count and $\varepsilon\ge0$ an integer. For integer $p$ with $L^*<p\le m$, let $D_p(t)=\sum_{i=1}^{p}\min(z_{(i)},t)$ and define
+\[
+ t_p=\min\{t\in\{0,\ldots,T\}:D_p(t)>b\},
+\]
+with exclusion cost $E(p)=b+1+(m-p)t_p$. For $p>m$, set $E(p)=0$. The minimum entry certificate size for gap at most $\varepsilon$ under this completion model is
+\begin{equation}
+ \begin{aligned}
+ Q_\varepsilon=\min_{s\in\mathcal S_\varepsilon}\big[&\max(0,sT-b)\\
+ &+E(s+\varepsilon+1)\big],
+ \end{aligned}
+ \label{eq:gap-witness}
+\end{equation}
+where $\mathcal S_\varepsilon=\{\max(0,L^*-\varepsilon),\ldots,L^*\}$. In particular, $Q_0=Q_{\rm exact}$.
+\end{corollary}
+These minima lower-bound entry queries under the same instance, budget, model, tolerance and empty history (Appendix~\ref{app:gap-witness}); residual witnesses account for existing observations (Appendix~\ref{app:residual}).
+
+
+\paragraph{Joint evidence: mean and even medians.}
+An entry with true flip contribution $f_{ir}$ raises its row's lower cost by $f_{ir}$ and reduces its upper cost by $p_i-f_{ir}$. Mean pooling can have integer $0<f_{ir}<p_i$, so one query contributes to both proofs. Table~\ref{tab:joint-example} shows why: the five-entry safety witness retains row 2, and the best separate union needs twelve entries. Retaining row 1 instead, six safety entries also support exclusion; one more completes a seven-entry joint certificate. Appendix~\ref{app:deduplicated} realizes these mean scores and proves minimality.
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{@{}lccr@{}}
+\toprule
+Evidence & Row 1 & Row 2 & Entries\\
+\midrule
+Minimum safety & \texttt{......} & \texttt{.00000} & 5\\
+Minimum exclusion & \texttt{111111} & \texttt{1.....} & 7\\
+Best separate union & \texttt{111111} & \texttt{100000} & 12\\
+Joint & \texttt{111111} & \texttt{1.....} & 7\\
+\bottomrule
+\end{tabular}
+\caption{Mean evidence with caps $(7,6)$ and flip budget six. Digits are revealed flip counts; dots are unqueried entries. Joint evidence retains row~1 (upper cost six). The lower costs of rows 1 and 2 sum to seven, exceeding the budget and excluding retention of both rows.}
+\label{tab:joint-example}
+\end{table}
+
+For history $\mathcal O$, let $\ell_i^0,u_i^0$ be its row bounds and $U_i$ its unqueried candidates. Using true contributions offline, define $\mathcal D_i=\{(|J|,\sum_{r\in J}f_{ir}):J\subseteq U_i\}$. Here $n_i$ counts new queries and $v_i$ sums their contributions. A state $(n_i,v_i)$ gives $\ell_i=\ell_i^0+v_i$, $u_i=u_i^0-n_ip_i+v_i$. Let $L^*$ be the true optimal active count.
+\begin{theorem}[Joint entry witness]
+\label{thm:joint}
+For the fixed true matrix, history $\mathcal O$ and integer $\varepsilon\ge0$, the minimum additional entry count $Q_{\rm joint}$ is $\min\sum_i n_i$, over $s\in\{\max(0,L^*-\varepsilon),\ldots,L^*\}$, row states in $\mathcal D_i$ and a safe set $C$ of $s$ active rows satisfying $\sum_{i\in C}u_i\le b_H$. If $p=s+\varepsilon+1\le m$, also require an integer $0\le t\le TM$ with
+\[
+ \sum_i(t-\ell_i)_+\le pt-b_H-1,
+\]
+where $(x)_+=\max(0,x)$. For $p>m$, exclusion is automatic.
+\end{theorem}
+Every successful query set induces reachable row states and a safe count $s$. Lemma~\ref{lem:order-threshold} (Appendix~\ref{app:joint-evidence}) equates exclusion with the $p$ smallest lower costs summing to at least $b_H+1$. Conversely, feasible row states certify at least $s$ safe active rows and optimistic active count at most $s+\varepsilon$. Only the latter condition is automatic when $p>m$. Every successful set is represented, and every feasible state choice is attained by a query set of the same size, proving minimality (Appendix~\ref{app:joint-evidence}). The offline dynamic program is polynomial in explicit $m,T,M$, with a potentially large budget-indexed grid. An equivalent integer program groups equal within-row outcomes into $G$ row--outcome groups, using $O(G+m)$ variables and constraints per safe-count target without guaranteeing polynomial solver time. Appendix~\ref{app:compact-joint} gives the formulations and even-median extension.
+
+\paragraph{What joint optimization adds.}
+Let $Q_{\rm split}$ minimize the sum of the separately minimum safety and exclusion sizes over admissible safe counts. For each such count, consider all tied minimum safety and exclusion witnesses. Let $Q_{\cup,\rm sep}$ minimize their union at the same count, then over admissible counts. For the same instance, history and tolerance,
+\[
+ Q_{\rm joint}\le Q_{\cup,\rm sep}\le Q_{\rm split}\le2Q_{\rm joint}.
+\]
+The chain holds for any nonnegative replacement weights, with $Q_{\rm joint}$ defined by the weighted integer program (Appendix~\ref{app:model-scope}). Observations only tighten both bounds, and a joint witness serves each task. One realizable mean family attains $Q_{\cup,\rm sep}/Q_{\rm joint}\to2$; a second, with $M=7$ and $\alpha=.10$ fixed, has limit $53/30$. Both assume empty history and exact stopping (Appendix~\ref{app:deduplicated}). A strict gain requires every minimum joint witness to contain an entry with $0<f_{ir}<p_i$ (Corollary~\ref{cor:overlap-budget}).
+
+Whole-evaluator queries reveal all $N$ scores in a column, so their minima depend on evidence positions (Appendix~\ref{app:granularity}). Every history admits a completion requiring no further exclusion evidence. No history therefore guarantees a strict remaining joint advantage (Proposition~\ref{prop:residual-no-uniform}); predictions can still guide discovery.
+
+\section{Acquiring a Certificate}
+\label{sec:acquisition}
+Offline minima show how much evidence suffices, not how to find it. Baselines are fixed order, random order and largest width $u_i-\ell_i$ (Appendix~\ref{app:protocol}). Reference priority fits one ridge model per candidate to reference-row flip counts $f_{ir}$. Features are pool scores, cutoff margin, score range and $p_i/M$; predictions are clipped to $[0,p_i]$ (Appendix~\ref{app:protocol}).
+
+Among query-eligible rows, reference priority selects the row with the smallest estimated total cost: observed flips plus predictions for remaining entries. Within the chosen row it chooses the unqueried candidate with largest predicted upper-cost reduction $p_i-\hat f_{ir}$. Frontier priority computes the active capacity under observed costs plus predictions for unqueried entries and clips it to $[V^- -m_0+1,V^+-m_0]$, obtaining target $s$. It scores predicted progress towards safety for $s$ and exclusion of $s+1$. It omits exclusion when $s+1>m$ or its deficit is nonpositive (Appendix~\ref{app:frontier}); safety-only frontier always omits it. Its exclusion target $s+1$ ignores the stopping tolerance, which only the verifier uses. Predictions guide order, not bounds; none of these rules has a query-optimality guarantee.
+
+\begin{algorithm}[t]
+\caption{Score inspection for certified retention}
+\label{alg:inspect}
+\begin{algorithmic}[1]
+\REQUIRE Base scores, pooling rule, $T$, $t_0$, $k$, $\alpha$, integer $\varepsilon\ge0$, policy $\pi$ with its reference-fitted models and seeded tie state.
+\STATE Compute membership, caps $p_i$ and $b_H$; set $\ell_i=0$, $u_i=Tp_i$ on active selected rows.
+\STATE Maximize retained count under upper costs to obtain $C^-$; compute $V^-=V(u)$ and $V^+=V(\ell)$.
+\WHILE{$V^+-V^->\varepsilon$}
+\STATE Use $\pi$ to choose an unqueried active candidate--output entry from initially visible information and query history.
+\STATE Query $s_r(i)$ and compute $f_{ir}$ from the base scores; set $\ell_i\gets\ell_i+f_{ir}$, $u_i\gets u_i-p_i+f_{ir}$; recompute $C^-$, $V^-$ and $V^+$.
+\ENDWHILE
+\STATE Return $S_0(P)\cap C^-$, its churn upper bound and retained-count gap.
+\end{algorithmic}
+\end{algorithm}
+
+Sorting computes each capacity bound in $O(m\log m)$ time; invariant selected rows have zero churn cost.
+\begin{proposition}[Discovery can be expensive]
+\label{prop:positive-discovery}
+For every integer $m\ge2$, a family of mean-pooling instances with $M=T=7$, $q=.05$, $\alpha=.10$, $|S_0|=m$ and $N=\Theta(m)$ has two-entry minimum certificates at $\varepsilon=\lceil.02m\rceil$. Every deterministic policy valid under the completion model needs at least $m$ queries on some instance of the family. Every randomized always-valid policy has expected cost at least $(m+1)/2$ on some fixed instance.
+\end{proposition}
+Hence no competitive factor independent of batch size holds at this tolerance (proof in Appendix~\ref{app:deduplicated}).
+
+\section{NLP Score-Inspection Experiments}
+\label{sec:experiments}
+We tested these bounds and acquisition rules on cached NLP evaluator panels.
+\input{tables/query-stopping}
+
+\subsection{Panels and protocol}
+Our RewardBench~2 panel contains 14 reward models scoring 1,723 four-completion prompts \citep{malik2026rewardbench2}. Our WMT23 en-de panel contains 557 source segments, 13 output streams and 24 reference-based metrics \citep{freitag2023wmt23}. Removing \texttt{synthetic\_ref} gives a twelve-stream variant with refitted maps and cutoff. WMT24 en-de, en-es and ja-zh panels use document splits, exclude human-reference outputs and keep four depths, 40 splits and $\alpha=.10$ \citep{freitag2024wmt24}.
+
+In RewardBench and WMT23, the first seven evaluators of a frozen ordering form the base pool, leaving $T=7$ RewardBench or $T=17$ WMT23 candidates (Appendix~\ref{app:protocol}). Forty seeded group-preserving splits assign 574/574/575 RewardBench prompts or 185/185/187 WMT23 source segments to reference, calibration and test sets. Each evaluator uses a reference-fitted right empirical cumulative distribution function (ECDF). For $n_{\rm ref}$ reference outputs, the cutoff is the $\max(1,\operatorname{round}(qn_{\rm ref}))$-th highest reference consensus (Appendix~\ref{app:protocol}). RewardBench and WMT23 use both pooling rules, $q\in\{.05,.10,.20,.30\}$ and $\alpha\in\{.02,.05,.10,.15,.20\}$ (primary $.10$).
+
+Primary stopping uses $V^+-V^-\le\varepsilon=\lceil.02|S_0(P)|\rceil$, returning $K=V^-$ and hence $V^*-K\le\varepsilon$; exact stopping uses zero.
+
+Main-panel queries access cached scores, so counts are logical accesses, not inference savings; reference and base scoring are charged separately (Appendix~\ref{app:protocol}).
+
+\subsection{Retention baselines and risk guarantees}
+Selected coverage is $K/|S_0|$. At $q=.05$, $\alpha=.10$ and median pooling, zero-query coverage spanned 80.9--99.2\% across RewardBench and the two WMT23 panels, versus 99.5--99.9\% under full information (Appendix Table~\ref{tab:baselines}).
+
+Of 15,360 certified masks at $\alpha=.10$, 6,985 had a replacement with normalized churn above $.10$, though each met the average budget (Appendix~\ref{app:individual-replacements}). Capping every replacement, equivalently guarding against adversarial replacement weights, makes full-information retention NP-hard (Proposition~\ref{prop:per-replacement-hard}). At $q=.05$ on the six mean panels, such caps raised reference-priority inspection at the primary stop from 82.1--86.5\% to 95.3--99.5\% of active entries (Appendix~\ref{app:per-replacement}).
+
+Envelope CRC \citep{yeh2025conformal} and grouped SCoRE target the same churn loss in expectation under group exchangeability, so neither ensures the budget on every batch. Grouped SCoRE uses candidate calibration scores but no candidate test scores. Its RewardBench coverage at $q=.05$ was \scoreRbMedianCov\% under median and \scoreRbMeanCov\% under mean (Appendices~\ref{app:baselines} and~\ref{app:review-score}).
+
+\subsection{Inspection and certificate size}
+
+At nominal $q=.05$ (Table~\ref{tab:stopping}), with median pooling, reference priority averaged 61.4\% active-entry inspection on RewardBench and 45.1\% on thirteen-stream WMT23. Mean pooling averaged 85.4--86.5\% across the three panels.
+
+\input{tables/full-mean-main}
+\paragraph{Matching minima.} At $q=.05$ and $\alpha=.10$, splitwise medians of exact-stop reference queries over the exact odd-median minimum (Theorem~\ref{thm:exact}) were 1.968 for RewardBench and 1.662 for thirteen-stream WMT23. Both medians use splits with $Q_{\rm exact}>0$ (Appendix Table~\ref{tab:certificates}).
+
+On the six panels, four depths and 40 splits yield 960 mean instances and 1,920 targets across the two stops. For every target, the saved solver records contain integer-checked joint and best separate-union witnesses whose sizes equal numerical global lower bounds. Table~\ref{tab:full-mean-main} reports these closed records. A nominal 60-second rerun of the outcome MILP, including construction, closed 931/960 primary and 945/960 exact targets (Table~\ref{tab:resource-strata}). Numerical closure is not an exact-arithmetic proof (Appendix~\ref{app:full-mean-grid}).
+
+\paragraph{Beyond deduplication.} Joint optimization improved on $Q_{\cup,\rm sep}$ in \fullMeanStrictGain{} of the 1,920 targets, saving \fullMeanJointSaving{} entries in total (Appendix~\ref{app:full-mean-grid}). Of 57 instances unable to retain the full baseline list, all 57 exact targets and 32 primary targets showed strict gain. Full retention makes exclusion automatic in the other 903 instances (1,806 targets). In the remaining 25 no-gain primary targets, a saved optimal witness certifies at least $|S_0|-\varepsilon$ outputs safe, making exclusion automatic (Table~\ref{tab:explanatory-overlap}). Across the 960 targets for each stopping rule, median savings were zero. Mean savings were 5.34 entries for primary stopping and 1.19 for exact stopping. Maximum reductions relative to $Q_{\cup,\rm sep}$ were 2.61\% and .87\%, respectively (Table~\ref{tab:gain-distribution}). Before candidate scoring, reference-predicted active cost relative to the budget ranked gain targets above no-gain targets (AUC .971 primary, .959 exact; Appendix~\ref{app:joint-mechanism}).
+
+\paragraph{Online discovery.} Across 960 primary mean targets, frontier priority averaged \frontierQueries{} queries versus \frontierRefQueries{} for reference and \frontierWidthQueries{} for width. It beat reference on \frontierWins{} targets and lost on \frontierLosses{}, with three ties. Where it won, it saved 420 entries on average; where it lost, it used 174 more. Safety-only frontier had a slightly lower overall mean. On the 32 targets needing exclusion, frontier priority saved 20.28 entries over safety-only frontier (25 wins, six losses, one tie). Under full retention it added 3.72 (Appendix~\ref{app:frontier}).
+
+\subsection{Budget, composition, external panels and quality}
+Inspection need not decrease with the churn budget: safety can become easier while exclusion becomes harder (Appendix Figure~\ref{fig:review-budgets}). Twenty random pools per RewardBench or WMT23 panel showed sensitivity to composition, which changes the replacement family and selected set (Appendix~\ref{app:review-composition}). Under median pooling at $q=.05$, WMT24 average zero-query coverage was 98.1--99.8\% (Appendix~\ref{app:review-quality}).
+
+\paragraph{Summarization evaluation and measured scoring cost.}
+A frozen SummEval \citep{fabbri-etal-2021-summeval} protocol covers all ten three-base/two-candidate compositions. On its 48 non-full mean targets, joint certificates were smaller than the best separate union on 27 and equal on 21. With mean pooling, frontier priority saved two queries on average relative to safety-only frontier when $V^*+\varepsilon<|S_0|$ and added queries under full retention. A fresh five-metric panel gave 192 runs on one A40, 24 per method. Primary reference priority averaged 89.97 s over 24 runs versus 108.18 s for full scoring, both including common setup. All query policies took 89.51--90.43 s, so joint sharing did not drive the saving (Appendix~\ref{app:summeval-confirmation}).
+
+\paragraph{Output quality.} Against label-blind, same-consensus top-$K$ at matched count, RewardBench preferred-label precision differed by $-0.46$ to $-0.03$ percentage points across depths under median reference priority. Average returned-set Multidimensional Quality Metrics (MQM) scores, higher meaning better, differed in either direction at matched annotated count. Neither comparator is churn-constrained (Appendices~\ref{app:quality} and~\ref{app:review-quality}).
+
+\subsection{Reference mapping and query granularity}
+\label{sec:query-granularity}
+On thirteen-stream WMT23 with median pooling at nominal $q=.05$, switching from right to midrank ECDF raised zero-query selected coverage from 84.9\% to 99.8\%. Average active-entry inspection at primary stopping fell from 45.1\% to 0.3\%. Test groups stayed fixed, but baseline-set Jaccard similarity was 0.77: the saving concerned a changed selection task (Appendix~\ref{app:mapping-column}).
+
+At $q=.05$ and $\alpha=.10$, median RewardBench reference priority revealed 1.77\% of all $NT$ candidate-test entries by entry queries. Column queries, which charge $N$ entries each, revealed 71.8\%. All 1,920 mean column targets on the six-panel grid had equal joint and best separate-union minima, including the column counterparts of the 89 entry-gain targets. Other realizable instances permit strict column gains (Appendix~\ref{app:mean-even-columns}).
+
+\section{Discussion}
+Unlike basis verification \citep{diwan2026basis}, retention requires two proof tasks, and their witnesses need not combine. In Table~\ref{tab:joint-example}, a longer safety witness yields a shorter certificate because its entries also exclude. Compatibility, whether some tied separate minima combine into a short union, decides the gain, not overlap alone. Two matched instances share component minima, joint minimum and intermediate counts, yet their best separate unions are eight and seven (Appendix~\ref{app:deduplicated}).
+
+A gain also needs both proof tasks to remain. Every no-gain target on the six-panel mean grid had an optimal joint witness with automatic exclusion. The second proof obligation vanished, not the capacity to share. Whole-column access removed the remaining room, since every non-full column target needed all candidate columns.
+
+Discovery adds its own cost. On the same 960 primary targets, reference queries exceeded $Q_{\rm joint}$ by 809.58 entries on average, whereas $Q_{\cup,\rm sep}-Q_{\rm joint}$ averaged 5.34. Proposition~\ref{prop:positive-discovery} bounds only the worst case, and prediction error alone does not explain this overhead. True-score priorities also failed to yield query optimality (Appendix~\ref{app:query-interventions}). An odd-median witness-shape policy lost to reference priority on 142 of 183 non-tied primary instances (Appendix~\ref{app:median-guided}). NLP studies should report evidence, queries and scoring time separately.
+\FloatBarrier
+\section{Conclusion}
+Evaluator replacement makes retention a choice of outputs and the evidence justifying them. Under unit-cost entry access, odd medians separate safety and exclusion evidence. Mean pools can beat optimal separate unions when both proof tasks remain and witnesses are compatible; NLP gains were modest. A small certificate ensures neither cheap discovery nor cheap inference. Witness compatibility under general histories and acquisition with batching and loading costs remain open.
+
+\section*{Limitations}
+The certificates cover single-member replacements from the declared finite family with fixed weights, maps and cutoff. The experiments, closed forms and Theorem~\ref{thm:joint} use uniform weights. They control average churn. Per-replacement caps define an NP-hard program whose optimum is never higher and was lower in 899 of 1,920 median and mean instances (Appendix~\ref{app:per-replacement}). Evaluators outside the family are not covered. Adding an unretained output of $S_0(P)$ changes the mask and requires rechecking the mask's budget, potentially using the existing observations. Returning an output outside $S_0(P)$ requires a different selection rule. Newly generated outputs also change the batch being certified. Nominal $2k$ normalization does not constrain the returned count to $k$. The odd-median closed-form witnesses assume unit-cost candidate--output queries and Boolean opposition completions without cross-entry constraints. Deviation and Lipschitz bounds are valid only when their constants hold for the true scores. The appendix experiment uses oracle constants from the test batches; reference-estimated constants held on 231 and 439 of 960 configurations, respectively (Appendix~\ref{app:constrained}). The near-full compatibility criterion of Proposition~\ref{prop:compatibility} assumes empty history, exact stopping and restricted exclusion-witness ties. It covers none of the 960 exact targets on the six-panel mean grid. The joint dynamic program has a large budget-indexed state space. Outcome grouping reduces the integer model size without guaranteeing polynomial solver time. Forty splits overlap and the two WMT23 variants share outputs, so aggregate comparisons are descriptive. True-score priorities are diagnostic, not deployable policies; improvements beyond optimal deduplication are modest in solved comparisons.
+
+RewardBench and WMT23 were used during method development. WMT24 results had not been inspected when the risk objective and panel-inclusion criteria were fixed. After an exact-replay failure, the numerical query priorities were corrected; this affected query order, not the certificate definition. This protocol freeze is partial and does not constitute a fully preregistered evaluation. Independence between evaluator training data and the benchmarks is also not established, so training-data overlap remains possible. Some released meta-metrics additionally use human-score calibration. The rationale for the original frozen evaluator ordering is not established by the records. Composition sensitivity does not make this ordering representative, and sampled pools do not cover all future evaluators. Reference priority has no online competitive guarantee. Incomplete MQM coverage restricts quality diagnostics to annotated outputs. The SummEval timing study measures five fixed scorers on one A40, with batch-eight full scoring and sequential entry queries. It does not optimize online microbatching or model deployment, and its three repetitions measure runtime variability, not independent task replication.
+
+\section*{Ethical Considerations}
+The experiments reuse evaluator panels and existing labels or generate controlled numerical scores; they collect no new human labels or language responses. Source reconstruction matches existing benchmark text to cached scores and output identities locally. Available records do not document a systematic audit for personally identifiable information or offensive content. Stable selection can preserve evaluator errors, so a certificate does not endorse retained content. Appendices~\ref{app:protocol} and~\ref{app:review-quality} document data sources and acquisition. We have not established redistribution permission for every separate RewardBench result or contributed WMT score. Benchmark and toolkit licenses do not resolve the status of every asset. Code, derived records and query traces are available at \url{https://anonymous.4open.science/r/acl-arr-B388}; third-party texts and full score arrays are excluded and are rebuilt from pinned public sources. Some raw score blocks and full traces remain local; their hashes, protocols and summaries are released. Intended use is research on retention certification. Generative AI tools supported problem framing, proof discussion, coding, analysis and manuscript drafting. Human authors remain responsible for claims, code, results, citations and final text. Historical compute accounting is incomplete; the repository records available details.
+
+\bibliography{references}
+\clearpage
+\appendix
+\setcounter{dbltopnumber}{3}
+\renewcommand{\dbltopfraction}{.9}
+\renewcommand{\dblfloatpagefraction}{.6}
+\input{appendix}
+\end{document}

@@ -1,0 +1,67 @@
+{
+  "status": "FROZEN_BEFORE_SCORE_EXTRACTION",
+  "panels": [
+    "en-de",
+    "en-ru",
+    "zh-en"
+  ],
+  "rationale": "All three official WMT22 primary metric-evaluation language directions; selected from public task metadata, not outcome values",
+  "reference": "refA",
+  "source_archive": "review-revision/acquisition/mt-metrics-eval-v2.tgz",
+  "source_authority": "https://github.com/google-research/mt-metrics-eval/issues/27",
+  "metadata_source": "https://www.statmt.org/wmt22/metrics/index.html",
+  "pool": "alphabetically ordered unique refA segment-score streams; first 7 base, all remaining candidates",
+  "minimum_streams": 8,
+  "systems": "intersection across streams excluding every reference filename stem",
+  "admission": "all rows finite across all admitted streams and systems; complete aligned score blocks required",
+  "duplicate_rule": "byte-identical complete numeric streams retained once alphabetically",
+  "direction": "sign of Pearson correlation with BLEURT-20 on reference outputs only; zero/undefined correlation keeps original sign",
+  "split": "one fixed document-disjoint reference/calibration/test partition per panel, each approximately one third; complete test partition",
+  "seed": 20261008,
+  "q": [
+    0.05,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "alpha": 0.1,
+  "pooling": [
+    "median",
+    "mean"
+  ],
+  "epsilon": [
+    "exact",
+    "ceil(.02*S0)"
+  ],
+  "methods": [
+    "fixed",
+    "random",
+    "largest_width",
+    "reference_priority"
+  ],
+  "mean_extra": [
+    "frontier_joint",
+    "frontier_safety",
+    "frontier_exclusion"
+  ],
+  "joint_solver_seconds": 60,
+  "separate_solver_seconds": 60,
+  "union_solver_seconds": 60,
+  "unresolved": "retain lower/upper bounds and every instance; do not claim closed optimality from incumbent alone",
+  "labels_used": false,
+  "preregistered_publicly": false,
+  "independent_team": false,
+  "training_contamination_excluded": false,
+  "source_bindings": {
+    "query_selection.py": "b873974812b6d86a79a6f522cd5ab5c49a7f24f1135bb9d284d790d22b8349aa",
+    "review_priority.py": "36645efb9bc5afa90caa69091154063698fc8253f022634158d48ea3c12da040",
+    "frontier_priority.py": "f7da267675f82357bdcb529cc3379546ce5c1294b45e5f23a0f0ec81e2181782",
+    "variable_target_certificate.py": "9b5f5a8bc82852220e6ea3a81bacf1211c7755ae690e40f36f1d61ba0d7a26a7",
+    "deduplicated_certificates.py": "8c059af44218c735b77f41fe0c8a6dd28fbc3c7249af0dbab3727fa4fd5ab018"
+  },
+  "preflight": [
+    "source/version: new year absent from six frozen evaluated panels; archive acquired earlier, only filenames inspected this turn",
+    "quantity/information: full test batch, M=7, finite uniform replacement family; reference-only direction and priority; labels unused",
+    "single spine: test joint/union evidence and online discovery; no quality-improvement hypothesis"
+  ]
+}

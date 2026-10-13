@@ -1,0 +1,2 @@
+{"event": "solver_call", "receipt": {"target": 1042, "mode": "union", "status": 0, "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)", "optimality_gap": 0.0, "dual_bound": 16343.999999999754, "variables": 12608, "constraints": 13496, "presolve": false}}
+{"event": "target", "result": {"target": 1042, "safety_minimum": 14113, "exclusion_minimum": 3535, "union_minimum": 16344, "proven": true}}

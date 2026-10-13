@@ -1,0 +1,2 @@
+# Optional pinned-source/native-record audit, not needed for frozen-score analysis.
+pyarrow==21.0.0

@@ -1,0 +1,126 @@
+{
+  "status": "PASS_SCALE_SAVED_WITNESSES_AND_SUBSET_MILP",
+  "cases": 2304,
+  "independent_subset_minima_checked": 396,
+  "independent_subset_MILP_calls": 1425,
+  "all_incumbents_integer_verified": true,
+  "summaries": [
+    {
+      "size": 4,
+      "cases": 384,
+      "active_min": 0,
+      "active_max": 4,
+      "joint_proven": 384,
+      "paired_proven": 384,
+      "runtime_median": 0.010141353999983949,
+      "runtime_p90": 0.2763362749000239,
+      "sampled_rss_p90_mib": 207.453125,
+      "strict_improvements": 39,
+      "total_saved": 64,
+      "total_separate": 6690,
+      "aggregate_saving_fraction": 0.009566517189835576,
+      "statuses": {
+        "OPTIMAL": 384
+      }
+    },
+    {
+      "size": 8,
+      "cases": 384,
+      "active_min": 0,
+      "active_max": 8,
+      "joint_proven": 328,
+      "paired_proven": 318,
+      "runtime_median": 0.27253404150002325,
+      "runtime_p90": 4.157078133000029,
+      "sampled_rss_p90_mib": 195.45312499999991,
+      "strict_improvements": 84,
+      "total_saved": 176,
+      "total_separate": 12743,
+      "aggregate_saving_fraction": 0.013811504355332339,
+      "statuses": {
+        "OPTIMAL": 318,
+        "TRANSITION_LIMIT": 66
+      }
+    },
+    {
+      "size": 16,
+      "cases": 384,
+      "active_min": 3,
+      "active_max": 16,
+      "joint_proven": 203,
+      "paired_proven": 202,
+      "runtime_median": 3.2871089379999603,
+      "runtime_p90": 5.976429020800029,
+      "sampled_rss_p90_mib": 174.40625,
+      "strict_improvements": 64,
+      "total_saved": 204,
+      "total_separate": 14538,
+      "aggregate_saving_fraction": 0.014032191498142799,
+      "statuses": {
+        "OPTIMAL": 202,
+        "TRANSITION_LIMIT": 182
+      }
+    },
+    {
+      "size": 32,
+      "cases": 384,
+      "active_min": 8,
+      "active_max": 32,
+      "joint_proven": 60,
+      "paired_proven": 60,
+      "runtime_median": 4.989534229499988,
+      "runtime_p90": 7.537974533099952,
+      "sampled_rss_p90_mib": 155.46875,
+      "strict_improvements": 4,
+      "total_saved": 30,
+      "total_separate": 7474,
+      "aggregate_saving_fraction": 0.004013914905004014,
+      "statuses": {
+        "TRANSITION_LIMIT": 324,
+        "OPTIMAL": 60
+      }
+    },
+    {
+      "size": 64,
+      "cases": 384,
+      "active_min": 19,
+      "active_max": 64,
+      "joint_proven": 64,
+      "paired_proven": 62,
+      "runtime_median": 5.732614729000005,
+      "runtime_p90": 8.383719403900045,
+      "sampled_rss_p90_mib": 158.0125,
+      "strict_improvements": 0,
+      "total_saved": 0,
+      "total_separate": 17418,
+      "aggregate_saving_fraction": 0.0,
+      "statuses": {
+        "TRANSITION_LIMIT": 317,
+        "OPTIMAL": 62,
+        "STATE_LIMIT": 5
+      }
+    },
+    {
+      "size": "full",
+      "cases": 384,
+      "active_min": 53,
+      "active_max": 1860,
+      "joint_proven": 26,
+      "paired_proven": 16,
+      "runtime_median": 6.58684866699997,
+      "runtime_p90": 12.914605653500006,
+      "sampled_rss_p90_mib": 187.5375,
+      "strict_improvements": 0,
+      "total_saved": 0,
+      "total_separate": 9235,
+      "aggregate_saving_fraction": 0.0,
+      "statuses": {
+        "OPTIMAL": 16,
+        "TRANSITION_LIMIT": 357,
+        "STATE_LIMIT": 11
+      }
+    }
+  ],
+  "large_nonzero_minima_independently_certified": false,
+  "limits_are_unresolved_not_infeasible": true
+}

@@ -1,0 +1,89 @@
+{
+  "checked_at": "2026-10-11T13:28:54.607113+08:00",
+  "platform": "macOS-15.6-arm64-arm-64bit",
+  "physical_memory_bytes": 25769803776,
+  "free_disk_bytes": 14009274368,
+  "cache_models": [
+    "models--BAAI--bge-small-en-v1.5",
+    "models--BAAI--bge-small-zh-v1.5",
+    "models--Qwen--Qwen2.5-0.5B-Instruct"
+  ],
+  "original_reward_family": [
+    {
+      "model": "allenai/Llama-3.1-Tulu-3-8B-RM",
+      "cached": false,
+      "original_revision_verified": false
+    },
+    {
+      "model": "nicolinho/QRM-Gemma-2-27B",
+      "cached": false,
+      "original_revision_verified": false
+    },
+    {
+      "model": "Qwen/WorldPM-72B",
+      "cached": false,
+      "original_revision_verified": false
+    },
+    {
+      "model": "Skywork/Skywork-Reward-V2-Llama-3.1-8B",
+      "cached": false,
+      "original_revision_verified": false
+    },
+    {
+      "model": "OpenAssistant/reward-model-deberta-v3-large-v2",
+      "cached": false,
+      "original_revision_verified": false
+    },
+    {
+      "model": "internlm/internlm2-20b-reward",
+      "cached": false,
+      "original_revision_verified": false
+    },
+    {
+      "model": "Nexusflow/Starling-RM-34B",
+      "cached": false,
+      "original_revision_verified": false
+    },
+    {
+      "model": "openbmb/UltraRM-13b",
+      "cached": false,
+      "original_revision_verified": false
+    },
+    {
+      "model": "LxzGordon/URM-LLaMa-3.1-8B",
+      "cached": false,
+      "original_revision_verified": false
+    },
+    {
+      "model": "NCSOFT/Llama-3-OffsetBias-RM-8B",
+      "cached": false,
+      "original_revision_verified": false
+    },
+    {
+      "model": "Ray2333/GRM-Llama3-8B-rewardmodel-ft",
+      "cached": false,
+      "original_revision_verified": false
+    },
+    {
+      "model": "Skywork/Skywork-Reward-V2-Llama-3.2-3B",
+      "cached": false,
+      "original_revision_verified": false
+    },
+    {
+      "model": "ShikaiChen/LDL-Reward-Gemma-2-27B-v0.1",
+      "cached": false,
+      "original_revision_verified": false
+    },
+    {
+      "model": "CIR-AMS/BTRM_Qwen2_7b_0613",
+      "cached": false,
+      "original_revision_verified": false
+    }
+  ],
+  "available_original_family_models": 0,
+  "remote_gpu_environment": "NOT_PROVIDED",
+  "status": "AWAITING_VERIFIED_SCORER_CONFIGURATION_AND_EXECUTION_ENVIRONMENT",
+  "real_inference_executed": false,
+  "new_family_confirmation_executed": false,
+  "scoring_replacements_used": false
+}

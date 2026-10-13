@@ -1,0 +1,35 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+Panel & $q$ & $C_0$ & $C_\uparrow$ & $C_\downarrow$ & $R_0$ & $R_\uparrow$ & $R_\downarrow$ & $n_+$ & More \\
+\midrule
+RewardBench & 0.05 & 4.300 & 3.785 & 3.888 & 1.210 & 1.419 & 1.457 & 40 & 0/0 \\
+RewardBench & 0.10 & 3.475 & 2.792 & 2.848 & 1.109 & 1.268 & 1.539 & 39 & 1/0 \\
+RewardBench & 0.20 & 1.375 & 0.856 & 0.844 & 1.054 & 1.646 & 1.832 & 37 & 0/0 \\
+RewardBench & 0.30 & 0.025 & 0.013 & 0.013 & 1.000 & 1.857 & 1.857 & 1 & 0/0 \\
+WMT23 (13) & 0.05 & 6.350 & 6.431 & 5.561 & 1.098 & 1.155 & 1.303 & 36 & 3/0 \\
+WMT23 (13) & 0.10 & 0.000 & 0.000 & 0.000 & -- & -- & -- & 0 & 0/0 \\
+WMT23 (13) & 0.20 & 0.000 & 0.000 & 0.000 & -- & -- & -- & 0 & 0/0 \\
+WMT23 (13) & 0.30 & 0.000 & 0.000 & 0.000 & -- & -- & -- & 0 & 0/0 \\
+WMT23 (12) & 0.05 & 0.625 & 0.558 & 0.557 & 1.262 & 1.586 & 1.795 & 3 & 0/0 \\
+WMT23 (12) & 0.10 & 0.350 & 0.254 & 0.224 & 1.300 & 2.035 & 2.254 & 5 & 1/0 \\
+WMT23 (12) & 0.20 & 0.100 & 0.061 & 0.065 & 1.000 & 1.775 & 1.419 & 1 & 0/0 \\
+WMT23 (12) & 0.30 & 0.050 & 0.036 & 0.043 & 1.500 & 1.646 & 2.088 & 1 & 0/1 \\
+WMT24 en-de & 0.05 & 0.175 & 0.148 & 0.143 & 1.000 & 1.160 & 1.321 & 2 & 1/0 \\
+WMT24 en-de & 0.10 & 0.150 & 0.093 & 0.089 & 1.000 & 1.605 & 1.991 & 5 & 0/0 \\
+WMT24 en-de & 0.20 & 0.000 & 0.000 & 0.000 & -- & -- & -- & 0 & 0/0 \\
+WMT24 en-de & 0.30 & 0.000 & 0.000 & 0.000 & -- & -- & -- & 0 & 0/0 \\
+WMT24 en-es & 0.05 & 0.125 & 0.109 & 0.130 & 1.600 & 1.712 & 1.643 & 1 & 1/0 \\
+WMT24 en-es & 0.10 & 0.000 & 0.000 & 0.000 & -- & -- & -- & 0 & 0/0 \\
+WMT24 en-es & 0.20 & 0.000 & 0.000 & 0.000 & -- & -- & -- & 0 & 0/0 \\
+WMT24 en-es & 0.30 & 0.000 & 0.000 & 0.000 & -- & -- & -- & 0 & 0/0 \\
+WMT24 ja-zh & 0.05 & 1.700 & 1.564 & 1.514 & 1.213 & 1.387 & 1.686 & 9 & 2/0 \\
+WMT24 ja-zh & 0.10 & 0.575 & 0.519 & 0.460 & 1.223 & 1.487 & 1.473 & 5 & 3/1 \\
+WMT24 ja-zh & 0.20 & 0.025 & 0.016 & 0.013 & 3.000 & 4.789 & 5.533 & 1 & 0/0 \\
+WMT24 ja-zh & 0.30 & 0.000 & 0.000 & 0.000 & -- & -- & -- & 0 & 0/0 \\
+\bottomrule
+\end{tabular}
+\caption{Column-cost sensitivity at $V^+-V^-\le\lceil.02|S_0|\rceil$ under the original median protocol and $\alpha=.10$. Uniform, ascending and descending prices have the same mean, normalized to one. The three $C$ columns average minimum costs over all 40 splits. The $R$ columns average reference-order cost divided by the matching optimum over the $n_+$ splits with positive minimum cost. All three price profiles have the same $n_+$. More reports ascending/descending split counts where even the fewest-column minimum-cost witness uses more columns than the minimum feasible count. Ties in total witness cost minimize column count. Undefined ratios remain missing. Prices are declared action-cost models, not measured scoring times or fees.}
+\label{tab:column-cost-tolerant}
+\end{table*}

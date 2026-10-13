@@ -1,0 +1,19 @@
+{
+  "status": "PASS_NEW_PANEL_SOURCE_AND_ALL_PATH_REPLAY",
+  "cases": 24,
+  "stop_targets": 48,
+  "paths": 132,
+  "revealed_entries_replayed": 888799,
+  "full_matrix_contributions_reconstructed": 3595088,
+  "mean_entry_targets_numerically_closed": 24,
+  "mean_strict_gains": 0,
+  "column_targets": 24,
+  "column_strict_gains": 0,
+  "column_predecessors_directly_checked": 28704,
+  "all_mean_targets_full_retention": true,
+  "exact_entry_means_independently_greedy_checked": 12,
+  "positive_tolerance_mean_lower_bounds_numeric": true,
+  "one_document_partition_per_panel": true,
+  "independent_team": false,
+  "human_proof_review": false
+}

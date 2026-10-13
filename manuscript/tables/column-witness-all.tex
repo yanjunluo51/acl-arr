@@ -1,0 +1,37 @@
+\begin{table*}[t]
+\centering\small
+
+
+\begin{tabular}{lrrrrrrr}
+\toprule
+Panel & $q$ & $K_{\rm col}>0$ & $K_{\rm col}$ & Min. (\%) & Fixed & Random & Reference \\
+\midrule
+RewardBench 2 & 0.05 & 40 & 4.93 & 70.4 & 1.167 & 1.167 & 1.183 \\
+RewardBench 2 & 0.10 & 40 & 4.05 & 57.9 & 1.000 & 1.200 & 1.000 \\
+RewardBench 2 & 0.20 & 39 & 1.83 & 26.1 & 1.000 & 1.000 & 1.000 \\
+RewardBench 2 & 0.30 & 6 & 0.15 & 2.1 & 1.000 & 1.000 & 1.000 \\
+WMT23, 13 streams & 0.05 & 36 & 7.75 & 45.6 & 1.873 & 1.707 & 1.000 \\
+WMT23, 13 streams & 0.10 & 1 & 0.05 & 0.3 & 1.000 & 1.000 & 1.000 \\
+WMT23, 13 streams & 0.20 & 0 & 0.00 & 0.0 & -- & -- & -- \\
+WMT23, 13 streams & 0.30 & 0 & 0.00 & 0.0 & -- & -- & -- \\
+WMT23, 12 streams & 0.05 & 4 & 0.83 & 4.9 & 1.383 & 1.433 & 1.100 \\
+WMT23, 12 streams & 0.10 & 8 & 0.75 & 4.4 & 1.450 & 1.278 & 1.200 \\
+WMT23, 12 streams & 0.20 & 1 & 0.15 & 0.9 & 1.000 & 1.167 & 1.000 \\
+WMT23, 12 streams & 0.30 & 2 & 0.15 & 0.9 & 1.125 & 1.125 & 1.000 \\
+WMT24 en-de & 0.05 & 3 & 0.25 & 1.8 & 1.333 & 1.500 & 1.000 \\
+WMT24 en-de & 0.10 & 5 & 0.38 & 2.7 & 1.333 & 1.333 & 1.000 \\
+WMT24 en-de & 0.20 & 0 & 0.00 & 0.0 & -- & -- & -- \\
+WMT24 en-de & 0.30 & 0 & 0.00 & 0.0 & -- & -- & -- \\
+WMT24 en-es & 0.05 & 2 & 0.23 & 1.6 & 1.063 & 1.125 & 1.125 \\
+WMT24 en-es & 0.10 & 3 & 0.10 & 0.7 & 1.500 & 1.000 & 1.000 \\
+WMT24 en-es & 0.20 & 1 & 0.03 & 0.2 & 2.000 & 1.000 & 1.000 \\
+WMT24 en-es & 0.30 & 0 & 0.00 & 0.0 & -- & -- & -- \\
+WMT24 ja-zh & 0.05 & 13 & 2.45 & 16.3 & 1.077 & 1.000 & 1.000 \\
+WMT24 ja-zh & 0.10 & 9 & 1.25 & 8.3 & 1.250 & 1.200 & 1.154 \\
+WMT24 ja-zh & 0.20 & 2 & 0.10 & 0.7 & 1.833 & 1.167 & 1.500 \\
+WMT24 ja-zh & 0.30 & 0 & 0.00 & 0.0 & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\caption{Minimum exact column counts and conditional median online column-count ratios across all 960 median configurations. Protocol and averaging follow Table~\ref{tab:column-witness-summary}; all three original column orders are included. Ratios are computed within positive-witness splits before taking the median; the positive-witness column counts splits.}
+\label{tab:column-witness-all}
+\end{table*}

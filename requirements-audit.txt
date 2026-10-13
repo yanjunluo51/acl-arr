@@ -1,0 +1,4 @@
+# Additional dependency for the author's PDF/source-delivery checks.
+# The portable saved-bundle check without --replay-tables uses standard Python.
+-r requirements.txt
+PyMuPDF==1.26.5

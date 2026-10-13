@@ -1,0 +1,15 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+Stop & Full retention & Targets & $d_*=0$ & Strict gain & Automatic exclusion\\
+\midrule
+Exact & Yes & 903 & 454 & 0 & 903\\
+Exact & No & 57 & 0 & 57 & 0\\
+Primary & Yes & 903 & 570 & 0 & 903\\
+Primary & No & 57 & 0 & 32 & 25\\
+\bottomrule
+\end{tabular}
+\caption{No-gain explanations on all 1,920 mean targets at $\alpha=.10$. Full retention concerns the true complete scores. Automatic exclusion counts targets with an integer-checked optimal witness satisfying $V^-+\varepsilon\ge |S_0|$; it does not mean zero-query stopping. All 1,831 no-gain targets have such a witness, including 25 non-full primary targets. All 1,024 zero-intermediate optima remain in the full-retention region. These are descriptive properties of saved optimal witnesses, not pre-query predictors or independent trials.}
+\label{tab:explanatory-overlap}
+\end{table*}

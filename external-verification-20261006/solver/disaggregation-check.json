@@ -1,0 +1,4 @@
+{
+  "status": "PASS_FIXED_TARGET_PARTITION_ON_THREE_SMALL_CASES",
+  "model_change": "only fixes integer target in an exhaustive partition"
+}

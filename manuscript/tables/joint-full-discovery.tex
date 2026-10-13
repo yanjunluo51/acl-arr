@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrrrrr}
+\toprule
+Panel & $q$ & Mean $Q_{\rm joint}$ & Fixed & Random & Width & Reference \\
+\midrule
+RewardBench 2 & 0.05 & 668.4 & 1.141 & 1.141 & 1.145 & 1.095 \\
+RewardBench 2 & 0.30 & 1560.6 & 1.336 & 1.334 & 1.204 & 1.359 \\
+WMT23, 13 streams & 0.05 & 1689.9 & 1.174 & 1.173 & 1.176 & 1.102 \\
+WMT23, 13 streams & 0.30 & 1851.8 & 1.504 & 1.516 & 1.289 & 1.631 \\
+WMT23, 12 streams & 0.05 & 1735.3 & 1.125 & 1.129 & 1.128 & 1.082 \\
+WMT23, 12 streams & 0.30 & 2370.9 & 1.476 & 1.476 & 1.295 & 1.524 \\
+WMT24 en-de & 0.05 & 4698.9 & 1.132 & 1.132 & 1.133 & 1.065 \\
+WMT24 en-de & 0.30 & 9857.6 & 1.295 & 1.295 & 1.212 & 1.283 \\
+WMT24 en-es & 0.05 & 3920.0 & 1.116 & 1.117 & 1.117 & 1.060 \\
+WMT24 en-es & 0.30 & 7553.6 & 1.322 & 1.322 & 1.222 & 1.345 \\
+WMT24 ja-zh & 0.05 & 4289.8 & 1.142 & 1.150 & 1.147 & 1.090 \\
+WMT24 ja-zh & 0.30 & 13957.3 & 1.271 & 1.271 & 1.219 & 1.174 \\
+\bottomrule
+\end{tabular}
+\caption{Full-test mean entry minima and online discovery from empty history at exact stopping, $\alpha=.10$, splits 0--7. Every row averages eight original full tasks with positive minima; ratio columns average the splitwise $Q_{\rm online}/Q_{\rm joint}$, not a ratio of means. All four original query paths are unchanged. Across 96 minima and 384 paths, every online count is at least its matching minimum. Mean $Q_{\rm joint}$ counts entry observations; policy columns are dimensionless. Joint minima are below the additive sum in 4/96 tasks, by 2,645 of 435,876 separately counted entries (0.607\%). The best deduplicated comparison is in Table~\ref{tab:deduplicated-summary}. These denominators are not used for positive-tolerance stops.}
+\label{tab:joint-full-discovery}
+\end{table*}

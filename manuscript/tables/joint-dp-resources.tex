@@ -1,0 +1,17 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Selected size & Both closed & Median s & 90th s & 90th MiB \\
+\midrule
+4 & 384/384 & 0.010 & 0.276 & 207.5 \\
+8 & 318/384 & 0.273 & 4.157 & 195.5 \\
+16 & 202/384 & 3.287 & 5.976 & 174.4 \\
+32 & 60/384 & 4.990 & 7.538 & 155.5 \\
+64 & 62/384 & 5.733 & 8.384 & 158.0 \\
+full & 16/384 & 6.587 & 12.915 & 187.5 \\
+\bottomrule
+\end{tabular}
+\caption{Cached row-state DP resource study: six panels, splits 0--7, $q\in\{.05,.30\}$, empty/quarter histories and exact/primary gaps give 384 instances per size. Subbatches reset $N,k,b_H$; full preserves the original test task. Both closed counts completed joint and separate minima. Limits are 100,000 reachable states, ten million transitions and 60 seconds shared by the two optimizations. Resource-limited rows retain valid witnesses without claiming minima. Times include unresolved attempts; RSS is sampled every 10 ms and includes Python, inputs and caches. Six concurrent workers share a workstation; these are not controlled speedup measurements.}
+\label{tab:joint-dp-resources}
+\end{table*}

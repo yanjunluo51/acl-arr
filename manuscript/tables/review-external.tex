@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+ &  & \multicolumn{3}{c}{Selected coverage (\%)} & \\
+Language & Pooling & Zero & Opt. & Ref. & Active (\%) \\
+\midrule
+en-de & median & 99.5 & 100.0 & 99.9 & 1.3 \\
+en-de & mean & 22.0 & 99.9 & 97.9 & 83.3 \\
+en-es & median & 99.8 & 100.0 & 99.9 & 1.1 \\
+en-es & mean & 21.2 & 99.9 & 97.8 & 82.1 \\
+ja-zh & median & 98.1 & 99.8 & 99.3 & 11.3 \\
+ja-zh & mean & 21.4 & 97.5 & 96.0 & 85.9 \\
+\bottomrule
+\end{tabular}
+\caption{Ref.\ stops at $V^+-V^-\le\lceil .02|S_0|\rceil$; Opt.\ uses full information. WMT24, $q=.05$, $\alpha=.10$: 40 document-grouped split means. Zero, Opt.\ and Ref.: zero-query, full-information and reference-priority coverage. Active: reference inspection ($100Q/(mT)$), zero for empty active sets. Admission uses metadata and finite scores.}
+\label{tab:review-external}
+\end{table*}

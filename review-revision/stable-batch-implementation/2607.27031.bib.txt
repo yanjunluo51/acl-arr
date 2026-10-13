@@ -1,0 +1,9 @@
+@misc{kim2026lotteryticketsdeploymenttickets,
+      title={Lottery Tickets Are Not Deployment Tickets}, 
+      author={Bum Jun Kim},
+      year={2026},
+      eprint={2607.27031},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2607.27031}, 
+}

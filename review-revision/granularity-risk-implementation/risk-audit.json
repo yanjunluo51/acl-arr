@@ -1,0 +1,10 @@
+{
+  "status": "PASS_SCENARIO_RISK_ARITHMETIC",
+  "masks": 15360,
+  "scenarios": 1505280,
+  "any_over_masks": 6985,
+  "average_budget_violations": 0,
+  "maximum_scenario_risk": 0.5,
+  "native_replacement_reconstruction": "run_risk.py reconstructs all member replacements and matches preexisting all_flips totals; this audit independently checks integer averages/quantiles and aggregate fields",
+  "independent_new_data": false
+}

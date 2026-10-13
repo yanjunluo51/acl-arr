@@ -1,0 +1,31 @@
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{rrrrr}
+\toprule
+$q$ & $\alpha$ & Risk & Sel. (\%) & Over / 40 \\
+\midrule
+0.05 & 0.02 & 0.004 & 11.1 & 1 \\
+0.05 & 0.05 & 0.037 & 59.1 & 5 \\
+0.05 & 0.10 & 0.072 & 98.8 & 0 \\
+0.05 & 0.15 & 0.073 & 100.0 & 0 \\
+0.05 & 0.20 & 0.073 & 100.0 & 0 \\
+0.10 & 0.02 & 0.011 & 43.4 & 0 \\
+0.10 & 0.05 & 0.042 & 83.2 & 9 \\
+0.10 & 0.10 & 0.063 & 100.0 & 0 \\
+0.10 & 0.15 & 0.063 & 100.0 & 0 \\
+0.10 & 0.20 & 0.063 & 100.0 & 0 \\
+0.20 & 0.02 & 0.016 & 60.8 & 4 \\
+0.20 & 0.05 & 0.045 & 98.3 & 5 \\
+0.20 & 0.10 & 0.048 & 100.0 & 0 \\
+0.20 & 0.15 & 0.048 & 100.0 & 0 \\
+0.20 & 0.20 & 0.048 & 100.0 & 0 \\
+0.30 & 0.02 & 0.018 & 77.5 & 10 \\
+0.30 & 0.05 & 0.039 & 100.0 & 0 \\
+0.30 & 0.10 & 0.039 & 100.0 & 0 \\
+0.30 & 0.15 & 0.039 & 100.0 & 0 \\
+0.30 & 0.20 & 0.039 & 100.0 & 0 \\
+\bottomrule
+\end{tabular}
+\caption{RewardBench 2, mean pooling: grouped SCoRE-MDR for the same churn loss and target $\alpha/B$. Risk and selected coverage $K/|S_0|$ average 40 splits. Over/40 counts splits whose realized churn exceeds the budget. Calibration candidate scores are fully observed; selection uses no candidate test scores. Guarantee assumptions and score-entry accounting appear in Appendix~\ref{app:review-score} and Table~\ref{tab:review-workload}.}
+\label{tab:review-score-0-mean}
+\end{table*}

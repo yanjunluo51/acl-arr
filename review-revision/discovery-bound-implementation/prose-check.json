@@ -1,0 +1,291 @@
+{
+  "scope": "paper",
+  "word_count": 23490,
+  "em_dash_count": 0,
+  "em_dash_limit": 3,
+  "issue_count": 3,
+  "issues": [
+    {
+      "code": "precision_terms",
+      "severity": "advisory",
+      "terms": {
+        "robust": 1
+      },
+      "message": "Verify that each promotional or vague term is earned by evidence and scope."
+    },
+    {
+      "code": "uniform_sentence_run",
+      "severity": "warning",
+      "runs": [
+        {
+          "sentences": [
+            312,
+            316
+          ],
+          "word_counts": [
+            14,
+            12,
+            12,
+            11,
+            12
+          ]
+        },
+        {
+          "sentences": [
+            313,
+            317
+          ],
+          "word_counts": [
+            12,
+            12,
+            11,
+            12,
+            14
+          ]
+        },
+        {
+          "sentences": [
+            439,
+            443
+          ],
+          "word_counts": [
+            23,
+            22,
+            20,
+            20,
+            23
+          ]
+        },
+        {
+          "sentences": [
+            493,
+            497
+          ],
+          "word_counts": [
+            12,
+            12,
+            10,
+            10,
+            9
+          ]
+        },
+        {
+          "sentences": [
+            494,
+            498
+          ],
+          "word_counts": [
+            12,
+            10,
+            10,
+            9,
+            9
+          ]
+        },
+        {
+          "sentences": [
+            543,
+            547
+          ],
+          "word_counts": [
+            13,
+            10,
+            12,
+            13,
+            8
+          ]
+        },
+        {
+          "sentences": [
+            568,
+            572
+          ],
+          "word_counts": [
+            15,
+            20,
+            16,
+            18,
+            18
+          ]
+        },
+        {
+          "sentences": [
+            664,
+            668
+          ],
+          "word_counts": [
+            9,
+            10,
+            13,
+            10,
+            10
+          ]
+        },
+        {
+          "sentences": [
+            817,
+            821
+          ],
+          "word_counts": [
+            18,
+            20,
+            22,
+            17,
+            20
+          ]
+        },
+        {
+          "sentences": [
+            826,
+            830
+          ],
+          "word_counts": [
+            12,
+            14,
+            13,
+            11,
+            14
+          ]
+        },
+        {
+          "sentences": [
+            906,
+            910
+          ],
+          "word_counts": [
+            9,
+            10,
+            12,
+            13,
+            14
+          ]
+        },
+        {
+          "sentences": [
+            920,
+            924
+          ],
+          "word_counts": [
+            21,
+            16,
+            20,
+            17,
+            16
+          ]
+        },
+        {
+          "sentences": [
+            995,
+            999
+          ],
+          "word_counts": [
+            18,
+            19,
+            16,
+            15,
+            15
+          ]
+        },
+        {
+          "sentences": [
+            1001,
+            1005
+          ],
+          "word_counts": [
+            5,
+            8,
+            5,
+            8,
+            7
+          ]
+        },
+        {
+          "sentences": [
+            1022,
+            1026
+          ],
+          "word_counts": [
+            13,
+            12,
+            12,
+            17,
+            16
+          ]
+        },
+        {
+          "sentences": [
+            1071,
+            1075
+          ],
+          "word_counts": [
+            11,
+            16,
+            15,
+            14,
+            16
+          ]
+        },
+        {
+          "sentences": [
+            1072,
+            1076
+          ],
+          "word_counts": [
+            16,
+            15,
+            14,
+            16,
+            13
+          ]
+        },
+        {
+          "sentences": [
+            1073,
+            1077
+          ],
+          "word_counts": [
+            15,
+            14,
+            16,
+            13,
+            11
+          ]
+        },
+        {
+          "sentences": [
+            1155,
+            1159
+          ],
+          "word_counts": [
+            10,
+            13,
+            13,
+            11,
+            11
+          ]
+        },
+        {
+          "sentences": [
+            1156,
+            1160
+          ],
+          "word_counts": [
+            13,
+            13,
+            11,
+            11,
+            11
+          ]
+        }
+      ],
+      "message": "Review five-sentence runs with nearly identical length for repeated syntax."
+    },
+    {
+      "code": "semicolon_density",
+      "severity": "advisory",
+      "count": 223,
+      "per_1000_words": 9.49,
+      "message": "Review semicolon density above two per 1,000 prose words."
+    }
+  ]
+}
