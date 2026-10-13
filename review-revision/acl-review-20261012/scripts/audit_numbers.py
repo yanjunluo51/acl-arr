@@ -77,7 +77,7 @@ eq('per-rep count', len({(r['dataset'], r['aggregator'], r['split'], r['q']) for
 eq('per-rep unresolved', sum(r['unresolved_milps'] for r in P) + sum(not r['V_star_max_proven'] for r in P), 0)
 eq('per-rep never higher', sum(r['V_star_max'] > r['V_star_avg'] for r in P), 0)
 lower = sum(r['V_star_max'] < r['V_star_avg'] for r in P); check('per-rep lower', lower, f'lower in {lower:,}' if lower >= 1000 else f'lower in {lower}')
-check('per-rep lower main', lower, f'lower in {lower} of 1,920', MAIN)
+eq('per-rep lower kept out of Limitations', f'lower in {lower} of 1,920' in MAIN, False)
 more = sum(r['max_primary_queries'] > r['avg_primary_queries'] for r in P)
 fewer = sum(r['max_primary_queries'] < r['avg_primary_queries'] for r in P)
 same = sum(r['max_primary_queries'] == r['avg_primary_queries'] for r in P)
@@ -123,7 +123,7 @@ check('lip WMT23', 0, f'from {r1(emean([x["none_primary_queries"] for x in v]))}
 check('lip finite', 0, f'{hu(100*emean([Fraction(r["lip_oracle_finite_columns"], r["T"]) for r in A]),1)}\\% of candidates', APP)
 bv, lv = sum(r['box_ref_valid_columns'] == r['T'] for r in A), sum(r['lip_ref_valid_columns'] == r['T'] for r in A)
 check('ref valid app', (bv, lv), f'in {bv} configurations for deviation caps and in {lv} for Lipschitz bounds', APP)
-check('ref valid main', (bv, lv), f'held on {bv} and {lv} of 960 configurations', MAIN)
+eq('ref valid kept out of Limitations', f'held on {bv} and {lv} of 960 configurations' in MAIN, False)
 eq('constrained all active', len(A), 960)
 
 # ---------------- weighted
