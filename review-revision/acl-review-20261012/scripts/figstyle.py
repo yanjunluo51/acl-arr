@@ -3,7 +3,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-BLUE, ORANGE, GRAY, INK, MUTED = '#1f5fbf', '#d1731f', '#8a94a3', '#222222', '#6b7280'
+BLUE, GREEN, GRAY, INK, MUTED = '#24578f', '#2e8b57', '#8a94a3', '#222222', '#6b7280'
 COLUMN = 3.03  # inches, ACL single-column width
 
 

@@ -2,7 +2,7 @@
 from fractions import Fraction
 from pathlib import Path
 import matplotlib.pyplot as plt
-from figstyle import setup, panel_label, BLUE, ORANGE, INK, MUTED, COLUMN
+from figstyle import setup, panel_label, BLUE, GREEN, INK, MUTED, COLUMN
 
 ROOT = Path(__file__).resolve().parents[3]
 
@@ -33,12 +33,12 @@ ax.axhline(2, color=MUTED, lw=0.6, ls=(0, (3, 2)))
 ax.axhline(float(lim), color=MUTED, lw=0.6, ls=(0, (3, 2)))
 ax.axhline(1, color=MUTED, lw=0.6)
 ax.plot(Ts, g, color=BLUE, lw=1.4, solid_capstyle='round')
-ax.plot(Ts, f, color=ORANGE, lw=1.4, solid_capstyle='round')
+ax.plot(Ts, f, color=GREEN, lw=1.4, solid_capstyle='round')
 ax.text(121, 2, ' factor two', va='center', ha='left', fontsize=6, color=MUTED)
 ax.text(121, float(lim), ' 53/30', va='center', ha='left', fontsize=6, color=MUTED)
 ax.text(121, 1, r' $\varepsilon=1$', va='center', ha='left', fontsize=6, color=MUTED)
 ax.text(70, 1.93, r'growing pool, $M=T+1$', color=BLUE, fontsize=6.5, ha='left', va='top')
-ax.text(70, 1.68, r'fixed pool, $M=7$, $\alpha=.10$', color=ORANGE, fontsize=6.5, ha='left', va='top')
+ax.text(70, 1.68, r'fixed pool, $M=7$, $\alpha=.10$', color=GREEN, fontsize=6.5, ha='left', va='top')
 ax.set_xlim(0, 120); ax.set_ylim(0.9, 2.1)
 ax.set_xlabel(r'Candidate evaluators $T$')
 ax.set_ylabel(r'$Q_{\cup,\rm sep}/Q_{\rm joint}$')

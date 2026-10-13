@@ -2,7 +2,7 @@
 import csv
 from pathlib import Path
 import matplotlib.pyplot as plt
-from figstyle import setup, BLUE, ORANGE, MUTED, COLUMN
+from figstyle import setup, BLUE, GREEN, MUTED, COLUMN
 
 ROOT = Path(__file__).resolve().parents[3]
 R = list(csv.DictReader(open(ROOT / 'outputs/full-mean-grid-20261005/audited_records.csv')))
@@ -11,7 +11,7 @@ PANELS = [('RewardBench2', 'RewardBench 2'), ('WMT23', 'WMT23, 13'), ('WMT23_wit
           ('WMT24-en-de', 'WMT24 en-de'), ('WMT24-en-es', 'WMT24 en-es'), ('WMT24-ja-zh', 'WMT24 ja-zh')]
 setup()
 fig, ax = plt.subplots(figsize=(COLUMN, 1.7))
-for j, (stop, c, off) in enumerate([('primary', BLUE, -0.18), ('exact', ORANGE, 0.18)]):
+for j, (stop, c, off) in enumerate([('primary', BLUE, -0.18), ('exact', GREEN, 0.18)]):
     data = []
     for key, _ in PANELS:
         rows = [r for r in R if r['dataset'] == key and r['stopping'] == stop]
