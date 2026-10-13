@@ -115,6 +115,20 @@ After the first four queries, returning rows~1 and~2 has certified risk at most 
 \FloatBarrier
 \section{Reproducible Experimental Specification}
 \label{app:protocol}
+\begin{algorithm}[h]
+\caption{Score inspection for certified retention}
+\label{alg:inspect}
+\begin{algorithmic}[1]
+\REQUIRE Base scores, pooling rule, $T$, $t_0$, $k$, $\alpha$, integer $\varepsilon\ge0$, policy $\pi$ with its reference-fitted models and seeded tie state.
+\STATE Compute membership, caps $p_i$ and $b_H$; set $\ell_i=0$, $u_i=Tp_i$ on active selected rows.
+\STATE Maximize retained count under upper costs to obtain $C^-$; compute $V^-=V(u)$ and $V^+=V(\ell)$.
+\WHILE{$V^+-V^->\varepsilon$}
+\STATE Use $\pi$ to choose an unqueried active candidate--output entry from initially visible information and query history.
+\STATE Query $s_r(i)$ and compute $f_{ir}$ from the base scores; set $\ell_i\gets\ell_i+f_{ir}$, $u_i\gets u_i-p_i+f_{ir}$; recompute $C^-$, $V^-$ and $V^+$.
+\ENDWHILE
+\STATE Return $S_0(P)\cap C^-$, its churn upper bound and retained-count gap.
+\end{algorithmic}
+\end{algorithm}
 Code, derived records and query traces are in the anonymous repository \url{https://anonymous.4open.science/r/acl-arr-B388}; scripts there rebuild the score panels from pinned public sources.
 \paragraph{Baseline query orders.} Fixed order uses seeded row priority followed by candidate index; random order permutes active entries. Largest width maximizes $u_i-\ell_i$ over eligible rows, then uses candidate index.
 

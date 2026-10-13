@@ -24,6 +24,7 @@
 \input{tables/editorial-evidence-numbers}
 \title{How Many Evaluator Scores Certify Output Retention Under a Churn Budget?}
 \author{Anonymous ACL submission}
+\raggedbottom
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -213,22 +214,8 @@ Offline minima show how much evidence suffices, not how to find it. Baselines ar
 
 Among query-eligible rows, reference priority selects the row with the smallest estimated total cost: observed flips plus predictions for remaining entries. Within the chosen row it chooses the unqueried candidate with largest predicted upper-cost reduction $p_i-\hat f_{ir}$. Frontier priority computes the active capacity under observed costs plus predictions for unqueried entries and clips it to $[V^- -m_0+1,V^+-m_0]$, obtaining target $s$. It scores predicted progress towards safety for $s$ and exclusion of $s+1$. It omits exclusion when $s+1>m$ or its deficit is nonpositive (Appendix~\ref{app:frontier}); safety-only frontier always omits it. Joint frontier's exclusion target $s+1$ ignores the stopping tolerance, which only the verifier uses. Predictions guide order, not bounds; none of these rules has a query-optimality guarantee.
 
-\begin{algorithm}[t]
-\caption{Score inspection for certified retention}
-\label{alg:inspect}
-\begin{algorithmic}[1]
-\REQUIRE Base scores, pooling rule, $T$, $t_0$, $k$, $\alpha$, integer $\varepsilon\ge0$, policy $\pi$ with its reference-fitted models and seeded tie state.
-\STATE Compute membership, caps $p_i$ and $b_H$; set $\ell_i=0$, $u_i=Tp_i$ on active selected rows.
-\STATE Maximize retained count under upper costs to obtain $C^-$; compute $V^-=V(u)$ and $V^+=V(\ell)$.
-\WHILE{$V^+-V^->\varepsilon$}
-\STATE Use $\pi$ to choose an unqueried active candidate--output entry from initially visible information and query history.
-\STATE Query $s_r(i)$ and compute $f_{ir}$ from the base scores; set $\ell_i\gets\ell_i+f_{ir}$, $u_i\gets u_i-p_i+f_{ir}$; recompute $C^-$, $V^-$ and $V^+$.
-\ENDWHILE
-\STATE Return $S_0(P)\cap C^-$, its churn upper bound and retained-count gap.
-\end{algorithmic}
-\end{algorithm}
 
-Sorting computes each capacity bound in $O(m\log m)$ time, and a frontier step also scores $O(mT)$ entries; invariant selected rows have zero churn cost.
+Algorithm~\ref{alg:inspect} in Appendix~\ref{app:protocol} gives the shared inspection loop. Sorting computes each capacity bound in $O(m\log m)$ time, and a frontier step also scores $O(mT)$ entries; invariant selected rows have zero churn cost.
 \begin{proposition}[Discovery can be expensive]
 \label{prop:positive-discovery}
 For every integer $m\ge2$, a family of mean-pooling instances with $M=T=7$, $q=.05$, $\alpha=.10$, $|S_0|=m$ and $N=\Theta(m)$ has two-entry minimum certificates at $\varepsilon=\lceil.02m\rceil$. Every deterministic policy valid under the completion model needs at least $m$ queries on some instance of the family. Every randomized always-valid policy has expected cost at least $(m+1)/2$ on some fixed instance.
@@ -300,9 +287,6 @@ RewardBench and WMT23 were used during method development. WMT24 results had not
 
 \section*{Ethical Considerations}
 The experiments reuse evaluator panels and existing labels or generate controlled numerical scores; they collect no new human labels or language responses. Source reconstruction matches existing benchmark text to cached scores and output identities locally. Available records do not document a systematic audit for personally identifiable information or offensive content. Stable selection can preserve evaluator errors, so a certificate does not endorse retained content. Appendices~\ref{app:protocol} and~\ref{app:review-quality} document data sources and acquisition. We have not established redistribution permission for every separate RewardBench result or contributed WMT score. Benchmark and toolkit licenses do not resolve the status of every asset. Code, derived records and selected query traces are available at \url{https://anonymous.4open.science/r/acl-arr-B388}. Third-party texts, full score arrays and some large or unreleased traces are excluded. The repository documents how to rebuild them or gives their hashes and summaries. Intended use is research on retention certification. Historical compute accounting is incomplete; the repository records available details.
-
-\section*{Acknowledgments}
-Generative AI tools supported problem framing, proof discussion, coding, analysis and manuscript drafting. Human authors remain responsible for claims, code, results, citations and final text.
 
 \bibliography{references}
 \clearpage
