@@ -28,21 +28,21 @@ fig, (a, b) = plt.subplots(1, 2, figsize=(COLUMN, 1.45), gridspec_kw={'width_rat
 labels = ['Deduplication\n' r'$Q_{\rm split}-Q_{\cup,\rm sep}$', 'Joint gain\n' r'$Q_{\cup,\rm sep}-Q_{\rm joint}$',
           'Discovery\n' r'$Q_{\rm ref}-Q_{\rm joint}$']
 y = [2, 1, 0]
-for stop, c, off in [('primary', BLUE, 0.17), ('exact', GREEN, -0.17)]:
-    a.barh([v + off for v in y], parts[stop], height=0.3, color=c, label=stop, edgecolor='white', linewidth=0.6)
+for stop, c, off, h in [('primary', BLUE, 0.17, None), ('exact', GREEN, -0.17, '////')]:
+    a.barh([v + off for v in y], parts[stop], height=0.3, color=c, label=stop, edgecolor='white', linewidth=0.6, hatch=h)
     for v, x in zip(y, parts[stop]):
-        a.text(x * 1.12, v + off, f'{x:.2f}', va='center', ha='left', fontsize=5.8, color=INK)
+        a.text(x * 1.12, v + off, f'{x:.2f}', va='center', ha='left', fontsize=6.8, color=INK)
 a.set_xscale('log'); a.set_xlim(0.8, 6000)
-a.set_yticks(y); a.set_yticklabels(labels, fontsize=6)
+a.set_yticks(y); a.set_yticklabels(labels, fontsize=7)
 a.tick_params(axis='y', length=0)
 a.grid(axis='y', visible=False)
 a.set_xlabel('Mean entries per target (log)')
-a.legend(frameon=False, loc='center right', handlelength=0.8, borderaxespad=0.1, fontsize=6)
+a.legend(frameon=False, loc='center right', handlelength=0.8, borderaxespad=0.1, fontsize=7)
 panel_label(a, '(a) Where the cost goes')
 bins = [i * 0.25 for i in range(12)]
 b.hist(pct, bins=bins, color=BLUE, edgecolor='white', linewidth=0.6)
 b.axvline(max(pct), color=GREEN, lw=0.8, ls=(0, (2, 1.5)))
-b.text(max(pct) - 0.06, b.get_ylim()[1] * 0.92, 'max 2.61%', ha='right', va='top', fontsize=5.8, color=GREEN)
+b.text(max(pct) - 0.06, b.get_ylim()[1] * 0.92, 'max 2.61%', ha='right', va='top', fontsize=6.8, color=GREEN)
 b.set_xlabel('Gain over best union (%)'); b.set_ylabel('Targets')
 b.set_xlim(0, 2.9); b.grid(axis='x', visible=False)
 panel_label(b, f'(b) {len(G)} strict-gain targets')

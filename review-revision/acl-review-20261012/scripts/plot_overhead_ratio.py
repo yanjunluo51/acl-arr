@@ -11,7 +11,7 @@ PANELS = [('RewardBench2', 'RewardBench 2'), ('WMT23', 'WMT23, 13'), ('WMT23_wit
           ('WMT24-en-de', 'WMT24 en-de'), ('WMT24-en-es', 'WMT24 en-es'), ('WMT24-ja-zh', 'WMT24 ja-zh')]
 setup()
 fig, ax = plt.subplots(figsize=(COLUMN, 1.7))
-for j, (stop, c, off) in enumerate([('primary', BLUE, -0.18), ('exact', GREEN, 0.18)]):
+for j, (stop, c, off, h) in enumerate([('primary', BLUE, -0.18, None), ('exact', GREEN, 0.18, '////')]):
     data = []
     for key, _ in PANELS:
         rows = [r for r in R if r['dataset'] == key and r['stopping'] == stop]
@@ -21,8 +21,9 @@ for j, (stop, c, off) in enumerate([('primary', BLUE, -0.18), ('exact', GREEN, 0
                     showfliers=False, medianprops={'color': 'white', 'linewidth': 1.0},
                     whiskerprops={'linewidth': 0.6, 'color': MUTED}, capprops={'linewidth': 0.6, 'color': MUTED}, boxprops={'linewidth': 0})
     for b in bp['boxes']:
-        b.set_facecolor(c)
-    ax.plot([], [], 's', color=c, label=f'{stop} stopping')
+        b.set_facecolor(c); b.set_hatch(h); b.set_edgecolor('white')
+    ax.bar([0], [0], color=c, hatch=h, edgecolor='white', label=f'{stop} stopping')
+ax.set_ylim(0.95, None)
 ax.axhline(1, ls='--', lw=0.6, c='#555555')
 ax.set_xticks(range(len(PANELS))); ax.set_xticklabels([p for _, p in PANELS], rotation=25, ha='right')
 ax.set_ylabel(r'Ref. queries / $Q_{\rm joint}$')

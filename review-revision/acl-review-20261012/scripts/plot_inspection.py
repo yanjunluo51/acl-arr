@@ -23,8 +23,8 @@ for lab, i, mk in markers:
     ax.scatter([v[i] for _, _, v in rows], y, marker=mk, s=11, facecolor='white', edgecolor=GRAY, linewidth=0.7, label=lab, zorder=2)
 ax.scatter([v[4] for _, _, v in rows], y, marker='o', s=18, color=BLUE, label='Reference', zorder=3)
 for yy, (_, _, v) in zip(y, rows):
-    ax.text(101.5, yy, f'{v[5]:.1f}', va='center', ha='left', fontsize=6, color=INK)
-ax.text(101.5, max(y) + 0.75, 'Cov.', va='center', ha='left', fontsize=6, color=MUTED)
+    ax.text(101.5, yy, f'{v[5]:.1f}', va='center', ha='left', fontsize=7, color=INK)
+ax.text(101.5, max(y) + 0.75, 'Cov.', va='center', ha='left', fontsize=7, color=MUTED)
 ax.axhline(2.5, color='#e5e7eb', lw=0.6)
 ax.set_yticks(y); ax.set_yticklabels(names); ax.tick_params(axis='y', length=0)
 ax.set_xlim(0, 100); ax.set_ylim(-0.6, 5.9)
