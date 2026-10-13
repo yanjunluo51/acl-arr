@@ -117,7 +117,7 @@ vstar = {(r['dataset'], r['split'], r['q']): r['V_lower'] for r in COL if r['sto
 nonfull = [r for r in COL if vstar[(r['dataset'], r['split'], r['q'])] < r['selected_count']]
 chk('column targets', len(COL) == 1920 and len(nonfull) == 114)
 chk('non-full needs every column', all(r['column_minimum'] == r['T'] for r in nonfull)
-    and 'every non-full column target needed all columns' in M)
+    and 'every non-full six-panel target needed all columns' in M)
 
 # Median pools never inspect more than mean pools (all budgets, depths and panels).
 def active(path, col):
@@ -166,7 +166,7 @@ g = sum(r['union_presolve_off'] > r['joint'] for r in SU); eqn = sum(r['union_pr
 SC = (ROOT/'manuscript/summarization-confirmation.tex').read_text()
 chk('summeval 27/21', (g, eqn) == (27, 21) and 'smaller than the best separate union on 27 and equal on 21' in M
     and 'Re-solving all 48 unions with HiGHS presolve disabled reproduced every value' in SC)
-chk('positioning', 'Unlike matroid feasibility in basis verification \\citep{diwan2026basis}, retention feasibility depends on unobserved flip costs' in M
+chk('positioning', 'Unlike matroid feasibility \\citep{diwan2026basis}, retention feasibility depends on unobserved flip costs' in M
     and 'Matroid verification also selects the certified basis' in M)
 
 
