@@ -126,6 +126,9 @@ After the first four queries, returning rows~1 and~2 has certified risk at most 
 \end{algorithmic}
 \end{algorithm}
 Code, derived records and query traces are in the anonymous repository \url{https://anonymous.4open.science/r/acl-arr-B388}; scripts there rebuild the score panels from pinned public sources.
+Table~\ref{tab:stopping} lists the values plotted in Figure~\ref{fig:inspection}.
+\input{tables/query-stopping}
+
 \paragraph{Baseline query orders.} Fixed order uses seeded row priority followed by candidate index; random order permutes active entries. Largest width maximizes $u_i-\ell_i$ over eligible rows, then uses candidate index.
 
 \paragraph{Panel construction.}

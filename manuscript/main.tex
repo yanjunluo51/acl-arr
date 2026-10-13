@@ -54,11 +54,12 @@ Ranking robustness covers weight changes, preference completions and word attack
 Certification concerns one partly observed score matrix: rows index outputs and columns index evaluators. Pools $P,R$ contain $M\ge1$ base and $T\ge1$ candidate evaluators, respectively. We fit normalization maps and cutoff $0<t_0\le1$ on a reference split of scored outputs. Reference denotes this fitting split, not a human translation. Write $s_e(i)\in[0,1]$ for normalized scores. Replacing base member $j$ with candidate $r$ gives $P^{j\to r}$; all $H=MT$ replacements have uniform weight. The true score matrix, maps and cutoff remain fixed. Base scores are initially visible; queries reveal candidate test scores.
 
 The base list is $S_0(P)=\{i:c_P(i)\ge t_0\}$, where $c_P$ is median or mean consensus. For even-sized pools, the median averages the two central scores; the closed-form median witness results require odd $M$. Cutoff ties are included. For a batch of $N\ge1$ outputs, choose a nominal selection fraction $q\in(0,1]$ and budget $\alpha\ge0$. Let $k=\max(1,\operatorname{round}(qN))$ be the nominal count, rounding half-integers to even. This count scales risk without imposing a return quota. Write $\sigma_Q(i)=\one[i\in S_0(Q)]$. Known base scores and one candidate score determine all $M$ row replacement outcomes. Define their flip count $f_{ir}$ and row total $F_i$:
+{\allowdisplaybreaks\predisplaypenalty=0
 \begin{align}
  f_{ir}&=\sum_{j=1}^{M}\one[\sigma_P(i)\ne\sigma_{P^{j\to r}}(i)],\nonumber\\
  F_i&=\sum_{r=1}^{T}f_{ir}.
  \label{eq:cost}
-\end{align}
+\end{align}}
 The commitment mask $C$ records outputs whose baseline accept or reject decisions are finalized without review; the returned set is $S_0(P)\cap C$. Its average normalized churn over the declared replacements is
 \begin{align}
  R(C)&=\frac1H\sum_{j,r}\frac{|(S_0(P)\SD S_0(P^{j\to r}))\cap C|}{2k}\nonumber\\
@@ -204,7 +205,14 @@ Let $Q_{\rm split}$ minimize the sum of the separately minimum safety and exclus
 \[
  Q_{\rm joint}\le Q_{\cup,\rm sep}\le Q_{\rm split}\le2Q_{\rm joint}.
 \]
-The chain holds for any nonnegative replacement weights, with $Q_{\rm joint}$ defined by the weighted integer program (Appendix~\ref{app:model-scope}). Observations only tighten both bounds, and a joint witness serves each task. One realizable mean family attains $Q_{\cup,\rm sep}/Q_{\rm joint}\to2$; a second, with $M=7$ and $\alpha=.10$ fixed, has limit $53/30$. Both assume empty history and exact stopping (Appendix~\ref{app:deduplicated}). A strict gain requires every minimum joint witness to contain an entry with $0<f_{ir}<p_i$ (Corollary~\ref{cor:overlap-budget}); such entries are not sufficient.
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/separation.pdf}
+\caption{Best separate union over joint certificate in the two realizable mean families, empty history and exact stopping. Dashed lines mark the limits; gap tolerance one gives ratio one.}
+\label{fig:separation}
+\end{figure}
+
+The chain holds for any nonnegative replacement weights, with $Q_{\rm joint}$ defined by the weighted integer program (Appendix~\ref{app:model-scope}). Observations only tighten both bounds, and a joint witness serves each task. One realizable mean family attains $Q_{\cup,\rm sep}/Q_{\rm joint}\to2$; a second, with $M=7$ and $\alpha=.10$ fixed, has limit $53/30$ (Figure~\ref{fig:separation}). Both assume empty history and exact stopping (Appendix~\ref{app:deduplicated}). A strict gain requires every minimum joint witness to contain an entry with $0<f_{ir}<p_i$ (Corollary~\ref{cor:overlap-budget}); such entries are not sufficient.
 
 Whole-evaluator queries reveal all $N$ scores in a column, so their minima depend on evidence positions (Appendix~\ref{app:granularity}). Every history admits a completion requiring no further exclusion evidence. No history therefore guarantees a strict remaining joint advantage (Proposition~\ref{prop:residual-no-uniform}); predictions can still guide discovery.
 
@@ -225,7 +233,12 @@ Hence no competitive ratio independent of batch size holds at this tolerance (pr
 \section{NLP Score-Inspection Experiments}
 \label{sec:experiments}
 We measured certificate sizes and acquisition queries on cached NLP evaluator panels and timed one fresh-scoring panel.
-\input{tables/query-stopping}
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/inspection.pdf}
+\caption{Mean active-entry inspection (\%) at $q=.05$, $\alpha=.10$ and primary stopping over 40 splits. Right: reference-priority selected coverage (\%); values in Appendix Table~\ref{tab:stopping}.}
+\label{fig:inspection}
+\end{figure}
 
 \subsection{Panels and protocol}
 Our RewardBench~2 panel contains 14 reward models scoring 1,723 four-completion prompts \citep{malik2026rewardbench2}. Our WMT23 en-de panel contains 557 source segments, 13 output streams and 24 reference-based metrics \citep{freitag2023wmt23}. Removing \texttt{synthetic\_ref} gives a twelve-stream variant with refitted maps and cutoff. WMT24 en-de, en-es and ja-zh panels use document splits, exclude human-reference outputs and keep four depths, 40 splits and $\alpha=.10$ \citep{freitag2024wmt24}.
@@ -245,7 +258,7 @@ Envelope CRC \citep{yeh2025conformal} and grouped SCoRE target the same churn lo
 
 \subsection{Inspection and certificate size}
 
-At nominal $q=.05$ (Table~\ref{tab:stopping}), with median pooling, reference priority averaged 61.4\% active-entry inspection on RewardBench and 45.1\% on thirteen-stream WMT23. With mean pooling, it averaged 85.4--86.5\% across the three panels.
+At nominal $q=.05$ (Figure~\ref{fig:inspection}), with median pooling, reference priority averaged 61.4\% active-entry inspection on RewardBench and 45.1\% on thirteen-stream WMT23. With mean pooling, it averaged 85.4--86.5\% across the three panels.
 
 \input{tables/full-mean-main}
 \paragraph{Matching minima.} At $q=.05$ and $\alpha=.10$, splitwise medians of exact-stop reference queries over the exact odd-median minimum (Theorem~\ref{thm:exact}) were 1.968 for RewardBench and 1.662 for thirteen-stream WMT23. Both medians use splits with $Q_{\rm exact}>0$ (Appendix Table~\ref{tab:entry-overhead-summary}).
@@ -257,7 +270,7 @@ On the six panels, four depths and 40 splits yield 960 mean instances and 1,920 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/overhead.pdf}
-\caption{(a) Reference-priority queries against $Q_{\rm joint}$ on the 960 primary mean targets; the dashed line marks equality. (b) Relative gain $(Q_{\cup,\rm sep}-Q_{\rm joint})/Q_{\cup,\rm sep}$ on the 89 strict-gain targets of both stopping rules.}
+\caption{(a) Mean entries per target, 960 targets per stop: deduplication saving, joint gain beyond it and reference excess over $Q_{\rm joint}$. (b) Relative gain over $Q_{\cup,\rm sep}$ on the 89 strict-gain targets.}
 \label{fig:overhead}
 \end{figure}
 
