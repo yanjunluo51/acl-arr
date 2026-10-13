@@ -108,7 +108,7 @@ for x in csv.DictReader(open(ROOT/'outputs/tolerance-sensitivity/stop_records.cs
 d = [m['guided_primary'] - REF[(m['dataset'], m['split'], m['q'])] for m in MG]
 chk('guided 960', len(d) == 960)
 lost, won = sum(v > 0 for v in d), sum(v < 0 for v in d)
-chk('142 of 183', (lost, won) == (142, 41) and 'odd-median witness-shape policy lost to reference priority on 142 of 183 non-tied primary instances' in M)
+chk('142 of 183', (lost, won) == (142, 41) and 'lost on 142' in A)
 
 # Whole-column minima: every non-full mean target needs every column.
 COL = [json.loads(l) for l in open(ROOT/'outputs/evidence-cost-columns/records.jsonl')]
@@ -166,7 +166,7 @@ g = sum(r['union_presolve_off'] > r['joint'] for r in SU); eqn = sum(r['union_pr
 SC = (ROOT/'manuscript/summarization-confirmation.tex').read_text()
 chk('summeval 27/21', (g, eqn) == (27, 21) and 'smaller than the best separate union on 27 and equal on 21' in M
     and 'Re-solving all 48 unions with HiGHS presolve disabled reproduced every value' in SC)
-chk('positioning', 'Unlike basis verification \\citep{diwan2026basis}, retention requires two proof tasks' in M
+chk('positioning', 'Unlike matroid feasibility in basis verification \\citep{diwan2026basis}, retention feasibility depends on unobserved flip costs' in M
     and 'Matroid verification also selects the certified basis' in M)
 
 
@@ -184,6 +184,27 @@ chk('deviation numbers', all(r['exact_dev'] <= r['exact_none'] and r['primary_de
     and 'At primary stopping the total fell by 0.71\\%' in A)
 
 chk('no strict-gain re-solve claim', 'strict_gain_evidence' not in A and 'Re-solving 66' not in A)
+# SummEval: mean targets requiring exclusion without strict gain (needs private traces; skipped if absent).
+TP = EXP/'private/traces-private.jsonl'
+if TP.exists():
+    XS = {(tuple(x['composition']), x['q']): x for x in map(json.loads, TP.read_text().splitlines()) if x['aggregator'] == 'mean'}
+    def cap(costs, b):
+        t = n = 0
+        for c in sorted(costs):
+            if t + c > b: break
+            t += c; n += 1
+        return n
+    need = noq = 0
+    for r in SU:
+        x = XS[(tuple(r['composition']), r['q'])]
+        s0 = x['selected']; e = 0 if r['stop'] == 'exact' else -(-2 * s0 // 100)
+        vs = s0 - len(x['truth']) + cap([sum(row) for row in x['truth']], x['budget'])
+        if vs + e < s0:
+            need += 1; noq += r['union_presolve_off'] == r['joint']
+    chk('summeval 13 of 40', (need, noq) == (40, 13) and '13 of the 40 SummEval mean targets requiring exclusion showed no gain' in M)
+chk('rejected bound pointer', 'reports one rejected conflicting bound' in M and 'invalidates the reported bound for the subproblem' in A)
+chk('no compatible-witness wording', 'witnesses are compatible' not in M and 'Compatibility, whether' not in M)
+
 print(f'PASS {n-len(fails)}  FAIL {len(fails)}')
 for f in fails: print('FAIL', f)
 sys.exit(1 if fails else 0)

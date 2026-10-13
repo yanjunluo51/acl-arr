@@ -209,7 +209,7 @@ for stop, tau in [('primary', '1/50'), ('exact', '0')]:
     if stop == 'primary':
         check('mg means', 0, f'averaged {hu(g.mean(),1)} entries at primary stopping. Reference priority averaged {hu(ref.mean(),1)}, width {hu(wid.mean(),1)} and the matching minimum $Q_\\varepsilon$ {hu(w.mean(),1)}', APP)
         check('mg wins', 0, f'beat reference on {(g < ref).sum()} instances and lost on {(g > ref).sum()}', APP)
-        check('mg main', 0, f'on {(g > ref).sum()} of {(g != ref).sum()} non-tied', MAIN)
+        check('mg app', 0, f'It beat reference on {(g < ref).sum()} instances and lost on {(g > ref).sum()}', APP)
         q05 = np.array([m['q'] == .05 for m in MG])
         check('mg q05', 0, f'averaged {hu(g[q05].mean(),1)} entries versus {hu(ref[q05].mean(),1)}', APP)
         for q in [.1, .2, .3]:
@@ -244,7 +244,7 @@ check('solver vars', 0, f'from {min(r["variables"] for r in v)} to {max(r["varia
 F = [r for r in csv.DictReader((ROOT / 'outputs/frontier-priority-20261005/records.csv').open()) if r['method'] == 'joint' and r['stopping'] == 'primary']
 eq('frontier n', len(F), 960)
 d = np.array([int(r['delta_reference']) for r in F])
-check('frontier sizes main', 0, f'Where it won, it saved {round(-d[d < 0].mean())} entries on average; where it lost, it used {round(d[d > 0].mean())} more', MAIN)
+check('frontier sizes main', 0, f'Its wins averaged {round(-d[d < 0].mean())} entries and its losses {round(d[d > 0].mean())}', MAIN)
 check('frontier sizes app', 0, f'wins average {hu(-d[d < 0].mean(),1)} entries and losses {hu(d[d > 0].mean(),1)}', APP)
 byq = defaultdict(list)
 for r, x in zip(F, d):
