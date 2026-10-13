@@ -158,7 +158,7 @@ for k, v in FR.items():
 chk('excl 32 targets', len(ex) == 32 and len(full) == 903)
 chk('20.28 saving', hu(Fraction(sum(ex), 32), 2) == '20.28' and (sum(x > 0 for x in ex), sum(x < 0 for x in ex), sum(x == 0 for x in ex)) == (25, 6, 1)
     and 'frontier priority saved 20.28 entries over safety-only frontier' in M and 'with 25 wins, six losses and one tie' in A)
-chk('3.72 full', hu(Fraction(-sum(full), 903), 2) == '3.72' and 'Under full retention it added 3.72' in M)
+chk('3.72 full', hu(Fraction(-sum(full), 903), 2) == '3.72' and 'full-retention targets it added 3.72' in M)
 chk('switch not better', p['switch'] > p['safety'])
 SU = [json.loads(l) for l in open(EXP/'outputs/summeval_union_recheck.jsonl')]
 chk('summeval recheck', len(SU) == 48 and all(r['status'] == 'OPTIMAL' and r['union_presolve_off'] == r['union_recorded'] for r in SU))
@@ -219,7 +219,7 @@ chk('eps ablation', len(EP) == 960 and len(all_e) == 960 and hu(Fraction(sum(all
     and hu(Fraction(sum(ex_e), 32), 1) == '8175.6' and hu(Fraction(sum(ex_j), 32), 1) == '8163.3' and wl == [10, 19, 3]
     and 'it averaged 5,209.7 queries' in A and 'it averaged 8,175.6 queries, against 8,163.3 for joint' in A
     and 'Against joint frontier it had 10 wins, 19 losses and three ties' in A
-    and 'A tolerance-aware target, $s+\\varepsilon+1$, did not help these 32 targets' in M)
+    and 'A tolerance-aware target, $s+\\varepsilon+1$, did not lower the mean on these 32 targets' in M)
 chk('median ratio table ref', 'Both medians use splits with $Q_{\\rm exact}>0$ (Appendix Table~\\ref{tab:entry-overhead-summary})' in M)
 
 print(f'PASS {n-len(fails)}  FAIL {len(fails)}')
