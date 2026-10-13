@@ -1,8 +1,5 @@
 \raggedbottom
-\paragraph{Appendix guide.}
-Repeated baseline, budget and grouped-SCoRE grids are provided in \nolinkurl{supplement/result_grids.csv}. Full-depth mapping, column, tolerance and discovery grids are in \nolinkurl{supplement/extended_result_grids.csv}. Companion JSON files preserve headers, captions and table sources. Matched minimum-evidence and query costs for both pooling rules are in \nolinkurl{supplement/matched_evidence_summary.csv}, with per-instance records in \nolinkurl{supplement/matched_evidence_records.csv}. Full proofs, replay specifications and additional diagnostics are provided below.
 Proofs begin in Appendix~\ref{app:proofs} (p.~\pageref{app:proofs}); replay specification begins in Appendix~\ref{app:protocol} (p.~\pageref{app:protocol}). Appendix~\ref{app:baselines} specifies baselines; D--J collect retention, quality and risk comparisons; K--L examine selection protocols and loss definitions. Minimum-evidence extensions are in Appendix~\ref{app:granularity} (p.~\pageref{app:granularity}), with a compact joint mean formulation in Appendix~\ref{app:compact-joint} (p.~\pageref{app:compact-joint}) and full-batch evidence in Appendix~\ref{app:full-mean-grid} (p.~\pageref{app:full-mean-grid}). N--O discuss tolerance and operational scope. Prediction interventions and frontier acquisition appear in Appendix~\ref{app:acquisition-diagnostics} (p.~\pageref{app:acquisition-diagnostics}). Appendix~\ref{app:summeval-confirmation} reports SummEval and measured scoring costs.
-\FloatBarrier
 \section{Proofs and Completion Model}
 \label{app:proofs}
 \subsection{Notation and units}
@@ -112,7 +109,6 @@ Queries & $\ell/4$ & $u/4$ & $V^-$ & $V^+$\\
 
 After the first four queries, returning rows~1 and~2 has certified risk at most $8/84=2/21\le.10$, while its actual risk is $4/84=1/21$. After four queries the frontier gap is one, although realized regret is already zero. Enumerating all $2^9=512$ subsets of the nine observable entries in this fixed matrix gives $Q_0=7$ and $Q_1=4$. Thus a lower query count at positive tolerance can reflect a smaller required witness as well as the acquisition order.
 
-\FloatBarrier
 \section{Reproducible Experimental Specification}
 \label{app:protocol}
 \begin{algorithm}[h]
@@ -168,7 +164,6 @@ No active set is empty in the original-pool budget experiments or primary WMT24 
 
 The original WMT23 score panels contain no quality labels, so their original precision fields remain missing. Appendix~\ref{app:quality} separately aligns official MQM after freezing the masks and paths.
 
-\FloatBarrier
 \section{Comparison Methods}
 \label{app:baselines}
 Full-information controls use exact observed costs and $b_H$; the zero-query control uses endpoint upper costs. Table~\ref{tab:control-objects} summarizes their different decision objects and guarantees. The four original acquisition orders (fixed, random, largest width and reference priority) share the selected-retention solver, information boundary, risk budget and stopping tolerance. Their query counts therefore compare algorithms on one certification task; frontier priority is evaluated separately (Appendix~\ref{app:frontier}). The controls below compare selection objectives or statistical guarantees and have different scoring requirements.
@@ -245,7 +240,6 @@ Historical runs evaluate the correction in floating point. An integer-arithmetic
 
 
 
-\FloatBarrier
 \section{All Depths and Pooling Rules}
 Tables~\ref{tab:all-tolerant} and~\ref{tab:all-exact} report acquisition at positive-gap and exact stopping. The complete baseline grids in \nolinkurl{supplement/result_grids.csv} use each control\textquotesingle s own baseline-selected set as the denominator of selected coverage. Because these sets can differ, coverage differences do not measure retention gains on an identical output set. Preference precision is reported separately in Appendix~\ref{app:quality}. Acquisition rankings change with depth. Under mean pooling on the three original panels, reference priority inspects fewer active entries than largest width at $q=.05$. Largest width inspects fewer at $q=.30$. This reversal holds under both stopping rules (Tables~\ref{tab:all-tolerant} and~\ref{tab:all-exact}). Inspection is therefore compared at a fixed pooling rule, depth and stopping target, alongside initial coverage.
 \input{tables/query-all-tolerant}
@@ -266,7 +260,6 @@ We preserve all original splits, mappings, masks and acquisition paths. The anal
 Table~\ref{tab:wmt23-native-quality} gives reference-priority positive-gap results at every depth; complete records retain all orders and stops. At median nominal $q=.05$, the mean splitwise share of returned outputs with MQM annotations is 28.3\% on thirteen streams and 77.3\% on twelve streams. The corresponding returned-minus-comparator mean MQM differences are approximately $-.0020$ and $-.0002$, respectively. Other configurations have differences of either sign. Low coverage, especially when \texttt{synthetic\_ref} is admitted, prevents extending these MQM comparisons to all returned outputs. The 40 overlapping splits provide descriptive averages, not independent samples for a significance test. A separate implementation rebuilds labels and both baseline masks and recomputes every diagnostic record.
 \input{tables/wmt23-native-quality}
 
-\FloatBarrier
 \section{Safe Retention Frontiers}
 Figure~\ref{fig:frontiers} shows the three development panels under both pooling rules at $q=.05$. The single-split trajectory in Table~\ref{tab:query-prefix-example} uses a different depth. It shows how two query orders can certify different retained counts after the same number of observations.
 \begin{figure*}[t]
@@ -310,7 +303,6 @@ Evaluator composition changes inspection requirements (Tables~\ref{tab:review-co
 \end{figure*}
 Full five-budget grids for all three original panels and both pooling rules are retained as \texttt{review-budget-*} in \nolinkurl{supplement/result_grids.csv}; the companion JSON preserves captions and units.
 
-\FloatBarrier
 \section{WMT24 Admission and Quality Diagnostics}
 \label{app:review-quality}
 \input{tables/review-external}
@@ -336,7 +328,6 @@ Correlation pooled across inputs alone does not establish discrimination among o
 Table~\ref{tab:review-sentinel} reports the two sentinel diagnostics without changing the certified selection protocol.
 \input{tables/review-sentinel}
 
-\FloatBarrier
 \section{Variation across Individual Replacements}
 \label{app:individual-replacements}
 \input{tables/review-replacement-median}
@@ -457,8 +448,6 @@ For odd-sized median pooling, apply a common strictly increasing bijection $h:[0
 \paragraph{Evidence requirements under changed protocols.}
 Table~\ref{tab:protocol-evidence} connects each changed median protocol to its initial count gap, invariant and budget-admissible zero-query retention, and matching exact entry minimum. We reaggregate 5,760 median configurations (six reference protocols, six panels, four depths and 40 splits) without new query runs. A lower minimum under a different reference map is evidence about a different selected set, not a same-instance acquisition improvement.
 \input{tables/protocol-evidence}
-\FloatBarrier
-
 \section{Risk Scaling and Selection Objects}
 \label{app:risk-interpretation}
 For a batch-fixed positive denominator $d$, define $R_d(C)=\sum_{i\in C}F_i/(dH)$. Then $R_d=(2k/d)R(C)$, and using $\alpha_d=2k\alpha/d$ preserves the integer budget and every feasible mask. Choosing $d=|S_0|$ requires a nonempty base list; choosing $d=N$ scales by all $NH$ possible membership flips. Keeping the same numerical $\alpha$ instead changes the allowed flip count. For example, with $k=10$, $|S_0|=30$ and $\alpha=.10$, the original replacement-average allowance is two flips. Base-list normalization preserves it at $\alpha_d=1/15$; using $.10$ would allow three. A denominator equal to the returned count depends on the mask and has no such fixed rescaling.
@@ -491,7 +480,6 @@ Partial observations keep the endpoint structure. For each base member $j$, the 
 \paragraph{Empirical comparison.}
 We use the six core panels, both pooling rules, four depths, 40 splits and $\alpha=.10$, giving 1,920 instances. Reference priority does not depend on the budget, so one query path serves both targets. For each path we locate the first primary and exact stops of each target by bisection; both gaps are monotone in the path prefix. HiGHS solves each capacity program with a 120-second limit; every program reached numerical bound closure within it. Table~\ref{tab:per-replacement} reports nominal $q=.05$. Across the 1,920 instances, the per-replacement optimum was lower in 899. The primary stop needed more queries in 1,401 instances, fewer in 31 and the same number in 488. Under mean pooling at $q=.05$, full-information retention fell from 126.1 to 68.0 outputs on thirteen-stream WMT23 and from 120.2 to 97.0 on RewardBench~2. Primary-stop inspection rose to 95.3--99.5\% of active entries. Under median pooling, it rose from 1.1--61.4\% to 11.9--76.0\%. Records are in \nolinkurl{outputs/scope-extensions/}.
 
-\FloatBarrier
 \section{Certificate Costs Across Query Granularities}
 \label{app:granularity}
 The objective remains certifying churn-feasible retention within a count tolerance. Changing the query unit, prior observations or pooling rule changes the evidence problem; a pooling change can also change the selected set. In this appendix, finite enumerations check stated instances and implementations; the general claims rest on the proofs, and constructed instances are evaluated apart from the NLP panels.
@@ -505,8 +493,6 @@ At $q=.05$, $\alpha=.10$ and the primary nominal two-percent stop, thirteen-stre
 \input{tables/nontrivial-median-exact}
 \input{tables/nontrivial-mean-tolerant}
 \input{tables/nontrivial-mean-exact}
-\FloatBarrier
-
 \subsection{Multiplicative entry discovery ratios}
 An offline constructor selects certificate entries using the complete score matrix. We define the multiplicative discovery ratio as $Q_{\rm online}/Q_{\rm exact}$ for exact median entry certification, conditional on $Q_{\rm exact}>0$. Splits with $Q_{\rm exact}=0$ have undefined ratios and are reported separately; all acquisition policies stop without queries on these splits. Ratios are computed per split before aggregation. Table~\ref{tab:entry-overhead-summary} reports the median, interpolated 90th percentile and maximum ratios for reference priority at $q=.05$. The supplement's \texttt{entry-overhead-all-*} grids include every original depth and order. Across six panels, four depths, six reference protocols, four acquisition orders and 40 splits, this exact median analysis gives 23,040 records and 576 panel--depth--protocol--order summary cells. Overlapping splits give descriptive distributions, not population confidence intervals or a competitive guarantee.
 
@@ -688,7 +674,6 @@ Row states can be cached once in $O(\sum_i T|\mathcal D_i|)$ time and $O(\sum_i|
 \end{algorithmic}
 \end{algorithm}
 
-\FloatBarrier
 \paragraph{Even-sized median pools.}
 \label{app:even-median}
 The separation between Boolean and shared evidence concerns replacement outcomes, not only the name of the pooling rule.
@@ -761,7 +746,7 @@ The four original complete acquisition policies are also run on these same batch
 \input{tables/joint-discovery}
 
 \paragraph{Even-median validation.}
-For pools of size two and four, exact rational scores on the quarter-step grid generate 3,690 two-row cases with two candidates, cutoff ties, endpoint and intermediate outcomes, empty and partial histories, and exact and positive-gap targets. A separate reconstruction enumerates all 38,887 eligible query subsets across these cases and agrees with the saved joint minima. These finite checks complement Corollary~\ref{cor:even-median}. The scripts \texttt{check\_even\_median.py} and \texttt{verify\_rational\_cases.py} in \path{review-revision/}\allowbreak\path{even-median-resource-20261007/} specify case generation and independent exhaustive reconstruction, respectively.
+For pools of size two and four, exact rational scores on the quarter-step grid generate 3,690 two-row cases with two candidates, cutoff ties, endpoint and intermediate outcomes, empty and partial histories, and exact and positive-gap targets. A separate reconstruction enumerates all 38,887 eligible query subsets across these cases and agrees with the saved joint minima. These finite checks complement Corollary~\ref{cor:even-median}. Scripts in \nolinkurl{review-revision/even-median-resource-20261007/} specify case generation and the exhaustive reconstruction.
 
 We also fix even pools of size six and eight on all six NLP panels, using the first $M$ evaluators in the existing order and all remaining evaluators as candidates. Six panels, two even pool sizes, 40 splits, four depths and two stopping targets give 3,840 full-batch tasks. Each task refits its consensus cutoff on the same reference outputs, retains right-ECDF normalization and $\alpha=.10$, and uses either the primary gap or exact stopping. Integer ECDF rank numerators make comparisons of the two central scores exact, including cutoff ties. Per-task records retain lower and feasible upper query bounds after a nominal 60-second outcome-MILP budget. Table~\ref{tab:even-median-panels} averages these bounds over 160 targets per row. These exposed-panel, offline results neither evaluate a new acquisition policy nor compare $M=6,7,8$ as the same selection task.
 \input{tables/even-median-panels}
@@ -817,7 +802,6 @@ Returning to the 96 full-batch NLP instances, all matching exact mean minima are
 \input{tables/joint-full-discovery}
 
 
-\FloatBarrier
 \subsection{Joint evidence beyond deduplicating separate optima}
 \label{app:deduplicated}
 For each safe target $s$ in Theorem~\ref{thm:joint}, let $\mathcal A_s$ be the set of all minimum-size additional safety witnesses, and let $\mathcal B_{s+\varepsilon+1}$ be the set of all minimum-size additional exclusion witnesses. Exclusion is automatic beyond the active-row count, with the empty witness. Define
@@ -1166,7 +1150,13 @@ To examine the role of intermediate contributions, we measure the fraction of ac
 \paragraph{Separating evidence costs.}
 For each identical instance and stopping target, we compare $Q_{\rm split}-Q_{\cup,\rm sep}$, $Q_{\cup,\rm sep}-Q_{\rm joint}$ and $Q_{\rm online}-Q_{\rm joint}$. The first removes duplicate counting from separately optimal proofs; the second measures the benefit of choosing their evidence jointly. The last measures online discovery above the joint minimum. The first two sum to $Q_{\rm split}-Q_{\rm joint}$; discovery overhead is measured separately. Table~\ref{tab:cost-contrasts} uses the same complete set for all three means: 960 primary and 960 exact targets. All depths and panels remain in the analysis.
 
-The complete records include 1,920 targets and seven policies, with all joint minima and union comparisons numerically closed. Across all 960 primary targets, the mean reference excess is 809.58 entries; the exact-target mean is 796.66. Historical resource-limited attempts remain separate from these final numerically closed values. Ratios use positive numerically closed minima, and zero minima have a separate field. These overlapping-split summaries describe the recorded panels, not a population effect or an online competitive bound. Files in \nolinkurl{outputs/evidence-cost-contrasts/} include all policy-level records and bounds.
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/overhead_ratio.pdf}
+\caption{Reference-priority queries divided by $Q_{\rm joint}$ on the 1,920 mean targets, 160 per panel and stopping rule. Boxes show quartiles and medians; whiskers span 1.5 interquartile ranges; outliers are omitted. The dashed line marks equality.}
+\label{fig:overhead-ratio}
+\end{figure}
+The complete records include 1,920 targets and seven policies, with all joint minima and union comparisons numerically closed. Figure~\ref{fig:overhead-ratio} shows the per-panel ratios. Across all 960 primary targets, the mean reference excess is 809.58 entries; the exact-target mean is 796.66. Historical resource-limited attempts remain separate from these final numerically closed values. Ratios use positive numerically closed minima, and zero minima have a separate field. These overlapping-split summaries describe the recorded panels, not a population effect or an online competitive bound. Files in \nolinkurl{outputs/evidence-cost-contrasts/} include all policy-level records and bounds.
 \input{tables/cost-contrasts}
 
 \paragraph{Matched inspection costs across pooling rules.}
@@ -1416,8 +1406,4 @@ The reference, true-row, true-candidate and combined paths run through exact sto
 
 Table~\ref{tab:query-interventions} reports mean-pooling query counts averaged over 40 splits at each depth. On thirteen-stream WMT23 with mean pooling at $q=.30$, true-row priority saves queries in all 40 splits relative to reference, but its mean remains 379.7 queries above width. True-candidate priority alone is worse on 36 splits, better on one and tied on three. At $q=.05$ on the same panel, true-row priority uses more queries than reference on 31 splits and fewer on nine. True row costs rank outputs by realized churn; query value also depends on current safety deficits, achievable bound reductions and, when exclusion is active, observations ruling out larger sets. True contributions therefore do not make this fixed priority rule query-optimal. These interventions change priority within an instance without attributing each loss to a particular deficit or implying general unhelpfulness of better predictions. Complete results, including median and exact-stop gains and losses, are in \nolinkurl{outputs/query-mechanism-interventions/records.csv}.
 \input{tables/query-interventions}
-\FloatBarrier
-
-
-
 \input{summarization-confirmation}
