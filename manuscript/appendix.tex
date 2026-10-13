@@ -1,10 +1,7 @@
 \raggedbottom
-Proofs begin in Appendix~\ref{app:proofs} (p.~\pageref{app:proofs}); replay specification begins in Appendix~\ref{app:protocol} (p.~\pageref{app:protocol}). Appendix~\ref{app:baselines} specifies baselines; D--J collect retention, quality and risk comparisons; K--L examine selection protocols and loss definitions. Minimum-evidence extensions are in Appendix~\ref{app:granularity} (p.~\pageref{app:granularity}), with a compact joint mean formulation in Appendix~\ref{app:compact-joint} (p.~\pageref{app:compact-joint}) and full-batch evidence in Appendix~\ref{app:full-mean-grid} (p.~\pageref{app:full-mean-grid}). N--O discuss tolerance and operational scope. Prediction interventions and frontier acquisition appear in Appendix~\ref{app:acquisition-diagnostics} (p.~\pageref{app:acquisition-diagnostics}). Appendix~\ref{app:summeval-confirmation} reports SummEval and measured scoring costs.
-\section{Proofs and Completion Model}
-\label{app:proofs}
-\subsection{Notation and units}
-Table~\ref{tab:notation} collects the main quantities; Section~\ref{sec:median} and Appendix~\ref{app:worked-example} give worked examples.
-\begin{table}[t]
+\noindent{\Large\bfseries Appendix\par}\vspace{6pt}
+\noindent Proofs begin in Appendix~\ref{app:proofs} (p.~\pageref{app:proofs}); replay specification begins in Appendix~\ref{app:protocol} (p.~\pageref{app:protocol}). Appendix~\ref{app:baselines} specifies baselines; D--J collect retention, quality and risk comparisons; K--L examine selection protocols and loss definitions. Minimum-evidence extensions are in Appendix~\ref{app:granularity} (p.~\pageref{app:granularity}), with a compact joint mean formulation in Appendix~\ref{app:compact-joint} (p.~\pageref{app:compact-joint}) and full-batch evidence in Appendix~\ref{app:full-mean-grid} (p.~\pageref{app:full-mean-grid}). N--O discuss tolerance and operational scope. Prediction interventions and frontier acquisition appear in Appendix~\ref{app:acquisition-diagnostics} (p.~\pageref{app:acquisition-diagnostics}). Appendix~\ref{app:summeval-confirmation} reports SummEval and measured scoring costs.
+\begin{table}[!h]
 \centering\small
 \begin{tabular}{@{}p{.23\columnwidth}p{.69\columnwidth}@{}}
 \toprule
@@ -27,6 +24,11 @@ $Q_{\rm split}$ & Minimum sum of separate proof sizes.\\
 \caption{Core notation. In odd-median Boolean formulas, dividing by the nonzero flip cap gives opposition-count costs and budget $b$. A column query reveals and is charged for all $N$ score entries.}
 \label{tab:notation}
 \end{table}
+
+\section{Proofs and Completion Model}
+\label{app:proofs}
+\subsection{Notation and units}
+Table~\ref{tab:notation} collects the main quantities; Section~\ref{sec:median} and Appendix~\ref{app:worked-example} give worked examples.
 
 \subsection{Flip geometry and sharp intervals}
 Our cutoff rule includes scores equal to the threshold. Under the nonempty reference ECDF conventions used here, every score in the reference split maps into $(0,1]$, so a cutoff fitted from reference consensus satisfies $0<t_0\le1$. For median pooling with $M=2h+1$, let $v_i$ be the number of base scores at least $t_0$. If $v_i\ge h+2$, removing one vote leaves at least $h+1$ votes. If $v_i\le h-1$, adding one vote leaves at most $h$ votes. These rows are invariant. When $v_i=h+1$, a below-cutoff candidate changes membership exactly when it replaces one of the $h+1$ voting members. When $v_i=h$, an at-or-above-cutoff candidate changes membership exactly when it replaces one of the $h+1$ nonvoting members. Thus the maximum flip count is $h+1$ on either boundary and zero elsewhere.
