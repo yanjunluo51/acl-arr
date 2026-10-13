@@ -85,7 +85,7 @@ For nonnegative costs $w$, define retention capacity
 \]
 Sorting selected-output costs computes $V(w)$. Maximizing retention under $u$ yields a mask, feasible for every consistent completion, returning $V^-=V(u)$ outputs. The optimistic count $V^+=V(\ell)$ is attainable in some completion.
 
-Keeping observed values fixed, assigning every unobserved entry its zero-flip endpoint realizes $\ell$; assigning these entries their maximum-flip endpoints realizes $u$. Known caps on a candidate's deviation from consensus, or Lipschitz bounds in base-score space, keep both endpoint vectors attainable with narrower entry ranges.
+Keeping observed values fixed, assigning every unobserved entry its zero-flip endpoint realizes $\ell$; assigning these entries their maximum-flip endpoints realizes $u$. Deviation caps or Lipschitz bounds holding for the true scores give narrower recomputed bounds, still jointly attainable.
 \begin{proposition}[Safe retention and stopping]
 \label{prop:stop}
 At any adaptive query history, let $C^-$ maximize retained count subject to the upper-cost budget. Then
@@ -106,7 +106,7 @@ An output is structurally invariant ($p_i=0$) if no candidate score can change i
 \label{sec:median}
 To measure how few revealed entries suffice, an offline constructor uses the true matrix to choose entries. The verifier sees only revealed entries and uses bounds valid for every consistent completion. Each entry has unit cost.
 
-\paragraph{Odd medians: disjoint evidence.}
+\paragraph{Odd medians under entry queries: disjoint evidence.}
 For $M=2h+1$ with nonnegative integer $h$, median selection requires $h+1$ votes at or above $t_0$. A single replacement changes at most one vote. Selected rows with at least $h+2$ votes are invariant interior rows; rows with exactly $h+1$ are boundary rows. A below-cutoff candidate excludes a boundary row precisely when replacing one of its $h+1$ voting members. Thus $p_i=h+1$ at the selected boundary and zero in the interior.
 
 Here the active selected rows form the boundary set $\mathcal B$, and the $m_0$ invariant selected rows are interior. For $i\in\mathcal B$, define opposition bits and their true row sums by
@@ -187,7 +187,7 @@ Joint & \texttt{111111} & \texttt{1.....} & 7\\
 \label{tab:joint-example}
 \end{table}
 
-For history $\mathcal O$, let $\ell_i^0,u_i^0$ be its row bounds and $U_i$ its unqueried candidates. Using true contributions offline, define $\mathcal D_i=\{(|J|,\sum_{r\in J}f_{ir}):J\subseteq U_i\}$. Here $n_i$ counts new queries and $v_i$ sums their contributions. A state $(n_i,v_i)$ gives $\ell_i=\ell_i^0+v_i$, $u_i=u_i^0-n_ip_i+v_i$. Let $L^*$ be the true optimal active count.
+For history $\mathcal O$, let $\ell_i^0,u_i^0$ be its row bounds and $U_i$ its unqueried candidates. Using true contributions offline, define $\mathcal D_i=\{(|J|,\sum_{r\in J}f_{ir}):J\subseteq U_i\}$. Here $n_i$ counts queries added after $\mathcal O$ and $v_i$ sums their contributions. A state $(n_i,v_i)$ gives $\ell_i=\ell_i^0+v_i$, $u_i=u_i^0-n_ip_i+v_i$. Let $L^*$ be the true optimal active count.
 \begin{theorem}[Joint entry witness]
 \label{thm:joint}
 For the fixed true matrix, history $\mathcal O$ and integer $\varepsilon\ge0$, the minimum additional entry count $Q_{\rm joint}$ is $\min\sum_i n_i$, over $s\in\{\max(0,L^*-\varepsilon),\ldots,L^*\}$, row states in $\mathcal D_i$ and a safe set $C$ of $s$ active rows satisfying $\sum_{i\in C}u_i\le b_H$. If $p=s+\varepsilon+1\le m$, also require an integer $0\le t\le TM$ with
@@ -203,7 +203,7 @@ Let $Q_{\rm split}$ minimize the sum of the separately minimum safety and exclus
 \[
  Q_{\rm joint}\le Q_{\cup,\rm sep}\le Q_{\rm split}\le2Q_{\rm joint}.
 \]
-The chain holds for any nonnegative replacement weights, with $Q_{\rm joint}$ defined by the weighted integer program (Appendix~\ref{app:model-scope}). Observations only tighten both bounds, and a joint witness serves each task. One realizable mean family attains $Q_{\cup,\rm sep}/Q_{\rm joint}\to2$; a second, with $M=7$ and $\alpha=.10$ fixed, has limit $53/30$. Both assume empty history and exact stopping (Appendix~\ref{app:deduplicated}). A strict gain requires every minimum joint witness to contain an entry with $0<f_{ir}<p_i$ (Corollary~\ref{cor:overlap-budget}).
+The chain holds for any nonnegative replacement weights, with $Q_{\rm joint}$ defined by the weighted integer program (Appendix~\ref{app:model-scope}). Observations only tighten both bounds, and a joint witness serves each task. One realizable mean family attains $Q_{\cup,\rm sep}/Q_{\rm joint}\to2$; a second, with $M=7$ and $\alpha=.10$ fixed, has limit $53/30$. Both assume empty history and exact stopping (Appendix~\ref{app:deduplicated}). A strict gain requires every minimum joint witness to contain an entry with $0<f_{ir}<p_i$ (Corollary~\ref{cor:overlap-budget}); such entries are not sufficient.
 
 Whole-evaluator queries reveal all $N$ scores in a column, so their minima depend on evidence positions (Appendix~\ref{app:granularity}). Every history admits a completion requiring no further exclusion evidence. No history therefore guarantees a strict remaining joint advantage (Proposition~\ref{prop:residual-no-uniform}); predictions can still guide discovery.
 
@@ -228,7 +228,7 @@ Among query-eligible rows, reference priority selects the row with the smallest 
 \end{algorithmic}
 \end{algorithm}
 
-Sorting computes each capacity bound in $O(m\log m)$ time; invariant selected rows have zero churn cost.
+Sorting computes each capacity bound in $O(m\log m)$ time, and a frontier step also scores $O(mT)$ entries; invariant selected rows have zero churn cost.
 \begin{proposition}[Discovery can be expensive]
 \label{prop:positive-discovery}
 For every integer $m\ge2$, a family of mean-pooling instances with $M=T=7$, $q=.05$, $\alpha=.10$, $|S_0|=m$ and $N=\Theta(m)$ has two-entry minimum certificates at $\varepsilon=\lceil.02m\rceil$. Every deterministic policy valid under the completion model needs at least $m$ queries on some instance of the family. Every randomized always-valid policy has expected cost at least $(m+1)/2$ on some fixed instance.
@@ -237,7 +237,7 @@ Hence no competitive factor independent of batch size holds at this tolerance (p
 
 \section{NLP Score-Inspection Experiments}
 \label{sec:experiments}
-We tested these bounds and acquisition rules on cached NLP evaluator panels.
+We measured certificate sizes and acquisition queries on cached NLP evaluator panels and timed one fresh-scoring panel.
 \input{tables/query-stopping}
 
 \subsection{Panels and protocol}
@@ -245,7 +245,7 @@ Our RewardBench~2 panel contains 14 reward models scoring 1,723 four-completion 
 
 In RewardBench and WMT23, the first seven evaluators of a frozen ordering form the base pool, leaving $T=7$ RewardBench or $T=17$ WMT23 candidates (Appendix~\ref{app:protocol}). Forty seeded group-preserving splits assign 574/574/575 RewardBench prompts or 185/185/187 WMT23 source segments to reference, calibration and test sets. Only CRC and grouped SCoRE use the calibration split. Each evaluator uses a reference-fitted right empirical cumulative distribution function (ECDF). For $n_{\rm ref}$ reference outputs, the cutoff is the $\max(1,\operatorname{round}(qn_{\rm ref}))$-th highest reference consensus (Appendix~\ref{app:protocol}). RewardBench and WMT23 use both pooling rules, $q\in\{.05,.10,.20,.30\}$ and $\alpha\in\{.02,.05,.10,.15,.20\}$ (primary $.10$).
 
-Primary stopping uses $V^+-V^-\le\varepsilon=\lceil.02|S_0(P)|\rceil$, returning $K=V^-$ and hence $V^*-K\le\varepsilon$; exact stopping uses zero.
+Primary stopping uses $V^+-V^-\le\varepsilon=\lceil.02|S_0(P)|\rceil$, returning $K=V^-$ and hence $V^*-K\le\varepsilon$, a nominal 2\% rounded up; exact stopping uses zero.
 
 Main-panel queries access cached scores, so counts are logical accesses, not inference savings; reference and base scoring are charged separately (Appendix~\ref{app:protocol}).
 
@@ -258,7 +258,7 @@ Envelope CRC \citep{yeh2025conformal} and grouped SCoRE target the same churn lo
 
 \subsection{Inspection and certificate size}
 
-At nominal $q=.05$ (Table~\ref{tab:stopping}), with median pooling, reference priority averaged 61.4\% active-entry inspection on RewardBench and 45.1\% on thirteen-stream WMT23. Mean pooling averaged 85.4--86.5\% across the three panels.
+At nominal $q=.05$ (Table~\ref{tab:stopping}), with median pooling, reference priority averaged 61.4\% active-entry inspection on RewardBench and 45.1\% on thirteen-stream WMT23. With mean pooling, it averaged 85.4--86.5\% across the three panels.
 
 \input{tables/full-mean-main}
 \paragraph{Matching minima.} At $q=.05$ and $\alpha=.10$, splitwise medians of exact-stop reference queries over the exact odd-median minimum (Theorem~\ref{thm:exact}) were 1.968 for RewardBench and 1.662 for thirteen-stream WMT23. Both medians use splits with $Q_{\rm exact}>0$ (Appendix Table~\ref{tab:entry-overhead-summary}).
@@ -286,7 +286,7 @@ At $q=.05$ and $\alpha=.10$, median RewardBench reference priority revealed 1.77
 \section{Discussion}
 Unlike matroid feasibility in basis verification \citep{diwan2026basis}, retention feasibility depends on unobserved flip costs, which couple safety and exclusion evidence. A strict gain arises when no pair of tied separate minima reaches the joint minimum after deduplication; overlap alone does not decide this. Two matched instances share component minima, joint minimum and intermediate counts, yet their best separate unions are eight and seven (Appendix~\ref{app:deduplicated}).
 
-A gain also needs both proof tasks to remain, but this is not sufficient. Every no-gain target on the six-panel mean grid had an optimal joint witness with automatic exclusion. Yet 13 of the 40 SummEval mean targets requiring exclusion showed no gain. Whole-column access removed the remaining room: every non-full column target needed all columns.
+A gain also needs both proof tasks to remain, but this is not sufficient. Every no-gain target on the six-panel mean grid had an optimal joint witness with automatic exclusion. Yet 13 of the 40 SummEval mean targets requiring exclusion showed no gain. On the six-panel grid, whole-column access removed the remaining room: every non-full column target needed all columns.
 
 Discovery adds its own cost: the online excess far exceeded the joint gain beyond deduplication. Proposition~\ref{prop:positive-discovery} bounds only the worst case, and prediction error alone does not explain this overhead. True-score priorities were not query-optimal either (Appendix~\ref{app:query-interventions}).
 \FloatBarrier

@@ -142,7 +142,7 @@ for (lang, q, agg), v in ext.items():
     if agg == 'median':
         pairs += 1; worse += v > ext[(lang, q, 'mean')]
 chk('median inspection never higher', pairs == 72 and len(ext) == 24 and worse == 0
-    and 'mean pooling averaged 85.4--86.5' in M.replace('Mean pooling','mean pooling'))
+    and 'With mean pooling, it averaged 85.4--86.5' in M)
 
 # Round 5: conditional frontier ablation, SummEval recheck, positioning sentences.
 FR = defaultdict(dict)
