@@ -94,7 +94,7 @@ def constrained(qs=(.05, .10)):
                              f"{hu(row['none_primary_queries'])} & {hu(row['box_primary_queries'])} & {hu(row['lip_primary_queries'])} & "
                              f"{hu(row['box_valid'])} & {hu(row['lip_valid'])}\\\\")
     lines += [r'\bottomrule', r'\end{tabular}',
-              r'\caption{Certification under oracle-valid deviation caps (Dev.) and Lipschitz bounds in base-score space (Lip.), $\alpha=.10$, means over 40 splits. Queries follow the unchanged reference-priority path. The last two columns give the share of candidates whose reference-estimated constant also holds on the test batch.}',
+              r'\caption{Certification under oracle-valid deviation caps (Dev.) and Lipschitz bounds in base-score space (Lip.), $\alpha=.10$, means over 40 splits. Queries follow the unchanged reference-priority path. The last two columns give the share of candidates whose reference-estimated constant also holds on the test batch; these candidate-level shares differ from the configuration-level counts in the text.}',
               r'\label{tab:constrained}', r'\end{table*}']
     (TAB / 'constrained.tex').write_text('\n'.join(lines) + '\n')
     return out
