@@ -48,6 +48,7 @@ python3 bruteforce_check.py     # exhaustive checks of the new solvers
 python3 audit_numbers.py        # recomputes every reported number from the records
 python3 median_deviation_minima.py  # odd-median minima under deviation caps
 python3 apply_tie_rounding.py   # decimal half-up for exact ties printed by earlier renderers
+python3 frontier_eps.py         # frontier priority with a tolerance-aware exclusion target
 python3 audit_round4.py         # recomputes the numbers added in the latest revision
 ```
 

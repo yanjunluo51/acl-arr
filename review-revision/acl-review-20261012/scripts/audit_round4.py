@@ -117,7 +117,7 @@ vstar = {(r['dataset'], r['split'], r['q']): r['V_lower'] for r in COL if r['sto
 nonfull = [r for r in COL if vstar[(r['dataset'], r['split'], r['q'])] < r['selected_count']]
 chk('column targets', len(COL) == 1920 and len(nonfull) == 114)
 chk('non-full needs every column', all(r['column_minimum'] == r['T'] for r in nonfull)
-    and 'every non-full column target needed all candidate columns' in M)
+    and 'every non-full column target needed all columns' in M)
 
 # Median pools never inspect more than mean pools (all budgets, depths and panels).
 def active(path, col):
@@ -157,7 +157,7 @@ for k, v in FR.items():
     elif vs == s0: full.append(d)
 chk('excl 32 targets', len(ex) == 32 and len(full) == 903)
 chk('20.28 saving', hu(Fraction(sum(ex), 32), 2) == '20.28' and (sum(x > 0 for x in ex), sum(x < 0 for x in ex), sum(x == 0 for x in ex)) == (25, 6, 1)
-    and 'frontier priority saved 20.28 entries over safety-only frontier (25 wins, six losses, one tie)' in M)
+    and 'frontier priority saved 20.28 entries over safety-only frontier' in M and 'with 25 wins, six losses and one tie' in A)
 chk('3.72 full', hu(Fraction(-sum(full), 903), 2) == '3.72' and 'Under full retention it added 3.72' in M)
 chk('switch not better', p['switch'] > p['safety'])
 SU = [json.loads(l) for l in open(EXP/'outputs/summeval_union_recheck.jsonl')]
@@ -204,6 +204,23 @@ if TP.exists():
     chk('summeval 13 of 40', (need, noq) == (40, 13) and '13 of the 40 SummEval mean targets requiring exclusion showed no gain' in M)
 chk('rejected bound pointer', 'reports one rejected conflicting bound' in M and 'invalidates the reported bound for the subproblem' in A)
 chk('no compatible-witness wording', 'witnesses are compatible' not in M and 'Compatibility, whether' not in M)
+
+# Tolerance-aware frontier ablation.
+EP = {(r['dataset'], r['split'], r['q']): r for r in map(json.loads, open(EXP/'outputs/frontier_eps_primary.jsonl'))}
+ex_e, all_e, ex_j, wl = [], [], [], [0, 0, 0]
+for k, v in FR.items():
+    if k[3] != 'primary': continue
+    e = EP[(k[0], int(k[1]), float(k[2]))]; j = v['joint']; s = v['safety']
+    all_e.append(e['queries'])
+    if int(j['V_star']) + int(j['epsilon']) < int(j['selected_count']):
+        ex_e.append(e['queries']); ex_j.append(int(j['queries']))
+        d = e['queries'] - int(j['queries']); wl[0 if d < 0 else 1 if d > 0 else 2] += 1
+chk('eps ablation', len(EP) == 960 and len(all_e) == 960 and hu(Fraction(sum(all_e), 960), 1) == '5209.7'
+    and hu(Fraction(sum(ex_e), 32), 1) == '8175.6' and hu(Fraction(sum(ex_j), 32), 1) == '8163.3' and wl == [10, 19, 3]
+    and 'it averaged 5,209.7 queries' in A and 'it averaged 8,175.6 queries, against 8,163.3 for joint' in A
+    and 'Against joint frontier it had 10 wins, 19 losses and three ties' in A
+    and 'A tolerance-aware target, $s+\\varepsilon+1$, did not help these 32 targets' in M)
+chk('median ratio table ref', 'Both medians use splits with $Q_{\\rm exact}>0$ (Appendix Table~\\ref{tab:entry-overhead-summary})' in M)
 
 print(f'PASS {n-len(fails)}  FAIL {len(fails)}')
 for f in fails: print('FAIL', f)
